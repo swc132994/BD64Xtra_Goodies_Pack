@@ -1,76 +1,102 @@
 OptionMenu "BrutalDoom64OptionsItem/WeaponSpawner"
 {
 	Title "Item/Weapon Spawner Options"
-		StaticText " "
 		StaticText "Options to choose replacements of weapons and power-ups",1
-	Option "Randomly replace Armour/Health Bonuses with Hell Potions =","BonusRandomCvar","BonusRandomValue"
+			StaticText ""
+	Option "Randomly Replace Armour/Health Bonuses With Hell Potions =","BonusRandomCvar","BonusRandomValue"
+			StaticText "(hell potions are combined armour/health pickups)",1
+			StaticText ""
 	Option "Randomly replace Power-ups with Unmaker Power-ups =","WpnPower_Spawner_Cvar","WpnPower_Spawner_Value"
-		StaticText " "
+		StaticText ""
 		StaticText "Extra Power-ups Options",1
-		StaticText " "
-	Option "Vanilla Spheres, Enhanced Spheres or random =","ExtraSpheres_CVar","ExtraSpheres_Value"
-	Option "Infrared, Crucifix, Flashlight or random =","Crucifix_Spawner_Cvar","Crucifix_Spawner_Value"
-	Option "Allmap, Scanner or random =","MapRadar_Spawner_CVar","MapRadar_Spawner_Value"
-	Option "Radsuit, Biosuit or random =","Biosuit_Spawner_CVar","Biosuit_Spawner_Value"
-	Option "Blue, Red or random Armors =","RedArmor_Spawner_CVar","RedArmor_Spawner_Value"
-		StaticText " "
+		StaticText ""
+	Option "Vanilla Spheres, Enhanced Spheres or Random =","ExtraSpheres_CVar","ExtraSpheres_Value"
+	Option "Infrared, Crucifix, Flashlight or Random =","Crucifix_Spawner_Cvar","Crucifix_Spawner_Value"
+	Option "Allmap, Scanner or Random =","MapRadar_Spawner_CVar","MapRadar_Spawner_Value"
+	Option "Radsuit, Biosuit or Random =","Biosuit_Spawner_CVar","Biosuit_Spawner_Value"
+	Option "Blue, Red or Random Armours =","RedArmor_Spawner_CVar","RedArmor_Spawner_Value"
+		StaticText "(Red armour gives 300 armour & protection from fire damage)",1
+		StaticText ""
 		StaticText "Extra Weapons Options",1
-		StaticText " "
-	Option "Chainsaw, FireAxe or random =","ChainsawNew_Spawner_Cvar","ChainsawNew_Spawner_Value"
-	Option "Chaingun, SMG, Rifle, LMG or random =","ChaingunNew_Spawner_Cvar","ChaingunNew_Spawner_Value"
-	Option "Super Shotgun, Assault Shotgun or random =","AutoShotgun_Spawner_Cvar","AutoShotgun_Spawner_Value"
-	Option "Rocket Launcher, Grenade Launcher, Flamethrower or random =","Immolator_Spawner_Cvar","Immolator_Spawner_Value"
-	Option "Plasma Rifle, Gauss Cannon, Nailgun, Ruiner or random =","PlasmaRifleNew_Spawner_Cvar","PlasmaRifleNew_Spawner_Value"
-	Option "Shotgun, Revolver, pistol silencer or random =","Revolver_Spawner_Cvar","Revolver_Spawner_Value"
-	Option "BFG9k, BFG10k, Unmkaer, Lasergun or random =","BFG9kNew_Spawner_Cvar","BFG9kNew_Spawner_Value"
-	StaticText " "
+		StaticText ""
+	Option "Chainsaw, Fire Axe or Random =","ChainsawNew_Spawner_Cvar","ChainsawNew_Spawner_Value"
+	Option "Chaingun, SMG, Rifle, LMG or Random =","ChaingunNew_Spawner_Cvar","ChaingunNew_Spawner_Value"
+	Option "Super Shotgun, Assault Shotgun or Random =","AutoShotgun_Spawner_Cvar","AutoShotgun_Spawner_Value"
+	Option "Rocket Launcher, Grenade Launcher, Flamethrower or Random =","Immolator_Spawner_Cvar","Immolator_Spawner_Value"
+	Option "Plasma Rifle, Gauss Cannon, Nailgun, Ruiner or Random =","PlasmaRifleNew_Spawner_Cvar","PlasmaRifleNew_Spawner_Value"
+	Option "Shotgun, Revolver, pistol silencer or Random =","Revolver_Spawner_Cvar","Revolver_Spawner_Value"
+	Option "BFG9k, BFG10k, Unmkaer, Lasergun or Random =","BFG9kNew_Spawner_Cvar","BFG9kNew_Spawner_Value"
+	StaticText ""
 		StaticText "Option to replace shotguns with super shotguns or Assault Shotguns",1
 		StaticText "('shotgun only', will set SSG Zombies to drop shells instead of SSG)",1
-		StaticText " "
+		StaticText ""
 	Option "SSG & ASG in Doom 1 =","SSGinDoom1_Cvar","SSGinDoom1Menu"
-		StaticText " "
+		StaticText ""
 		StaticText "Option to change the way addon ammo spawns",1
 		StaticText "Both spawns addon and default ammo at the same time",1
 		StaticText "Rarer is like both but only spawns addon ammo 50% of the time",1
 		StaticText "Only One will spawn either addon or default ammo randomly",1
 		StaticText "(This wont work if a specific weapon is disabled in any form)",1
-		StaticText " "
+		StaticText ""
 	Option "Addon Ammo Spawn =","ExtraAmmo_Spawner_Cvar","ExtraAmmo_Spawner_Value"
-	StaticText " "
+	StaticText ""
 		StaticText "Option to enable Nuke Launchers to spawn alongside Invulnerability",1
 		StaticText "And Nuclear Warheads alongside big Cellpacks/Rocket Crates",1
 		StaticText "(This wont work if vanilla only weapon spawns are enabled)",1
-		StaticText " "
+		StaticText ""
 	Option "Enable NukeLauncher =","NuclearMissile_Spawner_Cvar","YesOrNo"
 }
 
 OptionMenu "BrutalDoom64Item/WeaponOptions"
 {
-	Title "Item/Weapon Options"
-	StaticText "Option to ONLY spawn Doom64 Items/weapons.",1
-		StaticText "(Enabling this option will override all alternative spawns/drops)",1
-		StaticText " "
-	Option "Spawn Doom64 vanilla weapons/items ONLY =","D64WeaponsOnlyCvar","YesOrNo"
-		StaticText " "
-		StaticText "These options allow changing the skin for the Rifle and Laser Gun,",1
-		StaticText "as well as enable D64 vanilla style firing (Only for Classical).",1
-		StaticText "Classic weapon look for Rocket Launcher and Chaingun for Tactical/Modern.",1
-		StaticText " "
-	Option "Play Vanilla Weapon Animations (Classical Only) =","VWeaponCvar","YesOrNo"
-	Option "Play Start Warm Up Weapons (Tactical/Modern Only) =","WeaponsWarmUpCvar","YesOrNo"
-	Option "No Reloading for Tactical/Modern (Need Map Start) =","NoReloadCvar","YesOrNo"
+	Title "Other Item/Weapon Options"
+		StaticText ""
+		StaticText "Option to ONLY spawn classic Doom 64 items & weapons.",1
+		StaticText "(enabling this option will override all alternative spawns & drops)",1
+		StaticText ""
+	Option "ONLY Spawn Weapons & Items From Vanilla Doom 64 =","D64WeaponsOnlyCvar","YesOrNo"
+		StaticText ""
+		StaticText "Show classic Doom 64 weapon animations (classical mode ONLY).",1
+		StaticText ""
+	Option "Enable Vanilla Weapon Animations =","VWeaponCvar","YesOrNo"
+		StaticText ""
+		StaticText "Show weapon warm up animations on first pickup (tactical/modern modes ONLY).",1
+		StaticText ""
+	Option "Enable Weapon Warm Up Animations =","WeaponsWarmUpCvar","YesOrNo"
+		StaticText ""
+		StaticText "Options for classic or modernised weapon looks.",1
+		StaticText ""
+	Option "Classic Style Chainsaw for Tactical/Modern =","VanillaChainsawCvar","YesOrNo"
+	Option "Classic Style Chaingun for Tactical/Modern =","ClassicChaingunCvar","YesOrNo"
+	Option "Classic Style Rocket Launcher for Tactical/Modern =","ClassicRLCvar","YesOrNo"
+		StaticText ""
+		StaticText "Options for alternative or some alpha build looks for items & weapons.",1
+		StaticText ""
 	Option "Alternative Rifle Skin =","AlternativeRifleSkinCvar","YesOrNo"
 	Option "Alternative Laser Skin =","AlternativeLaserSkinCvar","YesOrNo"
-	Option "Classic Rocket Launcher for Tactical/Modern =","ClassicRLCvar","YesOrNo"
-	Option "Classic Chainsaw for Tactical/Modern =","VanillaChainsawCvar","YesOrNo"
-	Option "Striker-12 as Alternative of Assault Shotgun =","Striker12Cvar","YesOrNo"
-	Option "Alternative Ammo/Item Pickup Sprites =","AlternativeAmmoPickupSpritesCvar","AlternativeAmmoPickupSpritesValue"
+	Option "Alternative Ammo & Item Pickups =","AlternativeAmmoPickupSpritesCvar","AlternativeAmmoPickupSpritesValue"
+	Option "Alternative Radiation Suit Pickup =","AltRadSuitCvar","YesOrNo"
+	Option "Alternative Healing Kits & Berserk Pickups =","CensoredHealing_Cvar","CensoredHealing_Value"
+	Option "Alpha Build Item Pickups =","AlphaPickupCvar","YesOrNo"
+		StaticText ""
+		StaticText "Option to disable switching to fists on berserk pack pickup.",1
+		StaticText ""
 	Option "Switch to Fists on Berserk Pickup =","BerserkSwitchFistsCvar","YesOrNo"
-	Option "Show alpha/censored healing kits/berserk =","CensoredHealing_Cvar","CensoredHealing_Value"
-	Option "Alpha Build Items Pickup =","AlphaPickupCvar","YesOrNo"
-	Option "Alternative Rad Suit Pickup =","AltRadSuitCvar","YesOrNo"
-	Option "Start with Flashlight/Torch (Need Map Start) =","FlashlightStartCvar","YesOrNo"
+		StaticText ""
+		StaticText "Flashlight/torch can either be started with or picked up in game.",1
+		StaticText ""
+	Option "Start with Flashlight/Torch (Need Map Restart) =","FlashlightStartCvar","YesOrNo"
+		StaticText ""
+		StaticText "Skip weapon reload animation sequences (tactical/modern modes ONLY).",1
+		StaticText ""
+	Option "Skip Weapon Reload Sequences (Need Map Restart) =","NoReloadCvar","YesOrNo"
+		StaticText ""
+		StaticText "Extra Pack Weapon Options!",1
+		StaticText ""
+		StaticText "Switch between Stiker-12 or Assault Shotgun"
+	Option "Striker-12 as Alternative of Assault Shotgun =","Striker12Cvar","YesOrNo"
 }
+
 
 //XTRA WEAPON & AMMO VALUES
 OptionValue "AutoShotgun_Spawner_Value"

@@ -57,7 +57,7 @@ Inventory.PickupSound "misc/p_pkup"
 		QUAD ABCD 6 Bright
 		Loop
 	Pickup:
-		TNT1 A 0 HealThing(100,200) //added healing ability, for balance to the original Berserk kit's sake
+		TNT1 A 0 HealThing(100,200) //added healing ability,for balance to the original Berserk kit's sake
 		TNT1 A 0 A_GiveInventory("PowerQuadDamage64")
 		Stop
 	}
@@ -155,9 +155,9 @@ Actor 64BioSuit : CustomInventory
 		BIOS C 5
 		Loop
 	Pickup:
-		TNT1 A 0 A_GiveInventory("BioArmor", 1)
-		TNT1 A 0 A_GiveInventory("BioSuitFeet", 1)
-		TNT1 A 0 A_GiveInventory("BioSuitProtector", 1)
+		TNT1 A 0 A_GiveInventory("BioArmor",1)
+		TNT1 A 0 A_GiveInventory("BioSuitFeet",1)
+		TNT1 A 0 A_GiveInventory("BioSuitProtector",1)
 		Stop
 	}
 }
@@ -170,7 +170,7 @@ Actor BioSuitFeet : PowerupGiver
   Inventory.PickupMessage ""
   Powerup.Type "IronFeet"
   Powerup.Duration -120
-  Powerup.Color "Green", 0.1
+  Powerup.Color "Green",0.1
   States
   {
   Spawn:
@@ -181,9 +181,9 @@ Actor BioSuitFeet : PowerupGiver
 
 Actor PowerBioSuitProtection : PowerProtection
 {
-  DamageFactor "Poison", 0.1
-  DamageFactor "BFG", 0.125
-  DamageFactor "Plasma", 0.125
+  DamageFactor "Poison",0.1
+  DamageFactor "BFG",0.125
+  DamageFactor "Plasma",0.125
 }
 
 Actor BioSuitProtector : PowerupGiver
@@ -243,8 +243,8 @@ ACTOR 64UltraSphere : CustomInventory
 		ULTR AAAA 6 Bright Light("WEAPONPOWERTEAL")
 		Loop
 	Pickup:
-		TNT1 A 0 A_GiveInventory("64RedArmor", 1)
-		TNT1 A 0 A_GiveInventory("64UltraSphereHealth", 1)
+		TNT1 A 0 A_GiveInventory("64RedArmor",1)
+		TNT1 A 0 A_GiveInventory("64UltraSphereHealth",1)
 		TNT1 A 0 A_TakeInventory("Stamina",0)
 		Stop
 	}
@@ -260,7 +260,7 @@ ACTOR 64RedArmor : BasicArmorPickup
 	Inventory.Icon "ARM6A0"
 	Inventory.PickupSound "ARMOR"
 	Inventory.Pickupmessage "You got the UltraArmor!"
-	DamageFactor "Fire", 0.125
+	DamageFactor "Fire",0.125
 	States
 	{
 	Spawn:
