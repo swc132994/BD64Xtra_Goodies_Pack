@@ -1,0 +1,112 @@
+Grenade Launcher CREDITS:
+Sprites: Amuscaria, OSJCLatchford, Yukiherz, Midway, Craneo
+Code: The Skulltag Team
+Sounds: Quake 1, 3D Realms, Raven Software, ID Games
+Extra Edits: Craneo
+Idea by DoomerBlazkowicz
+
+IN LOVING MEMORY OF THE IMMOLATORS 202? - 2023 "A BELOVED WEAPON WITH IFFY BALANCE"
+
+Fire Axe CREDITS:
+Decorate: TheMightyHeracross, Blue Shadow, Skelegant
+Sounds: Id Software, Sgt_Mark_IV
+Sprites: Neoworm
+Extra Edits: Craneo
+
+IN LOVING MEMORY OF THE PLASMA BLADE 2023 - 2023 "A BADASS WEAPON THAT JUST DID NOT FIT IN..."
+
+BFG10k CREDITS:
+Code: (BFG10k): The Skulltag Team (Shield bits): Captain Toenail, David Raven, inkoalawetrust
+GLDefs: (BFG10k): The Skulltag Team
+Sounds: (BFG10k): Valve, Gearbox  (Shield bits): Quake 2, Half Life
+Sprites: (BFG10k): Midway, TypicalSF, Amuscaria, JuninhoRPG, Craneo (Shield bits): Gothic, Tormentor667, Duke3D, Rogue Entertainment, Captain Toenail, scalliano, David Raven
+Extra Edits: Craneo
+
+Flamethrower CREDITS:
+Code: Eriance
+GLDefs: Keksdose
+Sprites: Captain Toenail, Ipog, Id Software, Midway, Yukiherz, Tesefy, DoomerBlazkowicks
+Sounds: Eriance, Raven Software, Xaser, Freedoom Team
+Extra Edits: Craneo
+
+The Ruiner CREDITS:
+Code: Xaser, Mechadon, TheShooter7, Sgt_Mark_IV, swc132994
+Sprites: LilWhiteMouse, Neoworm, Xaser (Arbalest of the Ancients sprite parts), DrDoctor (Fleshy parts), ETTiNGRiNDER(?) (Impaler Arrow sprites)
+Sounds: CturiX
+Extra Edits: Craneo
+
+Nailgun Credits:
+Code: TheShooter7, Mechadon, Dox778, DoomerBlazkowicz
+Sprites: Id Software, HellCattX, Yukiherz, Amuscaria
+Sounds: Raven Software, Id Software
+Extra Edits: Craneo, IDDQD_1337
+
+Autoshotgun Credits:
+Code: Shotgun from BD64
+Sprites: TSF, Joblez
+Sounds: Valve (Shotgun from Half-Life)
+Extra Edits: IDDQD_1337 (Animation and coding)
+
+Light Machinegun Credits:
+
+(new sprites by TSF/Tesefy/Typical Sonic Fan, recolored and edited by IDDQD_1337, extra tweaks by Craneo, sounds (from COD MW2019) by Infinity Ward)
+
+//Grenade Launcher Assault Rifle
+Original mod uploader: Flammable4444 (ModDB)
+https: www.moddb.com/mods/brutal-doom-64/addons/cd-weapons-ar-as
+
+This version by swc132994 (ModDB)
+1. Converted the wad to a pk3 format.
+2. Weapons are now standalone.
+3. Weapon KeyKonf removed.
+4. Classical mode variants added
+
+Revolver Credits:
+Code: Dox778 (Cock Hammer pre-fire code taken from Who Dun It Reloaded), Shotgun from BD64
+Sprites:  LossForWords
+Sounds: New World (Insurgency (Not Sandstorm yet))
+Insparation: Basilisk (COD:MW2 (2022))
+Extra Edits: IDDQD_1337
+
+Nuclear Missile Launcher CREDITS:
+Code: Daniel
+Sprites: Daniel, 3D Realms (Nuke Missile), Monolith (Explosion), TSF, Banjo Software, DrDoctor, Midway (Nukelauncher gun sprites)
+Sounds: Epic Megagames (explosions, charge up), Valve (geiger counter, charge countdown, tacitcal mode raise sound)
+Extra Edits: Craneo
+
+//Xtra Powerups------------------------------------------------------------------
+Ghastsphere Credits:
+Code: scalliano, Skulltag Team
+Sprites: DrDoctor
+
+Titansphere Credits:
+Code: (heavily modified from Ghastsphere, same credits)
+Sprites: Craneo, Ittrav
+
+Quadsphere Credits:
+Code: Skulltag Team
+Sprites: Craneo
+
+Arsenalsphere Credits:
+Code: Dreadopp
+Sprites: Craneo
+
+Crucifix CREDITS:
+Code: Ghastly_dragon, MagicWazard
+Sprites: MagicWazard, Konami, SmithyGCN
+
+Advanced Area Scanner Credits:
+Code: Captain Toenail
+Sprites: Tesefy, Midway
+
+Biosuit Credits:
+Code: Ghastly_dragon
+Sprites: NMN, Craneo
+
+Red Armor Credits:
+Code: Skulltag Team
+Sprites: Amuscaria, IDDQD_1337, DrDoctor, DrPyspy, Monolith, Midway, Craneo
+
+Ultrasphere Credits:
+Code: (directly copied from the Megasphere from Zandronum with some changes and BD64 bits added)
+Sprites: Stefano, Id Software, Bethesda, Craneo

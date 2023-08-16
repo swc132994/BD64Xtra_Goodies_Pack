@@ -1,0 +1,559 @@
+//Auto shotgun
+brightmap sprite ASGFD0	{map "BRIGHTMAPS/Auto/ASGFD0_BR.png"}
+brightmap sprite ASGFE0	{map "BRIGHTMAPS/Auto/ASGFE0_BR.png"}
+brightmap sprite ASGFF0	{map "BRIGHTMAPS/Auto/ASGFf0_BR.png"}
+brightmap sprite ASGGA0	{map "BRIGHTMAPS/Auto/ASGGA0_BR.png"}
+brightmap sprite ASGGB0	{map "BRIGHTMAPS/Auto/ASGGB0_BR.png"}
+brightmap sprite ASGGC0	{map "BRIGHTMAPS/Auto/ASGGC0_BR.png"}
+brightmap sprite ASGGD0	{map "BRIGHTMAPS/Auto/ASGGD0_BR.png"}
+brightmap sprite ASGGE0	{map "BRIGHTMAPS/Auto/ASGGE0_BR.png"}
+brightmap sprite ASGGF0	{map "BRIGHTMAPS/Auto/ASGGF0_BR.png"}
+brightmap sprite ASGGG0	{map "BRIGHTMAPS/Auto/ASGGG0_BR.png"}
+brightmap sprite ASGGH0	{map "BRIGHTMAPS/Auto/ASGGH0_BR.png"}
+brightmap sprite ASGGI0	{map "BRIGHTMAPS/Auto/ASGGI0_BR.png"}
+brightmap sprite ASGGJ0	{map "BRIGHTMAPS/Auto/ASGGJ0_BR.png"}
+brightmap sprite ASGGK0	{map "BRIGHTMAPS/Auto/ASGGK0_BR.png"}
+brightmap sprite ASGGL0	{map "BRIGHTMAPS/Auto/ASGGL0_BR.png"}
+brightmap sprite ASGGM0	{map "BRIGHTMAPS/Auto/ASGGM0_BR.png"}
+brightmap sprite ASGGN0	{map "BRIGHTMAPS/Auto/ASGGN0_BR.png"}
+brightmap sprite ASGPA0	{map "BRIGHTMAPS/Auto/ASGPA0_BR.png"}
+brightmap sprite ASGRA0	{map "BRIGHTMAPS/Auto/ASGRA0_BR.png"}
+brightmap sprite ASGRB0	{map "BRIGHTMAPS/Auto/ASGRB0_BR.png"}
+brightmap sprite ASGRC0	{map "BRIGHTMAPS/Auto/ASGRC0_BR.png"}
+brightmap sprite ASGRD0	{map "BRIGHTMAPS/Auto/ASGRD0_BR.png"}
+brightmap sprite ASGRE0	{map "BRIGHTMAPS/Auto/ASGRE0_BR.png"}
+brightmap sprite ASGRF0	{map "BRIGHTMAPS/Auto/ASGRF0_BR.png"}
+brightmap sprite ASGRG0	{map "BRIGHTMAPS/Auto/ASGRG0_BR.png"}
+brightmap sprite ASGRH0	{map "BRIGHTMAPS/Auto/ASGRH0_BR.png"}
+brightmap sprite ASGRI0	{map "BRIGHTMAPS/Auto/ASGRI0_BR.png"}
+brightmap sprite ASGRJ0	{map "BRIGHTMAPS/Auto/ASGRJ0_BR.png"}
+brightmap sprite ASGRK0	{map "BRIGHTMAPS/Auto/ASGRK0_BR.png"}
+brightmap sprite ASGRL0	{map "BRIGHTMAPS/Auto/ASGRL0_BR.png"}
+brightmap sprite ASGRM0	{map "BRIGHTMAPS/Auto/ASGRM0_BR.png"}
+
+//Grenade Launcher
+brightmap sprite GRLFA0	{map "BRIGHTMAPS/NadeLauncher/GRLFA0_BR.png" Disablefullbright}
+brightmap sprite GRLFB0	{map "BRIGHTMAPS/NadeLauncher/GRLFB0_BR.png" Disablefullbright}
+brightmap sprite GRLFC0	{map "BRIGHTMAPS/NadeLauncher/GRLFC0_BR.png" Disablefullbright}
+brightmap sprite GRLFD0	{map "BRIGHTMAPS/NadeLauncher/GRLFD0_BR.png" Disablefullbright}
+brightmap sprite GRLFE0	{map "BRIGHTMAPS/NadeLauncher/GRLFE0_BR.png" Disablefullbright}
+
+brightmap sprite GRLVA0	{map "BRIGHTMAPS/NadeLauncher/GRLVA0_BR.png"}
+brightmap sprite GRLVB0	{map "BRIGHTMAPS/NadeLauncher/GRLVB0_BR.png"}
+brightmap sprite GRLVC0	{map "BRIGHTMAPS/NadeLauncher/GRLVC0_BR.png"}
+brightmap sprite GRLVD0	{map "BRIGHTMAPS/NadeLauncher/GRLVD0_BR.png"}
+brightmap sprite GRLVE0	{map "BRIGHTMAPS/NadeLauncher/GRLVE0_BR.png"}
+
+//Nailgun
+brightmap sprite NLLAB0		{map "BRIGHTMAPS/Nailgun/NLLAB0_BR.png" Disablefullbright}
+brightmap sprite NLLAC0		{map "BRIGHTMAPS/Nailgun/NLLAC0_BR.png" Disablefullbright}
+brightmap sprite NLLAD0		{map "BRIGHTMAPS/Nailgun/NLLAD0_BR.png" Disablefullbright}
+brightmap sprite NLLAF0		{map "BRIGHTMAPS/Nailgun/NLLAF0_BR.png" Disablefullbright}
+brightmap sprite NLLAG0		{map "BRIGHTMAPS/Nailgun/NLLAG0_BR.png" Disablefullbright}
+brightmap sprite NLLAH0		{map "BRIGHTMAPS/Nailgun/NLLAH0_BR.png" Disablefullbright}
+brightmap sprite NBOXB0		{map "BRIGHTMAPS/Nailgun/NBOXB0_BR.png"}
+brightmap sprite NLMGI0		{map "BRIGHTMAPS/Nailgun/NLMGI0_BR.png"}
+
+//Ruiner
+brightmap sprite SBOWA0		{map "BRIGHTMAPS/Ruiner/SBOWA0_BR.png" Disablefullbright}
+brightmap sprite SBOWB0		{map "BRIGHTMAPS/Ruiner/SBOWB0_BR.png" Disablefullbright}
+brightmap sprite SBOWC0		{map "BRIGHTMAPS/Ruiner/SBOWC0_BR.png" Disablefullbright}
+brightmap sprite SBOWD0		{map "BRIGHTMAPS/Ruiner/SBOWD0_BR.png" Disablefullbright}
+brightmap sprite SBOWE0		{map "BRIGHTMAPS/Ruiner/SBOWE0_BR.png" Disablefullbright}
+brightmap sprite SBOWF0		{map "BRIGHTMAPS/Ruiner/SBOWF0_BR.png" Disablefullbright}
+brightmap sprite SBOWG0		{map "BRIGHTMAPS/Ruiner/SBOWG0_BR.png" Disablefullbright}
+brightmap sprite SBOWH0		{map "BRIGHTMAPS/Ruiner/SBOWH0_BR.png" Disablefullbright}
+brightmap sprite SBOWI0		{map "BRIGHTMAPS/Ruiner/SBOWI0_BR.png" Disablefullbright}
+brightmap sprite SBOWJ0		{map "BRIGHTMAPS/Ruiner/SBOWJ0_BR.png" Disablefullbright}
+brightmap sprite SBOWK0		{map "BRIGHTMAPS/Ruiner/SBOWK0_BR.png" Disablefullbright}
+brightmap sprite SBOWL0		{map "BRIGHTMAPS/Ruiner/SBOWL0_BR.png" Disablefullbright}
+brightmap sprite SBOWM0		{map "BRIGHTMAPS/Ruiner/SBOWM0_BR.png" Disablefullbright}
+brightmap sprite VZ0YA0		{map "BRIGHTMAPS/Ruiner/VZ0YA0_BR.png" Disablefullbright}
+brightmap sprite VZ0YB0		{map "BRIGHTMAPS/Ruiner/VZ0YB0_BR.png" Disablefullbright}
+brightmap sprite VZ0YC0		{map "BRIGHTMAPS/Ruiner/VZ0YC0_BR.png" Disablefullbright}
+brightmap sprite VZ0YD0		{map "BRIGHTMAPS/Ruiner/VZ0YD0_BR.png" Disablefullbright}
+brightmap sprite WSBOA0		{map "BRIGHTMAPS/Ruiner/WSBOA0_BR.png" Disablefullbright}
+brightmap sprite ZV0UA0		{map "BRIGHTMAPS/Ruiner/ZV0UA0_BR.png" Disablefullbright}
+brightmap sprite ZV0UB0		{map "BRIGHTMAPS/Ruiner/ZV0UB0_BR.png" Disablefullbright}
+brightmap sprite ZV0UC0		{map "BRIGHTMAPS/Ruiner/ZV0UC0_BR.png" Disablefullbright}
+brightmap sprite ZV0UD0		{map "BRIGHTMAPS/Ruiner/ZV0UD0_BR.png" Disablefullbright}
+
+//Light MachineGun
+brightmap sprite GLRSA0	{map "BRIGHTMAPS/LightMachinegun/GLRGA0_BR.png"}
+brightmap sprite GLRSB0	{map "BRIGHTMAPS/LightMachinegun/GLRGA0_BR.png"}
+brightmap sprite GLRSC0	{map "BRIGHTMAPS/LightMachinegun/GLRGA0_BR.png"}
+brightmap sprite GLRSD0	{map "BRIGHTMAPS/LightMachinegun/GLRGA0_BR.png"}
+brightmap sprite GLRSE0	{map "BRIGHTMAPS/LightMachinegun/GLRSE0_BR.png"}
+brightmap sprite GLRSF0	{map "BRIGHTMAPS/LightMachinegun/GLRSE0_BR.png"}
+brightmap sprite GLRSG0	{map "BRIGHTMAPS/LightMachinegun/GLRSE0_BR.png"}
+brightmap sprite GLRSH0	{map "BRIGHTMAPS/LightMachinegun/GLRSH0_BR.png"}
+brightmap sprite GLRSI0	{map "BRIGHTMAPS/LightMachinegun/GLRSH0_BR.png"}
+brightmap sprite GLRSJ0	{map "BRIGHTMAPS/LightMachinegun/GLRSJ0_BR.png"}
+brightmap sprite GLRSK0	{map "BRIGHTMAPS/LightMachinegun/GLRSJ0_BR.png"}
+brightmap sprite AGFRA0	{map "BRIGHTMAPS/LightMachinegun/AGFRA0_BR.png" Disablefullbright}
+brightmap sprite AGFRB0	{map "BRIGHTMAPS/LightMachinegun/AGFRB0_BR.png" Disablefullbright}
+brightmap sprite AGFRC0	{map "BRIGHTMAPS/LightMachinegun/AGFRC0_BR.png"}
+brightmap sprite AGFRD0	{map "BRIGHTMAPS/LightMachinegun/AGFRD0_BR.png"}
+brightmap sprite AGLRA0	{map "BRIGHTMAPS/LightMachinegun/AGLRA0_BR.png"}
+brightmap sprite AGLRB0	{map "BRIGHTMAPS/LightMachinegun/AGLRB0_BR.png"}
+brightmap sprite AGLRC0	{map "BRIGHTMAPS/LightMachinegun/AGLRC0_BR.png"}
+brightmap sprite AGLRD0	{map "BRIGHTMAPS/LightMachinegun/AGLRD0_BR.png"}
+brightmap sprite AGLRE0	{map "BRIGHTMAPS/LightMachinegun/AGLRE0_BR.png"}
+brightmap sprite AGLRF0	{map "BRIGHTMAPS/LightMachinegun/AGLRF0_BR.png"}
+brightmap sprite AGLRG0	{map "BRIGHTMAPS/LightMachinegun/AGLRG0_BR.png"}
+brightmap sprite AGLRH0	{map "BRIGHTMAPS/LightMachinegun/AGLRH0_BR.png"}
+brightmap sprite AGLRI0	{map "BRIGHTMAPS/LightMachinegun/AGLRI0_BR.png"}
+brightmap sprite AGLRJ0	{map "BRIGHTMAPS/LightMachinegun/AGLRJ0_BR.png"}
+brightmap sprite GLRDB0	{map "BRIGHTMAPS/LightMachinegun/GLRDB0_BR.png"}
+brightmap sprite CHGGA0	{map "BRIGHTMAPS/LightMachinegun/GLRGA0_BR.png"}
+brightmap sprite GLRGA0	{map "BRIGHTMAPS/LightMachinegun/GLRGA0_BR.png"}
+brightmap sprite GLRFA0	{map "BRIGHTMAPS/LightMachinegun/GLRFA0_BR.png"}
+brightmap sprite GLRFB0	{map "BRIGHTMAPS/LightMachinegun/GLRFB0_BR.png" Disablefullbright}
+brightmap sprite GLRFC0	{map "BRIGHTMAPS/LightMachinegun/GLRFC0_BR.png" Disablefullbright}
+brightmap sprite GLFZA0	{map "BRIGHTMAPS/LightMachinegun/GLRFC0_BR.png"}
+brightmap sprite GLFZB0	{map "BRIGHTMAPS/LightMachinegun/GLRFB0_BR.png"}
+brightmap sprite GLFZC0	{map "BRIGHTMAPS/LightMachinegun/GL2GA0_BR.png"}
+brightmap sprite GL2GA0	{map "BRIGHTMAPS/LightMachinegun/GL2GA0_BR.png"}
+brightmap sprite GL2FA0	{map "BRIGHTMAPS/LightMachinegun/GL2FA0_BR.png"}
+brightmap sprite GL2FB0	{map "BRIGHTMAPS/LightMachinegun/GL2FB0_BR.png"}
+brightmap sprite GL2FC0	{map "BRIGHTMAPS/LightMachinegun/GL2FC0_BR.png"}
+brightmap sprite GLRRA0	{map "BRIGHTMAPS/LightMachinegun/GLRRA0_BR.png"}
+brightmap sprite GLRRB0	{map "BRIGHTMAPS/LightMachinegun/GLRRA0_BR.png"}
+brightmap sprite GLRRC0	{map "BRIGHTMAPS/LightMachinegun/GLRRC0_BR.png"}
+brightmap sprite GLRRD0	{map "BRIGHTMAPS/LightMachinegun/GLRRD0_BR.png"}
+brightmap sprite GLRRE0	{map "BRIGHTMAPS/LightMachinegun/GLRRE0_BR.png"}
+brightmap sprite GLRRF0	{map "BRIGHTMAPS/LightMachinegun/GLRRF0_BR.png"}
+brightmap sprite GLRRG0	{map "BRIGHTMAPS/LightMachinegun/GLRRG0_BR.png"}
+brightmap sprite GLRRH0	{map "BRIGHTMAPS/LightMachinegun/GLRRG0_BR.png"}
+brightmap sprite GLRRI0	{map "BRIGHTMAPS/LightMachinegun/GLRRF0_BR.png"}
+brightmap sprite GLRRJ0	{map "BRIGHTMAPS/LightMachinegun/GLRRE0_BR.png"}
+brightmap sprite GLRRK0	{map "BRIGHTMAPS/LightMachinegun/GLRRD0_BR.png"}
+brightmap sprite GLRRL0	{map "BRIGHTMAPS/LightMachinegun/GLRRC0_BR.png"}
+brightmap sprite GLRRM0	{map "BRIGHTMAPS/LightMachinegun/GLRRC0_BR.png"}
+brightmap sprite GLRRN0	{map "BRIGHTMAPS/LightMachinegun/GLRRC0_BR.png"}
+brightmap sprite GLRRO0	{map "BRIGHTMAPS/LightMachinegun/GLRRA0_BR.png"}
+brightmap sprite GLRRP0	{map "BRIGHTMAPS/LightMachinegun/GLRRA0_BR.png"}
+brightmap sprite GLRRQ0	{map "BRIGHTMAPS/LightMachinegun/GLRRA0_BR.png"}
+brightmap sprite GLRRR0	{map "BRIGHTMAPS/LightMachinegun/GLRRA0_BR.png"}
+brightmap sprite GLRRS0	{map "BRIGHTMAPS/LightMachinegun/GLRRA0_BR.png"}
+brightmap sprite GLRRT0	{map "BRIGHTMAPS/LightMachinegun/GLRRA0_BR.png"}
+
+//Nukelauncher
+brightmap sprite NUKGB0		{map "BRIGHTMAPS/Nuker/NUKGB0_BR.png"}
+brightmap sprite NUKGC0		{map "BRIGHTMAPS/Nuker/NUKGC0_BR.png"}
+brightmap sprite NUKGD0		{map "BRIGHTMAPS/Nuker/NUKGD0_BR.png"}
+brightmap sprite NUKGE0		{map "BRIGHTMAPS/Nuker/NUKGE0_BR.png"}
+brightmap sprite NUKGF0		{map "BRIGHTMAPS/Nuker/NUKGF0_BR.png"}
+brightmap sprite NUKGG0		{map "BRIGHTMAPS/Nuker/NUKGG0_BR.png" Disablefullbright}
+brightmap sprite NUKGH0		{map "BRIGHTMAPS/Nuker/NUKGH0_BR.png"}
+brightmap sprite NUKWA0		{map "BRIGHTMAPS/Nuker/NUKWA0_BR.png"}
+
+// Flamethrower
+brightmap sprite WFLMA0		{map "BRIGHTMAPS/Flamethrower/WFLMA0_BR.png"}
+brightmap sprite FLMGB0		{map "BRIGHTMAPS/Flamethrower/FLMGB0_BR.png" Disablefullbright}
+brightmap sprite FLMGC0		{map "BRIGHTMAPS/Flamethrower/FLMGC0_BR.png" Disablefullbright}
+brightmap sprite FLMGD0		{map "BRIGHTMAPS/Flamethrower/FLMGD0_BR.png" Disablefullbright}
+brightmap sprite FLMGE0		{map "BRIGHTMAPS/Flamethrower/FLMGE0_BR.png" Disablefullbright}
+
+// BFG10k
+brightmap sprite 10KPZ0		{map "BRIGHTMAPS/10k/10KPZ0_BR.png"}
+brightmap sprite 10KIA0		{map "BRIGHTMAPS/10k/10KIA0_BR.png" Disablefullbright}
+brightmap sprite 10KIB0		{map "BRIGHTMAPS/10k/10KIA0_BR.png" Disablefullbright}
+brightmap sprite 10KIC0		{map "BRIGHTMAPS/10k/10KIA0_BR.png" Disablefullbright}
+brightmap sprite 10KRA0		{map "BRIGHTMAPS/10k/10KIA0_BR.png" Disablefullbright}
+brightmap sprite 10KRB0		{map "BRIGHTMAPS/10k/10KIA0_BR.png" Disablefullbright}
+brightmap sprite 10KRC0		{map "BRIGHTMAPS/10k/10KRC0_BR.png" Disablefullbright}
+brightmap sprite 10KRD0		{map "BRIGHTMAPS/10k/10KRC0_BR.png" Disablefullbright}
+brightmap sprite 10KRE0		{map "BRIGHTMAPS/10k/10KRE0_BR.png" Disablefullbright}
+brightmap sprite 10KRF0		{map "BRIGHTMAPS/10k/10KRF0_BR.png" Disablefullbright}
+brightmap sprite 10KFA0		{map "BRIGHTMAPS/10k/10KFA0_BR.png" Disablefullbright}
+brightmap sprite 10KFB0		{map "BRIGHTMAPS/10k/10KFB0_BR.png" Disablefullbright}
+brightmap sprite 10KFC0		{map "BRIGHTMAPS/10k/10KFC0_BR.png" Disablefullbright}
+brightmap sprite 10KFD0		{map "BRIGHTMAPS/10k/10KFD0_BR.png" Disablefullbright}
+brightmap sprite 10KFE0		{map "BRIGHTMAPS/10k/10KFE0_BR.png" Disablefullbright}
+brightmap sprite 10KYA0		{map "BRIGHTMAPS/10k/10KYA0_BR.png" Disablefullbright}
+brightmap sprite 10KYB0		{map "BRIGHTMAPS/10k/10KYB0_BR.png" Disablefullbright}
+brightmap sprite 10KYC0		{map "BRIGHTMAPS/10k/10KYC0_BR.png" Disablefullbright}
+brightmap sprite 10KYD0		{map "BRIGHTMAPS/10k/10KYD0_BR.png" Disablefullbright}
+brightmap sprite 10KYE0		{map "BRIGHTMAPS/10k/10KRF0_BR.png" Disablefullbright}
+brightmap sprite 10KEA0		{map "BRIGHTMAPS/10k/10KRF0_BR.png" Disablefullbright}
+brightmap sprite 10KEB0		{map "BRIGHTMAPS/10k/10KEB0_BR.png" Disablefullbright}
+brightmap sprite 10KEC0		{map "BRIGHTMAPS/10k/10KEC0_BR.png" Disablefullbright}
+brightmap sprite 10KED0		{map "BRIGHTMAPS/10k/10KED0_BR.png" Disablefullbright}
+brightmap sprite 10KSA0		{map "BRIGHTMAPS/10k/10KRF0_BR.png" Disablefullbright}
+brightmap sprite 10KSB0		{map "BRIGHTMAPS/10k/10KEB0_BR.png" Disablefullbright}
+brightmap sprite 10KSC0		{map "BRIGHTMAPS/10k/10KEC0_BR.png" Disablefullbright}
+brightmap sprite 10KSD0		{map "BRIGHTMAPS/10k/10KED0_BR.png" Disablefullbright}
+brightmap sprite 10KSE0		{map "BRIGHTMAPS/10k/10KIA0_BR.png" Disablefullbright}
+
+//Lights
+pointlight LavaNailGlow
+{
+	color 1.0 0.6 0.0
+	size 16
+}
+
+object 64PlayerLavaNail
+{
+	frame L4RT {light LavaNailGlow}
+}
+
+pointlight ACIDARROW
+{
+	color 0.0 1.0 0.0
+	size 56
+}
+
+flickerlight ACIDARROW_X1
+{
+	color 0.2 1.0 0.2
+	size 64
+	secondarySize 72
+	chance 0.3
+}
+
+flickerlight ACIDARROW_X2
+{
+	color 0.3 1.0 0.3
+	size 80
+	secondarySize 88
+	chance 0.3
+}
+
+flickerlight ACIDARROW_X3
+{
+	color 0.5 1.0 0.5
+	size 96
+	secondarySize 104
+	chance 0.3
+}
+
+flickerlight ACIDARROW_X4
+{
+	color 0.2 0.7 0.2
+	size 96
+	secondarySize 104
+	chance 0.3
+}
+flickerlight ACIDARROW_X5
+{
+	color 0.1 0.3 0.1
+	size 96
+	secondarySize 104
+	chance 0.3
+}
+
+object 64ExplosiveArrow
+{
+	frame ARRWB {light ACIDARROW_X1}
+	frame ARRWC {light ACIDARROW_X2}
+	frame ARRWD {light ACIDARROW_X3}
+	frame ARRWE {light ACIDARROW_X4}
+	frame ARRWF {light ACIDARROW_X5}
+}
+
+object 64CorrosiveArrow_1
+{
+	frame ARRWA {light ACIDARROW}
+
+	frame ARRWB {light ACIDARROW_X1}
+	frame ARRWC {light ACIDARROW_X2}
+	frame ARRWD {light ACIDARROW_X3}
+	frame ARRWE {light ACIDARROW_X4}
+	frame ARRWF {light ACIDARROW_X5}
+}
+
+object 64CorrosiveArrow_2
+{
+	frame ARRWA {light ACIDARROW}
+
+	frame ARRWB {light ACIDARROW_X1}
+	frame ARRWC {light ACIDARROW_X2}
+	frame ARRWD {light ACIDARROW_X3}
+	frame ARRWE {light ACIDARROW_X4}
+	frame ARRWF {light ACIDARROW_X5}
+}
+
+object 64CorrosiveArrow_3
+{
+	frame ARRWA {light ACIDARROW}
+
+	frame ARRWB {light ACIDARROW_X1}
+	frame ARRWC {light ACIDARROW_X2}
+	frame ARRWD {light ACIDARROW_X3}
+	frame ARRWE {light ACIDARROW_X4}
+	frame ARRWF {light ACIDARROW_X5}
+}
+
+//Xtra Powerups
+PulseLight Ghastsphere
+{
+Color 0.8 1.0 0.8
+size 20
+secondarySize 24
+interval 2.0
+offset 0 16 0
+}
+
+Object 64Ghastsphere
+{
+Frame GHTS { Light Ghastsphere }
+}
+
+PulseLight Arsenalsphere
+{
+Color 1.0 1.0 0.0
+size 20
+secondarySize 24
+interval 2.0
+offset 0 16 0
+}
+
+Object 64Arsenalsphere
+{
+Frame AMSP { Light Arsenalsphere }
+}
+
+PulseLight Quadsphere
+{
+Color 1.0 0.8 1.0
+size 20
+secondarySize 24
+interval 2.0
+offset 0 16 0
+}
+
+Object 64Quadsphere
+{
+Frame QUAD { Light Quadsphere }
+}
+
+pulselight TITANGLOW
+{
+	color 1.0 0.0 0.0
+	size 20
+	secondarySize 24
+	interval 2.0
+	offset 0 16 0
+}
+
+object 64Titansphere
+{
+	frame BLST {light TITANGLOW}
+}
+
+pulselight CRUCIFIX
+{
+	color 1.0 1.0 1.0
+	size 16
+	secondarySize 24
+	interval 1.5
+}
+
+Object 64Crucifix
+{
+	frame CRFX { light CRUCIFIX }
+}
+
+
+pointlight NUKEROCKET
+{
+    color 1.0 0.7 0.0
+    size 56
+}
+
+flickerlight NUKEROCKET_X1
+{
+    color 1.0 0.7 0.0
+    size 64
+    secondarySize 72
+    chance 0.3
+}
+
+flickerlight NUKEROCKET_X2
+{
+    color 0.5 0.1 0.0
+    size 80
+    secondarySize 88
+    chance 0.3
+}
+
+flickerlight NUKEROCKET_X3
+{
+    color 0.3 0.0 0.0
+    size 96
+    secondarySize 104
+    chance 0.3
+}
+
+object 64NuclearMissileShot
+{
+frame NKE1A { light NUKEROCKET }
+frame NKE1B { light NUKEROCKET_X3 }
+frame NKE1C { light NUKEROCKET_X3 }
+frame NKE1D { light NUKEROCKET_X3 }
+frame NKE1E { light NUKEROCKET_X3 }
+frame NKE1F { light NUKEROCKET_X2 }
+frame NKE1G { light NUKEROCKET_X2 }
+frame NKE1H { light NUKEROCKET_X2 }
+frame NKE1I { light NUKEROCKET_X2 }
+frame NKE1J { light NUKEROCKET_X1 }
+frame NKE1K { light NUKEROCKET_X1 }
+frame NKE1L { light NUKEROCKET_X1 }
+frame NKE1M { light NUKEROCKET_X1 }
+}
+
+pointlight IrradiatedAreaBig
+{
+    color 0.0 0.7 0.0
+    size 1024
+}
+
+pointlight IrradiatedAreaMedium
+{
+    color 0.0 0.5 0.0
+    size 512
+}
+
+pointlight IrradiatedAreaSmall
+{
+    color 0.0 0.4 0.0
+    size 256
+}
+
+pointlight IrradiatedAreaTiny
+{
+    color 0.0 0.2 0.0
+    size 128
+}
+
+pointlight IrradiatedAreaMicroscopic
+{
+    color 0.0 0.1 0.0
+    size 64
+}
+
+object 64NuclearFlames
+{
+frame TNT1 { light NUKEROCKET }
+}
+
+FlickerLight2 FlameThrowerFire
+{
+Offset 0 2 0
+Color 0.15 0.04 0.0
+Size 40
+SecondarySize 60
+Interval 2.0
+}
+
+Object 64FlamerFlames
+{
+Frame FRFX { Light FlameThrowerFire }
+}
+
+Object 64FlamerFlamesLessEffects
+{
+Frame FRFX { Light FlameThrowerFire }
+}
+
+object 64FlamerExploder
+{
+	frame MTB2A {light IMPBALL}
+	frame MTB2B {light IMPBALL}
+	frame MTB2C {light IMPBALL}
+
+	frame MANFD {light TRACER_X1}
+	frame MANFE {light TRACER_X1}
+	frame MANFF {light TRACER_X2}
+	frame MANFG {light TRACER_X2}
+	frame MANFH {light TRACER_X3}
+	frame MANFI {light TRACER_X3}
+}
+
+
+object 64NadeLauncherGrenades
+{
+	frame MISLB {light ROCKET_X1}
+	frame MISLC {light ROCKET_X2}
+	frame MISLD {light ROCKET_X3}
+	frame MISLE {light ROCKET_X4}
+	frame MISLF {light ROCKET_X5}
+}
+
+PointLight BFG10kShot
+{
+Color 0.0 1.0 0.0
+Size 120
+}
+
+FlickerLight BFG10KSHOT_X1
+{
+Color 0.0 1.0 0.0
+Size 120
+SecondarySize 128
+Chance 0.3
+}
+
+FlickerLight BFG10KSHOT_X2
+{
+Color 0.0 1.0 0.0
+Size 180
+SecondarySize 182
+Chance 0.3
+}
+
+FlickerLight BFG10KSHOT_X3
+{
+Color 0.0 1.0 0.0
+Size 200
+SecondarySize 210
+Chance 0.3
+}
+
+Object 64BFG10kShot
+{
+Frame BFE1A0 { Light BFG10KSHOT }
+Frame BFE1B0 { Light BFG10KSHOT }
+Frame BFE1C0 { Light BFG10KSHOT_X1 }
+Frame BFE1D0 { Light BFG10KSHOT_X2 }
+Frame BFE1E0 { Light BFG10KSHOT_X3 }
+}
+
+
+flickerlight PlasmaShieldOrange
+{
+	color 0.7 0.7 0.2
+	size 120
+	secondarySize 128
+	chance 0.3
+}
+
+
+flickerlight PlasmaShieldRed
+{
+	color 0.3 0.1 0.1
+	size 48
+	secondarySize 56
+	chance 0.3
+}
+
+Object 64BFG10kActiveShield
+{
+Frame KHXAZ {light BFGBALL}
+Frame KHXBZ {light PlasmaShieldOrange}
+Frame KHXCZ {light PlasmaShieldRed}
+}
+
+//Red armour
+pointlight REDARMOR1
+{
+	color 0.6 0.0 0.1
+	size 20
+}
+
+pointlight REDARMOR2
+{
+	color 0.6 0.0 0.1
+	size 24
+}
