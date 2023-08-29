@@ -124,7 +124,7 @@ Tag "Nailgun"
 		Wait
 	Select:
 		TNT1 A 0 A_PlaySound("NAILPKUP")
-		TNT1 AAAAAAAAAAAAA 0 A_Raise
+		TNT1 AAAAAAAAAA 0 A_Raise
 		Goto SelectAnimation
 	SelectAnimation:
 		NLSL ABCDE 1
@@ -313,11 +313,11 @@ Projectile
 	Crash:
 	Death:
 		TNT1 A 0 A_PlaySound("Weapons/NailHit")
-		TNT1 A 1 A_SpawnItemEx("RicoChet",0,0,-5,0,0,0,0,SXF_NOCHECKPOSITION,0)
+		TNT1 A 1 A_SpawnItemEx("RicoChet")
 		Stop
 	XDeath:
 		TNT1 A 0 A_PlaySound("Weapons/NailHitBleed")
-		TNT1 A 1 A_SpawnItemEx("RicoChet",0,0,-5,0,0,0,0,SXF_NOCHECKPOSITION,0)
+		TNT1 A 1 A_SpawnItemEx("RicoChet")
 		Stop
 	}
 }

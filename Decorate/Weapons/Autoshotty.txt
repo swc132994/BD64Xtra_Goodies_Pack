@@ -239,9 +239,9 @@ Tag "Assault Shotgun"
 		TNT1 A 0 A_PlaySound("DRYFIRE")
 		TNT1 A 0 A_TakeInventory("HasUsedShell",1)
 		Goto Ready
-	Select: //Select Animation Improvement
+	Select:
 		TNT1 A 0 A_PlaySound("ASGPUMP",3)
-		TNT1 AAAAAAAAA 0 A_Raise
+		TNT1 AAAAAAAAAA 0 A_Raise
 		Goto SelectAnimation
 	SelectAnimation:
 		ASGS ABCD 1
@@ -556,7 +556,7 @@ Tag "Striker-12"
 		Goto Ready
 	Select:
 		TNT1 A 0 A_PlaySound("Striker-12/Select",3)
-		TNT1 AAAAAAAAA 0 A_Raise
+		TNT1 AAAAAAAAAA 0 A_Raise
 		Goto SelectAnimation
 	SelectAnimation:
 		SK15 ABCD 1
