@@ -65,26 +65,24 @@ ACTOR 64FireAxe : DoomWeapon
 		AXEG A 1 A_WeaponReady
 		loop
 	Fire:
-		AXEG ABC 2 A_Stop
-		AXEG DEF 2 A_Stop
-		AXEG G 2 A_Stop
+		AXEG ABCDEFG 2 A_Stop
 	Hold:
-		TNT1 A 1 A_GiveInventory("AxeCharge", 1)
+		TNT1 A 1 A_GiveInventory("AxeCharge",1)
 		TNT1 A 0 A_Refire
 		AXEG H 1
-		AXEG I 1 A_PlaySound("weapons/axeswing", CHAN_WEAPON)
-		AXEG A 0 A_JumpIfInventory("PowerStrength", 1, "FireHitBerserk")
-		AXEG J 1 A_SetPitch(pitch+1.2, SPF_INTERPOLATE)
-		AXEG A 0 A_JumpIfInventory("AxeCharge", 25, "FireHitCharge2")
+		AXEG I 1 A_PlaySound("weapons/axeswing",CHAN_WEAPON)
+		AXEG A 0 A_JumpIfInventory("PowerStrength",1,"FireHitBerserk")
+		AXEG J 1 A_SetPitch(pitch+1.2,SPF_INTERPOLATE)
+		AXEG A 0 A_JumpIfInventory("AxeCharge",25,"FireHitCharge2")
 		AXEG A 0 A_FireCustomMissile("ChargeAxeAttack",0,0,0,0)
 		Goto FireEnd
 	FireHitCharge2:
-		AXEG A 0 A_JumpIfInventory("AxeCharge", 50, "FireHitCharge3")
+		AXEG A 0 A_JumpIfInventory("AxeCharge",50,"FireHitCharge3")
 		TNT1 A 0 A_Recoil(-1)
 		AXEG AA 0 A_FireCustomMissile("ChargeAxeAttack",0,0,0,0)
 		Goto FireEndCharge2
 	FireHitCharge3:
-		AXEG A 0 A_JumpIfInventory("AxeCharge", 100, "FireHitCharge4")
+		AXEG A 0 A_JumpIfInventory("AxeCharge",100,"FireHitCharge4")
 		TNT1 A 0 A_Recoil(-2)
 		AXEG AAA 0 A_FireCustomMissile("ChargeAxeAttack",0,0,0,0)
 		Goto FireEndCharge3
@@ -93,17 +91,17 @@ ACTOR 64FireAxe : DoomWeapon
 		AXEG AAAA 0 A_FireCustomMissile("ChargeAxeAttack",0,0,0,0)
 		Goto FireEndCharge4
 	FireHitBerserk:
-		AXEG J 1 A_SetPitch(pitch+1.2, SPF_INTERPOLATE)
-		AXEG A 0 A_JumpIfInventory("AxeCharge", 25, "FireHitBerserkCharge2")
+		AXEG J 1 A_SetPitch(pitch+1.2,SPF_INTERPOLATE)
+		AXEG A 0 A_JumpIfInventory("AxeCharge",25,"FireHitBerserkCharge2")
 		AXEG A 0 A_FireCustomMissile("SuperAxeAttack",0,0,0,0)
 		Goto FireEnd
 	FireHitBerserkCharge2:
-		AXEG A 0 A_JumpIfInventory("AxeCharge", 50, "FireHitBerserkCharge3")
+		AXEG A 0 A_JumpIfInventory("AxeCharge",50,"FireHitBerserkCharge3")
 		TNT1 A 0 A_Recoil(-1)
 		AXEG AA 0 A_FireCustomMissile("SuperAxeAttack",0,0,0,0)
 		Goto FireEndCharge2
 	FireHitBerserkCharge3:
-		AXEG A 0 A_JumpIfInventory("AxeCharge", 100, "FireHitBerserkCharge4")
+		AXEG A 0 A_JumpIfInventory("AxeCharge",100,"FireHitBerserkCharge4")
 		TNT1 A 0 A_Recoil(-2)
 		AXEG AAA 0 A_FireCustomMissile("SuperAxeAttack",0,0,0,0)
 		Goto FireEndCharge3
@@ -112,34 +110,34 @@ ACTOR 64FireAxe : DoomWeapon
 		AXEG AAAA 0 A_FireCustomMissile("SuperAxeAttack",0,0,0,0)
 		Goto FireEndCharge4
 	FireEnd:
-		TNT1 A 0 A_TakeInventory("AxeCharge", 0x7FFFFFFF)
-		AXEG K 1 A_SetPitch(pitch+1.5, SPF_INTERPOLATE)
-		AXEG L 1 A_SetPitch(pitch+1.6, SPF_INTERPOLATE)
-		AXEG M 1 A_SetPitch(pitch+1.7, SPF_INTERPOLATE)
+		TNT1 A 0 A_TakeInventory("AxeCharge",0x7FFFFFFF)
+		AXEG K 1 A_SetPitch(pitch+1.5,SPF_INTERPOLATE)
+		AXEG L 1 A_SetPitch(pitch+1.6,SPF_INTERPOLATE)
+		AXEG M 1 A_SetPitch(pitch+1.7,SPF_INTERPOLATE)
 		TNT1 A 4
 		AXER DCBA 1
 		Goto Ready
 	FireEndCharge2:
-		TNT1 A 0 A_TakeInventory("AxeCharge", 0x7FFFFFFF)
-		AXEG K 1 A_SetPitch(pitch+1.5, SPF_INTERPOLATE)
-		AXEG L 1 A_SetPitch(pitch+1.7, SPF_INTERPOLATE)
-		AXEG M 1 A_SetPitch(pitch+1.9, SPF_INTERPOLATE)
+		TNT1 A 0 A_TakeInventory("AxeCharge",0x7FFFFFFF)
+		AXEG K 1 A_SetPitch(pitch+1.5,SPF_INTERPOLATE)
+		AXEG L 1 A_SetPitch(pitch+1.7,SPF_INTERPOLATE)
+		AXEG M 1 A_SetPitch(pitch+1.9,SPF_INTERPOLATE)
 		TNT1 A 6
 		AXER DCBA 1
 		Goto Ready
 	FireEndCharge3:
-		TNT1 A 0 A_TakeInventory("AxeCharge", 0x7FFFFFFF)
-		AXEG K 1 A_SetPitch(pitch+1.5, SPF_INTERPOLATE)
-		AXEG L 1 A_SetPitch(pitch+2.0, SPF_INTERPOLATE)
-		AXEG M 1 A_SetPitch(pitch+2.5, SPF_INTERPOLATE)
+		TNT1 A 0 A_TakeInventory("AxeCharge",0x7FFFFFFF)
+		AXEG K 1 A_SetPitch(pitch+1.5,SPF_INTERPOLATE)
+		AXEG L 1 A_SetPitch(pitch+2.0,SPF_INTERPOLATE)
+		AXEG M 1 A_SetPitch(pitch+2.5,SPF_INTERPOLATE)
 		TNT1 AA 8
 		AXER DCBA 1
 		Goto Ready
 	FireEndCharge4:
-		TNT1 A 0 A_TakeInventory("AxeCharge", 0x7FFFFFFF)
-		AXEG K 1 A_SetPitch(pitch+1.5, SPF_INTERPOLATE)
-		AXEG L 1 A_SetPitch(pitch+2.5, SPF_INTERPOLATE)
-		AXEG M 1 A_SetPitch(pitch+3.5, SPF_INTERPOLATE)
+		TNT1 A 0 A_TakeInventory("AxeCharge",0x7FFFFFFF)
+		AXEG K 1 A_SetPitch(pitch+1.5,SPF_INTERPOLATE)
+		AXEG L 1 A_SetPitch(pitch+2.5,SPF_INTERPOLATE)
+		AXEG M 1 A_SetPitch(pitch+3.5,SPF_INTERPOLATE)
 		TNT1 AA 12
 		AXER DCBA 1
 		Goto Ready
@@ -190,20 +188,18 @@ ACTOR 64FireAxeModern : Brutal64Weapon
 		AXEP A -1
 		Stop
 	Select:
-		TNT1 AAAAAAAAAA 0 A_Raise
 		TNT1 A 0 A_PlaySound("weapons/axedraw")
-		Goto SelectAnimation
-	SelectAnimation:
-		AXER DCBA 1
-		Goto Ready
+		AXER DCBA 1 Offset(0,32)
+		TNT1 A 0 A_Raise
+		Wait
 	Deselect:
 		TNT1 A 0 A_ZoomFactor(1.0)
 		TNT1 A 0 A_Takeinventory("WeaponSpecialAction",0)
 		TNT1 A 0 A_Takeinventory("TossMine",0)
 		TNT1 A 0 A_Takeinventory("PlaceMine",0)
 		TNT1 A 0 A_Takeinventory("Kicking",0)
-		AXER ABCD 1
 		TNT1 A 0 A_StopSound(CHAN_WEAPON)
+		AXER ABCD 1
 		TNT1 A 1 A_Lower
 		Wait
 	v1Ready:
@@ -214,26 +210,24 @@ ACTOR 64FireAxeModern : Brutal64Weapon
 		AXEG AA 1 A_WeaponReady(WRF_ALLOWRELOAD)
 		loop
 	Fire:
-		AXEG ABC 2 A_Stop
-		AXEG DEF 2 A_Stop
-		AXEG G 2 A_Stop
+		AXEG ABCDEFG 2 A_Stop
 	Hold:
-		TNT1 A 1 A_GiveInventory("AxeCharge", 1)
+		TNT1 A 1 A_GiveInventory("AxeCharge",1)
 		TNT1 A 0 A_Refire
 		AXEG H 1
-		AXEG I 1 A_PlaySound("weapons/axeswing", CHAN_WEAPON)
-		AXEG A 0 A_JumpIfInventory("PowerStrength", 1, "FireHitBerserk")
-		AXEG J 1 A_SetPitch(pitch+1.2, SPF_INTERPOLATE)
-		AXEG A 0 A_JumpIfInventory("AxeCharge", 25, "FireHitCharge2")
+		AXEG I 1 A_PlaySound("weapons/axeswing",CHAN_WEAPON)
+		AXEG A 0 A_JumpIfInventory("PowerStrength",1,"FireHitBerserk")
+		AXEG J 1 A_SetPitch(pitch+1.2,SPF_INTERPOLATE)
+		AXEG A 0 A_JumpIfInventory("AxeCharge",25,"FireHitCharge2")
 		AXEG A 0 A_FireCustomMissile("ChargeAxeAttack",0,0,0,0)
 		Goto FireEnd
 	FireHitCharge2:
-		AXEG A 0 A_JumpIfInventory("AxeCharge", 50, "FireHitCharge3")
+		AXEG A 0 A_JumpIfInventory("AxeCharge",50,"FireHitCharge3")
 		TNT1 A 0 A_Recoil(-1)
 		AXEG AA 0 A_FireCustomMissile("ChargeAxeAttack",0,0,0,0)
 		Goto FireEndCharge2
 	FireHitCharge3:
-		AXEG A 0 A_JumpIfInventory("AxeCharge", 100, "FireHitCharge4")
+		AXEG A 0 A_JumpIfInventory("AxeCharge",100,"FireHitCharge4")
 		TNT1 A 0 A_Recoil(-2)
 		AXEG AAA 0 A_FireCustomMissile("ChargeAxeAttack",0,0,0,0)
 		Goto FireEndCharge3
@@ -242,17 +236,17 @@ ACTOR 64FireAxeModern : Brutal64Weapon
 		AXEG AAAA 0 A_FireCustomMissile("ChargeAxeAttack",0,0,0,0)
 		Goto FireEndCharge4
 	FireHitBerserk:
-		AXEG J 1 A_SetPitch(pitch+1.2, SPF_INTERPOLATE)
-		AXEG A 0 A_JumpIfInventory("AxeCharge", 25, "FireHitBerserkCharge2")
+		AXEG J 1 A_SetPitch(pitch+1.2,SPF_INTERPOLATE)
+		AXEG A 0 A_JumpIfInventory("AxeCharge",25,"FireHitBerserkCharge2")
 		AXEG A 0 A_FireCustomMissile("SuperAxeAttack",0,0,0,0)
 		Goto FireEnd
 	FireHitBerserkCharge2:
-		AXEG A 0 A_JumpIfInventory("AxeCharge", 50, "FireHitBerserkCharge3")
+		AXEG A 0 A_JumpIfInventory("AxeCharge",50,"FireHitBerserkCharge3")
 		TNT1 A 0 A_Recoil(-1)
 		AXEG AA 0 A_FireCustomMissile("SuperAxeAttack",0,0,0,0)
 		Goto FireEndCharge2
 	FireHitBerserkCharge3:
-		AXEG A 0 A_JumpIfInventory("AxeCharge", 100, "FireHitBerserkCharge4")
+		AXEG A 0 A_JumpIfInventory("AxeCharge",100,"FireHitBerserkCharge4")
 		TNT1 A 0 A_Recoil(-2)
 		AXEG AAA 0 A_FireCustomMissile("SuperAxeAttack",0,0,0,0)
 		Goto FireEndCharge3
@@ -261,64 +255,64 @@ ACTOR 64FireAxeModern : Brutal64Weapon
 		AXEG AAAA 0 A_FireCustomMissile("SuperAxeAttack",0,0,0,0)
 		Goto FireEndCharge4
 	FireEnd:
-		TNT1 A 0 A_TakeInventory("AxeCharge", 0x7FFFFFFF)
-		AXEG K 1 A_SetPitch(pitch+1.5, SPF_INTERPOLATE)
-		AXEG L 1 A_SetPitch(pitch+1.6, SPF_INTERPOLATE)
-		AXEG M 1 A_SetPitch(pitch+1.7, SPF_INTERPOLATE)
+		TNT1 A 0 A_TakeInventory("AxeCharge",0x7FFFFFFF)
+		AXEG K 1 A_SetPitch(pitch+1.5,SPF_INTERPOLATE)
+		AXEG L 1 A_SetPitch(pitch+1.6,SPF_INTERPOLATE)
+		AXEG M 1 A_SetPitch(pitch+1.7,SPF_INTERPOLATE)
 		TNT1 A 4
 		AXER DCBA 1
 		Goto Ready
 	FireEndCharge2:
-		TNT1 A 0 A_TakeInventory("AxeCharge", 0x7FFFFFFF)
-		AXEG K 1 A_SetPitch(pitch+1.5, SPF_INTERPOLATE)
-		AXEG L 1 A_SetPitch(pitch+1.7, SPF_INTERPOLATE)
-		AXEG M 1 A_SetPitch(pitch+1.9, SPF_INTERPOLATE)
+		TNT1 A 0 A_TakeInventory("AxeCharge",0x7FFFFFFF)
+		AXEG K 1 A_SetPitch(pitch+1.5,SPF_INTERPOLATE)
+		AXEG L 1 A_SetPitch(pitch+1.7,SPF_INTERPOLATE)
+		AXEG M 1 A_SetPitch(pitch+1.9,SPF_INTERPOLATE)
 		TNT1 A 6
 		AXER DCBA 1
 		Goto Ready
 	FireEndCharge3:
-		TNT1 A 0 A_TakeInventory("AxeCharge", 0x7FFFFFFF)
-		AXEG K 1 A_SetPitch(pitch+1.5, SPF_INTERPOLATE)
-		AXEG L 1 A_SetPitch(pitch+2.0, SPF_INTERPOLATE)
-		AXEG M 1 A_SetPitch(pitch+2.5, SPF_INTERPOLATE)
+		TNT1 A 0 A_TakeInventory("AxeCharge",0x7FFFFFFF)
+		AXEG K 1 A_SetPitch(pitch+1.5,SPF_INTERPOLATE)
+		AXEG L 1 A_SetPitch(pitch+2.0,SPF_INTERPOLATE)
+		AXEG M 1 A_SetPitch(pitch+2.5,SPF_INTERPOLATE)
 		TNT1 AA 8
 		AXER DCBA 1
 		Goto Ready
 	FireEndCharge4:
-		TNT1 A 0 A_TakeInventory("AxeCharge", 0x7FFFFFFF)
-		AXEG K 1 A_SetPitch(pitch+1.5, SPF_INTERPOLATE)
-		AXEG L 1 A_SetPitch(pitch+2.5, SPF_INTERPOLATE)
-		AXEG M 1 A_SetPitch(pitch+3.5, SPF_INTERPOLATE)
+		TNT1 A 0 A_TakeInventory("AxeCharge",0x7FFFFFFF)
+		AXEG K 1 A_SetPitch(pitch+1.5,SPF_INTERPOLATE)
+		AXEG L 1 A_SetPitch(pitch+2.5,SPF_INTERPOLATE)
+		AXEG M 1 A_SetPitch(pitch+3.5,SPF_INTERPOLATE)
 		TNT1 AA 12
 		AXER DCBA 1
 		Goto Ready
 	AltFire:
-		AXEG A 0 A_JumpIfInventory("PowerStrength", 1, "AltFireBerserked")
+		AXEG A 0 A_JumpIfInventory("PowerStrength",1,"AltFireBerserked")
 		AXEG ABCD 2
-		TNT1 A 0 A_PlaySound("weapons/axeswing", CHAN_WEAPON)
-		TNT1 A 0 A_SetPitch(pitch-1.2, SPF_INTERPOLATE)
+		TNT1 A 0 A_PlaySound("weapons/axeswing",CHAN_WEAPON)
+		TNT1 A 0 A_SetPitch(pitch-1.2,SPF_INTERPOLATE)
 		AXEB ABCD 1
-		TNT1 A 0 A_SetPitch(pitch-1.4, SPF_INTERPOLATE)
+		TNT1 A 0 A_SetPitch(pitch-1.4,SPF_INTERPOLATE)
 		TNT1 A 0 A_FireCustomMissile("AxePushAway",0,0,0,-5)
 		AXEB F 2 A_Stop
 		TNT1 A 0 A_Recoil(5)
-		TNT1 A 0 A_SetPitch(pitch+1.4, SPF_INTERPOLATE)
+		TNT1 A 0 A_SetPitch(pitch+1.4,SPF_INTERPOLATE)
 		AXEB DCBA 1
-		TNT1 A 0 A_SetPitch(pitch+1.2, SPF_INTERPOLATE)
+		TNT1 A 0 A_SetPitch(pitch+1.2,SPF_INTERPOLATE)
 		AXEG DCBA 2
 		Goto Ready
 	AltFireBerserked:
 		AXEG ABCD 2
-		TNT1 A 0 A_PlaySound("weapons/axeswing", CHAN_WEAPON)
-		TNT1 A 0 A_SetPitch(pitch-1.2, SPF_INTERPOLATE)
+		TNT1 A 0 A_PlaySound("weapons/axeswing",CHAN_WEAPON)
+		TNT1 A 0 A_SetPitch(pitch-1.2,SPF_INTERPOLATE)
 		AXEB ABCD 1
-		TNT1 A 0 A_SetPitch(pitch-1.4, SPF_INTERPOLATE)
+		TNT1 A 0 A_SetPitch(pitch-1.4,SPF_INTERPOLATE)
 		TNT1 A 0 A_FireCustomMissile("AxeFUCKOFF",0,0,0,-5)
 		AXEB F 2 A_Stop
 		TNT1 A 0 A_Recoil(5)
-		TNT1 A 0 A_SetPitch(pitch+1.4, SPF_INTERPOLATE)
+		TNT1 A 0 A_SetPitch(pitch+1.4,SPF_INTERPOLATE)
 		AXEB DCBA 1
-		TNT1 A 0 A_SetPitch(pitch+1.2, SPF_INTERPOLATE)
+		TNT1 A 0 A_SetPitch(pitch+1.2,SPF_INTERPOLATE)
 		AXEG DCBA 2
 		Goto Ready
 	Reload:
@@ -334,8 +328,7 @@ ACTOR 64FireAxeModern : Brutal64Weapon
 		AX2G DD 2 A_WeaponReady
 		AX2G CBA 1 A_WeaponReady
 		TNT1 A 0 A_PlaySound("player/cyborg/fist",3)
-		AXEG C 2 A_WeaponReady
-		AXEG CBA 2 A_WeaponReady
+		AXEG CCBA 2 A_WeaponReady
 		Goto Ready
 	}
 }
@@ -384,20 +377,18 @@ ACTOR 64FireAxeTactical : Brutal64Weapon
 		AXEP A -1
 		Stop
 	Select:
-		TNT1 AAAAAAAAAA 0 A_Raise
 		TNT1 A 0 A_PlaySound("weapons/axedraw")
-		Goto SelectAnimation
-	SelectAnimation:
-		AXER DCBA 1
-		Goto Ready
+		AXER DCBA 1 Offset(0,32)
+		TNT1 A 0 A_Raise
+		Wait
 	Deselect:
 		TNT1 A 0 A_ZoomFactor(1.0)
 		TNT1 A 0 A_Takeinventory("WeaponSpecialAction",0)
 		TNT1 A 0 A_Takeinventory("TossMine",0)
 		TNT1 A 0 A_Takeinventory("PlaceMine",0)
 		TNT1 A 0 A_Takeinventory("Kicking",0)
-		AXER ABCD 1
 		TNT1 A 0 A_StopSound(CHAN_WEAPON)
+		AXER ABCD 1
 		TNT1 A 1 A_Lower
 		Wait
 	v1Ready:
@@ -408,28 +399,26 @@ ACTOR 64FireAxeTactical : Brutal64Weapon
 		AXEG AA 1 A_WeaponReady(WRF_ALLOWRELOAD)
 		loop
 	Fire:
-		AXEG ABC 2 A_Stop
-		AXEG DEF 2 A_Stop
-		AXEG G 2 A_Stop
+		AXEG ABCDEFG 2 A_Stop
 	Hold:
-		TNT1 A 1 A_GiveInventory("Stamina", 1)
+		TNT1 A 1 A_GiveInventory("Stamina",1)
 		TNT1 A 0 A_GiveInventory("AxeCharge",1)
 		TNT1 A 0 A_JumpIfInventory("Stamina",100,"AxeTired")
 		TNT1 A 0 A_Refire
 		AXEG H 1
-		AXEG I 1 A_PlaySound("weapons/axeswing", CHAN_WEAPON)
-		AXEG A 0 A_JumpIfInventory("PowerStrength", 1, "FireHitBerserk")
-		AXEG J 1 A_SetPitch(pitch+1.2, SPF_INTERPOLATE)
-		AXEG A 0 A_JumpIfInventory("AxeCharge", 25, "FireHitCharge2")
+		AXEG I 1 A_PlaySound("weapons/axeswing",CHAN_WEAPON)
+		AXEG A 0 A_JumpIfInventory("PowerStrength",1,"FireHitBerserk")
+		AXEG J 1 A_SetPitch(pitch+1.2,SPF_INTERPOLATE)
+		AXEG A 0 A_JumpIfInventory("AxeCharge",25,"FireHitCharge2")
 		AXEG A 0 A_FireCustomMissile("ChargeAxeAttack",0,0,0,0)
 		Goto FireEnd
 	FireHitCharge2:
-		AXEG A 0 A_JumpIfInventory("AxeCharge", 50, "FireHitCharge3")
+		AXEG A 0 A_JumpIfInventory("AxeCharge",50,"FireHitCharge3")
 		TNT1 A 0 A_Recoil(-1)
 		AXEG AA 0 A_FireCustomMissile("ChargeAxeAttack",0,0,0,0)
 		Goto FireEndCharge2
 	FireHitCharge3:
-		AXEG A 0 A_JumpIfInventory("AxeCharge", 90, "FireHitCharge4")
+		AXEG A 0 A_JumpIfInventory("AxeCharge",90,"FireHitCharge4")
 		TNT1 A 0 A_Recoil(-2)
 		AXEG AAA 0 A_FireCustomMissile("ChargeAxeAttack",0,0,0,0)
 		Goto FireEndCharge3
@@ -438,17 +427,17 @@ ACTOR 64FireAxeTactical : Brutal64Weapon
 		AXEG AAAA 0 A_FireCustomMissile("ChargeAxeAttack",0,0,0,0)
 		Goto FireEndCharge4
 	FireHitBerserk:
-		AXEG J 1 A_SetPitch(pitch+1.2, SPF_INTERPOLATE)
-		AXEG A 0 A_JumpIfInventory("AxeCharge", 25, "FireHitBerserkCharge2")
+		AXEG J 1 A_SetPitch(pitch+1.2,SPF_INTERPOLATE)
+		AXEG A 0 A_JumpIfInventory("AxeCharge",25,"FireHitBerserkCharge2")
 		AXEG A 0 A_FireCustomMissile("SuperAxeAttack",0,0,0,0)
 		Goto FireEnd
 	FireHitBerserkCharge2:
-		AXEG A 0 A_JumpIfInventory("AxeCharge", 50, "FireHitBerserkCharge3")
+		AXEG A 0 A_JumpIfInventory("AxeCharge",50,"FireHitBerserkCharge3")
 		TNT1 A 0 A_Recoil(-1)
 		AXEG AA 0 A_FireCustomMissile("SuperAxeAttack",0,0,0,0)
 		Goto FireEndCharge2
 	FireHitBerserkCharge3:
-		AXEG A 0 A_JumpIfInventory("AxeCharge", 90, "FireHitBerserkCharge4")
+		AXEG A 0 A_JumpIfInventory("AxeCharge",90,"FireHitBerserkCharge4")
 		TNT1 A 0 A_Recoil(-2)
 		AXEG AAA 0 A_FireCustomMissile("SuperAxeAttack",0,0,0,0)
 		Goto FireEndCharge3
@@ -457,75 +446,75 @@ ACTOR 64FireAxeTactical : Brutal64Weapon
 		AXEG AAAA 0 A_FireCustomMissile("SuperAxeAttack",0,0,0,0)
 		Goto FireEndCharge4
 	FireEnd:
-		TNT1 A 0 A_TakeInventory("AxeCharge", 0x7FFFFFFF)
-		AXEG K 1 A_SetPitch(pitch+1.5, SPF_INTERPOLATE)
-		AXEG L 1 A_SetPitch(pitch+1.6, SPF_INTERPOLATE)
-		AXEG M 1 A_SetPitch(pitch+1.7, SPF_INTERPOLATE)
+		TNT1 A 0 A_TakeInventory("AxeCharge",0x7FFFFFFF)
+		AXEG K 1 A_SetPitch(pitch+1.5,SPF_INTERPOLATE)
+		AXEG L 1 A_SetPitch(pitch+1.6,SPF_INTERPOLATE)
+		AXEG M 1 A_SetPitch(pitch+1.7,SPF_INTERPOLATE)
 		TNT1 A 4
 		AXER DCBA 1
 		Goto Ready
 	FireEndCharge2:
-		TNT1 A 0 A_TakeInventory("AxeCharge", 0x7FFFFFFF)
-		AXEG K 1 A_SetPitch(pitch+1.5, SPF_INTERPOLATE)
-		AXEG L 1 A_SetPitch(pitch+1.7, SPF_INTERPOLATE)
-		AXEG M 1 A_SetPitch(pitch+1.9, SPF_INTERPOLATE)
+		TNT1 A 0 A_TakeInventory("AxeCharge",0x7FFFFFFF)
+		AXEG K 1 A_SetPitch(pitch+1.5,SPF_INTERPOLATE)
+		AXEG L 1 A_SetPitch(pitch+1.7,SPF_INTERPOLATE)
+		AXEG M 1 A_SetPitch(pitch+1.9,SPF_INTERPOLATE)
 		TNT1 A 6
 		AXER DCBA 1
 		Goto Ready
 	FireEndCharge3:
-		TNT1 A 0 A_TakeInventory("AxeCharge", 0x7FFFFFFF)
-		AXEG K 1 A_SetPitch(pitch+1.5, SPF_INTERPOLATE)
-		AXEG L 1 A_SetPitch(pitch+2.0, SPF_INTERPOLATE)
-		AXEG M 1 A_SetPitch(pitch+2.5, SPF_INTERPOLATE)
+		TNT1 A 0 A_TakeInventory("AxeCharge",0x7FFFFFFF)
+		AXEG K 1 A_SetPitch(pitch+1.5,SPF_INTERPOLATE)
+		AXEG L 1 A_SetPitch(pitch+2.0,SPF_INTERPOLATE)
+		AXEG M 1 A_SetPitch(pitch+2.5,SPF_INTERPOLATE)
 		TNT1 AA 8
 		AXER DCBA 1
 		Goto Ready
 	FireEndCharge4:
-		TNT1 A 0 A_TakeInventory("AxeCharge", 0x7FFFFFFF)
-		AXEG K 1 A_SetPitch(pitch+1.5, SPF_INTERPOLATE)
-		AXEG L 1 A_SetPitch(pitch+2.5, SPF_INTERPOLATE)
-		AXEG M 1 A_SetPitch(pitch+3.5, SPF_INTERPOLATE)
+		TNT1 A 0 A_TakeInventory("AxeCharge",0x7FFFFFFF)
+		AXEG K 1 A_SetPitch(pitch+1.5,SPF_INTERPOLATE)
+		AXEG L 1 A_SetPitch(pitch+2.5,SPF_INTERPOLATE)
+		AXEG M 1 A_SetPitch(pitch+3.5,SPF_INTERPOLATE)
 		TNT1 AA 12
 		AXER DCBA 1
 		Goto Ready
 	AxeTired:
-		TNT1 A 0 A_TakeInventory("AxeCharge", 0x7FFFFFFF)
+		TNT1 A 0 A_TakeInventory("AxeCharge",0x7FFFFFFF)
 		TNT1 A 0 A_Print("Not enough stamina!",1)
 		TNT1 A 0 A_PlaySound("Tired",2)
 		AXER DCBAAAAAAA 2
 		AXER AAAAAA 3
 		Goto Ready
 	AltFire:
-		AXEG A 0 A_JumpIfInventory("PowerStrength", 1, "AltFireBerserked")
+		AXEG A 0 A_JumpIfInventory("PowerStrength",1,"AltFireBerserked")
 		AXEG ABCD 2
 		TNT1 A 0 A_JumpIfInventory("Stamina",91,"Tired")
 		TNT1 A 0 A_GiveInventory("Stamina",9)
-		TNT1 A 0 A_PlaySound("weapons/axeswing", CHAN_WEAPON)
-		TNT1 A 0 A_SetPitch(pitch-1.2, SPF_INTERPOLATE)
+		TNT1 A 0 A_PlaySound("weapons/axeswing",CHAN_WEAPON)
+		TNT1 A 0 A_SetPitch(pitch-1.2,SPF_INTERPOLATE)
 		AXEB ABCD 1
-		TNT1 A 0 A_SetPitch(pitch-1.4, SPF_INTERPOLATE)
+		TNT1 A 0 A_SetPitch(pitch-1.4,SPF_INTERPOLATE)
 		TNT1 A 0 A_FireCustomMissile("AxePushAway",0,0,0,-5)
 		AXEB F 2 A_Stop
 		TNT1 A 0 A_Recoil(5)
-		TNT1 A 0 A_SetPitch(pitch+1.4, SPF_INTERPOLATE)
+		TNT1 A 0 A_SetPitch(pitch+1.4,SPF_INTERPOLATE)
 		AXEB DCBA 1
-		TNT1 A 0 A_SetPitch(pitch+1.2, SPF_INTERPOLATE)
+		TNT1 A 0 A_SetPitch(pitch+1.2,SPF_INTERPOLATE)
 		AXEG DCBA 2
 		Goto Ready
 	AltFireBerserked:
 		AXEG ABCD 2
 		TNT1 A 0 A_JumpIfInventory("Stamina",91,"AxeTired")
 		TNT1 A 0 A_GiveInventory("Stamina",9)
-		TNT1 A 0 A_PlaySound("weapons/axeswing", CHAN_WEAPON)
-		TNT1 A 0 A_SetPitch(pitch-1.2, SPF_INTERPOLATE)
+		TNT1 A 0 A_PlaySound("weapons/axeswing",CHAN_WEAPON)
+		TNT1 A 0 A_SetPitch(pitch-1.2,SPF_INTERPOLATE)
 		AXEB ABCD 1
-		TNT1 A 0 A_SetPitch(pitch-1.4, SPF_INTERPOLATE)
+		TNT1 A 0 A_SetPitch(pitch-1.4,SPF_INTERPOLATE)
 		TNT1 A 0 A_FireCustomMissile("AxeFUCKOFF",0,0,0,-5)
 		AXEB F 2 A_Stop
 		TNT1 A 0 A_Recoil(5)
-		TNT1 A 0 A_SetPitch(pitch+1.4, SPF_INTERPOLATE)
+		TNT1 A 0 A_SetPitch(pitch+1.4,SPF_INTERPOLATE)
 		AXEB DCBA 1
-		TNT1 A 0 A_SetPitch(pitch+1.2, SPF_INTERPOLATE)
+		TNT1 A 0 A_SetPitch(pitch+1.2,SPF_INTERPOLATE)
 		AXEG DCBA 2
 		Goto Ready
 	Reload:
@@ -541,8 +530,7 @@ ACTOR 64FireAxeTactical : Brutal64Weapon
 		AX2G DD 2 A_WeaponReady
 		AX2G CBA 1 A_WeaponReady
 		TNT1 A 0 A_PlaySound("player/cyborg/fist",3)
-		AXEG C 2 A_WeaponReady
-		AXEG CBA 2 A_WeaponReady
+		AXEG CCBA 2 A_WeaponReady
 		Goto Ready
 	}
 }
@@ -646,9 +634,8 @@ ACTOR AxeSparks : SSawPuff
 	}
 }
 
-
 ACTOR AxeCharge : Ammo
 {
-  Inventory.MaxAmount 100
-  Inventory.Icon "AXEPZ0"
+Inventory.MaxAmount 100
+Inventory.Icon "AXEPZ0"
 }

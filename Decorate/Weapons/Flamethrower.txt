@@ -236,12 +236,9 @@ Inventory.ForbiddenTo "64DoomPlayer","Modern"
 		Wait
 	Select:
 		TNT1 A 0 A_PlaySound("Flamethrower/Ready")
-		TNT1 AAAAAAAAAA 0 A_Raise
-		Goto SelectAnimation
-	SelectAnimation:
-		FR4M ABCDE 1
-		TNT1 A 0 A_GunFlash
-		Goto Ready
+		FR4M ABCDE 1 Offset(0,32)
+		TNT1 A 0 A_Raise
+		Wait
 	v1Ready:
 	Ready:
 		FLMG A 1 A_WeaponReady
@@ -348,12 +345,9 @@ Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","64DoomPla
 		Wait
 	Select:
 		TNT1 A 0 A_PlaySound("Flamethrower/Ready")
-		TNT1 AAAAAAAAAA 0 A_Raise
-		Goto SelectAnimation
-	SelectAnimation:
-		FR4M ABCDE 1
-		TNT1 A 0 A_GunFlash
-		Goto Ready
+		FR4M ABCDE 1 Offset(0,32)
+		TNT1 A 0 A_Raise
+		Wait
 	v1Ready:
 	Ready:
 		FLMG A 1 A_WeaponReady
