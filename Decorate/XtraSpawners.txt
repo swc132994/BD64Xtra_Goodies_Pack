@@ -215,34 +215,6 @@ Scale 0.82
 	}
 }
 
-Actor Dyn_ClipBoxReplacer replaces ClipBox
-{
-Scale 0.82
-	States
-	{
-	Spawn:
-		AMMO A 0 NoDelay A_JumpIf(CallACS("D64WeaponsOnlyReplacer")==1,"SpawnClip")	//if D64 weapons only enabled spawn Chaingun
-		TNT1 A 0 A_JumpIf(CallACS("ChaingunNewRandomACS")==0,"SpawnClip")
-		TNT1 A 0 A_JumpIf(CallACS("ChaingunNewRandomACS")==1,"SpawnClip")
-		TNT1 A 0 A_JumpIf(CallACS("ChaingunNewRandomACS")==2,"SpawnClip")
-		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS")==0,"SpawnBoth")
-		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS")==1,"SpawnBothRarerNails")
-		TNT1 A 0 A_Jump(32,"SpawnHighAmmo") //(12.5%)
-	SpawnClip:
-		TNT1 A 1 A_SpawnItemEx("64ClipBox",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
-		Stop
-	SpawnHighAmmo:
-		TNT1 A 1 A_SpawnItemEx("64HighCaliberBox",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
-		Stop
-	SpawnBothRarerNails:
-		TNT1 A 0 A_Jump(128,"SpawnClip")
-	SpawnBoth:
-		TNT1 A 0 A_SpawnItemEx("64ClipBox",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
-		TNT1 A 1 A_SpawnItemEx("64HighCaliberBox",random(-14,14),-14,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
-		Stop
-	}
-}
-
 Actor Dyn_ShellReplacer replaces Shell
 {
 Scale 0.82

@@ -74,10 +74,8 @@ Speed 35
 Gravity 0.2
 Radius 4
 Height 4
-Species "Marines"
 Decal "BigScorch"
 +EXTREMEDEATH
-+THRUSPECIES
 -DEHEXPLOSION
 -ROCKETTRAIL
 -NOGRAVITY
@@ -695,23 +693,5 @@ Weapon.SisterWeapon "64LMGTactical"
 		TNT1 A 0 A_Takeinventory("RocketAmmo",1,TIF_NOTAKEINFINITE)
 		TNT1 A 0 A_GiveInventory("GLReloading",1)
 		Goto ResumeFire
-	}
-}
-
-Actor 64HighCaliberBox : Ammo
-{
-Scale 0.82
-Inventory.PickupSound "IPICK"
-Inventory.PickupMessage "Picked up a high-caliber ammo box."
-Inventory.Amount 40
-Inventory.MaxAmount 100
-Ammo.BackpackAmount 20
-Ammo.BackpackMaxAmount 250
-Inventory.Icon "HI04X0"
-	states
-	{
-	Spawn:
-		HI04 X -1
-		Stop
 	}
 }
