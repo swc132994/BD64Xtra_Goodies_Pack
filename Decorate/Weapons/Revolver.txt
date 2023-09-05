@@ -145,75 +145,75 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 	States
 	{
 	MineThrowFlash:
-		REVD ABCD 1
+		DARD ABCD 1
 		TNT1 A 18
-		REVD DCBA 1
+		DARD DCBA 1
 		Stop
 	KickingFlash:
-		REVD ABCD 1
-		REVD D 8
-		REVD DCBA 1
+		DARD ABCD 1
+		DARD D 8
+		DARD DCBA 1
 		Stop
 	AirKickingFlash:
-		REVD ABDC 1
-		REVD D 10
-		REVD DCBA 1
+		DARD ABDC 1
+		DARD D 10
+		DARD DCBA 1
 		Stop
 	SlideKickingStart:
-		REVD ABDC 1
-		REVD D 18
+		DARD ABDC 1
+		DARD D 18
 	SlideKickingEnd:
-		REVD D 6
-		REVD DCBA 1
+		DARD D 6
+		DARD DCBA 1
 		Stop
 	v1Ready:
 	Ready:
 		TNT1 A 0 A_JumpIfInventory("Kicking",1,"DoKick")
 		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
-		REVG D 0 A_JumpIfInventory("RevolverAlt",1,2)
-		REVG A 0
-		REVG "#" 1 A_WeaponReady(WRF_ALLOWRELOAD)
+		DARG D 0 A_JumpIfInventory("RevolverAlt",1,2)
+		DARG A 0
+		DARG "#" 1 A_WeaponReady(WRF_ALLOWRELOAD)
 		Loop
 	Fidget:
 		TNT1 A 0 A_Jump(64,"AltFidget")
-		REVI A 1 A_WeaponReady
-		REVI B 1 Offset(0,34) A_WeaponReady
-		REVI C 1 Offset(0,35) A_WeaponReady
-		REVI D 1 Offset(0,36) A_WeaponReady
-		REVI E 1 Offset(0,37) A_PlaySound("REVCOK1",0)
-		REVI F 1 Offset(0,38) A_WeaponReady
-		REVI FF 10 A_WeaponReady
-		REVI E 1 Offset(0,37) A_PlaySound("REVCOK2",0)
-		REVI D 1 Offset(0,36) A_WeaponReady
-		REVI C 1 Offset(0,35) A_WeaponReady
-		REVI B 1 Offset(0,34) A_WeaponReady
-		REVI A 1 A_WeaponReady
+		DARI A 1 A_WeaponReady
+		DARI B 1 Offset(0,34) A_WeaponReady
+		DARI C 1 Offset(0,35) A_WeaponReady
+		DARI D 1 Offset(0,36) A_WeaponReady
+		DARI E 1 Offset(0,37) A_PlaySound("REVCOK1",0)
+		DARI F 1 Offset(0,38) A_WeaponReady
+		DARI FF 10 A_WeaponReady
+		DARI E 1 Offset(0,37) A_PlaySound("REVCOK2",0)
+		DARI D 1 Offset(0,36) A_WeaponReady
+		DARI C 1 Offset(0,35) A_WeaponReady
+		DARI B 1 Offset(0,34) A_WeaponReady
+		DARI A 1 A_WeaponReady
 		Goto Ready
 	AltFidget:
-		REVR ABCD 1 A_WeaponReady
+		DARR ABCD 1 A_WeaponReady
 		TNT1 A 0 A_PlaySound("REVREL1",1)
-		REVR EFGH 1  A_WeaponReady
-		REVR II 5 A_WeaponReady
-		REVR JKLM 1 A_WeaponReady
+		DARR EFGH 1  A_WeaponReady
+		DARR II 5 A_WeaponReady
+		DARR JKLM 1 A_WeaponReady
 		TNT1 A 0 A_PlaySound("REVREL3",1)
-		REVR STUVWXYZ 1 A_WeaponReady
+		DARR STUVWXYZ 1 A_WeaponReady
 		TNT1 A 0 A_JumpIfInventory("RevolverAlt",1,"TriggerDown")
 		Goto Ready
 	Select:
 		TNT1 A 0 A_JumpIfInventory("RevolverAmmo",1,"Select2")
 		TNT1 A 0 A_PlaySound("REVSEL",CHAN_WEAPON)
-		REVD DCBA 1 Offset(0,32)	//empty select
+		DARD DCBA 1 Offset(0,32)	//empty select
 		TNT1 A 0 A_Raise
 		wait
 	Select2:
 		TNT1 A 0 A_PlaySound("REVREL3",CHAN_WEAPON)
-		REVS ABCDEF 1 Offset(0,32)	//normal select
+		DARS ABCDEF 1 Offset(0,32)	//normal select
 		TNT1 A 0 A_Raise
 		wait
 	NoAmmo:
-		REVG A 1
-		REVG A 5 A_PlaySound("DRYFIRE",1)
+		DARG A 1
+		DARG A 5 A_PlaySound("DRYFIRE",1)
 		TNT1 A 0 A_JumpIfInventory("RevolverAlt",1,"TriggerDown")
 		Goto Ready
 	Deselect:
@@ -223,16 +223,16 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		TNT1 A 0 A_Takeinventory("PlaceMine",0)
 		TNT1 A 0 A_Takeinventory("Kicking",0)
 		TNT1 A 0 A_Takeinventory("RevolverAlt",0)
-		REVD ABCD 1
+		DARD ABCD 1
 		TNT1 A 1 A_Lower
 		Wait
 	Fire:
 		TNT1 A 0 A_JumpIfInventory("RevolverAlt",1,"AmmoCheck")
 		TNT1 A 0 A_PlaySound("REVCOK1",0)
-		REVG BCCD 1 A_WeaponReady(WRF_NOSWITCH)
+		DARG BCCD 1 A_WeaponReady(WRF_NOSWITCH)
 		TNT1 A 0 A_ReFire("AmmoCheck")
 		TNT1 A 0 A_PlaySound("REVCOK2",0)
-		REVG CB 1 A_WeaponReady(WRF_NOSWITCH)
+		DARG CB 1 A_WeaponReady(WRF_NOSWITCH)
 		Goto Ready
 	ResumeReadyFire:
 		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
@@ -242,88 +242,88 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		TNT1 A 0 A_PlaySound("REVFIRE",1)
 		TNT1 A 0 A_AlertMonsters
 		TNT1 A 0 A_ZoomFactor(0.95)
-		REVF AB 1 Bright
+		DARF AB 1 Bright
 		TNT1 A 0 A_ZoomFactor(1.0)
-		REVF C 3 A_SetPitch(pitch-2,SPF_INTERPOLATE)
-		REVF D 1 A_SetPitch(pitch+0.8,SPF_INTERPOLATE)
-		REVF E 1 A_SetPitch(pitch+0.6,SPF_INTERPOLATE)
-		REVF F 1 A_SetPitch(pitch+0.4,SPF_INTERPOLATE)
-		REVG A 1 A_SetPitch(pitch+0.2,SPF_INTERPOLATE)
+		DARF C 3 A_SetPitch(pitch-2,SPF_INTERPOLATE)
+		DARF D 1 A_SetPitch(pitch+0.8,SPF_INTERPOLATE)
+		DARF E 1 A_SetPitch(pitch+0.6,SPF_INTERPOLATE)
+		DARF F 1 A_SetPitch(pitch+0.4,SPF_INTERPOLATE)
+		DARG A 1 A_SetPitch(pitch+0.2,SPF_INTERPOLATE)
 		TNT1 A 0 A_JumpIfInventory("RevolverAlt",1,"TriggerDown")
 		Goto Ready
 	TriggerDown:
-		REVI A 1
-		REVI B 1 Offset(0,34)
-		REVI C 1 Offset(0,35)
-		REVI D 1 Offset(0,36)
-		REVI E 1 Offset(0,37) A_PlaySound("REVCOK1",0)
-		REVI F 1 Offset(0,38)
-		REVI G 1 Offset(0,37)
-		REVI H 1 Offset(0,36)
-		REVI I 1 Offset(0,35)
-		REVI J 1 Offset(0,34)
+		DARI A 1
+		DARI B 1 Offset(0,34)
+		DARI C 1 Offset(0,35)
+		DARI D 1 Offset(0,36)
+		DARI E 1 Offset(0,37) A_PlaySound("REVCOK1",0)
+		DARI F 1 Offset(0,38)
+		DARI G 1 Offset(0,37)
+		DARI H 1 Offset(0,36)
+		DARI I 1 Offset(0,35)
+		DARI J 1 Offset(0,34)
 		TNT1 A 0 A_Refire
 		Goto Ready
 	AltFire:
 		TNT1 A 0 A_JumpIfInventory("PowerStrength",1,"FanningFire")
 		TNT1 A 0 A_JumpIfInventory("RevolverAlt",1,"StopAlt")
 		TNT1 A 0 A_GiveInventory("RevolverAlt",1)
-		REVI A 1
-		REVI B 1 Offset(0,34)
-		REVI C 1 Offset(0,35)
-		REVI D 1 Offset(0,36)
-		REVI E 1 Offset(0,37) A_PlaySound("REVCOK1",0)
-		REVI F 1 Offset(0,38) A_Print("Cocked",2)
-		REVI G 1 Offset(0,37)
-		REVI H 1 Offset(0,36)
-		REVI I 1 Offset(0,35)
-		REVI J 1 Offset(0,34)
+		DARI A 1
+		DARI B 1 Offset(0,34)
+		DARI C 1 Offset(0,35)
+		DARI D 1 Offset(0,36)
+		DARI E 1 Offset(0,37) A_PlaySound("REVCOK1",0)
+		DARI F 1 Offset(0,38) A_Print("Cocked",2)
+		DARI G 1 Offset(0,37)
+		DARI H 1 Offset(0,36)
+		DARI I 1 Offset(0,35)
+		DARI J 1 Offset(0,34)
 		Goto Ready
 	StopAlt:
 		TNT1 A 0 A_TakeInventory("RevolverAlt",1)
-		REVI J 1
-		REVI I 1 Offset(0,34)
-		REVI H 1 Offset(0,35)
-		REVI G 1 Offset(0,36)
-		REVI F 1 Offset(0,37) A_PlaySound("REVCOK2",0)
-		REVI E 1 Offset(0,38) A_Print("Uncocked",2)
-		REVI D 1 Offset(0,37)
-		REVI C 1 Offset(0,36)
-		REVI B 1 Offset(0,35)
-		REVI A 1 Offset(0,34)
+		DARI J 1
+		DARI I 1 Offset(0,34)
+		DARI H 1 Offset(0,35)
+		DARI G 1 Offset(0,36)
+		DARI F 1 Offset(0,37) A_PlaySound("REVCOK2",0)
+		DARI E 1 Offset(0,38) A_Print("Uncocked",2)
+		DARI D 1 Offset(0,37)
+		DARI C 1 Offset(0,36)
+		DARI B 1 Offset(0,35)
+		DARI A 1 Offset(0,34)
 		Goto Ready
 	PreReloadTriggerUp:
-		REVI J 1
-		REVI I 1 Offset(0,34)
-		REVI H 1 Offset(0,35)
-		REVI G 1 Offset(0,36)
-		REVI F 1 Offset(0,37) A_PlaySound("REVCOK2",0)
-		REVI E 1 Offset(0,38)
-		REVI D 1 Offset(0,37)
-		REVI C 1 Offset(0,36)
-		REVI B 1 Offset(0,35)
-		REVI A 1 Offset(0,34)
+		DARI J 1
+		DARI I 1 Offset(0,34)
+		DARI H 1 Offset(0,35)
+		DARI G 1 Offset(0,36)
+		DARI F 1 Offset(0,37) A_PlaySound("REVCOK2",0)
+		DARI E 1 Offset(0,38)
+		DARI D 1 Offset(0,37)
+		DARI C 1 Offset(0,36)
+		DARI B 1 Offset(0,35)
+		DARI A 1 Offset(0,34)
 		TNT1 A 0 A_JumpIfInventory("RevolverAmmo",6,"AltFidget")
 		Goto StartReload
 	Reload:
-		REVG A 1 A_WeaponReady
+		DARG A 1 A_WeaponReady
 		TNT1 A 0 A_JumpIfInventory("64SpeedloaderAmmo",1,"DecideReloadType")
 		Goto Ready
 	DecideReloadType:
 		TNT1 A 0 A_JumpIfInventory("RevolverAlt",1,"PreReloadTriggerUp")
 		TNT1 A 0 A_JumpIfInventory("RevolverAmmo",6,"Fidget")
 	StartReload:
-		REVR ABCD 1 A_WeaponReady
+		DARR ABCD 1 A_WeaponReady
 		TNT1 A 0 A_PlaySound("REVREL1",1)
-		REVR EFGHII 1
-		REVR JKL 1
+		DARR EFGHII 1
+		DARR JKL 1
 		TNT1 A 0 A_JumpIfInventory("PowerStrength",1,6)
 		TNT1 A 0 A_JumpIfInventory("RevolverAmmo",5,5)
 		TNT1 A 0 A_JumpIfInventory("RevolverAmmo",4,4)
 		TNT1 A 0 A_JumpIfInventory("RevolverAmmo",3,"SmartReload") //3 Bullets Ejected
 		TNT1 A 0 A_JumpIfInventory("RevolverAmmo",2,"SmartReload") //4 Bullets Ejected
 		TNT1 A 0 A_JumpIfInventory("RevolverAmmo",1,"SmartReload") //5 Bullets Ejected
-		REVR MNOPR 1
+		DARR MNOPR 1
 		TNT1 A 0 A_JumpIfInventory("PowerStrength",1,"CountinueReload1")
 		TNT1 A 0 A_JumpIfInventory("RevolverAmmo",5,"OneBulletReload")
 		TNT1 A 0 A_JumpIfInventory("RevolverAmmo",4,"TwoBulletsReload")
@@ -354,7 +354,7 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		RFVR RSTUVWXYZ 1
 		RF1R ABCD 1
 		TNT1 A 0 A_PlaySound("REVREL3",1)
-		REVR STUVWXYZ 1
+		DARR STUVWXYZ 1
 		Goto InsertBullets
 	OneBulletReload:
 		RE1R ABCDE 1
@@ -369,7 +369,7 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		RE1R TUVW 2
 		RF1R ABCD 1
 		TNT1 A 0 A_PlaySound("REVREL3",1)
-		REVR STUVWXYZ 1
+		DARR STUVWXYZ 1
 		TNT1 A 0 A_JumpIfInventory("RevolverAlt",1,"TriggerDown")
 		Goto Ready
 	TwoBulletsReload:
@@ -387,7 +387,7 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		RE2R RS 2
 		RF1R BBCD 1
 		TNT1 A 0 A_PlaySound("REVREL3",1)
-		REVR STUVWXYZ 1
+		DARR STUVWXYZ 1
 		TNT1 A 0 A_JumpIfInventory("RevolverAlt",1,"TriggerDown")
 		Goto Ready
 	SmartReload:
@@ -400,19 +400,19 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		"####" IJKLMNOPQR 1
 		Goto CountinueReload1
 	InsertBullets:
-		REVO A 0 A_JumpIfInventory("RevolverAmmo",6,"Refire")
-		REVO A 0 A_JumpIfInventory("64SpeedloaderAmmo",1,2)
+		DARO A 0 A_JumpIfInventory("RevolverAmmo",6,"Refire")
+		DARO A 0 A_JumpIfInventory("64SpeedloaderAmmo",1,2)
 		TNT1 A 0 A_JumpIfInventory("RevolverAlt",1,"TriggerDown")
 		Goto Ready
-		REVO A 0 A_Giveinventory("RevolverAmmo",1)
-		REVO A 0 A_Takeinventory("64SpeedloaderAmmo",1)
+		DARO A 0 A_Giveinventory("RevolverAmmo",1)
+		DARO A 0 A_Takeinventory("64SpeedloaderAmmo",1)
 		Goto InsertBullets
 	Refire:
-		REVO A 0 A_Refire
+		DARO A 0 A_Refire
 		TNT1 A 0 A_JumpIfInventory("RevolverAlt",1,"TriggerDown")
 		Goto Ready
 	Spawn:
-		REVO L -1
+		DARO L -1
 		Stop
 	AmmoCheck:
 		TNT1 A 0 A_JumpIfInventory("NoReloading",1,"NoReload")
@@ -438,11 +438,11 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		Goto ResumeActualFanningFire
 	FanningFire:
 		TNT1 A 0 A_JumpIfInventory("RevolverAlt",1,"StopAlt")
-		REVN ABCDE 1
+		DARN ABCDE 1
 		Goto ActualFanningFire
 	ActualFanningFire:
-		REVN F 2
-		REVN GH 1
+		DARN F 2
+		DARN GH 1
 		Goto FanningAmmoCheck
 	ResumeActualFanningFire:
 		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
@@ -452,13 +452,13 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		TNT1 A 0 A_PlaySound("REVFIRE",1)
 		TNT1 A 0 A_AlertMonsters
 		TNT1 A 0 A_ZoomFactor(0.95)
-		REVN IJ 1 Bright
+		DARN IJ 1 Bright
 		TNT1 A 0 A_ZoomFactor(1.0)
-		REVN K 3 A_SetPitch(pitch-5,SPF_INTERPOLATE)
-		REVN L 1 A_SetPitch(Pitch+0.5,SPF_INTERPOLATE)
-		REVN MN 1 A_SetPitch(Pitch+0.6,SPF_INTERPOLATE)
+		DARN K 3 A_SetPitch(pitch-5,SPF_INTERPOLATE)
+		DARN L 1 A_SetPitch(Pitch+0.5,SPF_INTERPOLATE)
+		DARN MN 1 A_SetPitch(Pitch+0.6,SPF_INTERPOLATE)
 		TNT1 A 0 A_Refire("ActualFanningFire")
-		REVN EDCBA 1
+		DARN EDCBA 1
 		Goto Ready
 	}
 }
