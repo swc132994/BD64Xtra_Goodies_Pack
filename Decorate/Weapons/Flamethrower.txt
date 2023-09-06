@@ -14,31 +14,33 @@ Inventory.PickupSound "WPICK"
 		Stop
 	Pickup:
 		TNT1 A 0 A_JumpIfInventory("IsTacticalClass",1,"Pickup2")
-		TNT1 A 0 A_JumpIfInventory("IsModern",1,"Pickup3")
+		TNT1 A 0 A_JumpIfInventory("IsModern",1,"Pickup2")
 		TNT1 A 0 A_GiveInventory("64Flamethrower",1)
 		Stop
 	Pickup2:
 		TNT1 A 0 A_GiveInventory("64FlamethrowerTACTICAL",1)
-		Stop
-	Pickup3:
-		TNT1 A 0 A_GiveInventory("64FlamethrowerModern",1)
 		Stop
 	DMSpawn:
 		TNT1 A 0 A_ChangeFlag("THRUACTORS",1)
 		TNT1 A 0 A_SpawnItemEx("TeleportationFog")
 		TNT1 A 0 A_SpawnItemEx("64Flamethrower")
 		TNT1 A 0 A_SpawnItemEx("64FlamethrowerTACTICAL")
-		TNT1 A 0 A_SpawnItemEx("64FlamethrowerMODERN")
 		TNT1 A 1050
 		Loop
 	}
+}
+
+Actor SawGasXtra : SawGas Replaces SawGas
+{
+VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
+Inventory.ForbiddenTo "64DoomPlayer"
 }
 
 Actor 64Flamethrower : DoomWeapon
 {
 scale 0.7
 Weapon.SlotNumber 9
-Weapon.AmmoType "RocketAmmo"
+Weapon.AmmoType "SawGas"
 Weapon.AmmoGive 50
 Weapon.AmmoUse 1
 Inventory.PickupMessage "You got the flamethrower!"
@@ -130,19 +132,19 @@ Projectile
 	{
 	Spawn:
 		FRFX A 2
-		FRFX BCD 2 bright A_Explode(5,8,0)
+		FRFX BCD 2 bright A_Explode(1,8,0)
 		TNT1 A 0 A_LowGravity
-		FRFX EFG 2 bright A_Explode(5,16,0)
-		FRFX HIJ 2 bright A_Explode(5,32,0)
-		FRFX KLM 2 bright A_Explode(5,64,0)
+		FRFX EFG 2 bright A_Explode(1,16,0)
+		FRFX HIJ 2 bright A_Explode(1,32,0)
+		FRFX KLM 2 bright A_Explode(1,64,0)
 		FRFX NO 2 bright
 		Stop
 	Death:
 		TNT1 A 0 A_SpawnItemEx("TinyBurningPiece2",random(-25,25),random(-15,15))
 		TNT1 A 0 A_SpawnItemEx("TinyBurningPiece",random(-15,15),random(-15,15))
 		TNT1 A 0 A_CustomMissile("FlamethrowerFireParticles",6,0,random(0,360),2,random(10,90))
-		FRFX HIJ 2 bright A_Explode(5,32,0)
-		FRFX KLM 2 bright A_Explode(5,64,0)
+		FRFX HIJ 2 bright A_Explode(1,32,0)
+		FRFX KLM 2 bright A_Explode(1,64,0)
 		FRFX NO 2 bright
 		Stop
 	}
@@ -153,8 +155,8 @@ Actor 64FlamerFlamesLessEffects : 64FlamerFlames
 	{
 	Death:
 		TNT1 A 0 A_CustomMissile("FlamethrowerFireParticles",6,0,random(0,360),2,random(10,90))
-		FRFX HIJ 2 bright A_Explode(5,32,0)
-		FRFX KLM 2 bright A_Explode(5,64,0)
+		FRFX HIJ 2 bright A_Explode(1,32,0)
+		FRFX KLM 2 bright A_Explode(1,64,0)
 		FRFX NO 2 bright
 		Stop
 	}
@@ -217,9 +219,10 @@ Obituary "%o was cremated by %k's flamethrower."
 Tag "Flamethrower"
 +WEAPON.NOAUTOAIM
 +Weapon.Explosive
++WEAPON.ALT_USES_BOTH
 +INVENTORY.RESTRICTABSOLUTELY
-VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p"
-Inventory.ForbiddenTo "64DoomPlayer","Modern"
+VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
+Inventory.ForbiddenTo "64DoomPlayer"
 	States
 	{
 	Spawn:
@@ -270,7 +273,8 @@ Inventory.ForbiddenTo "64DoomPlayer","Modern"
 		FLMG EA 2
 		Goto Ready
 	AltFire:
-		TNT1 A 0 A_JumpIfInventory("SawGas",1,"FireCannonBall")
+		TNT1 A 0 A_JumpIfInventory("SawGas",10,"FireCannonBall")
+		TNT1 A 0 A_Print("Not Enough Ammo!",1)
 		Goto Ready
 	FireCannonBall:
 		TNT1 A 0 A_SetPitch(pitch-1.2)
@@ -280,120 +284,11 @@ Inventory.ForbiddenTo "64DoomPlayer","Modern"
 		TNT1 A 0 A_PlaySound("Flamethrower/Cannon",1)
 		FLMG C 1 bright A_FireCustomMissile("64FlamerExploder",0,0,0,-8)
 		FLMG B 2 bright A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
-		TNT1 A 0 A_TakeInventory("SawGas",1,TIF_NOTAKEINFINITE)
+		TNT1 A 0 A_TakeInventory("SawGas",10,TIF_NOTAKEINFINITE)
 		TNT1 A 0 A_SetPitch(pitch+1.2)
 		TNT1 A 0 A_ZoomFactor(1.0)
 		FLMG DDDD 2 A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
 		FLMG DDDD 1 A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
-		FLMG EEEE 1 A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
-		FLMG EEEE 2 A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
-		Goto Ready
-	MineThrowFlash:
-		FR4M EDCBA 1
-		TNT1 A 16
-		FR4M ABCDE 1
-		Stop
-	KickingFlash:
-		FR4M EDCB 1
-		FR4M A 8
-		FR4M BCDE 1
-		Stop
-	AirKickingFlash:
-		FR4M EDCB 1
-		FR4M A 10
-		FR4M BCDE 1
-		Stop
-	SlideKickingStart:
-		FR4M EDCB 1
-		FR4M A 17
-	SlideKickingEnd:
-		FR4M A 6
-		FR4M BCDE 1
-		Stop
-	}
-}
-
-Actor 64FlamethrowerModern : Brutal64Weapon
-{
-scale 0.7
-Weapon.SlotNumber 9
-Weapon.AmmoType "RocketAmmo"
-Weapon.AmmoGive 300
-Weapon.AmmoUse 1
-Inventory.PickupMessage "You got the flamethrower!"
-Inventory.PickupSound "WPICK"
-Obituary "%o was cremated by %k's flamethrower."
-Tag "Flamethrower"
-+WEAPON.NOAUTOAIM
-+Weapon.Explosive
-+INVENTORY.RESTRICTABSOLUTELY
-VisibleToPlayerClass "Modern"
-Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","64DoomPlayer"
-	States
-	{
-	Spawn:
-		WFLM A -1
-		Loop
-	Deselect:
-		TNT1 A 0 A_ZoomFactor(1.0)
-		TNT1 A 0 A_Takeinventory("WeaponSpecialAction",0)
-		TNT1 A 0 A_Takeinventory("TossMine",0)
-		TNT1 A 0 A_Takeinventory("PlaceMine",0)
-		TNT1 A 0 A_Takeinventory("Kicking",0)
-		FR4M EDCBA 1
-		TNT1 A 1 A_Lower
-		Wait
-	Select:
-		TNT1 A 0 A_PlaySound("Flamethrower/Ready")
-		FR4M ABCDE 1 Offset(0,32)
-		TNT1 A 0 A_Raise
-		Wait
-	v1Ready:
-	Ready:
-		FLMG A 1 A_WeaponReady
-		TNT1 A 0 A_JumpIfInventory("Kicking",1,"DoKick")
-		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
-		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
-		Loop
-	Fire:
-		TNT1 A 0 A_SetPitch(pitch-1.2)
-		TNT1 A 0 A_ZoomFactor(0.98)
-		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",30,5,40)
-		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
-		FLMG B 1 bright A_FireCustomMissile("64FlamerFlamesLessEffects",0,0,0,0)
-		FLMG C 1 bright A_FireCustomMissile("64FlamerFlames",0,0,0,0)
-		FLMG B 1 bright A_FireCustomMissile("64FlamerFlamesLessEffects",0,0,0,0)
-		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",30,5,40)
-		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
-		FLMG C 1 bright A_FireCustomMissile("64FlamerFlamesLessEffects",0,0,0,0)
-		FLMG B 1 bright A_FireCustomMissile("64FlamerFlamesLessEffects",0,0,0,0)
-		FLMG C 1 bright A_FireCustomMissile("64FlamerFlamesLessEffects",0,0,0,0)
-		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",30,5,40)
-		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
-		FLMG B 1 bright A_FireCustomMissile("64FlamerFlamesLessEffects",0,0,0,0)
-		FLMG C 1 bright A_FireCustomMissile("64FlamerFlamesLessEffects",0,0,0,0)
-		FLMG B 1 bright A_FireCustomMissile("64FlamerFlamesLessEffects",0,1,0,0)
-		TNT1 A 0 A_SetPitch(pitch+1.2)
-		TNT1 A 0 A_ZoomFactor(1.0)
-		FLMG D 2 A_ReFire
-		FLMG EA 2
-		Goto Ready
-	AltFire:
-		TNT1 A 0 A_JumpIfInventory("RocketAmmo",1,"FireCannonBall")
-		Goto Ready
-	FireCannonBall:
-		TNT1 A 0 A_SetPitch(pitch-1.2)
-		TNT1 A 0 A_ZoomFactor(0.98)
-		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",30,5,40)
-		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
-		TNT1 A 0 A_PlaySound("Flamethrower/Cannon",1)
-		FLMG C 1 bright A_FireCustomMissile("64FlamerExploder",0,0,0,-8)
-		FLMG B 2 bright A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
-		TNT1 A 0 A_TakeInventory("RocketAmmo",1,TIF_NOTAKEINFINITE)
-		TNT1 A 0 A_SetPitch(pitch+1.2)
-		TNT1 A 0 A_ZoomFactor(1.0)
-		FLMG DDDD 1 A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
-		FLMG DDDD 2 A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
 		FLMG EEEE 1 A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
 		FLMG EEEE 2 A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
 		Goto Ready

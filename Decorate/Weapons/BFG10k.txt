@@ -1,7 +1,7 @@
 Actor BFG10kSpawner : CustomInventory
 {
 Scale 1.0
-Inventory.Pickupmessage "You got the BFG10000!  Hell, yes!"
+Inventory.Pickupmessage "You got the BFG10000!  Hell,yes!"
 Inventory.PickupSound "WPICK"
 	States
 	{
@@ -71,10 +71,10 @@ Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		TNT1 A 0 A_PlaySound("Weapons/BFG10KX",2)
 		10KF A 2 Bright
 		TNT1 A 0 A_ZoomFactor(0.98)
-		TNT1 A 0 A_SetPitch(pitch+1.2, SPF_INTERPOLATE)
-		10KF B 2 Bright A_FireBullets(0, 0, 1, 10, "64BFG10kShot")
+		TNT1 A 0 A_SetPitch(pitch+1.2,SPF_INTERPOLATE)
+		10KF B 2 Bright A_FireBullets(0,0,1,10,"64BFG10kShot")
 		TNT1 A 0 A_ZoomFactor(1.0)
-		TNT1 A 0 A_SetPitch(pitch-1.2, SPF_INTERPOLATE)
+		TNT1 A 0 A_SetPitch(pitch-1.2,SPF_INTERPOLATE)
 		10KF CDE 2 Bright
 		TNT1 A 0 A_ReFire
 		10KE A 1 A_PlaySound("Weapons/BFG10KCool",2)
@@ -122,7 +122,7 @@ Alpha 0.75
 		TNT1 AAAA 0 A_SpawnItemEx("TinyBurningPieceGreen",random(-15,15),random(-15,15))
 		TNT1 A 0 Radius_Quake(3,4,0,150,0)
 		TNT1 A 0 A_PlaySound("Weapons/BFG10KZ",3)
-		BFE1 A 3 Bright A_Explode(160, 150, 1)
+		BFE1 A 3 Bright A_Explode(160,150,1)
 		BFE1 B 3 Bright A_FadeOut(0.142857)
 		BFE1 C 2 Bright A_FadeOut(0.142857)
 		BFE1 DEF 1 Bright A_FadeOut(0.142857)
@@ -253,10 +253,10 @@ Tag "BFG 10,000"
 		TNT1 A 0 A_PlaySound("Weapons/BFG10KX",2)
 		10KF A 2 Bright
 		TNT1 A 0 A_ZoomFactor(0.98)
-		TNT1 A 0 A_SetPitch(pitch+1.2, SPF_INTERPOLATE)
-		10KF B 2 Bright A_FireBullets(0, 0, 1, 10, "64BFG10kShot")
+		TNT1 A 0 A_SetPitch(pitch+1.2,SPF_INTERPOLATE)
+		10KF B 2 Bright A_FireBullets(0,0,1,10,"64BFG10kShot")
 		TNT1 A 0 A_ZoomFactor(1.0)
-		TNT1 A 0 A_SetPitch(pitch-1.2, SPF_INTERPOLATE)
+		TNT1 A 0 A_SetPitch(pitch-1.2,SPF_INTERPOLATE)
 		10KF CDE 2 Bright
 		TNT1 A 0 A_ReFire
 		10KE A 1 A_PlaySound("Weapons/BFG10KCool",2)
