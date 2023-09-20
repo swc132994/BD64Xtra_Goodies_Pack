@@ -74,6 +74,12 @@ Sprites: Daniel, 3D Realms (Nuke Missile), Monolith (Explosion), TSF, Banjo Soft
 Sounds: Epic Megagames (explosions, charge up), Valve (geiger counter, charge countdown, tacitcal mode raise sound)
 Extra Edits: Craneo
 
+Sniper Rifle CREDITS:
+Code: Alexander, Xim, IDDQD_1337
+Sprites: Captain J (render), drlambert (model), Sgt Shivers (muzzleflash), Paul (scope ADS)
+Sounds: Valve
+Extra Edits: Craneo
+
 //Xtra Powerups------------------------------------------------------------------
 Ghastsphere Credits:
 Code: scalliano, Skulltag Team

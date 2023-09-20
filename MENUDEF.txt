@@ -24,7 +24,7 @@ OptionMenu "BrutalDoom64OptionsItem/WeaponSpawner"
 	Option "Super Shotgun, Assault Shotgun or Random =","AutoShotgun_Spawner_Cvar","AutoShotgun_Spawner_Value"
 	Option "Rocket Launcher, Grenade Launcher, Flamethrower or Random =","Immolator_Spawner_Cvar","Immolator_Spawner_Value"
 	Option "Plasma Rifle, Gauss Cannon, Nailgun, Ruiner or Random =","PlasmaRifleNew_Spawner_Cvar","PlasmaRifleNew_Spawner_Value"
-	Option "Shotgun, Revolver, pistol silencer or Random =","Revolver_Spawner_Cvar","Revolver_Spawner_Value"
+	Option "Shotgun, Revolver, Pistol Silencer, Sniper Rifle or Random =","Revolver_Spawner_Cvar","Revolver_Spawner_Value"
 	Option "BFG9k, BFG10k, Unmkaer, Lasergun or Random =","BFG9kNew_Spawner_Cvar","BFG9kNew_Spawner_Value"
 	StaticText ""
 		StaticText "Option to replace shotguns with super shotguns or Assault Shotguns",1
@@ -168,7 +168,8 @@ OptionValue "Revolver_Spawner_Value"
 {
 	0,"Shotgun"
 	1,"Revolver"
-	2,"Random"
+	2,"Sniper Rifle"
+	3,"Random"
 }
 
 //XTRA POWERUP VALUES

@@ -31,6 +31,21 @@ brightmap sprite ASGRK0	{map "BRIGHTMAPS/Auto/ASGRK0_BR.png"}
 brightmap sprite ASGRL0	{map "BRIGHTMAPS/Auto/ASGRL0_BR.png"}
 brightmap sprite ASGRM0	{map "BRIGHTMAPS/Auto/ASGRM0_BR.png"}
 
+//Sniper Rifle
+brightmap sprite SNIFF0	{map "BRIGHTMAPS/Sniper/SNIFF0_BR.png" Disablefullbright}
+brightmap sprite SNIZA0	{map "BRIGHTMAPS/Sniper/SNIZA0_BR.png" Disablefullbright}
+brightmap sprite SNIZB0	{map "BRIGHTMAPS/Sniper/SNIZA0_BR.png" Disablefullbright}
+brightmap sprite SNIZC0	{map "BRIGHTMAPS/Sniper/SNIZA0_BR.png" Disablefullbright}
+brightmap sprite SNIZD0	{map "BRIGHTMAPS/Sniper/SNIZA0_BR.png" Disablefullbright}
+brightmap sprite SNIZE0	{map "BRIGHTMAPS/Sniper/SNIZA0_BR.png" Disablefullbright}
+brightmap sprite SNIZF0	{map "BRIGHTMAPS/Sniper/SNIZA0_BR.png" Disablefullbright}
+brightmap sprite 5NIZA0	{map "BRIGHTMAPS/Sniper/SNIZA0_BR.png" Disablefullbright}
+brightmap sprite 5NIZB0	{map "BRIGHTMAPS/Sniper/SNIZA0_BR.png" Disablefullbright}
+brightmap sprite 5NIZC0	{map "BRIGHTMAPS/Sniper/SNIZA0_BR.png" Disablefullbright}
+brightmap sprite 5NIZD0	{map "BRIGHTMAPS/Sniper/SNIZA0_BR.png" Disablefullbright}
+brightmap sprite 5NIZE0	{map "BRIGHTMAPS/Sniper/SNIZA0_BR.png" Disablefullbright}
+brightmap sprite 5NIZF0	{map "BRIGHTMAPS/Sniper/SNIZA0_BR.png" Disablefullbright}
+
 //Grenade Launcher
 brightmap sprite GRLFA0	{map "BRIGHTMAPS/NadeLauncher/GRLFA0_BR.png" Disablefullbright}
 brightmap sprite GRLFB0	{map "BRIGHTMAPS/NadeLauncher/GRLFB0_BR.png" Disablefullbright}

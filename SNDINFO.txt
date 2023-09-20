@@ -1,16 +1,16 @@
 //Grenade Launcher
-Grenadier/Fire  	GRNLFIRE
-Grenadier/Ready 	GRNLREDY
-Grenadier/Bouncy 	GRNBOUNC
-Grenadier/Gas    	GRNGASS
+Grenadier/Fire		GRNLFIRE
+Grenadier/Ready		GRNLREDY
+Grenadier/Bouncy	GRNBOUNC
+Grenadier/Gas		GRNGASS
 
-// FireAxe
+//FireAxe
 weapons/axecut SPLICE
 weapons/axebang CLANG
 weapons/axeswing SWISH
 weapons/axedraw AXEDRAW
 
-// BFG10k
+//BFG10k
 Weapons/BFG10KF		DSBFG10K
 Weapons/BFG10KX		DS10KFIR
 Weapons/BFG10KZ		DS10KHIT
@@ -31,7 +31,7 @@ DSZAPHT2	DSZAPHT2
 DSZAPHT3	DSZAPHT3
 
 
-$random ForceBarrier/Hit	{ DSZAPHT1 DSZAPHT2 DSZAPHT3 }
+$random ForceBarrier/Hit	{DSZAPHT1 DSZAPHT2 DSZAPHT3}
 $limit ForceBarrier/Hit	0
 
 //NukeLauncher
@@ -48,9 +48,9 @@ HL1GEI4 HL1GEI4
 HL1GEI5 HL1GEI5
 HL1GEI6 HL1GEI6
 
-nuker/CountdownOfDeath    NUKECOUN
-nuker/WeaponActivated     NUKEACT0
-nuker/DryFire             NUKEFAIL
+nuker/CountdownOfDeath	NUKECOUN
+nuker/WeaponActivated	NUKEACT0
+nuker/DryFire			NUKEFAIL
 
 //Nailgun
 Weapons/NailMGFire		NAILFIRE
@@ -108,17 +108,17 @@ $volume DSASGFR1 0.5
 $volume DSASHUP 0.8
 $volume DSASHL1 0.9
 
-// Blighter
-blighter/fire		 SBOFIR
-blighter/idle		 SBOIDL
-blighter/scream		 SBOSTR
-blighter/missile	 SBOFLY
-blighter/explode	 SBOEX1
-blighter/explodefar	 SBOEX2
-blighter/chatterer	 SBOFID
+//Blighter
+blighter/fire		SBOFIR
+blighter/idle		SBOIDL
+blighter/scream		SBOSTR
+blighter/missile	SBOFLY
+blighter/explode	SBOEX1
+blighter/explodefar	SBOEX2
+blighter/chatterer	SBOFID
 
-$volume blighter/idle     0.6
-$volume blighter/missile  0.6
+$volume blighter/idle		0.6
+$volume blighter/missile	0.6
 
 //Revolver (Sounds from Insurgency (Reload) and Killing Floor (Fire))
 REVFIRE REVFIRE
@@ -136,3 +136,10 @@ Flamethrower/Fire	FMTRFIRE
 Flamethrower/Hit	FMTRHIT
 Flamethrower/Ready	FLMRREAD
 Flamethrower/Cannon	FMTRALTF
+
+//Sniper Rifle
+Weapon/SniperCharge		MLSNICHR
+Weapon/SniperReload		MLSNIREL
+Weapon/SniperFire		MLSNIFIR
+Weapon/SniperZoom		MLSNIZOM
+Weapon/SniperStealth	MLSNISIL
