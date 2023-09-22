@@ -32,8 +32,7 @@ Inventory.PickupSound "WPICK"
 
 Actor SawGasXtra : SawGas Replaces SawGas
 {
-VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
-Inventory.ForbiddenTo "64DoomPlayer"
+VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern","64DoomPlayer"
 }
 
 Actor 64Flamethrower : DoomWeapon
