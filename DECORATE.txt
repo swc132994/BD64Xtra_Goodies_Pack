@@ -3,6 +3,7 @@
 #INCLUDE "Decorate/Weapons/Nailgun.txt"
 #INCLUDE "Decorate/Weapons/Ruiner.txt"
 #INCLUDE "Decorate/Weapons/Autoshotty.txt"
+#INCLUDE "Decorate/Weapons/QuadShotty.txt"
 #INCLUDE "Decorate/Weapons/LMG.txt"
 #INCLUDE "Decorate/Weapons/SniperRifle.txt"
 #INCLUDE "Decorate/Weapons/Nuker.txt"

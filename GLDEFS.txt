@@ -31,6 +31,17 @@ brightmap sprite ASGRK0	{map "BRIGHTMAPS/Auto/ASGRK0_BR.png"}
 brightmap sprite ASGRL0	{map "BRIGHTMAPS/Auto/ASGRL0_BR.png"}
 brightmap sprite ASGRM0	{map "BRIGHTMAPS/Auto/ASGRM0_BR.png"}
 
+//Quad shotgun
+brightmap sprite Q2GFA0	{map "BRIGHTMAPS/Quad/Q2GFA0_BR.png" Disablefullbright}
+brightmap sprite Q2GFB0	{map "BRIGHTMAPS/Quad/Q2GFB0_BR.png" Disablefullbright}
+brightmap sprite Q4GFA0	{map "BRIGHTMAPS/Quad/Q4GFA0_BR.png" Disablefullbright}
+brightmap sprite Q4GFB0	{map "BRIGHTMAPS/Quad/Q4GFB0_BR.png" Disablefullbright}
+brightmap sprite QSGFA0	{map "BRIGHTMAPS/Quad/QSGFA0_BR.png" Disablefullbright}
+brightmap sprite QSGFB0	{map "BRIGHTMAPS/Quad/QSGFB0_BR.png" Disablefullbright}
+brightmap sprite QS3FA0	{map "BRIGHTMAPS/Quad/QS3FA0_BR.png" Disablefullbright}
+brightmap sprite QS3FB0	{map "BRIGHTMAPS/Quad/QS3FB0_BR.png" Disablefullbright}
+brightmap sprite QS3IA0	{map "BRIGHTMAPS/Quad/QS3IA0_BR.png"}
+
 //Sniper Rifle
 brightmap sprite SNIFF0	{map "BRIGHTMAPS/Sniper/SNIFF0_BR.png" Disablefullbright}
 brightmap sprite SNIZA0	{map "BRIGHTMAPS/Sniper/SNIZA0_BR.png" Disablefullbright}

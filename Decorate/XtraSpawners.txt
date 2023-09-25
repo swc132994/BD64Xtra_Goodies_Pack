@@ -158,7 +158,9 @@ Scale 0.87
 		SHOT A 0 NoDelay A_JumpIf(CallACS("SSGinDoom1")==0,"SpawnShotgunOrRevolver")
 		TNT1 A 0 A_JumpIf(CallACS("SSGinDoom1")==1,"SpawnSSG")
 		TNT1 A 0 A_JumpIf(CallACS("SSGinDoom1")==2,"SpawnAutoShotgun")
+		TNT1 A 0 A_JumpIf(CallACS("SSGinDoom1")==3,"SpawnQuadShotgun")
 		TNT1 A 0 A_Jump(38,"SpawnAutoShotgun") //(15%)
+		TNT1 A 0 A_Jump(8,"SpawnQuadShotgun") //(3%)
 		TNT1 A 0 A_Jump(64,"SpawnSSG") //(25%)
 	SpawnShotgunOrRevolver:
 		TNT1 A 1 A_SpawnItemEx("Dyn_ShotgunReplacer",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -168,6 +170,9 @@ Scale 0.87
 		Stop
 	SpawnAutoShotgun:
 		TNT1 A 1 A_SpawnItemEx("AssaultShotgunSpawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
+		Stop
+	SpawnQuadShotgun:
+		TNT1 A 1 A_SpawnItemEx("QuadShotWeaponSpawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
 	}
 }
@@ -181,12 +186,17 @@ Scale 0.87
 		SGN2 A 0 NoDelay A_JumpIf(CallACS("D64WeaponsOnlyReplacer")==1,"SpawnSSG")	//if D64 weapons only enabled spawn ssg
 		SGN2 A 0 A_JumpIf(CallACS("AutoShotgunRandom")==0,"SpawnSSG")
 		TNT1 A 0 A_JumpIf(CallACS("AutoShotgunRandom")==1,"SpawnAssaultShotgun")
+		TNT1 A 0 A_JumpIf(CallACS("AutoShotgunRandom")==2,"SpawnUltraShotgun")
 		TNT1 A 0 A_Jump(38,"SpawnAssaultShotgun") //(15%)
+		TNT1 A 0 A_Jump(8,"SpawnUltraShotgun") //(3%)
 	SpawnSSG:
 		TNT1 A 1 A_SpawnItemEx("SuperShotgunSpawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
 	SpawnAssaultShotgun:
 		TNT1 A 1 A_SpawnItemEx("AssaultShotgunSpawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
+		Stop
+	SpawnUltraShotgun:
+		TNT1 A 1 A_SpawnItemEx("QuadShotWeaponSpawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
 	}
 }
@@ -558,6 +568,42 @@ Scale 0.82
 		Stop
 	SpawnRed:
 		TNT1 A 1 A_SpawnItemEx("64RedArmor",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
+		Stop
+	}
+}
+
+Actor Dyn_MiniSphereReplacer Replaces GreenArmor
+{
+Scale 0.82
+	States
+	{
+	Spawn:
+		ARM1 A 0 NoDelay A_JumpIf(CallACS("ExtraSpheresACS")==0,"SpawnGreen")
+		TNT1 A 0 A_JumpIf(CallACS("ExtraSpheresACS")==1,"SpawnMini")
+		TNT1 A 0 A_Jump(39,"SpawnMini") //(15%)
+	SpawnGreen:
+		TNT1 A 1 A_SpawnItemEx("64GreenArmor",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
+		Stop
+	SpawnMini:
+		TNT1 A 1 A_SpawnItemEx("64Minisphere",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
+		Stop
+	}
+}
+
+Actor Dyn_HyperSphereReplacer Replaces Soulsphere
+{
+Scale 0.82
+	States
+	{
+	Spawn:
+		SOUL A 0 NoDelay A_JumpIf(CallACS("ExtraSpheresACS")==0,"SpawnSuper")
+		TNT1 A 0 A_JumpIf(CallACS("ExtraSpheresACS")==1,"SpawnHyper")
+		TNT1 A 0 A_Jump(39,"SpawnHyper") //(15%)
+	SpawnSuper:
+		TNT1 A 1 A_SpawnItemEx("64Soulsphere",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
+		Stop
+	SpawnHyper:
+		TNT1 A 1 A_SpawnItemEx("64HyperSphere",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
 	}
 }

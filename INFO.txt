@@ -22,6 +22,12 @@ Sounds: (BFG10k): Valve, Gearbox  (Shield bits): Quake 2, Half Life
 Sprites: (BFG10k): Midway, TypicalSF, Amuscaria, JuninhoRPG, Craneo (Shield bits): Gothic, Tormentor667, Duke3D, Rogue Entertainment, Captain Toenail, scalliano, David Raven
 Extra Edits: Craneo
 
+Quad Shotgun credits:
+Code: DBJ87
+Sounds: High Noon Drifter (Fire), BEEFBOSS.pk3 (Reload)
+Sprites: BigStronk, Cage, OldHermit, Craneo
+Extra Edits: Craneo
+
 Flamethrower CREDITS:
 Code: Eriance
 GLDefs: Keksdose

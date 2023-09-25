@@ -65,7 +65,7 @@ ACTOR 64FireAxe : DoomWeapon
 		AXEG A 1 A_WeaponReady
 		loop
 	Fire:
-		AXEG ABCDEFG 2 A_Stop
+		AXEG ABCDEFG 2
 	Hold:
 		TNT1 A 1 A_GiveInventory("AxeCharge",1)
 		TNT1 A 0 A_Refire
@@ -210,7 +210,7 @@ ACTOR 64FireAxeModern : Brutal64Weapon
 		AXEG AA 1 A_WeaponReady(WRF_ALLOWRELOAD)
 		loop
 	Fire:
-		AXEG ABCDEFG 2 A_Stop
+		AXEG ABCDEFG 2
 	Hold:
 		TNT1 A 1 A_GiveInventory("AxeCharge",1)
 		TNT1 A 0 A_Refire
@@ -294,8 +294,7 @@ ACTOR 64FireAxeModern : Brutal64Weapon
 		AXEB ABCD 1
 		TNT1 A 0 A_SetPitch(pitch-1.4,SPF_INTERPOLATE)
 		TNT1 A 0 A_FireCustomMissile("AxePushAway",0,0,0,-5)
-		AXEB F 2 A_Stop
-		TNT1 A 0 A_Recoil(5)
+		AXEB F 2 A_Recoil(5)
 		TNT1 A 0 A_SetPitch(pitch+1.4,SPF_INTERPOLATE)
 		AXEB DCBA 1
 		TNT1 A 0 A_SetPitch(pitch+1.2,SPF_INTERPOLATE)
@@ -308,8 +307,7 @@ ACTOR 64FireAxeModern : Brutal64Weapon
 		AXEB ABCD 1
 		TNT1 A 0 A_SetPitch(pitch-1.4,SPF_INTERPOLATE)
 		TNT1 A 0 A_FireCustomMissile("AxeFUCKOFF",0,0,0,-5)
-		AXEB F 2 A_Stop
-		TNT1 A 0 A_Recoil(5)
+		AXEB F 2 A_Recoil(5)
 		TNT1 A 0 A_SetPitch(pitch+1.4,SPF_INTERPOLATE)
 		AXEB DCBA 1
 		TNT1 A 0 A_SetPitch(pitch+1.2,SPF_INTERPOLATE)
@@ -399,7 +397,7 @@ ACTOR 64FireAxeTactical : Brutal64Weapon
 		AXEG AA 1 A_WeaponReady(WRF_ALLOWRELOAD)
 		loop
 	Fire:
-		AXEG ABCDEFG 2 A_Stop
+		AXEG ABCDEFG 2
 	Hold:
 		TNT1 A 1 A_GiveInventory("Stamina",1)
 		TNT1 A 0 A_GiveInventory("AxeCharge",1)
@@ -494,8 +492,7 @@ ACTOR 64FireAxeTactical : Brutal64Weapon
 		AXEB ABCD 1
 		TNT1 A 0 A_SetPitch(pitch-1.4,SPF_INTERPOLATE)
 		TNT1 A 0 A_FireCustomMissile("AxePushAway",0,0,0,-5)
-		AXEB F 2 A_Stop
-		TNT1 A 0 A_Recoil(5)
+		AXEB F 2 A_Recoil(5)
 		TNT1 A 0 A_SetPitch(pitch+1.4,SPF_INTERPOLATE)
 		AXEB DCBA 1
 		TNT1 A 0 A_SetPitch(pitch+1.2,SPF_INTERPOLATE)
@@ -510,8 +507,7 @@ ACTOR 64FireAxeTactical : Brutal64Weapon
 		AXEB ABCD 1
 		TNT1 A 0 A_SetPitch(pitch-1.4,SPF_INTERPOLATE)
 		TNT1 A 0 A_FireCustomMissile("AxeFUCKOFF",0,0,0,-5)
-		AXEB F 2 A_Stop
-		TNT1 A 0 A_Recoil(5)
+		AXEB F 2 A_Recoil(5)
 		TNT1 A 0 A_SetPitch(pitch+1.4,SPF_INTERPOLATE)
 		AXEB DCBA 1
 		TNT1 A 0 A_SetPitch(pitch+1.2,SPF_INTERPOLATE)

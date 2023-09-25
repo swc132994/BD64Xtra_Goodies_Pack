@@ -30,7 +30,6 @@ DSZAPHT1	DSZAPHT1
 DSZAPHT2	DSZAPHT2
 DSZAPHT3	DSZAPHT3
 
-
 $random ForceBarrier/Hit	{DSZAPHT1 DSZAPHT2 DSZAPHT3}
 $limit ForceBarrier/Hit	0
 
@@ -78,12 +77,21 @@ Striker-12/StartReload S12REL1
 Striker-12/FinishReload S12REL2
 Striker-12/Fidget S12PUMP
 
+//QuadShotty, yoinked from DeathMachine by BigStronk
+QSGFIRE		QSGFIRE		$volume QSGFIRE 0.5
+QSHTFIRE	QSHTFIRE	$volume QSHTFIRE 0.4
+QSGFIR2		QSGFIR2		$volume QSGFIR2 0.7
+QSHTFIR2	QSHTFIR2	$volume QSHTFIR2 0.6
+QSGOPEN		QSGOPEN		$volume QSGOPEN 0.5
+QSGIN		QSGIN		$volume QSGIN 0.5
+QSGCLSE		QSGCLSE		$volume QSGCLSE 0.5
+
 //Grenade Launcher Assault Rifle
 assaultrifle/grenade		DSGRFIR2
-assaultrifle/grenadeopen	DSARGOP
-assaultrifle/grenadeload	DSARGLO
-assaultrifle/grenadeclose	DSARGCL
-DSARPRM DSARPRM
+assaultrifle/grenadeopen	DSARGOP		$volume assaultrifle/grenadeopen 0.6
+assaultrifle/grenadeload	DSARGLO		$volume assaultrifle/grenadeload 0.6
+assaultrifle/grenadeclose	DSARGCL		$volume assaultrifle/grenadeclose 0.6
+DSARPRM DSARPRM							$volume DSARPRM 0.6
 $random LMG	{LMG1 LMG2 LMG3 LMG4 LMG5 LMG6}
 LMG1 LMG1
 LMG2 LMG2
@@ -95,30 +103,18 @@ LMG6 LMG6
 LMGOUT LMGOUT
 LMGIN LMGIN
 
-$volume assaultrifle/grenadeopen 0.6
-$volume assaultrifle/grenadeload 0.6
-$volume assaultrifle/grenadeclose 0.6
-$volume DSARPRM 0.6
-
-DSASHL1 DSASHL1
-DSASHUP DSASHUP
-DSASGFR1 DSASGFR1
-
-$volume DSASGFR1 0.5
-$volume DSASHUP 0.8
-$volume DSASHL1 0.9
+DSASHL1 DSASHL1		$volume DSASHL1 0.9
+DSASHUP DSASHUP		$volume DSASHUP 0.8
+DSASGFR1 DSASGFR1	$volume DSASGFR1 0.5
 
 //Blighter
 blighter/fire		SBOFIR
-blighter/idle		SBOIDL
+blighter/idle		SBOIDL		$volume blighter/idle		0.6
 blighter/scream		SBOSTR
-blighter/missile	SBOFLY
+blighter/missile	SBOFLY		$volume blighter/missile	0.6
 blighter/explode	SBOEX1
 blighter/explodefar	SBOEX2
 blighter/chatterer	SBOFID
-
-$volume blighter/idle		0.6
-$volume blighter/missile	0.6
 
 //Revolver (Sounds from Insurgency (Reload) and Killing Floor (Fire))
 REVFIRE REVFIRE
