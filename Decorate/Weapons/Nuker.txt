@@ -66,13 +66,13 @@ Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		TNT1 A 0 A_JumpIfInventory("64NuclearWarheadAmmo",1,"TacticalNuke")
 		Goto NukeFailure
 	NukeFailure:
-		TNT1 A 0 A_PlayWeaponSound("nuker/DryFire")
+		TNT1 A 0 A_PlaySound("nuker/DryFire",CHAN_WEAPON)
 		TNT1 A 0 A_Print("<!> WARNING - AMMUNITION DEPLETED <!>",1)
 		Goto Ready
 	TacticalNuke:
-		TNT1 A 0 A_PlayWeaponSound("nuker/CountdownOfDeath")
+		TNT1 A 0 A_PlaySound("nuker/CountdownOfDeath",CHAN_WEAPON)
 		NUKG ABCD 20
-		TNT1 A 0 A_PlayWeaponSound("weapons/nuclearmissilecharge")
+		TNT1 A 0 A_PlaySound("weapons/nuclearmissilecharge",CHAN_WEAPON)
 		NUKG EF 20
 		TNT1 A 0 A_Recoil(5)
 		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",30,5,40)
@@ -128,14 +128,14 @@ Inventory.PickupSound "WPICK"
 		TNT1 A 0 A_JumpIfInventory("64NuclearWarheadAmmo",1,"TacticalNuke")
 		Goto NukeFailure
 	NukeFailure:
-		TNT1 A 0 A_PlayWeaponSound("nuker/DryFire")
+		TNT1 A 0 A_PlaySound("nuker/DryFire",CHAN_WEAPON)
 		TNT1 A 0 A_Print("<!> WARNING - AMMUNITION DEPLETED <!>",1)
 		Goto Ready
 	TacticalNuke:
-		TNT1 A 0 A_PlayWeaponSound("nuker/CountdownOfDeath")
+		TNT1 A 0 A_PlaySound("nuker/CountdownOfDeath",CHAN_WEAPON)
 		TNT1 A 0 A_AlertMonsters
 		NUKG ABCD 20
-		TNT1 A 0 A_PlayWeaponSound("weapons/nuclearmissilecharge")
+		TNT1 A 0 A_PlaySound("weapons/nuclearmissilecharge",CHAN_WEAPON)
 		NUKG EF 20
 		TNT1 A 0 A_Recoil(5)
 		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",30,5,40)
@@ -151,9 +151,9 @@ Inventory.PickupSound "WPICK"
 		TNT1 A 0 A_ReFire
 		Goto Ready
 /*	AltFire:
-		TNT1 A 0 A_PlayWeaponSound("nuker/CountdownOfDeath")
+		TNT1 A 0 A_PlaySound("nuker/CountdownOfDeath",CHAN_WEAPON)
 		NUKG ABCDEF 20
-		TNT1 A 0 A_PlayWeaponSound("nuker/DryFire")
+		TNT1 A 0 A_PlaySound("nuker/DryFire",CHAN_WEAPON)
 		NUKG A 2 A_Print("<!> WARNING - ALTERNATIVE FIREMODE NOT YET IMPLEMENTED <!>")
 		Goto Ready*/
 	MineThrowFlash:
@@ -336,6 +336,7 @@ Height 4
 Speed 20
 Damage 5
 Damagetype "Plasma"
+Damagetype "Fire"
 Obituary "%o was charred by a Nuclear Heatwave."
 +MISSILE
 +NOBLOCKMAP
@@ -347,11 +348,10 @@ Obituary "%o was charred by a Nuclear Heatwave."
 +BLOODLESSIMPACT
 +NOTARGET
 +FLOORHUGGER
-+FIREDAMAGE
 +THRUGHOST
 +NODAMAGETHRUST
 +DONTSPLASH
-+ForcePain
++FORCEPAIN
 +CANNOTPUSH
 	States
 	{
@@ -492,8 +492,8 @@ Gravity 0.001
 BounceFactor 0.1
 Alpha 0.4
 RenderStyle Translucent
+BounceType "Doom"
 -NOGRAVITY
-+DOOMBOUNCE
 +MISSILE
 +NOTELEPORT
 +DONTSPLASH

@@ -274,7 +274,7 @@ Tag "BFG 10,000"
 		10KE AAAA 1 BRIGHT A_Print("Not Enough Cells")
 		Goto Ready
 	HoloShield:
-		TNT1 A 0 A_PlaySoundEx("ForceBarrier/On",7)
+		TNT1 A 0 A_PlaySound("ForceBarrier/On",CHAN_7)
 		10KR ABCDDEF 2 BRIGHT
 		10KY ABCD 2 BRIGHT
 		TNT1 A 0 A_SpawnItemEx("64BFG10kActiveShield",56,-80,8,0,0,0,0,1)

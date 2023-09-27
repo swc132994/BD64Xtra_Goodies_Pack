@@ -37,6 +37,7 @@ Inventory.PickupSound "WPICK"
 ACTOR 64FireAxe : DoomWeapon
 {
 	Scale 0.8
+	Weapon.SlotNumber 1
 	+WEAPON.MELEEWEAPON
 	+WEAPON.NOALERT
 	+WEAPON.AMMO_OPTIONAL
@@ -45,7 +46,6 @@ ACTOR 64FireAxe : DoomWeapon
 	Inventory.Icon "AXEPA0"
 	Inventory.PickupMessage "You found a fireaxe!"
 	Tag "FireAxe"
-	Weapon.SlotNumber 1
 	Obituary "%k was slashed by %o fireaxe!"
 	VisibleToPlayerClass "64DoomPlayer"
 	Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
@@ -541,7 +541,7 @@ Obituary "%k was slashed by %o fireaxe!"
 States
 	{
 	Spawn:
-		TNT1 A 1
+		TNT1 A 3
 		Stop
 	Death:
 		TNT1 A 0 A_SpawnItemEx("AxeSparks")
@@ -570,7 +570,7 @@ Obituary "%k was slashed by %o fireaxe!"
 States
 	{
 	Spawn:
-		TNT1 A 1
+		TNT1 A 3
 		Stop
 	Death:
 		TNT1 A 0 A_SpawnItemEx("AxeSparks")
@@ -597,7 +597,7 @@ Obituary "%o was pushed away by %k."
 	States
 	{
 	Spawn:
-		TNT1 A 1
+		TNT1 A 3
 		Stop
 	Death:
 	XDeath:

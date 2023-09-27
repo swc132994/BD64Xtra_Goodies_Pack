@@ -26,7 +26,6 @@ Powerup.Type "PowerInfiniteAmmo"
 Powerup.Color "EF EA 4A",0.2
 +INVENTORY.AUTOACTIVATE
 +INVENTORY.ALWAYSPICKUP
-+INVENTORY.FANCYPICKUPSOUND
 +COUNTITEM
 	States
 	{
@@ -108,7 +107,6 @@ Actor 64Crucifix : CustomInventory
 {
 Scale 0.7
 +INVENTORY.ALWAYSPICKUP
-+INVENTORY.FANCYPICKUPSOUND
 Inventory.PickupMessage "Holy Crucifix"
 Inventory.PickupSound "misc/p_pkup"
 +COUNTITEM
@@ -324,7 +322,6 @@ ACTOR HyperHealth : Health
 	+COUNTITEM
 	+INVENTORY.AUTOACTIVATE
 	+INVENTORY.ALWAYSPICKUP
-	+INVENTORY.FANCYPICKUPSOUND
 	Inventory.Amount 200
 	Inventory.MaxAmount 300
 	Inventory.PickupMessage "HYPERCHARGE!!"
@@ -342,7 +339,6 @@ Actor 64HyperSphere : CustomInventory
 Scale 0.7
 +COUNTITEM
 +INVENTORY.ALWAYSPICKUP
-+INVENTORY.FANCYPICKUPSOUND
 Inventory.PickupMessage "HYPERCHARGE!!"
 Inventory.PickupSound "misc/p_pkup"
 	States
