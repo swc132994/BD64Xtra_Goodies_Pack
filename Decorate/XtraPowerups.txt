@@ -94,7 +94,7 @@ Inventory.PickupSound "misc/p_pkup"
 	States
 	{
 	Spawn:
-		BLST ABCD 6 Bright
+		BLST ABCDCB 6 Bright
 		Loop
 	Pickup:
 		TNT1 A 0 A_GiveInventory("64Vampirism")
