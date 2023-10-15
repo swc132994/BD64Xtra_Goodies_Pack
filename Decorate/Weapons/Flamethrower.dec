@@ -89,25 +89,6 @@ Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		FLMG D 2 A_ReFire
 		FLMG EA 2
 		Goto Ready
-	AltFire:
-		TNT1 A 0 A_JumpIfInventory("RocketAmmo",1,"FireCannonBall")
-		Goto Ready
-	FireCannonBall: //obligatory inclussion due to being a RocketLauncher spawn...
-		TNT1 A 0 A_SetPitch(pitch-1.2)
-		TNT1 A 0 A_ZoomFactor(0.98)
-		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",30,5,40)
-		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
-		TNT1 A 0 A_PlaySound("Flamethrower/Cannon",1)
-		FLMG C 1 bright A_FireCustomMissile("64FlamerExploder",0,0,0,-8)
-		FLMG B 2 bright A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
-		TNT1 A 0 A_TakeInventory("RocketAmmo",1,TIF_NOTAKEINFINITE)
-		TNT1 A 0 A_SetPitch(pitch+1.2)
-		TNT1 A 0 A_ZoomFactor(1.0)
-		FLMG DDDD 1 A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
-		FLMG DDDD 2 A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
-		FLMG EEEE 1 A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
-		FLMG EEEE 2 A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
-		Goto Ready
 	}
 }
 

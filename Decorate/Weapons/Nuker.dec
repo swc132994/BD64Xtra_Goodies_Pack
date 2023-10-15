@@ -42,6 +42,7 @@ Tag "Nuclear Missile Launcher"
 Inventory.PickupMessage "Remember - Duck and Cover."
 Inventory.PickupSound "WPICK"
 +WEAPON.NOAUTOAIM
++WEAPON.NO_AUTO_SWITCH
 VisibleToPlayerClass "64DoomPlayer"
 Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 +INVENTORY.RESTRICTABSOLUTELY
@@ -102,6 +103,7 @@ Inventory.PickupSound "WPICK"
 +WEAPON.NOAUTOAIM
 +INVENTORY.RESTRICTABSOLUTELY
 +WEAPON.NOALERT
++WEAPON.NO_AUTO_SWITCH
 	States
 	{
 	Spawn:
