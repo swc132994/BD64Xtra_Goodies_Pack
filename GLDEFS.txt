@@ -212,6 +212,27 @@ brightmap sprite 10KSC0		{map "BRIGHTMAPS/10k/10KEC0_BR.png" Disablefullbright}
 brightmap sprite 10KSD0		{map "BRIGHTMAPS/10k/10KED0_BR.png" Disablefullbright}
 brightmap sprite 10KSE0		{map "BRIGHTMAPS/10k/10KIA0_BR.png" Disablefullbright}
 
+//ExpRevLaunchers
+brightmap sprite HLAUZ0	{map "BRIGHTMAPS/ExpRevLauncher/HLAUZ0_BR.png"}
+brightmap sprite RVCGA0	{map "BRIGHTMAPS/ExpRevLauncher/RVCGA0_BR.png"}
+brightmap sprite RVCGB0	{map "BRIGHTMAPS/ExpRevLauncher/RVCGB0_BR.png"}
+brightmap sprite RVCGC0	{map "BRIGHTMAPS/ExpRevLauncher/RVCGC0_BR.png"}
+brightmap sprite RVCGD0	{map "BRIGHTMAPS/ExpRevLauncher/RVCGA0_BR.png"}
+brightmap sprite RVCGE0	{map "BRIGHTMAPS/ExpRevLauncher/RVCGA0_BR.png"}
+brightmap sprite RVCGF0	{map "BRIGHTMAPS/ExpRevLauncher/RVCGF0_BR.png"}
+brightmap sprite RVCGG0	{map "BRIGHTMAPS/ExpRevLauncher/RVCGG0_BR.png"}
+brightmap sprite RVCGH0	{map "BRIGHTMAPS/ExpRevLauncher/RVCGA0_BR.png"}
+brightmap sprite RVCGI0	{map "BRIGHTMAPS/ExpRevLauncher/RVCGA0_BR.png"}
+brightmap sprite RVCGJ0	{map "BRIGHTMAPS/ExpRevLauncher/RVCGJ0_BR.png"}
+brightmap sprite RVDFB0	{map "BRIGHTMAPS/ExpRevLauncher/RVDFB0_BR.png"}
+brightmap sprite RVDFC0	{map "BRIGHTMAPS/ExpRevLauncher/RVDFC0_BR.png"}
+brightmap sprite RVDFD0	{map "BRIGHTMAPS/ExpRevLauncher/RVCGA0_BR.png"}
+brightmap sprite RVDFE0	{map "BRIGHTMAPS/ExpRevLauncher/RVCGA0_BR.png"}
+brightmap sprite RVDWA0	{map "BRIGHTMAPS/ExpRevLauncher/RVDWA0_BR.png"}
+brightmap sprite RVDWB0	{map "BRIGHTMAPS/ExpRevLauncher/RVDWB0_BR.png"}
+brightmap sprite RVDWC0	{map "BRIGHTMAPS/ExpRevLauncher/RVDWC0_BR.png"}
+brightmap sprite RVDWD0	{map "BRIGHTMAPS/ExpRevLauncher/RVDWD0_BR.png"}
+
 //Lights
 pointlight LavaNailGlow
 {
@@ -582,4 +603,19 @@ pointlight REDARMOR2
 {
 	color 0.6 0.0 0.1
 	size 24
+}
+
+//ExpRevLauncher
+object 64HeatseekerProjectilePlayer
+{
+	frame M5B1A {light TRACER}
+	frame M5B1B {light TRACER}
+	frame M5B1C {light TRACER}
+
+	frame MBALC {light TRACER_X1}
+	frame MBALD {light TRACER_X1}
+	frame MBALE {light TRACER_X2}
+	frame MBALF {light TRACER_X2}
+	frame MBALG {light TRACER_X3}
+	frame MBALH {light TRACER_X3}
 }

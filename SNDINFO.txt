@@ -139,3 +139,6 @@ Weapon/SniperReload		MLSNIREL
 Weapon/SniperFire		MLSNIFIR
 Weapon/SniperZoom		MLSNIZOM
 Weapon/SniperStealth	MLSNISIL
+
+//Exp Revenant Launcher
+heatseek/raise	REVRAISE

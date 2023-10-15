@@ -10,5 +10,6 @@
 #INCLUDE "Decorate/Weapons/Revolver.dec"
 #INCLUDE "Decorate/Weapons/Flamethrower.dec"
 #INCLUDE "Decorate/Weapons/BFG10k.dec"
+#INCLUDE "Decorate/Weapons/ExpRevLauncher.dec"
 #INCLUDE "Decorate/XtraPowerups.dec"
 #INCLUDE "Decorate/XtraSpawners.dec"

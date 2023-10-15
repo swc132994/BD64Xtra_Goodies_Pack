@@ -1,0 +1,251 @@
+Actor RevenantLauncherSpawner : CustomInventory
+{
+scale 0.82
+Inventory.PickupMessage "You got the Heatseeker Missile Launchers!"
+Inventory.PickupSound "WPICK"
+	States
+	{
+	Spawn:
+		HLAU Z 2
+		TNT1 A 0 ACS_NamedExecuteAlways("DM_SpawnACS")
+		HLAU Z 2
+		TNT1 A 0 A_JumpIfInventory("ISDM",1,"DMSpawn")
+		HLAU Z -1
+		Stop
+	Pickup:
+		TNT1 A 0 A_JumpIfInventory("IsTacticalClass",1,"Pickup2")
+		TNT1 A 0 A_JumpIfInventory("IsModern",1,"Pickup2")
+		TNT1 A 0 A_GiveInventory("64HeatseekerLauncher",1)
+		Stop
+	Pickup2:
+		TNT1 A 0 A_GiveInventory("64HeatseekerLauncherTACTICAL",1)
+		Stop
+	DMSpawn:
+		TNT1 A 0 A_ChangeFlag("THRUACTORS",1)
+		TNT1 A 0 A_SpawnItemEx("TeleportationFog")
+		TNT1 A 0 A_SpawnItemEx("64HeatseekerLauncher")
+		TNT1 A 0 A_SpawnItemEx("64HeatseekerLauncherTACTICAL")
+		TNT1 A 1050
+		Loop
+	}
+}
+
+ACTOR 64HeatseekerLauncher : DoomWeapon
+{
+Scale 0.82
+Weapon.SelectionOrder 8000
+Weapon.SlotNumber 9
+Weapon.BobRangeX 0
+Weapon.AmmoType "RocketAmmo"
+Weapon.AmmoUse 1
+Weapon.AmmoGive 4
++WEAPON.NOAUTOAIM
++WEAPON.NOALERT
++WEAPON.EXPLOSIVE
++INVENTORY.RESTRICTABSOLUTELY
+Inventory.PickupMessage "You got the Heatseeker Missile Launchers!"
+Inventory.PickupSound "WPICK"
+Tag "Heatseeker Missile Launcher"
+VisibleToPlayerClass "64DoomPlayer"
+Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
+	States
+	{
+	Ready:
+		RVCG A 4 A_WeaponReady
+		Loop
+	Deselect:
+		RVCG A 1 A_Lower
+		Loop
+	Select:
+		RVCG A 1 A_Raise
+		wait
+	Spawn:
+		HLAU Z -1
+		Stop
+	Fire:
+		TNT1 A 0 A_JumpIfTargetInLOS("OpenFire")
+		RVCG J 1
+	Goto Ready
+	OpenFire:
+		TNT1 A 0 A_JumpIfInventory("HeatseekerSwitchShoulder", 1,"OpenFire2")
+		RVCG B 2 BRIGHT A_FireCustomMissile("64HeatseekerProjectilePlayer",random(4,-4),1,-8,0)
+		RVCG C 2 BRIGHT A_AlertMonsters
+		RVCG DDEAA 2
+		TNT1 A 0 A_GiveInventory("HeatseekerSwitchShoulder",1)
+		Goto Ready
+	OpenFire2:
+		RVCG F 2 BRIGHT A_FireCustomMissile("64HeatseekerProjectilePlayer",random(4,-4),1,8,0)
+		RVCG G 2 BRIGHT A_AlertMonsters
+		RVCG HHIAA 2
+		TNT1 A 0 A_TakeInventory("HeatseekerSwitchShoulder",1)
+		Goto Ready
+	}
+}
+
+Actor HeatseekerSwitchShoulder : Inventory
+{
+inventory.maxamount 1
+}
+
+ACTOR 64HeatseekerProjectilePlayer : 64RevenantTracer3
+{
+	Damage 10
+	Speed 12
+	+SCREENSEEKER
+	+NOBLOCKMAP
+	-SHOOTABLE
+	States
+	{
+	Spawn:
+		M5B1 A 2 Bright A_SpawnItemEx("RedFlareSmall")
+		TNT1 A 0 A_SeekerMissile(15,15,SMF_LOOK|SMF_PRECISE)
+		TNT1 A 0 A_SpawnItemEx("RevenantFireTrailparticle")
+		TNT1 A 0 A_SpawnItemEx("OldschoolRocketSmokeTrail2")
+		M5B1 B 2 Bright A_SpawnItemEx("RedFlareSmall")
+		TNT1 A 0 A_SeekerMissile(15,15,SMF_LOOK|SMF_PRECISE)
+		TNT1 A 0 A_SpawnItemEx("RevenantFireTrailparticle")
+		TNT1 A 0 A_SpawnItemEx("OldschoolRocketSmokeTrail2")
+		M5B1 C 2 Bright A_SpawnItemEx("RedFlareSmall")
+		TNT1 A 0 A_SeekerMissile(15,15,SMF_LOOK|SMF_PRECISE)
+		TNT1 A 0 A_SpawnItemEx("RevenantFireTrailparticle")
+		TNT1 A 0 A_SpawnItemEx("OldschoolRocketSmokeTrail2")
+		Loop
+	}
+}
+
+ACTOR 64HeatseekerLauncherTACTICAL : Brutal64Weapon
+{
+Scale 0.82
+Weapon.SelectionOrder 8000
+Weapon.SlotNumber 9
+Weapon.BobRangeX 0
+Weapon.AmmoType "RocketAmmo"
+Weapon.AmmoUse 1
+Weapon.AmmoGive 4
++WEAPON.NOAUTOAIM
++WEAPON.NOALERT
++WEAPON.EXPLOSIVE
++INVENTORY.RESTRICTABSOLUTELY
+Inventory.PickupMessage "You got the Heatseeker Missile Launchers!"
+Inventory.PickupSound "WPICK"
+Tag "Heatseeker Missile Launcher"
+	States
+	{
+	Spawn:
+		HLAU Z -1
+		Stop
+	Deselect:
+		TNT1 A 0 A_ZoomFactor(1.0)
+		TNT1 A 0 A_Takeinventory("WeaponSpecialAction",0)
+		TNT1 A 0 A_Takeinventory("TossMine",0)
+		TNT1 A 0 A_Takeinventory("PlaceMine",0)
+		TNT1 A 0 A_Takeinventory("Kicking",0)
+		RVDW ABCD 1
+		TNT1 A 1 A_Lower
+		Wait
+	Select:
+		TNT1 A 0 A_PlaySound("heatseek/raise")
+		RVDW DCBA 1 Offset(0,32)
+		TNT1 A 0 A_Raise
+		Wait
+	v1Ready:
+	Ready:
+		RVCG A 4 A_WeaponReady
+		TNT1 A 0 A_JumpIfInventory("Kicking",1,"DoKick")
+		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
+		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
+		Loop
+	Fire:
+		TNT1 A 0 A_JumpIfTargetInLOS("OpenFire")
+		RVCG J 1
+		Goto Ready
+	OpenFire:
+		TNT1 A 0 A_JumpIfInventory("HeatseekerSwitchShoulder",1,"OpenFire2")
+		RVCG B 2 BRIGHT A_FireCustomMissile("64HeatseekerProjectilePlayer",random(4,-4),1,-8,0)
+		RVCG C 2 BRIGHT A_AlertMonsters
+		RVCG DDEAA 2
+		TNT1 A 0 A_GiveInventory("HeatseekerSwitchShoulder",1)
+		Goto Ready
+	OpenFire2:
+		RVCG F 2 BRIGHT A_FireCustomMissile("64HeatseekerProjectilePlayer",random(4,-4),1,8,0)
+		RVCG G 2 BRIGHT A_AlertMonsters
+		RVCG HHIAA 2
+		TNT1 A 0 A_TakeInventory("HeatseekerSwitchShoulder",1)
+		Goto Ready
+	AltFire:
+		TNT1 A 0 A_JumpIfInventory("RocketAmmo",2,"CheckAltTarget")
+		TNT1 A 0 A_Print("Not Enough Ammo!",2)
+		Goto Ready
+	CheckAltTarget:
+		TNT1 A 0 A_JumpIfTargetInLOS("OpenFire4")
+		RVCG J 1
+		Goto Ready
+	OpenFire4:
+		TNT1 A 0 A_FireCustomMissile("64HeatseekerProjectilePlayer",random(4,-4),1,8,0)
+		RVDF B 2 BRIGHT A_FireCustomMissile("64HeatseekerProjectilePlayer",random(4,-4),1,-8,0)
+		TNT1 A 0 A_TakeInventory("RocketAmmo",2,TIF_NOTAKEINFINITE)
+		RVDF C 2 BRIGHT A_AlertMonsters
+		RVDF DDDE 2
+		RVCG AAA 2
+		Goto Ready
+	MineThrowFlash:
+		RVDW ABCE 1
+		TNT1 A 18
+		RVDW ECBA 1
+		Stop
+	KickingFlash:
+		RVDW ABCD 1
+		RVDW D 8
+		RVDW DCBA 1
+		Stop
+	AirKickingFlash:
+		RVDW ABCD 1
+		RVDW D 10
+		RVDW DCBA 1
+		Stop
+	SlideKickingStart:
+		RVDW ABCD 1
+		RVDW D 18
+	SlideKickingEnd:
+		RVDW D 6
+		RVDW DCBA 1
+		Stop
+	TossMine:
+		"----" A 0 A_JumpIfInventory("64MineAmmo",1,2)
+		"----" A 0 A_Print("No Mines in inventory!")
+		Goto GetReady
+		"----" A 0 A_Takeinventory("HasPlasmaWeapon",1)
+		TNT1 A 0 A_GunFlash("MineThrowFlash")
+		TNT1 A 5
+		TNT1 A 0 A_Takeinventory("Zoomed",1)
+		TNT1 A 0 A_ZoomFactor(1.0)
+		PMNF D 1 Offset(0,46)
+		PMNF D 1 Offset(0,39)
+		PMNF D 1 Offset(0,34)
+		PMNF D 1 Offset(0,33)
+		PMNF EFG 1
+		TNT1 A 0 A_TakeInventory("64MineAmmo",1,TIF_NOTAKEINFINITE)
+		TNT1 A 0 A_FireCustomMissile("64ThrownActiveProxMine1",0,0,0,0,0,10)
+		PMNF HIJKLMNOP 1
+		TNT1 A 5
+		Goto GetReady
+	PlaceMine:
+		"----" A 0 A_JumpIfInventory("64MineAmmo",1,2)
+		"----" A 0 A_Print("No Mines in inventory!")
+		Goto GetReady
+		"----" A 0 A_Takeinventory("HasPlasmaWeapon",1)
+		TNT1 A 0 A_GunFlash("MineThrowFlash")
+		TNT1 A 5
+		TNT1 A 0 A_Takeinventory("Zoomed",1)
+		TNT1 A 0 A_ZoomFactor(1.0)
+		PMNF D 1 Offset(0,46)
+		PMNF D 1 Offset(0,39)
+		PMNF D 1 Offset(0,34)
+		PMNF D 1 Offset(0,33)
+		PMNP BCDE 1
+		TNT1 A 0 A_TakeInventory("64MineAmmo",1,TIF_NOTAKEINFINITE)
+		TNT1 A 0 A_FireCustomMissile("64GroundProxMine")
+		TNT1 A 13
+		Goto GetReady
+	}
+}
