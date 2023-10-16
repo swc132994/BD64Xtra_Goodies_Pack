@@ -336,16 +336,16 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		TNT1 A 0 A_JumpIfInventory("RevolverAmmo",1,"FiveBulletsDrops")
 		Goto AllBulletsDrops
 	ThreeBulletsDrops:
-		TNT1 AAA 0 A_Firecustommissile("50CaseSpawn",0,0,18,-26)
+		TNT1 AAA 0 A_Firecustommissile("BulletCaseSpawn",0,0,18,-26)
 		Goto CountinueReload2
 	FourBulletsDrops:
-		TNT1 AAAA 0 A_Firecustommissile("50CaseSpawn",0,0,18,-26)
+		TNT1 AAAA 0 A_Firecustommissile("BulletCaseSpawn",0,0,18,-26)
 		Goto CountinueReload2
 	FIveBulletsDrops:
-		TNT1 AAAAA 0 A_Firecustommissile("50CaseSpawn",0,0,18,-26)
+		TNT1 AAAAA 0 A_Firecustommissile("BulletCaseSpawn",0,0,18,-26)
 		Goto CountinueReload2
 	AllBulletsDrops:
-		TNT1 AAAAAA 0 A_Firecustommissile("50CaseSpawn",0,0,18,-26)
+		TNT1 AAAAAA 0 A_Firecustommissile("BulletCaseSpawn",0,0,18,-26)
 	CountinueReload2:
 		RFVR II 5
 		TNT1 A 0 A_PlaySound("REVREL2",1)
@@ -360,7 +360,7 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		RE1R ABCDE 1
 		TNT1 A 0 A_PlaySound("REVEJECT",1)
 		RE1R FGHIJK 2
-		TNT1 A 0 A_Firecustommissile("50CaseSpawn",0,0,18,-26)
+		TNT1 A 0 A_Firecustommissile("BulletCaseSpawn",0,0,18,-26)
 		RE1R LL 5
 		RE1R MNOPQRS 1
 		TNT1 A 0 A_PlaySound("REVINSRT",1)
@@ -377,7 +377,7 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		RE1R E 1
 		TNT1 A 0 A_PlaySound("REVEJECT",1)
 		RE2R FGHIJ 2
-		TNT1 AA 0 A_Firecustommissile("50CaseSpawn",0,0,18,-26)
+		TNT1 AA 0 A_Firecustommissile("BulletCaseSpawn",0,0,18,-26)
 		RE2R KK 5
 		RE2R LMNOPQ 1
 		TNT1 A 0 A_PlaySound("REVINSRT",0)
