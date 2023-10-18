@@ -236,8 +236,8 @@ brightmap sprite RVDWD0	{map "BRIGHTMAPS/ExpRevLauncher/RVDWD0_BR.png"}
 //Lights
 pointlight LavaNailGlow
 {
-	color 1.0 0.6 0.0
-	size 16
+color 1.0 0.6 0.0
+size 16
 }
 
 object 64PlayerLavaNail
@@ -247,47 +247,47 @@ object 64PlayerLavaNail
 
 pointlight ACIDARROW
 {
-	color 0.0 1.0 0.0
-	size 56
+color 0.0 1.0 0.0
+size 56
 }
 
 flickerlight ACIDARROW_X1
 {
-	color 0.2 1.0 0.2
-	size 64
-	secondarySize 72
-	chance 0.3
+color 0.2 1.0 0.2
+size 64
+secondarySize 72
+chance 0.3
 }
 
 flickerlight ACIDARROW_X2
 {
-	color 0.3 1.0 0.3
-	size 80
-	secondarySize 88
-	chance 0.3
+color 0.3 1.0 0.3
+size 80
+secondarySize 88
+chance 0.3
 }
 
 flickerlight ACIDARROW_X3
 {
-	color 0.5 1.0 0.5
-	size 96
-	secondarySize 104
-	chance 0.3
+color 0.5 1.0 0.5
+size 96
+secondarySize 104
+chance 0.3
 }
 
 flickerlight ACIDARROW_X4
 {
-	color 0.2 0.7 0.2
-	size 96
-	secondarySize 104
-	chance 0.3
+color 0.2 0.7 0.2
+size 96
+secondarySize 104
+chance 0.3
 }
 flickerlight ACIDARROW_X5
 {
-	color 0.1 0.3 0.1
-	size 96
-	secondarySize 104
-	chance 0.3
+color 0.1 0.3 0.1
+size 96
+secondarySize 104
+chance 0.3
 }
 
 object 64ExplosiveArrow
@@ -344,7 +344,7 @@ offset 0 16 0
 
 Object 64Ghastsphere
 {
-Frame GHTS { Light Ghastsphere }
+Frame GHTS {Light Ghastsphere}
 }
 
 PulseLight Arsenalsphere
@@ -358,7 +358,7 @@ offset 0 16 0
 
 Object 64Arsenalsphere
 {
-Frame AMSP { Light Arsenalsphere }
+Frame AMSP {Light Arsenalsphere}
 }
 
 PulseLight Quadsphere
@@ -372,16 +372,16 @@ offset 0 16 0
 
 Object 64Quadsphere
 {
-Frame QUAD { Light Quadsphere }
+Frame QUAD {Light Quadsphere}
 }
 
 pulselight TITANGLOW
 {
-	color 1.0 0.0 0.0
-	size 20
-	secondarySize 24
-	interval 2.0
-	offset 0 16 0
+color 1.0 0.0 0.0
+size 20
+secondarySize 24
+interval 2.0
+offset 0 16 0
 }
 
 object 64Titansphere
@@ -391,98 +391,98 @@ object 64Titansphere
 
 pulselight CRUCIFIX
 {
-	color 1.0 1.0 1.0
-	size 16
-	secondarySize 24
-	interval 1.5
+color 1.0 1.0 1.0
+size 16
+secondarySize 24
+interval 1.5
 }
 
 Object 64Crucifix
 {
-	frame CRFX { light CRUCIFIX }
+	frame CRFX {light CRUCIFIX}
 }
 
 
 pointlight NUKEROCKET
 {
-    color 1.0 0.7 0.0
-    size 56
+color 1.0 0.7 0.0
+size 56
 }
 
 flickerlight NUKEROCKET_X1
 {
-    color 1.0 0.7 0.0
-    size 64
-    secondarySize 72
-    chance 0.3
+color 1.0 0.7 0.0
+size 64
+secondarySize 72
+chance 0.3
 }
 
 flickerlight NUKEROCKET_X2
 {
-    color 0.5 0.1 0.0
-    size 80
-    secondarySize 88
-    chance 0.3
+color 0.5 0.1 0.0
+size 80
+secondarySize 88
+chance 0.3
 }
 
 flickerlight NUKEROCKET_X3
 {
-    color 0.3 0.0 0.0
-    size 96
-    secondarySize 104
-    chance 0.3
+color 0.3 0.0 0.0
+size 96
+secondarySize 104
+chance 0.3
 }
 
 object 64NuclearMissileShot
 {
-frame NKE1A { light NUKEROCKET }
-frame NKE1B { light NUKEROCKET_X3 }
-frame NKE1C { light NUKEROCKET_X3 }
-frame NKE1D { light NUKEROCKET_X3 }
-frame NKE1E { light NUKEROCKET_X3 }
-frame NKE1F { light NUKEROCKET_X2 }
-frame NKE1G { light NUKEROCKET_X2 }
-frame NKE1H { light NUKEROCKET_X2 }
-frame NKE1I { light NUKEROCKET_X2 }
-frame NKE1J { light NUKEROCKET_X1 }
-frame NKE1K { light NUKEROCKET_X1 }
-frame NKE1L { light NUKEROCKET_X1 }
-frame NKE1M { light NUKEROCKET_X1 }
+frame NKE1A {light NUKEROCKET}
+frame NKE1B {light NUKEROCKET_X3}
+frame NKE1C {light NUKEROCKET_X3}
+frame NKE1D {light NUKEROCKET_X3}
+frame NKE1E {light NUKEROCKET_X3}
+frame NKE1F {light NUKEROCKET_X2}
+frame NKE1G {light NUKEROCKET_X2}
+frame NKE1H {light NUKEROCKET_X2}
+frame NKE1I {light NUKEROCKET_X2}
+frame NKE1J {light NUKEROCKET_X1}
+frame NKE1K {light NUKEROCKET_X1}
+frame NKE1L {light NUKEROCKET_X1}
+frame NKE1M {light NUKEROCKET_X1}
 }
 
 pointlight IrradiatedAreaBig
 {
-    color 0.0 0.7 0.0
-    size 1024
+color 0.0 0.7 0.0
+size 1024
 }
 
 pointlight IrradiatedAreaMedium
 {
-    color 0.0 0.5 0.0
-    size 512
+color 0.0 0.5 0.0
+size 512
 }
 
 pointlight IrradiatedAreaSmall
 {
-    color 0.0 0.4 0.0
-    size 256
+color 0.0 0.4 0.0
+size 256
 }
 
 pointlight IrradiatedAreaTiny
 {
-    color 0.0 0.2 0.0
-    size 128
+color 0.0 0.2 0.0
+size 128
 }
 
 pointlight IrradiatedAreaMicroscopic
 {
-    color 0.0 0.1 0.0
-    size 64
+color 0.0 0.1 0.0
+size 64
 }
 
 object 64NuclearFlames
 {
-frame TNT1 { light NUKEROCKET }
+frame TNT1 {light NUKEROCKET}
 }
 
 FlickerLight2 FlameThrowerFire
@@ -496,12 +496,12 @@ Interval 2.0
 
 Object 64FlamerFlames
 {
-Frame FRFX { Light FlameThrowerFire }
+Frame FRFX {Light FlameThrowerFire}
 }
 
 Object 64FlamerFlamesLessEffects
 {
-Frame FRFX { Light FlameThrowerFire }
+Frame FRFX {Light FlameThrowerFire}
 }
 
 object 64FlamerExploder
@@ -560,29 +560,29 @@ Chance 0.3
 
 Object 64BFG10kShot
 {
-Frame BFE1A0 { Light BFG10KSHOT }
-Frame BFE1B0 { Light BFG10KSHOT }
-Frame BFE1C0 { Light BFG10KSHOT_X1 }
-Frame BFE1D0 { Light BFG10KSHOT_X2 }
-Frame BFE1E0 { Light BFG10KSHOT_X3 }
+Frame BFE1A0 {Light BFG10KSHOT}
+Frame BFE1B0 {Light BFG10KSHOT}
+Frame BFE1C0 {Light BFG10KSHOT_X1}
+Frame BFE1D0 {Light BFG10KSHOT_X2}
+Frame BFE1E0 {Light BFG10KSHOT_X3}
 }
 
 
 flickerlight PlasmaShieldOrange
 {
-	color 0.7 0.7 0.2
-	size 120
-	secondarySize 128
-	chance 0.3
+color 0.7 0.7 0.2
+size 120
+secondarySize 128
+chance 0.3
 }
 
 
 flickerlight PlasmaShieldRed
 {
-	color 0.3 0.1 0.1
-	size 48
-	secondarySize 56
-	chance 0.3
+color 0.3 0.1 0.1
+size 48
+secondarySize 56
+chance 0.3
 }
 
 Object 64BFG10kActiveShield
@@ -595,14 +595,14 @@ Frame KHXCZ {light PlasmaShieldRed}
 //Red armour
 pointlight REDARMOR1
 {
-	color 0.6 0.0 0.1
-	size 20
+color 0.6 0.0 0.1
+size 20
 }
 
 pointlight REDARMOR2
 {
-	color 0.6 0.0 0.1
-	size 24
+color 0.6 0.0 0.1
+size 24
 }
 
 //ExpRevLauncher
