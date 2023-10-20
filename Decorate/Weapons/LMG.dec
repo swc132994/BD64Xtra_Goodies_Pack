@@ -30,21 +30,6 @@ Inventory.PickupSound "WPICK"
 	}
 }
 
-//Regular Rifle (improved misc)
-ACTOR 50CaseSpawn2
-{
-Speed 20
-PROJECTILE
-+NOCLIP
-+CLIENTSIDEONLY
-	States
-	{
-	Spawn:
-		TNT1 A 1 NoDelay A_CustomMissile("EmptyBrass",-2,0,random(-80,-100),2,random(40,80))
-		Stop
-	}
-}
-
 //Upgraded Rifle
 ACTOR GrenTrail
 {
@@ -144,7 +129,7 @@ Weapon.SlotNumber 4
 Weapon.SelectionOrder 5
 Weapon.AmmoUse1 1
 Weapon.AmmoGive1 40
-Weapon.AmmoType1 "64HighCaliberBox"
+Weapon.AmmoType1 "Clip"
 Weapon.AmmoUse2 1
 Weapon.AmmoGive2 6
 Weapon.AmmoType2 "RocketAmmo"
@@ -183,7 +168,7 @@ Inventory.forbiddento "Tactical64DoomPlayer","Tactical64DoomPlayer_P","Modern"
 		TNT1 A 0 A_FireBullets(0.0,0.0,-1,9,"RifleBulletPuff",1)
 		TNT1 A 0 A_PlaySound("LMG",1,0.9)
 		GLRF BC 1 A_SetPitch(pitch+0.1)
-		TNT1 A 0 A_Firecustommissile("50CaseSpawn2",0,0,-6,-18)
+		TNT1 A 0 A_Firecustommissile("50CaseSpawn",0,0,-6,-18)
 		TNT1 A 0 A_GiveInventory("FiredLMG",1)
 		GLRG A 1 A_SetAngle(angle + random(-1,1))
 		TNT1 A 0 A_Refire
@@ -195,7 +180,7 @@ Inventory.forbiddento "Tactical64DoomPlayer","Tactical64DoomPlayer_P","Modern"
 		TNT1 A 0 A_FireBullets(0.6,0.6,-1,9,"RifleBulletPuff",1)
 		TNT1 A 0 A_PlaySound("LMG",1,0.9)
 		GLRF BC 1 A_SetPitch(pitch+0.1)
-		TNT1 A 0 A_Firecustommissile("50CaseSpawn2",0,0,-6,18)
+		TNT1 A 0 A_Firecustommissile("50CaseSpawn",0,0,-6,18)
 		TNT1 A 0 A_GiveInventory("FiredLMG",1)
 		GLRG A 1 A_SetAngle(angle + random(-1,1))
 		TNT1 A 0 A_Refire
@@ -207,7 +192,7 @@ Inventory.forbiddento "Tactical64DoomPlayer","Tactical64DoomPlayer_P","Modern"
 		TNT1 A 0 A_FireBullets(2.0,2.0,-1,9,"RifleBulletPuff",1)
 		TNT1 A 0 A_PlaySound("LMG",1,0.9)
 		GLRF BC 1 A_SetPitch(pitch+0.25)
-		TNT1 A 0 A_Firecustommissile("50CaseSpawn2",0,0,-6,18)
+		TNT1 A 0 A_Firecustommissile("50CaseSpawn",0,0,-6,18)
 		TNT1 A 0 A_GiveInventory("FiredLMG",1)
 		GLRG A 1 A_SetAngle(angle + random(-1,1))
 		TNT1 A 0 A_Refire
@@ -219,7 +204,7 @@ Inventory.forbiddento "Tactical64DoomPlayer","Tactical64DoomPlayer_P","Modern"
 		TNT1 A 0 A_FireBullets(1.5,1.5,-1,9,"RifleBulletPuff",1)
 		TNT1 A 0 A_PlaySound("LMG",1,0.9)
 		GLRF BC 1 A_SetPitch(pitch+0.1)
-		TNT1 A 0 A_Firecustommissile("50CaseSpawn2",0,0,-6,-18)
+		TNT1 A 0 A_Firecustommissile("50CaseSpawn",0,0,-6,-18)
 		TNT1 A 0 A_GiveInventory("FiredLMG",1)
 		GLRG A 1 A_SetAngle(angle + random(-1,1))
 		TNT1 A 0 A_Refire
@@ -231,7 +216,7 @@ Inventory.forbiddento "Tactical64DoomPlayer","Tactical64DoomPlayer_P","Modern"
 		TNT1 A 0 A_FireBullets(1.0,1.0,-1,9,"RifleBulletPuff",1)
 		TNT1 A 0 A_PlaySound("LMG",1,0.9)
 		GLRF BC 1 A_SetPitch(pitch+0.1)
-		TNT1 A 0 A_Firecustommissile("50CaseSpawn2",0,0,-6,-18)
+		TNT1 A 0 A_Firecustommissile("50CaseSpawn",0,0,-6,-18)
 		TNT1 A 0 A_GiveInventory("FiredLMG",1)
 		GLRG A 1 A_SetAngle(angle + random(-1,1))
 		TNT1 A 0 A_Refire
@@ -360,7 +345,7 @@ Weapon.SisterWeapon "64LMGGrenadeModeTactical"
 		TNT1 A 0 A_AlertMonsters
 		TNT1 A 0 A_PlaySound("LMG",1,0.9)
 		GLRF BC 1 A_SetPitch(pitch+0.1)
-		TNT1 A 0 A_Firecustommissile("50CaseSpawn2",0,0,-6,-18)
+		TNT1 A 0 A_Firecustommissile("50CaseSpawn",0,0,-6,-18)
 		TNT1 A 0 A_GiveInventory("FiredLMG",1)
 		GLRG A 1 A_SetAngle(angle + random(-1,1))
 		TNT1 A 0 A_Refire
@@ -373,7 +358,7 @@ Weapon.SisterWeapon "64LMGGrenadeModeTactical"
 		TNT1 A 0 A_AlertMonsters
 		TNT1 A 0 A_PlaySound("LMG",1,0.9)
 		GLRF BC 1 A_SetPitch(pitch+0.1)
-		TNT1 A 0 A_Firecustommissile("50CaseSpawn2",0,0,-6,18)
+		TNT1 A 0 A_Firecustommissile("50CaseSpawn",0,0,-6,18)
 		TNT1 A 0 A_GiveInventory("FiredLMG",1)
 		GLRG A 1 A_SetAngle(angle + random(-1,1))
 		TNT1 A 0 A_Refire
@@ -386,7 +371,7 @@ Weapon.SisterWeapon "64LMGGrenadeModeTactical"
 		TNT1 A 0 A_AlertMonsters
 		TNT1 A 0 A_PlaySound("LMG",1,0.9)
 		GLRF BC 1 A_SetPitch(pitch+0.25)
-		TNT1 A 0 A_Firecustommissile("50CaseSpawn2",0,0,-6,18)
+		TNT1 A 0 A_Firecustommissile("50CaseSpawn",0,0,-6,18)
 		TNT1 A 0 A_GiveInventory("FiredLMG",1)
 		GLRG A 1 A_SetAngle(angle + random(-1,1))
 		TNT1 A 0 A_Refire
@@ -399,7 +384,7 @@ Weapon.SisterWeapon "64LMGGrenadeModeTactical"
 		TNT1 A 0 A_AlertMonsters
 		TNT1 A 0 A_PlaySound("LMG",1,0.9)
 		GLRF BC 1 A_SetPitch(pitch+0.1)
-		TNT1 A 0 A_Firecustommissile("50CaseSpawn2",0,0,-6,-18)
+		TNT1 A 0 A_Firecustommissile("50CaseSpawn",0,0,-6,-18)
 		TNT1 A 0 A_GiveInventory("FiredLMG",1)
 		GLRG A 1 A_SetAngle(angle + random(-1,1))
 		TNT1 A 0 A_Refire
@@ -412,7 +397,7 @@ Weapon.SisterWeapon "64LMGGrenadeModeTactical"
 		TNT1 A 0 A_AlertMonsters
 		TNT1 A 0 A_PlaySound("LMG",1,0.9)
 		GLRF BC 1 A_SetPitch(pitch+0.1)
-		TNT1 A 0 A_Firecustommissile("50CaseSpawn2",0,0,-6,-18)
+		TNT1 A 0 A_Firecustommissile("50CaseSpawn",0,0,-6,-18)
 		TNT1 A 0 A_GiveInventory("FiredLMG",1)
 		GLRG A 1 A_SetAngle(angle + random(-1,1))
 		TNT1 A 0 A_Refire
