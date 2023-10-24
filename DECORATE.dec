@@ -13,3 +13,10 @@
 #INCLUDE "Decorate/Weapons/ExpRevLauncher.dec"
 #INCLUDE "Decorate/XtraPowerups.dec"
 #INCLUDE "Decorate/XtraSpawners.dec"
+
+//Token
+
+Actor WeaponSpecialAction2 : Inventory
+{
+inventory.maxamount 1
+}

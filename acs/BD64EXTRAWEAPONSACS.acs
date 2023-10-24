@@ -97,3 +97,8 @@ if (CheckInventory("64ProtectaTACTICAL") == 1 && GetCvar("Striker12Cvar") == 0)
 Delay(40);
 Restart;
 }
+
+Script "WeaponSpecialAction2" (VOID) NET
+{
+GiveInventory("WeaponSpecialAction2",1);
+}

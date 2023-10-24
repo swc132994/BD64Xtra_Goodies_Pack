@@ -1,0 +1,5 @@
+AddKeySection "Brutal Doom 64 Xtra Goodies Pack" BrutalDoom64XtraGoodiesPack
+
+Alias "WeaponSpecialAction2" "PukeName WeaponSpecialAction2"
+AddMenuKey "Weapon Special Action 2" "WeaponSpecialAction2"
+DefaultBind "Z" "WeaponSpecialAction2"
