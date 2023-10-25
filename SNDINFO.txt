@@ -65,9 +65,14 @@ $Limit Weapons/NailHit		0
 $Limit Weapons/NailHitBleed	0
 
 //Auto-Shotgun (Sounds taken from Half-Life HQ Sounds)
-ASGFIRE ASGFIRE
+
+
+AutoShotgun/Fire ASGFIRE
 //ASGFIR3 ASGFIR3 Unused
-ASGPUMP ASGPUMP
+AutoShotgun/Pump ASGPUMP
+
+AutoShotgun/HDFire AHDFIRE
+AutoShotgun/HDPump AHDPUMP
 
 //Striker-12 (Sounds taken from Counter-Strike: Online 2 by Nexon)
 Striker-12/Fire S12FIRE
