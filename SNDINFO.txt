@@ -140,7 +140,8 @@ Flamethrower/Cannon	FMTRALTF
 
 //Sniper Rifle
 Weapon/SniperCharge		MLSNICHR
-Weapon/SniperReload		MLSNIREL
+Weapon/SniperClipOut		MLSNIOUT
+Weapon/SniperClipIn		MLSNIIN
 Weapon/SniperFire		MLSNIFIR
 Weapon/SniperZoom		MLSNIZOM
 Weapon/SniperStealth	MLSNISIL
