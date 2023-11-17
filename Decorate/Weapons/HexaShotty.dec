@@ -1,4 +1,4 @@
-Actor HexaShotWeaponSpawner : CustomInventory
+Actor HexaShotgunSpawner : CustomInventory
 {
 scale 0.9
 inventory.pickupmessage "You got the Hexa Shotgun!"

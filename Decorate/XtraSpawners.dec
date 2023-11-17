@@ -111,7 +111,8 @@ Scale 0.9
 		TNT1 A 0 A_JumpIf(CallACS("BFG9kNewRandomACS")==1,"Spawn10k")
 		TNT1 A 0 A_JumpIf(CallACS("BFG9kNewRandomACS")==2,"SpawnUnmaker")
 		TNT1 A 0 A_JumpIf(CallACS("BFG9kNewRandomACS")==3,"SpawnLasergun")
-		TNT1 A 0 A_Jump(64,"Spawn10k","SpawnUnmaker","SpawnLasergun") //(25%)
+		TNT1 A 0 A_JumpIf(CallACS("BFG9kNewRandomACS")==4,"SpawnHexaShotgun")		
+		TNT1 A 0 A_Jump(64,"Spawn10k","SpawnUnmaker","SpawnLasergun","HexaShotgunSpawner") //(25%)
 	Spawn9k:
 		TNT1 A 1 A_SpawnItemEx("BFG9000Spawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
@@ -124,6 +125,9 @@ Scale 0.9
 	SpawnLasergun:
 		TNT1 A 1 A_SpawnItemEx("LasergunSpawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
+	SpawnHexaShotgun:
+		TNT1 A 1 A_SpawnItemEx("HexaShotgunSpawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
+		Stop		
 	}
 }
 
