@@ -4,6 +4,7 @@
 #INCLUDE "Decorate/Weapons/Ruiner.dec"
 #INCLUDE "Decorate/Weapons/Autoshotty.dec"
 #INCLUDE "Decorate/Weapons/QuadShotty.dec"
+#INCLUDE "Decorate/Weapons/HexaShotty.dec"
 #INCLUDE "Decorate/Weapons/LMG.dec"
 #INCLUDE "Decorate/Weapons/SniperRifle.dec"
 #INCLUDE "Decorate/Weapons/Nuker.dec"
