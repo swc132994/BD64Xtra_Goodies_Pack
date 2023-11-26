@@ -262,7 +262,6 @@ Tag "Walther WA 2000"
 		TNT1 A 0 A_JumpIfInventory("64HighCaliberBox",1,"ContinuedReload")
 		Goto NoAmmo
 	ContinuedReload:
-		TNT1 A 0 A_JumpIfInventory("SniperSilencer",1,"SilencedReload")
 		SNIR A 2
 		SNIR BCD 1 A_JumpIfInventory("Kicking",1,"DoKick")
 		SNIR EFGH 1 A_JumpIfInventory("Kicking",1,"DoKick")
