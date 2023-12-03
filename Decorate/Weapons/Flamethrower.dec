@@ -214,8 +214,8 @@ Inventory.ForbiddenTo "64DoomPlayer"
 		TNT1 A 0 A_Takeinventory("TossMine",0)
 		TNT1 A 0 A_Takeinventory("PlaceMine",0)
 		TNT1 A 0 A_Takeinventory("Kicking",0)
-		FR4M EDCBA 1
-		TNT1 A 1 A_Lower
+		FR4M FGHIJ 1
+		TNT1 A 0 A_Lower
 		Wait
 	Select:
 		TNT1 A 0 A_PlaySound("Flamethrower/Ready")
@@ -273,26 +273,26 @@ Inventory.ForbiddenTo "64DoomPlayer"
 		FLMG EEEE 2 A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
 		Goto Ready
 	MineThrowFlash:
-		FR4M EDCBA 1
+		FR4M FGHIJ 1
 		TNT1 A 16
 		FR4M ABCDE 1
 		Stop
 	KickingFlash:
-		FR4M EDCB 1
-		FR4M A 8
-		FR4M BCDE 1
+		FR4M FGHI 1
+		FR4M J 8
+		FR4M HIGF 1
 		Stop
 	AirKickingFlash:
-		FR4M EDCB 1
-		FR4M A 10
-		FR4M BCDE 1
+		FR4M FGHI 1
+		FR4M J 10
+		FR4M HIGF 1
 		Stop
 	SlideKickingStart:
-		FR4M EDCB 1
-		FR4M A 17
+		FR4M FGHI 1
+		FR4M J 17
 	SlideKickingEnd:
-		FR4M A 6
-		FR4M BCDE 1
+		FR4M J 6
+		FR4M HIGF 1
 		Stop
 	}
 }

@@ -74,7 +74,7 @@ Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		GRLF E 1 Bright A_SetPitch(pitch+0.4,SPF_INTERPOLATE)
 		GRLG C 2 A_SetPitch(pitch+0.2,SPF_INTERPOLATE)
 		GRLG CBB 2
-		GRLG A 8
+		GRLG A 8 A_WeaponReady
 		GRLG A 1 A_Refire
 		Goto Ready
 	}
@@ -108,8 +108,8 @@ Tag "Grenade Launcher"
 		TNT1 A 0 A_Takeinventory("TossMine",0)
 		TNT1 A 0 A_Takeinventory("PlaceMine",0)
 		TNT1 A 0 A_Takeinventory("Kicking",0)
-		GRLS DBCA 1
-		TNT1 A 1 A_Lower
+		GRLS EFGH 1
+		TNT1 A 0 A_Lower
 		Wait
 	Select:
 		TNT1 A 0 A_PlaySound("Grenadier/Ready")
@@ -135,7 +135,7 @@ Tag "Grenade Launcher"
 		GRLF E 1 Bright A_SetPitch(pitch+0.4,SPF_INTERPOLATE)
 		GRLG C 2 A_SetPitch(pitch+0.2,SPF_INTERPOLATE)
 		GRLG CBB 2
-		GRLG A 8
+		GRLG A 8 A_WeaponReady
 		GRLG A 1 A_Refire
 		Goto Ready
 	AltFire:
@@ -150,10 +150,10 @@ Tag "Grenade Launcher"
 		GRLG C 2 A_SetPitch(pitch+0.2,SPF_INTERPOLATE)
 		GRLG C 8
 		GRLG CBB 2
-		GRLG AA 8
+		GRLG AA 8 A_WeaponReady
 		Goto Ready
 	MineThrowFlash:
-		GRLS DCBA 1
+		GRLS EFGH 1
 		TNT1 A 18
 		GRLS ABCD 1
 		Stop

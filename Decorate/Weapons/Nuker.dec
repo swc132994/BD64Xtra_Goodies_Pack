@@ -110,12 +110,12 @@ Inventory.PickupSound "WPICK"
 		NUKW A -1
 		Stop
 	Deselect:
-		NUK6 WXYZ 1
-		TNT1 A 1 A_Lower
+		NUKS EFGH 1
+		TNT1 A 0 A_Lower
 		Wait
 	Select:
 		TNT1 A 0 A_PlaySound("nuker/WeaponActivated")
-		NUK6 ZYXW 1 Offset(0,32)
+		NUKS ABCD 1 Offset(0,32)
 		TNT1 A 0 A_Raise
 		Wait
 	v1Ready:
@@ -159,11 +159,9 @@ Inventory.PickupSound "WPICK"
 		NUKG A 2 A_Print("<!> WARNING - ALTERNATIVE FIREMODE NOT YET IMPLEMENTED <!>")
 		Goto Ready*/
 	MineThrowFlash:
-		NUKG A 1
-		NUK6 WXYZ 1
-		TNT1 A 16
-		NUK6 ZYXW 1
-		NUKG A 1
+		NUKS EFGH 1
+		TNT1 A 18
+		NUKS ABCD 1
 		Stop
 	KickingFlash:
 		NUK7 WXYZ 1
