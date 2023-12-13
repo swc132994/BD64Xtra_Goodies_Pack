@@ -18,14 +18,13 @@ Inventory.PickupSound "WPICK"
 		TNT1 A 0 A_GiveInventory("64FireAxe",1)
 		Stop
 	Pickup2:
-		TNT1 A 0 A_GiveInventory("64FireAxeTactical",1)
+		TNT1 A 0 A_GiveInventory("64FireAxeModern",1)
 		Stop
 	DMSpawn:
 		TNT1 A 0 A_ChangeFlag("THRUACTORS",1)
 		TNT1 A 0 A_SpawnItemEx("TeleportationFog")
 		TNT1 A 0 A_SpawnItemEx("64FireAxe")
 		TNT1 A 0 A_SpawnItemEx("64FireAxeModern")
-		TNT1 A 0 A_SpawnItemEx("64FireAxeTactical")
 		TNT1 A 1050
 		Loop
 	}
@@ -284,7 +283,7 @@ ACTOR 64FireAxeModern : Brutal64Weapon
 		AXEF E 1 A_SetPitch(pitch+2)
 		AXEF FG 1
 		TNT1 AA 1 A_SetPitch(pitch+2)
-		TNT1 A 2		
+		TNT1 A 2
 		TNT1 AAAA 1 A_SetPitch(pitch-2)
 		AXES HGFE 1
 		Goto Ready
@@ -307,7 +306,7 @@ ACTOR 64FireAxeModern : Brutal64Weapon
 		ASEG D 1 A_SetAngle(angle+2)
 		ASEF AB 1 
 		AXEG A 0 A_FireCustomMissile("ChargeAxeAttack",0,0,0,0)
-		AXEG A 0 A_FireCustomMissile("ChargeAxeAttack",20,0,0,0)	
+		AXEG A 0 A_FireCustomMissile("ChargeAxeAttack",20,0,0,0)
 		AXEG A 0 A_FireCustomMissile("ChargeAxeAttack",-20,0,0,0)
 	AltFireEnd:
 		ASEF C 1 A_SetAngle(angle+2)
@@ -342,7 +341,7 @@ ACTOR 64FireAxeModern : Brutal64Weapon
 		TNT1 A 0 A_SetPitch(pitch+1.4,SPF_INTERPOLATE)
 		TNT1 A 0 A_SetPitch(pitch+1.2,SPF_INTERPOLATE)
 		AXEB DE 2
-		Goto Ready	
+		Goto Ready
 	Reload:
 		AX2G ABC 1 A_WeaponReady
 		TNT1 A 0 A_PlaySound("VUP",2)
