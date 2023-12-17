@@ -58,7 +58,7 @@ Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		Loop
 	Ready2:
 		SNIZ A 1 Bright A_WeaponReady
-		Loop		
+		Loop
 	Deselect:
 		TNT1 A 0 A_Takeinventory("Zoomed",0)
 		TNT1 A 0 A_ZoomFactor(1.0)
@@ -76,8 +76,7 @@ Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		TNT1 A 0 A_FireBullets(6.0,6.0,1,60,"RifleBulletPuff")
 		TNT1 A 0 A_PlaySound("Weapon/SniperFire",CHAN_WEAPON)
 		SNIF A 2 Bright
-		TNT1 A 0 A_SetPitch(pitch-1.5,SPF_INTERPOLATE)
-		SNIF B 1 A_Firecustommissile("50CaseSpawn",0,0,-6,-18)	
+		SNIF B 1 A_Firecustommissile("50CaseSpawn",0,0,-6,-18)
 		SNIF CD 1
 		SNIG A 4 A_WeaponReady(1)
 		SNIG A 2
@@ -102,7 +101,6 @@ Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		TNT1 A 0 A_FireBullets(0,0,1,120,"RifleBulletPuff")
 		TNT1 A 0 A_PlaySound("Weapon/SniperFire",CHAN_WEAPON)
 		SNIZ A 2 Bright
-		TNT1 A 0 A_SetPitch(pitch-1.2,SPF_INTERPOLATE)
 		TNT1 A 0 A_Firecustommissile("50CaseSpawn",0,0,-6,-18)
 		SNIZ A 4 Bright
 		Goto Ready2

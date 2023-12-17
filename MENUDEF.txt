@@ -180,7 +180,7 @@ OptionValue "Revolver_Spawner_Value"
 
 OptionValue "ASGHLSoundValue"
 {
-	0,"Standart (Valve, HQ Restored by Senn)"
+	0,"Standard (Valve, HQ Restored by Senn)"
 	1,"HD (Gearbox)"
 }
 

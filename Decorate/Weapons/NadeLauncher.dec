@@ -65,14 +65,11 @@ Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 	Fire:
 		TNT1 A 0 A_PlaySound("Grenadier/Fire",1)
 		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",30,5,40)
-		TNT1 A 0 A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
+		TNT1 A 0 A_FireCustomMissile("GunFireSmoke")
 		GRLF A 1 Bright A_FireCustomMissile("64NadeLauncherGrenades",0,1,0,0)
 		TNT1 A 0 A_Recoil(2)
-		GRLF B 1 Bright A_SetPitch(pitch-2,SPF_INTERPOLATE)
-		GRLF C 1 Bright A_SetPitch(pitch+0.8,SPF_INTERPOLATE)
-		GRLF D 1 Bright A_SetPitch(pitch+0.6,SPF_INTERPOLATE)
-		GRLF E 1 Bright A_SetPitch(pitch+0.4,SPF_INTERPOLATE)
-		GRLG C 2 A_SetPitch(pitch+0.2,SPF_INTERPOLATE)
+		GRLF BCDE 1 Bright
+		GRLG C 2
 		GRLG CBB 2
 		GRLG A 8 A_WeaponReady
 		GRLG A 1 A_Refire
