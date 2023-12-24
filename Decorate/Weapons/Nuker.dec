@@ -111,6 +111,10 @@ Inventory.PickupSound "WPICK"
 		Stop
 	Deselect:
 		NUKS EFGH 1
+		TNT1 A 0 A_Takeinventory("WeaponSpecialAction",0)
+		TNT1 A 0 A_Takeinventory("TossMine",0)
+		TNT1 A 0 A_Takeinventory("PlaceMine",0)
+		TNT1 A 0 A_Takeinventory("Kicking",0)
 		TNT1 A 0 A_Lower
 		Wait
 	Select:
@@ -121,10 +125,9 @@ Inventory.PickupSound "WPICK"
 	v1Ready:
 	Ready:
 		NUKG A 1 A_WeaponReady
-		TNT1 A 0 A_Takeinventory("WeaponSpecialAction",0)
-		TNT1 A 0 A_Takeinventory("TossMine",0)
-		TNT1 A 0 A_Takeinventory("PlaceMine",0)
-		TNT1 A 0 A_Takeinventory("Kicking",0)
+		TNT1 A 0 A_Jumpifinventory("Kicking",1,"DoKick")
+		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
+		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
 		Loop
 	Fire:
 		TNT1 A 0 A_JumpIfInventory("64NuclearWarheadAmmo",1,"TacticalNuke")
