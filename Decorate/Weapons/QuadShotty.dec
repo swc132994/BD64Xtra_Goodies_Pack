@@ -191,61 +191,52 @@ inventory.pickupmessage "You got the Ultra Shotgun!"
 		TNT1 A 0 A_Jumpifinventory("Kicking",1,"DoKick")
 		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
-		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction",1,"SpecialCheck")
-		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction2",1,"CheckForDemonKey")
+		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction",1,"CheckForDemonKey")
 		loop
 	BlinkBegin:
 		QSGI B 1 A_WeaponReady(WRF_ALLOWRELOAD)
 		TNT1 A 0 A_Jumpifinventory("Kicking",1,"DoKick")
 		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
-		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction",1,"SpecialCheck")
-		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction2",1,"CheckForDemonKey")
+		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction",1,"CheckForDemonKey")
 		QSGI C 1 A_WeaponReady(WRF_ALLOWRELOAD)
 		TNT1 A 0 A_Jumpifinventory("Kicking",1,"DoKick")
 		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
-		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction",1,"SpecialCheck")
-		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction2",1,"CheckForDemonKey")
+		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction",1,"CheckForDemonKey")
 		QSGI D 1 A_WeaponReady(WRF_ALLOWRELOAD)
 		TNT1 A 0 A_Jumpifinventory("Kicking",1,"DoKick")
 		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
-		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction",1,"SpecialCheck")
-		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction2",1,"CheckForDemonKey")
+		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction",1,"CheckForDemonKey")
 		Goto Blink
 	Blink:
 		QSGI E 1 A_WeaponReady(WRF_ALLOWRELOAD)
 		TNT1 A 0 A_Jumpifinventory("Kicking",1,"DoKick")
 		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
-		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction",1,"SpecialCheck")
-		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction2",1,"CheckForDemonKey")
+		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction",1,"CheckForDemonKey")
 		TNT1 A 0 A_JumpIfTargetInLOS("Blink",0,0,JLOSF_COMBATANTONLY,12000) //Still in sight? Then repeat!
 		QSGI D 1 A_WeaponReady(WRF_ALLOWRELOAD)
 		TNT1 A 0 A_Jumpifinventory("Kicking",1,"DoKick")
 		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
-		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction",1,"SpecialCheck")
-		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction2",1,"CheckForDemonKey")
+		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction",1,"CheckForDemonKey")
 		QSGI C 1 A_WeaponReady(WRF_ALLOWRELOAD)
 		TNT1 A 0 A_Jumpifinventory("Kicking",1,"DoKick")
 		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
-		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction",1,"SpecialCheck")
-		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction2",1,"CheckForDemonKey")
+		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction",1,"CheckForDemonKey")
 		QSGI B 1 A_WeaponReady(WRF_ALLOWRELOAD)
 		TNT1 A 0 A_Jumpifinventory("Kicking",1,"DoKick")
 		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
-		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction",1,"SpecialCheck")
-		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction2",1,"CheckForDemonKey")
+		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction",1,"CheckForDemonKey")
 		Goto Ready
 	Deselect:
 		TNT1 A 0 A_ZoomFactor(1.0)
 		TNT1 A 0 A_Takeinventory("QuadShottyIncendiaryToken",0)
 		TNT1 A 0 A_Takeinventory("WeaponSpecialAction",0)
-		TNT1 A 0 A_Takeinventory("WeaponSpecialAction2",0)
 		TNT1 A 0 A_Takeinventory("TossMine",0)
 		TNT1 A 0 A_Takeinventory("PlaceMine",0)
 		TNT1 A 0 A_Takeinventory("Kicking",0)
@@ -255,6 +246,7 @@ inventory.pickupmessage "You got the Ultra Shotgun!"
 	Select:
 		TNT1 A 0 A_JumpIfInventory("QSGReloading",1,"RaiseReloading")
 		TNT1 A 0 A_PlaySound("QSGCLSE")
+		TNT1 A 0 A_Print("Weapon Special Available",2)
 		QSG1 PQRSTUVW 1 Offset(0,32)
 		TNT1 A 0 A_Raise
 		Wait
@@ -267,7 +259,7 @@ inventory.pickupmessage "You got the Ultra Shotgun!"
 		QSGS ABCD 1 Offset(0,32)
 		Goto Ready
 	Fire:
-		TNT1 A 0 A_Jumpifinventory("QuadShottySingleToken",1,"HalfFire")
+//		TNT1 A 0 A_Jumpifinventory("QuadShottySingleToken",1,"HalfFire")
 		TNT1 A 0 A_JumpIfInventory("QSGSingleAlt",1,"TripleFire")
 		TNT1 A 0 A_Jumpifinventory("QSGAlt",1,"AltFire2")
 		TNT1 A 0 A_JumpIfInventory("QSGSingleAlt3",1,"SingleAltFire4")
@@ -287,7 +279,7 @@ inventory.pickupmessage "You got the Ultra Shotgun!"
 		QSGF F 1 A_SetPitch(pitch+1.2,SPF_INTERPOLATE)
 		QSGI A 1 A_SetPitch(pitch+0.8,SPF_INTERPOLATE)
 		QSGI A 1 A_SetPitch(pitch+0.4,SPF_INTERPOLATE)
-		QSGI A 0 A_WeaponReady
+		TNT1 A 0 A_WeaponReady
 		Goto Reload
 	FireIncendiary:
 		TNT1 A 0 A_AlertMonsters
@@ -304,7 +296,7 @@ inventory.pickupmessage "You got the Ultra Shotgun!"
 		QSGF F 1 A_SetPitch(pitch+1.2,SPF_INTERPOLATE)
 		QSGI A 1 A_SetPitch(pitch+0.8,SPF_INTERPOLATE)
 		QSGI A 1 A_SetPitch(pitch+0.4,SPF_INTERPOLATE)
-		QSGI A 0 A_WeaponReady
+		TNT1 A 0 A_WeaponReady
 		Goto Reload
 	TripleFire:
 		Goto TripleAmmoCheck
@@ -324,7 +316,7 @@ inventory.pickupmessage "You got the Ultra Shotgun!"
 		QSGF F 1 A_SetPitch(pitch+1.2,SPF_INTERPOLATE)
 		QSGI A 1 A_SetPitch(pitch+0.8,SPF_INTERPOLATE)
 		QSGI A 1 A_SetPitch(pitch+0.4,SPF_INTERPOLATE)
-		QSGI A 0 A_WeaponReady
+		TNT1 A 0 A_WeaponReady
 		Goto Reload
 	TripleFireIncendiary:
 		TNT1 AAAAAA 0 A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
@@ -341,10 +333,10 @@ inventory.pickupmessage "You got the Ultra Shotgun!"
 		QSGF F 1 A_SetPitch(pitch+1.2,SPF_INTERPOLATE)
 		QSGI A 1 A_SetPitch(pitch+0.8,SPF_INTERPOLATE)
 		QSGI A 1 A_SetPitch(pitch+0.4,SPF_INTERPOLATE)
-		QSGI A 0 A_WeaponReady
+		TNT1 A 0 A_WeaponReady
 		Goto Reload
 	AltFire:
-		TNT1 A 0 A_Jumpifinventory("QuadShottySingleToken",1,"SingleAltFire")
+//		TNT1 A 0 A_Jumpifinventory("QuadShottySingleToken",1,"SingleAltFire")
 	HalfFire:
 		TNT1 A 0 A_Jumpifinventory("QSGSingleAlt",1,"AltFire3")
 		TNT1 A 0 A_Jumpifinventory("QSGAlt",1,"AltFire2")
@@ -390,7 +382,7 @@ inventory.pickupmessage "You got the Ultra Shotgun!"
 		QSGF F 1 A_SetPitch(pitch+1.2,SPF_INTERPOLATE)
 		QSGI A 1 A_SetPitch(pitch+0.8,SPF_INTERPOLATE)
 		QSGI A 1 A_SetPitch(pitch+0.4,SPF_INTERPOLATE)
-		QSGI A 0 A_WeaponReady
+		TNT1 A 0 A_WeaponReady
 		Goto Reload
 	ResumeAltFireIncendiary:
 		TNT1 AAA 0 A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
@@ -426,7 +418,7 @@ inventory.pickupmessage "You got the Ultra Shotgun!"
 		QSGF F 1 A_SetPitch(pitch+1.2,SPF_INTERPOLATE)
 		QSGI A 1 A_SetPitch(pitch+0.8,SPF_INTERPOLATE)
 		QSGI A 1 A_SetPitch(pitch+0.4,SPF_INTERPOLATE)
-		QSGI A 0 A_WeaponReady
+		TNT1 A 0 A_WeaponReady
 		Goto Reload
 	AltFire3:
 		Goto AltAmmoCheck
@@ -784,34 +776,34 @@ inventory.pickupmessage "You got the Ultra Shotgun!"
 		TNT1 A 0 A_JumpIfInventory("QSGSingleAlt2",1,"ResumeSingleAltFire3")
 		TNT1 A 0 A_JumpIfInventory("QSGSingleAlt3",1,"ResumeSingleAltFire4")
 		Goto ResumeSingleAltFire
-	SpecialCheck:
+/*	SpecialCheck:
 		TNT1 A 0 A_JumpIfInventory("QuadShottySingleToken",1,"ResumeFullShot")
 		TNT1 A 0 A_GiveInventory("QuadShottySingleToken",1)
 		TNT1 A 0 A_Print("Half Fire Mode")
 		TNT1 A 0 A_TakeInventory("WeaponSpecialAction",0)
-		Goto Ready
-	ResumeFullShot:
+		Goto Ready*/
+/*	ResumeFullShot:
 		TNT1 A 0 A_TakeInventory("QuadShottySingleToken",1)
 		TNT1 A 0 A_Print("Full Fire Mode")
 		TNT1 A 0 A_TakeInventory("WeaponSpecialAction",0)
-		Goto Ready
+		Goto Ready*/
 	CheckForDemonKey:
 		TNT1 A 0 A_JumpIfInventory("WpnPower4Icon",1,"AltSwitch")
 		QSGI A 8 A_Print("It is locked with a magic seal...")
-		TNT1 A 0 A_TakeInventory("WeaponSpecialAction2",0)
+		TNT1 A 0 A_TakeInventory("WeaponSpecialAction",0)
 		Goto Ready
 	AltSwitch:
 		TNT1 A 0 A_JumpIfInventory("QuadShottyIncendiaryToken",1,"NotIncendiary")
 		TNT1 A 0 A_Giveinventory("QuadShottyIncendiaryToken",1)
 		QSGI BCD 1
 		QSGI E 8 A_Print("Incendiary Mode!")
-		TNT1 A 0 A_TakeInventory("WeaponSpecialAction2",0)
+		TNT1 A 0 A_TakeInventory("WeaponSpecialAction",0)
 		Goto Ready
 	NotIncendiary:
 		QSGI E 8 A_Print("Normal Mode!")
 		QSGI DCB 1
 		TNT1 A 0 A_Takeinventory("QuadShottyIncendiaryToken",0)
-		TNT1 A 0 A_TakeInventory("WeaponSpecialAction2",0)
+		TNT1 A 0 A_TakeInventory("WeaponSpecialAction",0)
 		Goto Ready
 	Spawn:
 		QSGP A -1

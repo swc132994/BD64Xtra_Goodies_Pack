@@ -98,11 +98,6 @@ Delay(40);
 Restart;
 }
 
-Script "WeaponSpecialAction2" (VOID) NET
-{
-GiveInventory("WeaponSpecialAction2",1);
-}
-
 Script "ASGHLFireSounds" (VOID) NET //I don't like HL HD Shotgun Sound
 {
 	If (GetCvar("ASGHLSoundCvar")==True)
