@@ -24,6 +24,7 @@ Powerup.Type "PowerInfiniteAmmo"
 Powerup.Color "EF EA 4A",0.2
 Inventory.PickupMessage "Infinite Ammo!"
 Inventory.PickupSound "misc/p_pkup"
+Tag "Arsenal Sphere"
 +INVENTORY.AUTOACTIVATE
 +INVENTORY.ALWAYSPICKUP
 +COUNTITEM
@@ -47,6 +48,7 @@ Actor 64Quadsphere : CustomInventory
 Scale 0.82
 Inventory.PickupMessage "QUAD DAMAGE!"
 Inventory.PickupSound "misc/p_pkup"
+Tag "Quad Damage Sphere"
 +INVENTORY.BIGPOWERUP
 +INVENTORY.ALWAYSPICKUP
 +COUNTITEM
@@ -67,6 +69,7 @@ Actor 64Ghastsphere : CustomInventory
 Scale 0.82
 Inventory.PickupMessage "Shadowy Speed!"
 Inventory.PickupSound "misc/p_pkup"
+Tag "Ghast Sphere"
 +INVENTORY.BIGPOWERUP
 +INVENTORY.ALWAYSPICKUP
 +COUNTITEM
@@ -88,6 +91,7 @@ Actor 64Titansphere : CustomInventory
 Scale 0.9
 Inventory.PickupMessage "IMMORTALITY!"
 Inventory.PickupSound "misc/p_pkup"
+Tag "Titan Sphere"
 +INVENTORY.ALWAYSPICKUP
 +INVENTORY.BIGPOWERUP
 +COUNTITEM
@@ -108,6 +112,7 @@ Actor 64Crucifix : CustomInventory
 Scale 0.7
 Inventory.PickupMessage "Holy Crucifix"
 Inventory.PickupSound "misc/p_pkup"
+Tag "Crucifix"
 +INVENTORY.ALWAYSPICKUP
 +COUNTITEM
 +FLOATBOB
@@ -139,6 +144,7 @@ Actor 64BioSuit : CustomInventory
 Scale 0.82
 Inventory.MaxAmount 0
 Inventory.PickupMessage "You got a Bio-Suit"
+Tag "Biological Suit"
 +INVENTORY.ALWAYSPICKUP
 +INVENTORY.AUTOACTIVATE
 +COUNTITEM
@@ -228,6 +234,7 @@ ACTOR 64UltraSphere : CustomInventory
 Scale 0.82
 Inventory.PickupMessage "ULTRASPHERE!!!"
 Inventory.PickupSound "misc/p_pkup"
+Tag "Ultra Sphere"
 +INVENTORY.ALWAYSPICKUP
 +COUNTITEM
 	States
@@ -254,9 +261,10 @@ Scale 0.92
 DamageFactor "Fire",0.125
 Armor.SavePercent 66.66666
 Armor.Saveamount 300
+Tag "Red Armour"
 Inventory.Icon "ARM6A0"
 Inventory.PickupSound "ARMOR"
-Inventory.Pickupmessage "You got the UltraArmor!"
+Inventory.Pickupmessage "You got the UltraArmour!"
 	States
 	{
 	Spawn:
@@ -299,6 +307,7 @@ ACTOR 64Minisphere : CustomInventory
 Scale 0.64
 Inventory.PickupMessage "Minisphere!"
 Inventory.PickupSound "misc/p_pkup"
+Tag "Mini Sphere"
 +INVENTORY.ALWAYSPICKUP
 +COUNTITEM
 	States
@@ -337,6 +346,7 @@ Actor 64HyperSphere : CustomInventory
 Scale 0.7
 Inventory.PickupMessage "HYPERCHARGE!!"
 Inventory.PickupSound "misc/p_pkup"
+Tag "Hyper Sphere"
 +INVENTORY.ALWAYSPICKUP
 +COUNTITEM
 	States

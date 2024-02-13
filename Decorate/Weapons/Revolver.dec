@@ -104,6 +104,7 @@ Inventory.Amount 6
 Inventory.MaxAmount 25
 Ammo.BackpackAmount 6
 Ammo.BackpackMaxAmount 50
+Tag "Revolver Speedloader"
 Inventory.Icon "HI04Z0"
 	states
 	{

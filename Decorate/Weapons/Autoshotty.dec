@@ -742,6 +742,7 @@ Inventory.PickupSound "IPICK"
 Inventory.PickupMessage "Picked up 2 Ultra Shells."
 Inventory.Amount 2
 Inventory.MaxAmount 25
+Tag "Blue Shells"
 Ammo.BackpackAmount 2
 Ammo.BackpackMaxAmount 50
 Inventory.Icon "10GUA0"
@@ -758,6 +759,7 @@ Actor 64BlueShellBox : 64BlueShell
 Scale 1.0
 Inventory.PickupMessage "Picked up a box of Ultra Shells."
 Inventory.Amount 10
+Tag "Blue Shell Box"
 	states
 	{
 	Spawn:

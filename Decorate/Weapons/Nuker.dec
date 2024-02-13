@@ -474,6 +474,7 @@ Inventory.Amount 1
 Inventory.MaxAmount 1
 Ammo.BackpackAmount 0
 Ammo.BackpackMaxAmount 3
+Tag "Nuclear Warhead"
 Inventory.PickupMessage "Picked up one nuclear warhead."
 Inventory.PickupSound "IPICK"
 Inventory.Icon "NUKAA0"
