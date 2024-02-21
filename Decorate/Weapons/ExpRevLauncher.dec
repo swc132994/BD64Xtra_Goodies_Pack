@@ -151,7 +151,7 @@ Tag "Heatseeker Missile Launcher"
 		TNT1 A 0 A_Lower
 		Wait
 	Select:
-		TNT1 A 0 A_PlaySound("heatseek/raise")
+		TNT1 A 0 A_PlaySound("heatseek/raise",CHAN_BODY)
 		RVDW DCBA 1 Offset(0,32)
 		TNT1 A 0 A_Raise
 		Wait

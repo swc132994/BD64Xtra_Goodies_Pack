@@ -55,34 +55,28 @@ Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		Loop
 	Deselect:
 		TNT1 A 0 A_ZoomFactor(1.0)
+		TNT1 A 0 A_TakeInventory("NailgunFire2ndCannon",0)
 		NLMG A 1 A_Lower
 		Loop
 	Ready:
 		NLMG A 1 A_WeaponReady
 		Loop
 	Fire:
-		TNT1 A 0 A_JumpIfInventory("64NailAmmo",1,"FireNail1")
-		Goto Ready
-	FireNail1:
-		TNT1 A 0 A_TakeInventory("64NailAmmo",1,TIF_NOTAKEINFINITE)
 		TNT1 A 0 A_JumpIfInventory("NailgunFire2ndCannon",1,"FireNail2")
 		TNT1 A 0 A_PlaySound("Weapons/NailMGFire",CHAN_WEAPON)
-		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0,1,0,0,0)
-		NLMG B 1 A_FireCustomMissile("64PlayerNail",Random(4,-4),0,3,0,0,Random(2,-2))
-		NLMG CD 1
-		NLMG C 1
+		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0,1)
+		NLMG B 1 A_FireCustomMissile("64PlayerNail",Random(4,-4),1,3,-10,0,Random(2,-2))
+		NLMG CDC 1
 		TNT1 A 0 A_ZoomFactor(0.98)
 		NLMG B 1
 		TNT1 A 0 A_ZoomFactor(1.0)
 		TNT1 A 0 A_GiveInventory("NailgunFire2ndCannon",1)
 		Goto Ready
 	FireNail2:
-		TNT1 A 0 A_TakeInventory("64NailAmmo",1,TIF_NOTAKEINFINITE)
 		TNT1 A 0 A_PlaySound("Weapons/NailMGFire",CHAN_WEAPON)
-		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0,-1,0,0,0)
-		NLMG F 1 A_FireCustomMissile("64PlayerNail",Random(4,-4),0,-3,0,0,Random(2,-2))
-		NLMG GH 1
-		NLMG G 1
+		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0,-1)
+		NLMG F 1 A_FireCustomMissile("64PlayerNail",Random(4,-4),1,-3,-10,0,Random(2,-2))
+		NLMG GHG 1
 		TNT1 A 0 A_ZoomFactor(0.98)
 		NLMG F 1
 		TNT1 A 0 A_ZoomFactor(1.0)
@@ -97,8 +91,6 @@ Scale 0.82
 Weapon.AmmoUse1 1
 Weapon.AmmoGive1 25
 Weapon.AmmoType1 "64NailAmmo"
-//Weapon.AmmoUse2 1
-//Weapon.AmmoType2 "64NailOverheat"
 Weapon.SlotNumber 6
 Inventory.PickupSound "WPICK"
 Inventory.PickupMessage "You got the NailGun!"
@@ -106,8 +98,6 @@ Obituary "%o was nailed by %k."
 Tag "Nailgun"
 +WEAPON.NOAUTOAIM
 +INVENTORY.RESTRICTABSOLUTELY
-//+WEAPON.AMMO_OPTIONAL
-//+WEAPON.ALT_AMMO_OPTIONAL
 	States
 	{
 	Spawn:
@@ -115,6 +105,7 @@ Tag "Nailgun"
 		Stop
 	Deselect:
 		TNT1 A 0 A_ZoomFactor(1.0)
+		TNT1 A 0 A_TakeInventory("NailgunFire2ndCannon",0)
 		TNT1 A 0 A_Takeinventory("WeaponSpecialAction",0)
 		TNT1 A 0 A_Takeinventory("TossMine",0)
 		TNT1 A 0 A_Takeinventory("PlaceMine",0)
@@ -123,7 +114,7 @@ Tag "Nailgun"
 		TNT1 A 0 A_Lower
 		Wait
 	Select:
-		TNT1 A 0 A_PlaySound("NAILPKUP")
+		TNT1 A 0 A_PlaySound("NAILPKUP",CHAN_AUTO)
 		NLSL ABCDE 1 Offset(0,32)
 		TNT1 A 0 A_Raise
 		Wait
@@ -135,66 +126,56 @@ Tag "Nailgun"
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
 		Loop
 	Fire:
-		TNT1 A 0 A_JumpIfInventory("64NailAmmo",1,"FireNail1")
-		Goto Ready
-	FireNail1:
-		TNT1 A 0 A_TakeInventory("64NailAmmo",1,TIF_NOTAKEINFINITE)
 		TNT1 A 0 A_JumpIfInventory("NailgunFire2ndCannon",1,"FireNail2")
 		TNT1 A 0 A_PlaySound("Weapons/NailMGFire",CHAN_WEAPON)
-		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0,1,0,0,0)
-		NLMG B 1 A_FireCustomMissile("64PlayerNail",Random(4,-4),0,3,0,0,Random(2,-2))
+		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0,1)
+		NLMG B 1 A_FireCustomMissile("64PlayerNail",Random(4,-4),1,3,-10,0,Random(2,-2))
 		NLMG CD 1
 		NLMG C 1 A_SetPitch(pitch-1.2)
 		TNT1 A 0 A_ZoomFactor(0.98)
 		NLMG B 1 A_SetPitch(pitch+1.2)
 		TNT1 A 0 A_ZoomFactor(1.0)
-//		TNT1 A 0 A_GiveInventory("64NailOverheat",1)
 		TNT1 A 0 A_GiveInventory("NailgunFire2ndCannon",1)
 		Goto Ready
 	FireNail2:
 		TNT1 A 0 A_PlaySound("Weapons/NailMGFire",CHAN_WEAPON)
-		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0,-1,0,0,0)
-		NLMG F 1 A_FireCustomMissile("64PlayerNail",Random(4,-4),0,-3,0,0,Random(2,-2))
+		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0,-1)
+		NLMG F 1 A_FireCustomMissile("64PlayerNail",Random(4,-4),1,-3,-10,0,Random(2,-2))
 		NLMG GH 1
 		NLMG G 1 A_SetPitch(pitch-1.2)
 		TNT1 A 0 A_ZoomFactor(0.98)
 		NLMG F 1 A_SetPitch(pitch+1.2)
 		TNT1 A 0 A_ZoomFactor(1.0)
-//		TNT1 A 0 A_GiveInventory("64NailOverheat",1)
 		TNT1 A 0 A_TakeInventory("NailgunFire2ndCannon",1)
 		Goto Ready
 	Reload:
 		NLFI ABCDEFGHJK 1 A_WeaponReady
 		TNT1 A 0 A_Jump(64,"AltInspect")
 		NLFI LMN 1 A_WeaponReady
-		TNT1 A 0 A_PlaySound("Weapons/NailFidget1",1)
+		TNT1 A 0 A_PlaySound("Weapons/NailFidget1",CHAN_WEAPON)
 		NLFI OPQRRRR 1 A_WeaponReady
-		TNT1 A 0 A_PlaySound("Weapons/NailFidget2",1)
+		TNT1 A 0 A_PlaySound("Weapons/NailFidget2",CHAN_WEAPON)
 		NLFI STUVXYDCBA 1 A_WeaponReady
 		Goto Ready
 	AltInspect:
 		NLF2 AB 1 A_WeaponReady
-		TNT1 A 0 A_PlaySound("Weapons/NailFidget1",1)
+		TNT1 A 0 A_PlaySound("Weapons/NailFidget1",CHAN_WEAPON)
 		NLF2 CDEFGGGGG 1 A_WeaponReady
-		TNT1 A 0 A_PlaySound("Weapons/NailFidget2",1)
+		TNT1 A 0 A_PlaySound("Weapons/NailFidget2",CHAN_WEAPON)
 		NLF2 HIJKLMNOP 1 A_WeaponReady
 		NLFI DCBA 1 A_WeaponReady
 		Goto Ready
 	AltFire:
-		TNT1 A 0 A_JumpIfInventory("64NailAmmo",1,"AltProceed")
+		TNT1 A 0 A_JumpIfInventory("64NailAmmo",3,"LavaNail1")
+		TNT1 A 0 A_Print("Not Enough Nails!")
 		Goto Ready
-	AltProceed:
-//		TNT1 A 0 A_JumpIfInventory("64NailOverheat",2,"LavaNail1")
-//		TNT1 A 0 A_Print("Not hot enough!")
-//		Goto Ready
 	LavaNail1:
 		TNT1 A 0 A_TakeInventory("64NailAmmo",3,TIF_NOTAKEINFINITE)
-//		TNT1 A 0 A_TakeInventory("64NailOverheat",2)
 		TNT1 A 0 A_PlaySound("Weapons/NailMGFire",CHAN_WEAPON)
 		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",30,5,40)
 		NLMG A 0 A_JumpIfInventory("NailgunFire2ndCannon",1,"LavaNail2")
-		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0,1,0,0,0)
-		NLLA B 2 Bright A_FireCustomMissile("64PlayerLavaNail",Random(8,-8),0,3,0,0,Random(4,-4))
+		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0,1)
+		NLLA B 2 Bright A_FireCustomMissile("64PlayerLavaNail",Random(8,-8),0,3,-10,0,Random(4,-4))
 		NLLA CD 1 Bright
 		NLMG C 1 A_SetPitch(pitch-1.2)
 		TNT1 A 0 A_ZoomFactor(0.98)
@@ -203,8 +184,8 @@ Tag "Nailgun"
 		TNT1 A 0 A_GiveInventory("NailgunFire2ndCannon",1)
 		Goto Ready
 	LavaNail2:
-		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0,-1,0,0,0)
-		NLLA F 2 Bright A_FireCustomMissile("64PlayerLavaNail",Random(8,-8),0,-3,0,0,Random(4,-4))
+		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0,-1)
+		NLLA F 2 Bright A_FireCustomMissile("64PlayerLavaNail",Random(8,-8),0,-3,-10,0,Random(4,-4))
 		NLLA GH 1 Bright
 		NLMG G 1 A_SetPitch(pitch-1.2)
 		TNT1 A 0 A_ZoomFactor(0.98)
@@ -272,23 +253,6 @@ Tag "Nail Box"
 	}
 }
 
-/*Actor 64NailOverheat : Ammo
-{
-Radius 16
-Height 8
-Inventory.PickupMessage "Nailgun Overheating!"
-Inventory.Icon "TNT1A0"
-Inventory.Amount 1
-Inventory.MaxAmount 80
-	States
-	{
-	Spawn:
-		TNT1 A -1
-		Stop
-	}
-}*/
-
-
 Actor 64PlayerNail
 {
 Scale 0.5
@@ -306,15 +270,15 @@ Projectile
 	{
 	Spawn:
 		DART A 1 NoDelay A_SpawnItemEx("64NailBlur",0,0,0,1,0,0,180,128)
-		TNT1 A 0 A_PlaySound("Weapons/NailFlight")
+		TNT1 A 0 A_PlaySound("Weapons/NailFlight",CHAN_AUTO)
 		Loop
 	Crash:
 	Death:
-		TNT1 A 0 A_PlaySound("Weapons/NailHit")
+		TNT1 A 0 A_PlaySound("Weapons/NailHit",CHAN_VOICE)
 		TNT1 A 1 A_SpawnItemEx("RicoChet")
 		Stop
 	XDeath:
-		TNT1 A 0 A_PlaySound("Weapons/NailHitBleed")
+		TNT1 A 0 A_PlaySound("Weapons/NailHitBleed",CHAN_VOICE)
 		TNT1 A 1 A_SpawnItemEx("RicoChet")
 		Stop
 	}
@@ -330,7 +294,7 @@ DamageType Plasma
 	{
 	Spawn:
 		L4RT A 1 Bright NoDelay A_SpawnItemEx("RedFlareSmall",0,0,0,1,0,0,180,128)
-		TNT1 A 0 A_PlaySound("Weapons/NailFlight")
+		TNT1 A 0 A_PlaySound("Weapons/NailFlight",CHAN_AUTO)
 		Loop
 	}
 }

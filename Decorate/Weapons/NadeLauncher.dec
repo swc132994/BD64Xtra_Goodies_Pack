@@ -63,10 +63,10 @@ Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		GRLG A 1 A_Raise
 		Loop
 	Fire:
-		TNT1 A 0 A_PlaySound("Grenadier/Fire",1)
+		TNT1 A 0 A_PlaySound("Grenadier/Fire",CHAN_WEAPON)
 		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",30,5,40)
-		TNT1 A 0 A_FireCustomMissile("GunFireSmoke")
-		GRLF A 1 Bright A_FireCustomMissile("64NadeLauncherGrenades",0,1,0,0)
+		TNT1 A 0 A_FireCustomMissile("GunFireSmoke",0,0)
+		GRLF A 1 Bright A_FireCustomMissile("64NadeLauncherGrenades")
 		TNT1 A 0 A_Recoil(2)
 		GRLF BCDE 1 Bright
 		GRLG C 2
@@ -109,7 +109,7 @@ Tag "Grenade Launcher"
 		TNT1 A 0 A_Lower
 		Wait
 	Select:
-		TNT1 A 0 A_PlaySound("Grenadier/Ready")
+		TNT1 A 0 A_PlaySound("Grenadier/Ready",CHAN_AUTO)
 		GRLS ABCD 1 Offset(0,32)
 		TNT1 A 0 A_Raise
 		Wait
@@ -121,10 +121,10 @@ Tag "Grenade Launcher"
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
 		Loop
 	Fire:
-		TNT1 A 0 A_PlaySound("Grenadier/Fire",1)
+		TNT1 A 0 A_PlaySound("Grenadier/Fire",CHAN_WEAPON)
 		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",30,5,40)
-		TNT1 A 0 A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
-		GRLF A 1 Bright A_FireCustomMissile("64NadeLauncherGrenades",0,1,0,0)
+		TNT1 A 0 A_FireCustomMissile("GunFireSmoke",0,0)
+		GRLF A 1 Bright A_FireCustomMissile("64NadeLauncherGrenades")
 		TNT1 A 0 A_Recoil(2)
 		GRLF B 1 Bright A_SetPitch(pitch-2,SPF_INTERPOLATE)
 		GRLF C 1 Bright A_SetPitch(pitch+0.8,SPF_INTERPOLATE)
@@ -136,9 +136,9 @@ Tag "Grenade Launcher"
 		GRLG A 1 A_Refire
 		Goto Ready
 	AltFire:
-		TNT1 A 0 A_PlaySound("Grenadier/Fire",1)
-		TNT1 A 0 A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
-		GRLV A 1 A_FireCustomMissile("64NadeLauncherGasnades",0,1,0,0)
+		TNT1 A 0 A_PlaySound("Grenadier/Fire",CHAN_WEAPON)
+		TNT1 A 0 A_FireCustomMissile("GunFireSmoke",0,0)
+		GRLV A 1 A_FireCustomMissile("64NadeLauncherGasnades")
 		TNT1 A 0 A_Recoil(2)
 		GRLV B 1 A_SetPitch(pitch-2,SPF_INTERPOLATE)
 		GRLV C 1 A_SetPitch(pitch+0.8,SPF_INTERPOLATE)
@@ -197,18 +197,18 @@ States
 	Spawn:
 		GREN A 0 NoDelay ThrustThingZ(0,10,0,1)
 	Spawn2:
-		GREN AAAA 2 A_CustomMissile("GasnadeSmoke",0,0,0,2,0)
+		GREN AAAA 2 A_CustomMissile("GasnadeSmoke",0,0,0,2)
 		Loop
 	Death:
 		TNT1 A 0 A_CustomMissile("PoisonShotCloud1",0,0,90)
 		TNT1 A 0 A_CustomMissile("PoisonShotCloud1",0,0,-90)
 		TNT1 A 0 A_CustomMissile("PoisonShotCloud1",0,0,180)
-		TNT1 A 0 A_CustomMissile("PoisonShotCloud1",0,0,0)
+		TNT1 A 0 A_CustomMissile("PoisonShotCloud1",0,0)
 		GREN A 50
 		TNT1 A 0 A_CustomMissile("PoisonShotCloud1",0,0,90)
 		TNT1 A 0 A_CustomMissile("PoisonShotCloud1",0,0,-90)
 		TNT1 A 0 A_CustomMissile("PoisonShotCloud1",0,0,180)
-		TNT1 A 0 A_CustomMissile("PoisonShotCloud1",0,0,0)
+		TNT1 A 0 A_CustomMissile("PoisonShotCloud1",0,0)
 	NadeOnFloor:
 		GREN A 400
 		TNT1 A 0 A_JumpIfInventory("LowGraphicsMode",1,"Stoping")

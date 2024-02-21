@@ -59,18 +59,18 @@ Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		DARG A 1 A_Lower
 		Wait
 	Fire:
-		TNT1 A 0 A_PlaySound("REVCOK1",0)
+		TNT1 A 0 A_PlaySound("REVCOK1",CHAN_AUTO)
 		DARG BCCD 1 A_WeaponReady(WRF_NOSWITCH)
 		TNT1 A 0 A_ReFire("ReadyFire")
-		TNT1 A 0 A_PlaySound("REVCOK2",0)
+		TNT1 A 0 A_PlaySound("REVCOK2",CHAN_AUTO)
 		DARG CB 1 A_WeaponReady(WRF_NOSWITCH)
 		Goto ready
 	ReadyFire:
-		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
+		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0)
 		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",30,5,40)
 		TNT1 A 0 A_FireCustomMissile("Tracer",random(-3,3),0,-1,-12,0,random(-5,5))
 		TNT1 A 0 A_FireBullets(4.0,4.0,1,50,"HitPuff")
-		TNT1 A 0 A_PlaySound("REVFIRE",1)
+		TNT1 A 0 A_PlaySound("REVFIRE",CHAN_WEAPON)
 		TNT1 A 0 A_AlertMonsters
 		TNT1 A 0 A_ZoomFactor(0.95)
 		DARF AB 1 Bright
@@ -179,10 +179,10 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		DARI B 1 Offset(0,34) A_WeaponReady
 		DARI C 1 Offset(0,35) A_WeaponReady
 		DARI D 1 Offset(0,36) A_WeaponReady
-		DARI E 1 Offset(0,37) A_PlaySound("REVCOK1",0)
+		DARI E 1 Offset(0,37) A_PlaySound("REVCOK1",CHAN_AUTO)
 		DARI F 1 Offset(0,38) A_WeaponReady
 		DARI FF 10 A_WeaponReady
-		DARI E 1 Offset(0,37) A_PlaySound("REVCOK2",0)
+		DARI E 1 Offset(0,37) A_PlaySound("REVCOK2",CHAN_AUTO)
 		DARI D 1 Offset(0,36) A_WeaponReady
 		DARI C 1 Offset(0,35) A_WeaponReady
 		DARI B 1 Offset(0,34) A_WeaponReady
@@ -190,11 +190,11 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		Goto Ready
 	AltFidget:
 		DARR ABCD 1 A_WeaponReady
-		TNT1 A 0 A_PlaySound("REVREL1",1)
+		TNT1 A 0 A_PlaySound("REVREL1",CHAN_WEAPON)
 		DARR EFGH 1  A_WeaponReady
 		DARR II 5 A_WeaponReady
 		DARR JKLM 1 A_WeaponReady
-		TNT1 A 0 A_PlaySound("REVREL3",1)
+		TNT1 A 0 A_PlaySound("REVREL3",CHAN_WEAPON)
 		DARR STUVWXYZ 1 A_WeaponReady
 		TNT1 A 0 A_JumpIfInventory("RevolverAlt",1,"TriggerDown")
 		Goto Ready
@@ -212,7 +212,7 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		wait
 	NoAmmo:
 		DARG A 1
-		DARG A 5 A_PlaySound("DRYFIRE",1)
+		DARG A 5 A_PlaySound("DRYFIRE",CHAN_WEAPON)
 		TNT1 A 0 A_JumpIfInventory("RevolverAlt",1,"TriggerDown")
 		Goto Ready
 	Deselect:
@@ -227,18 +227,18 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		Wait
 	Fire:
 		TNT1 A 0 A_JumpIfInventory("RevolverAlt",1,"AmmoCheck")
-		TNT1 A 0 A_PlaySound("REVCOK1",0)
+		TNT1 A 0 A_PlaySound("REVCOK1",CHAN_AUTO)
 		DARG BCCD 1 A_WeaponReady(WRF_NOSWITCH)
 		TNT1 A 0 A_ReFire("AmmoCheck")
-		TNT1 A 0 A_PlaySound("REVCOK2",0)
+		TNT1 A 0 A_PlaySound("REVCOK2",CHAN_AUTO)
 		DARG CB 1 A_WeaponReady(WRF_NOSWITCH)
 		Goto Ready
 	ResumeReadyFire:
-		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
+		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0)
 		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",30,5,40)
 		TNT1 A 0 A_FireCustomMissile("Tracer",random(-6,6),0,-1,0,0,random(-5,5))
 		TNT1 A 0 A_FireBullets(4.0,4.0,1,50,"HitPuff",0)
-		TNT1 A 0 A_PlaySound("REVFIRE",1)
+		TNT1 A 0 A_PlaySound("REVFIRE",CHAN_WEAPON)
 		TNT1 A 0 A_AlertMonsters
 		TNT1 A 0 A_ZoomFactor(0.95)
 		DARF AB 1 Bright
@@ -255,7 +255,7 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		DARI B 1 Offset(0,34)
 		DARI C 1 Offset(0,35)
 		DARI D 1 Offset(0,36)
-		DARI E 1 Offset(0,37) A_PlaySound("REVCOK1",0)
+		DARI E 1 Offset(0,37) A_PlaySound("REVCOK1",CHAN_AUTO)
 		DARI F 1 Offset(0,38)
 		DARI G 1 Offset(0,37)
 		DARI H 1 Offset(0,36)
@@ -270,7 +270,7 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		DARI B 1 Offset(0,34)
 		DARI C 1 Offset(0,35)
 		DARI D 1 Offset(0,36)
-		DARI E 1 Offset(0,37) A_PlaySound("REVCOK1",0)
+		DARI E 1 Offset(0,37) A_PlaySound("REVCOK1",CHAN_AUTO)
 		DARI F 1 Offset(0,38) A_Print("Cocked",2)
 		DARI G 1 Offset(0,37)
 		DARI H 1 Offset(0,36)
@@ -283,7 +283,7 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		DARI I 1 Offset(0,34)
 		DARI H 1 Offset(0,35)
 		DARI G 1 Offset(0,36)
-		DARI F 1 Offset(0,37) A_PlaySound("REVCOK2",0)
+		DARI F 1 Offset(0,37) A_PlaySound("REVCOK2",CHAN_AUTO)
 		DARI E 1 Offset(0,38) A_Print("Uncocked",2)
 		DARI D 1 Offset(0,37)
 		DARI C 1 Offset(0,36)
@@ -295,7 +295,7 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		DARI I 1 Offset(0,34)
 		DARI H 1 Offset(0,35)
 		DARI G 1 Offset(0,36)
-		DARI F 1 Offset(0,37) A_PlaySound("REVCOK2",0)
+		DARI F 1 Offset(0,37) A_PlaySound("REVCOK2",CHAN_AUTO)
 		DARI E 1 Offset(0,38)
 		DARI D 1 Offset(0,37)
 		DARI C 1 Offset(0,36)
@@ -312,7 +312,7 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		TNT1 A 0 A_JumpIfInventory("RevolverAmmo",6,"Fidget")
 	StartReload:
 		DARR ABCD 1 A_WeaponReady
-		TNT1 A 0 A_PlaySound("REVREL1",1)
+		TNT1 A 0 A_PlaySound("REVREL1",CHAN_WEAPON)
 		DARR EFGHII 1
 		DARR JKL 1
 		TNT1 A 0 A_JumpIfInventory("PowerStrength",1,6)
@@ -326,7 +326,7 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		TNT1 A 0 A_JumpIfInventory("RevolverAmmo",5,"OneBulletReload")
 		TNT1 A 0 A_JumpIfInventory("RevolverAmmo",4,"TwoBulletsReload")
 	CountinueReload1:
-		TNT1 A 0 A_PlaySound("REVDUMP",1)
+		TNT1 A 0 A_PlaySound("REVDUMP",CHAN_WEAPON)
 		RFVR ABCDEFH 1
 		TNT1 A 0 A_JumpIfInventory("PowerStrength",1,"AllBulletsDrops")
 		TNT1 A 0 A_JumpIfInventory("RevolverAmmo",3,"ThreeBulletsDrops")
@@ -346,49 +346,49 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		TNT1 AAAAAA 0 A_Firecustommissile("BulletCaseSpawn",0,0,-10,-16)
 	CountinueReload2:
 		RFVR II 5
-		TNT1 A 0 A_PlaySound("REVREL2",1)
+		TNT1 A 0 A_PlaySound("REVREL2",CHAN_WEAPON)
 		RFVR JKLMNO 1
 		RFVR PQ 2
 		RFVR RSTUVWXYZ 1
 		RF1R ABCD 1
-		TNT1 A 0 A_PlaySound("REVREL3",1)
+		TNT1 A 0 A_PlaySound("REVREL3",CHAN_WEAPON)
 		DARR STUVWXYZ 1
 		Goto InsertBullets
 	OneBulletReload:
 		RE1R ABCDE 1
-		TNT1 A 0 A_PlaySound("REVEJECT",1)
+		TNT1 A 0 A_PlaySound("REVEJECT",CHAN_WEAPON)
 		RE1R FGHIJK 2
 		TNT1 A 0 A_Firecustommissile("BulletCaseSpawn",0,0,-15,-20)
 		RE1R LL 5
 		RE1R MNOPQRS 1
-		TNT1 A 0 A_PlaySound("REVINSRT",1)
+		TNT1 A 0 A_PlaySound("REVINSRT",CHAN_WEAPON)
 		TNT1 A 0 A_GiveInventory("RevolverAmmo",1)
 		TNT1 A 0 A_TakeInventory("64SpeedloaderAmmo",1)
 		RE1R TUVW 2
 		RF1R ABCD 1
-		TNT1 A 0 A_PlaySound("REVREL3",1)
+		TNT1 A 0 A_PlaySound("REVREL3",CHAN_WEAPON)
 		DARR STUVWXYZ 1
 		TNT1 A 0 A_JumpIfInventory("RevolverAlt",1,"TriggerDown")
 		Goto Ready
 	TwoBulletsReload:
 		RE2R ABCD 1
 		RE1R E 1
-		TNT1 A 0 A_PlaySound("REVEJECT",1)
+		TNT1 A 0 A_PlaySound("REVEJECT",CHAN_WEAPON)
 		RE2R FGHIJ 2
 		TNT1 AA 0 A_Firecustommissile("BulletCaseSpawn",0,0,-15,-20)
 		RE2R KK 5
 		RE2R LMNOPQ 1
-		TNT1 A 0 A_PlaySound("REVINSRT",1)
+		TNT1 A 0 A_PlaySound("REVINSRT",CHAN_WEAPON)
 		TNT1 A 0 A_GiveInventory("RevolverAmmo",2)
 		TNT1 A 0 A_TakeInventory("64SpeedloaderAmmo",2)
 		RE2R RS 2
 		RF1R BBCD 1
-		TNT1 A 0 A_PlaySound("REVREL3",1)
+		TNT1 A 0 A_PlaySound("REVREL3",CHAN_WEAPON)
 		DARR STUVWXYZ 1
 		TNT1 A 0 A_JumpIfInventory("RevolverAlt",1,"TriggerDown")
 		Goto Ready
 	SmartReload:
-		TNT1 A 0 A_PlaySound("REVDUMP",1)
+		TNT1 A 0 A_PlaySound("REVDUMP",CHAN_WEAPON)
 		RE3R A 0 A_JumpIfInventory("RevolverAmmo",3,3)
 		RE4R A 0 A_JumpIfInventory("RevolverAmmo",2,2)
 		RE5R A 0
@@ -447,11 +447,11 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		DARN GH 1
 		Goto FanningAmmoCheck
 	ResumeActualFanningFire:
-		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0,0,0,0,0)
+		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0)
 		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",30,5,40)
 		TNT1 A 0 A_FireCustomMissile("Tracer",random(-6,6),0,-1,0,0,random(-5,5))
 		TNT1 A 0 A_FireBullets(4.0,4.0,1,50,"HitPuff",0)
-		TNT1 A 0 A_PlaySound("REVFIRE",1)
+		TNT1 A 0 A_PlaySound("REVFIRE",CHAN_WEAPON)
 		TNT1 A 0 A_AlertMonsters
 		TNT1 A 0 A_ZoomFactor(0.95)
 		DARN IJ 1 Bright A_WeaponReady
