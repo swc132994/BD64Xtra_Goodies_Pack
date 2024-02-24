@@ -151,7 +151,7 @@ Tag "Biological Suit"
 	States
 	{
 	Spawn:
-		BIOS A 0 NoDelay A_JumpIf(CallACS("AltRadSuitACS")==1,"AltSpawn")
+		BIOS A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("AltRadSuitACS")==1,"AltSpawn")
 		BIOS A 6 Bright Light("REDARMOR1")
 		BIOS B 5 Light("REDARMOR2")
 		loop
@@ -268,7 +268,7 @@ Inventory.Pickupmessage "You got the UltraArmour!"
 	States
 	{
 	Spawn:
-		ARM6 A 0 NoDelay A_JumpIf(CallACS("AlphaPickupACS")==True,"AlphaSpawn")
+		ARM6 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("AlphaPickupACS")==True,"AlphaSpawn")
 		ARM6 A 6 Light("REDARMOR1")
 		ARM6 B 7 bright Light("REDARMOR2")
 		Loop

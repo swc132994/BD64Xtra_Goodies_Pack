@@ -4,11 +4,11 @@ Scale 0.82
 	States
 	{
 	Spawn:
-		LAUN A 0 NoDelay A_JumpIf(CallACS("D64WeaponsOnlyReplacer")==1,"SpawnRocketLauncher")	//if D64 weapons only enabled spawn Rocketlauncher
-		TNT1 A 0 A_JumpIf(CallACS("ImmolatorRandom")==0,"SpawnRocketLauncher")
-		TNT1 A 0 A_JumpIf(CallACS("ImmolatorRandom")==1,"SpawnNadeLauncher")
-		TNT1 A 0 A_JumpIf(CallACS("ImmolatorRandom")==2,"SpawnFlamethrower")
-		TNT1 A 0 A_JumpIf(CallACS("ImmolatorRandom")==3,"SpawnRevenantLauncher")
+		LAUN A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("D64WeaponsOnlyReplacer")==1,"SpawnRocketLauncher")	//if D64 weapons only enabled spawn Rocketlauncher
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("ImmolatorRandom")==0,"SpawnRocketLauncher")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("ImmolatorRandom")==1,"SpawnNadeLauncher")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("ImmolatorRandom")==2,"SpawnFlamethrower")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("ImmolatorRandom")==3,"SpawnRevenantLauncher")
 		TNT1 A 0 A_Jump(51,"SpawnNadeLauncher","SpawnFlamethrower","SpawnRevenantLauncher") //(20%)
 	SpawnRocketLauncher:
 		TNT1 A 1 A_SpawnItemEx("RocketLauncherSpawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -31,11 +31,11 @@ Scale 0.82
 	States
 	{
 	Spawn:
-		PLAS A 0 NoDelay A_JumpIf(CallACS("D64WeaponsOnlyReplacer")==1,"SpawnPlasmaRifle")	//if D64 weapons only enabled spawn plasma rifle
-		TNT1 A 0 A_JumpIf(CallACS("PlasmaNewRandomACS")==0,"SpawnPlasmaRifle")
-		TNT1 A 0 A_JumpIf(CallACS("PlasmaNewRandomACS")==1,"SpawnGaussCannon")
-		TNT1 A 0 A_JumpIf(CallACS("PlasmaNewRandomACS")==2,"SpawnRuiner")
-		TNT1 A 0 A_JumpIf(CallACS("PlasmaNewRandomACS")==3,"SpawnNailgun")
+		PLAS A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("D64WeaponsOnlyReplacer")==1,"SpawnPlasmaRifle")	//if D64 weapons only enabled spawn plasma rifle
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("PlasmaNewRandomACS")==0,"SpawnPlasmaRifle")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("PlasmaNewRandomACS")==1,"SpawnGaussCannon")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("PlasmaNewRandomACS")==2,"SpawnRuiner")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("PlasmaNewRandomACS")==3,"SpawnNailgun")
 		TNT1 A 0 A_Jump(38,"SpawnRuiner") //(15%)
 		TNT1 A 0 A_Jump(64,"SpawnGaussCannon","SpawnNailgun") //(25%)
 	SpawnPlasmaRifle:
@@ -59,11 +59,11 @@ Scale 0.82
 	States
 	{
 	Spawn:
-		MGUN A 0 NoDelay A_JumpIf(CallACS("D64WeaponsOnlyReplacer")==1,"SpawnChaingun")	//if D64 weapons only enabled spawn Chaingun
-		TNT1 A 0 A_JumpIf(CallACS("ChaingunNewRandomACS")==0,"SpawnChaingun")
-		TNT1 A 0 A_JumpIf(CallACS("ChaingunNewRandomACS")==1,"SpawnRifle")
-		TNT1 A 0 A_JumpIf(CallACS("ChaingunNewRandomACS")==2,"SpawnSMG")
-		TNT1 A 0 A_JumpIf(CallACS("ChaingunNewRandomACS")==3,"SpawnLMG")
+		MGUN A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("D64WeaponsOnlyReplacer")==1,"SpawnChaingun")	//if D64 weapons only enabled spawn Chaingun
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("ChaingunNewRandomACS")==0,"SpawnChaingun")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("ChaingunNewRandomACS")==1,"SpawnRifle")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("ChaingunNewRandomACS")==2,"SpawnSMG")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("ChaingunNewRandomACS")==3,"SpawnLMG")
 		TNT1 A 0 A_Jump(38,"SpawnLMG") //(15%)
 		TNT1 A 0 A_Jump(64,"SpawnSMG","SpawnRifle") //(25%)
 	SpawnChaingun:
@@ -87,9 +87,9 @@ Scale 0.82
 	States
 	{
 	Spawn:
-		CSAW A 0 NoDelay A_JumpIf(CallACS("D64WeaponsOnlyReplacer")==1,"SpawnSaw")	//if D64 weapons only enabled spawn Saw
-		TNT1 A 0 A_JumpIf(CallACS("ChainsawerNewRandomACS")==0,"SpawnSaw")
-		TNT1 A 0 A_JumpIf(CallACS("ChainsawerNewRandomACS")==1,"SpawnAxe")
+		CSAW A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("D64WeaponsOnlyReplacer")==1,"SpawnSaw")	//if D64 weapons only enabled spawn Saw
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("ChainsawerNewRandomACS")==0,"SpawnSaw")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("ChainsawerNewRandomACS")==1,"SpawnAxe")
 		TNT1 A 0 A_Jump(128,"SpawnAxe") //(50%)
 	SpawnSaw:
 		TNT1 A 1 A_SpawnItemEx("ChainsawSpawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -106,12 +106,12 @@ Scale 0.9
 	States
 	{
 	Spawn:
-		BFUG A 0 NoDelay A_JumpIf(CallACS("D64WeaponsOnlyReplacer")==1,"Spawn9k")	//if D64 weapons only enabled spawn 9k
-		TNT1 A 0 A_JumpIf(CallACS("BFG9kNewRandomACS")==0,"Spawn9k")
-		TNT1 A 0 A_JumpIf(CallACS("BFG9kNewRandomACS")==1,"Spawn10k")
-		TNT1 A 0 A_JumpIf(CallACS("BFG9kNewRandomACS")==2,"SpawnUnmaker")
-		TNT1 A 0 A_JumpIf(CallACS("BFG9kNewRandomACS")==3,"SpawnLasergun")
-		TNT1 A 0 A_JumpIf(CallACS("BFG9kNewRandomACS")==4,"SpawnHexaShotgun")
+		BFUG A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("D64WeaponsOnlyReplacer")==1,"Spawn9k")	//if D64 weapons only enabled spawn 9k
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("BFG9kNewRandomACS")==0,"Spawn9k")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("BFG9kNewRandomACS")==1,"Spawn10k")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("BFG9kNewRandomACS")==2,"SpawnUnmaker")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("BFG9kNewRandomACS")==3,"SpawnLasergun")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("BFG9kNewRandomACS")==4,"SpawnHexaShotgun")
 		TNT1 A 0 A_Jump(64,"Spawn10k","SpawnUnmaker","SpawnLasergun","HexaShotgunSpawner") //(25%)
 	Spawn9k:
 		TNT1 A 1 A_SpawnItemEx("BFG9000Spawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -137,10 +137,10 @@ Scale 0.87
 	States
 	{
 	Spawn:
-		SHOT A 0 NoDelay A_JumpIf(CallACS("D64WeaponsOnlyReplacer")==1,"SpawnShotgun")	//if D64 weapons only enabled spawn sg
-		TNT1 A 0 A_JumpIf(CallACS("RevolverRandom")==0,"SpawnShotgun")
-		TNT1 A 0 A_JumpIf(CallACS("RevolverRandom")==1,"SpawnRevolver")
-		TNT1 A 0 A_JumpIf(CallACS("RevolverRandom")==2,"SpawnSniperRifle")
+		SHOT A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("D64WeaponsOnlyReplacer")==1,"SpawnShotgun")	//if D64 weapons only enabled spawn sg
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("RevolverRandom")==0,"SpawnShotgun")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("RevolverRandom")==1,"SpawnRevolver")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("RevolverRandom")==2,"SpawnSniperRifle")
 		TNT1 A 0 A_Jump(64,"SpawnRevolver","SpawnPistolSilencer","SpawnSniperRifle") //(25%)
 	SpawnShotgun:
 		TNT1 A 1 A_SpawnItemEx("Shotgunspawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -163,10 +163,10 @@ Scale 0.87
 	States
 	{
 	Spawn:
-		SHOT A 0 NoDelay A_JumpIf(CallACS("SSGinDoom1")==0,"SpawnShotgunOrRevolver")
-		TNT1 A 0 A_JumpIf(CallACS("SSGinDoom1")==1,"SpawnSSG")
-		TNT1 A 0 A_JumpIf(CallACS("SSGinDoom1")==2,"SpawnAutoShotgun")
-		TNT1 A 0 A_JumpIf(CallACS("SSGinDoom1")==3,"SpawnQuadShotgun")
+		SHOT A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("SSGinDoom1")==0,"SpawnShotgunOrRevolver")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("SSGinDoom1")==1,"SpawnSSG")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("SSGinDoom1")==2,"SpawnAutoShotgun")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("SSGinDoom1")==3,"SpawnQuadShotgun")
 		TNT1 A 0 A_Jump(13,"SpawnQuadShotgun")//(5%)
 		TNT1 A 0 A_Jump(38,"SpawnAutoShotgun")//(15%)
 		TNT1 A 0 A_Jump(64,"SpawnSSG")//(25%)
@@ -191,10 +191,10 @@ Scale 0.87
 	States
 	{
 	Spawn:
-		SGN2 A 0 NoDelay A_JumpIf(CallACS("D64WeaponsOnlyReplacer")==1,"SpawnSSG")	//if D64 weapons only enabled spawn ssg
-		SGN2 A 0 A_JumpIf(CallACS("AutoShotgunRandom")==0,"SpawnSSG")
-		TNT1 A 0 A_JumpIf(CallACS("AutoShotgunRandom")==1,"SpawnAssaultShotgun")
-		TNT1 A 0 A_JumpIf(CallACS("AutoShotgunRandom")==2,"SpawnUltraShotgun")
+		SGN2 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("D64WeaponsOnlyReplacer")==1,"SpawnSSG")	//if D64 weapons only enabled spawn ssg
+		SGN2 A 0 A_JumpIf(ACS_NamedExecuteWithResult("AutoShotgunRandom")==0,"SpawnSSG")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("AutoShotgunRandom")==1,"SpawnAssaultShotgun")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("AutoShotgunRandom")==2,"SpawnUltraShotgun")
 		TNT1 A 0 A_Jump(38,"SpawnAssaultShotgun") //(15%)
 		TNT1 A 0 A_Jump(8,"SpawnUltraShotgun") //(3%)
 	SpawnSSG:
@@ -215,10 +215,10 @@ Scale 0.82
 	States
 	{
 	Spawn:
-		CLIP A 0 NoDelay A_JumpIf(CallACS("D64WeaponsOnlyReplacer")==1,"SpawnClip")	//if D64 weapons only enabled spawn Chaingun
-		TNT1 A 0 A_JumpIf(CallACS("RevolverRandom")==0,"SpawnClip")
-		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS")==0,"SpawnBoth")
-		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS")==1,"SpawnBothRarerNails")
+		CLIP A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("D64WeaponsOnlyReplacer")==1,"SpawnClip")	//if D64 weapons only enabled spawn Chaingun
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("RevolverRandom")==0,"SpawnClip")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("ExtraAmmoRandomACS")==0,"SpawnBoth")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("ExtraAmmoRandomACS")==1,"SpawnBothRarerNails")
 		TNT1 A 0 A_Jump(32,"SpawnHighAmmo") //(12.5%)
 	SpawnClip:
 		TNT1 A 1 A_SpawnItemEx("64Clip",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -241,19 +241,19 @@ Scale 0.82
 	States
 	{
 	Spawn:
-		SHEL A 0 NoDelay A_JumpIf(CallACS("D64WeaponsOnlyReplacer")==1,"SpawnShells")	//if D64 weapons only enabled spawn Chaingun
-		TNT1 A 0 A_JumpIf(CallACS("AutoShotgunRandom")==1,"SpawnDecide")
-		TNT1 A 0 A_JumpIf(CallACS("AutoShotgunRandom")==2,"SpawnDecide")
-		TNT1 A 0 A_JumpIf(CallACS("AutoShotgunRandom")==3,"SpawnDecide")
-		TNT1 A 0 A_JumpIf(CallACS("SSGinDoom1")==2,"SpawnDecide")
-		TNT1 A 0 A_JumpIf(CallACS("SSGinDoom1")==3,"SpawnDecide")
-		TNT1 A 0 A_JumpIf(CallACS("SSGinDoom1")==4,"SpawnDecide")
+		SHEL A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("D64WeaponsOnlyReplacer")==1,"SpawnShells")	//if D64 weapons only enabled spawn Chaingun
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("AutoShotgunRandom")==1,"SpawnDecide")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("AutoShotgunRandom")==2,"SpawnDecide")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("AutoShotgunRandom")==3,"SpawnDecide")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("SSGinDoom1")==2,"SpawnDecide")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("SSGinDoom1")==3,"SpawnDecide")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("SSGinDoom1")==4,"SpawnDecide")
 	SpawnShells:
 		TNT1 A 1 A_SpawnItemEx("64Shell",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
 	SpawnDecide:
-		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS")==0,"SpawnBoth")
-		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS")==1,"SpawnBothRarer10g")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("ExtraAmmoRandomACS")==0,"SpawnBoth")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("ExtraAmmoRandomACS")==1,"SpawnBothRarer10g")
 		TNT1 A 0 A_Jump(64,"SpawnShells","Spawn10g") //(25%)
 		Goto SpawnShells
 	Spawn10g:
@@ -274,19 +274,19 @@ Scale 0.82
 	States
 	{
 	Spawn:
-		SBOX A 0 NoDelay A_JumpIf(CallACS("D64WeaponsOnlyReplacer")==1,"SpawnShells")	//if D64 weapons only enabled spawn Chaingun
-		TNT1 A 0 A_JumpIf(CallACS("AutoShotgunRandom")==1,"SpawnDecide")
-		TNT1 A 0 A_JumpIf(CallACS("AutoShotgunRandom")==2,"SpawnDecide")
-		TNT1 A 0 A_JumpIf(CallACS("AutoShotgunRandom")==3,"SpawnDecide")
-		TNT1 A 0 A_JumpIf(CallACS("SSGinDoom1")==2,"SpawnDecide")
-		TNT1 A 0 A_JumpIf(CallACS("SSGinDoom1")==3,"SpawnDecide")
-		TNT1 A 0 A_JumpIf(CallACS("SSGinDoom1")==4,"SpawnDecide")
+		SBOX A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("D64WeaponsOnlyReplacer")==1,"SpawnShells")	//if D64 weapons only enabled spawn Chaingun
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("AutoShotgunRandom")==1,"SpawnDecide")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("AutoShotgunRandom")==2,"SpawnDecide")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("AutoShotgunRandom")==3,"SpawnDecide")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("SSGinDoom1")==2,"SpawnDecide")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("SSGinDoom1")==3,"SpawnDecide")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("SSGinDoom1")==4,"SpawnDecide")
 	SpawnShells:
 		TNT1 A 1 A_SpawnItemEx("64ShellBox",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
 	SpawnDecide:
-		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS")==0,"SpawnBoth")
-		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS")==1,"SpawnBothRarer10g")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("ExtraAmmoRandomACS")==0,"SpawnBoth")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("ExtraAmmoRandomACS")==1,"SpawnBothRarer10g")
 		TNT1 A 0 A_Jump(64,"SpawnShells","Spawn10g") //(25%)
 		Goto SpawnShells
 	Spawn10g:
@@ -307,8 +307,8 @@ Scale 0.82
 	States
 	{
 	Spawn:
-		BPAK A 0 NoDelay A_JumpIf(CallACS("ExtraSpheresACS")==0,"SpawnBackpack")
-		TNT1 A 0 A_JumpIf(CallACS("ExtraSpheresACS")==1,"SpawnArsenalsphere")
+		BPAK A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("ExtraSpheresACS")==0,"SpawnBackpack")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("ExtraSpheresACS")==1,"SpawnArsenalsphere")
 		TNT1 A 0 A_Jump(39,"SpawnArsenalsphere") //(15%)
 	SpawnBackpack:
 		TNT1 A 1 A_SpawnItemEx("64Backpack",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -325,12 +325,12 @@ Scale 0.82
 	States
 	{
 	Spawn:
-		PINS A 0 NoDelay A_JumpIf(CallACS("WpnPowerRandom")==0,"PowerupChoose")
-		TNT1 A 0 A_JumpIf(CallACS("WpnPowerRandom")==1,"SpawnDemonKey")
+		PINS A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("WpnPowerRandom")==0,"PowerupChoose")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("WpnPowerRandom")==1,"SpawnDemonKey")
 		TNT1 A 0 A_Jump(39,"SpawnDemonKey") //(15%)
 	PowerupChoose:
-		PINS A 0 A_JumpIf(CallACS("ExtraSpheresACS")==0,"SpawnBlurSphere")
-		TNT1 A 0 A_JumpIf(CallACS("ExtraSpheresACS")==1,"SpawnGhastsphere")
+		PINS A 0 A_JumpIf(ACS_NamedExecuteWithResult("ExtraSpheresACS")==0,"SpawnBlurSphere")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("ExtraSpheresACS")==1,"SpawnGhastsphere")
 		TNT1 A 0 A_Jump(39,"SpawnGhastsphere") //(15%)
 	SpawnBlurSphere:
 		TNT1 A 1 A_SpawnItemEx("64Blursphere",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -350,12 +350,12 @@ Scale 0.82
 	States
 	{
 	Spawn:
-		PSTR A 0 NoDelay A_JumpIf(CallACS("WpnPowerRandom")==0,"PowerupChoose")
-		TNT1 A 0 A_JumpIf(CallACS("WpnPowerRandom")==1,"SpawnDemonKey")
+		PSTR A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("WpnPowerRandom")==0,"PowerupChoose")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("WpnPowerRandom")==1,"SpawnDemonKey")
 		TNT1 A 0 A_Jump(39,"SpawnDemonKey") //(15%)
 	PowerupChoose:
-		PSTR A 0 A_JumpIf(CallACS("ExtraSpheresACS")==0,"SpawnBerserk")
-		TNT1 A 0 A_JumpIf(CallACS("ExtraSpheresACS")==1,"SpawnQuadsphere")
+		PSTR A 0 A_JumpIf(ACS_NamedExecuteWithResult("ExtraSpheresACS")==0,"SpawnBerserk")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("ExtraSpheresACS")==1,"SpawnQuadsphere")
 		TNT1 A 0 A_Jump(39,"SpawnQuadsphere") //(15%)
 	SpawnBerserk:
 		TNT1 A 1 A_SpawnItemEx("64Berserk",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -375,15 +375,15 @@ Scale 0.82
 	States
 	{
 	Spawn:
-		PINV A 0 NoDelay A_JumpIf(CallACS("WpnPowerRandom")==0,"PowerupChoose")
-		TNT1 A 0 A_JumpIf(CallACS("WpnPowerRandom")==1,"SpawnDemonKey")
-		TNT1 A 0 A_JumpIf(CallACS("D64WeaponsOnlyReplacer")==1,"PowerupChoose")	//if D64 weapons only enabled spawn plasma rifle
-		TNT1 A 0 A_JumpIf(CallACS("NukelauncherSpawnerACS")==0,"PowerupChoose")
+		PINV A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("WpnPowerRandom")==0,"PowerupChoose")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("WpnPowerRandom")==1,"SpawnDemonKey")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("D64WeaponsOnlyReplacer")==1,"PowerupChoose")	//if D64 weapons only enabled spawn plasma rifle
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("NukelauncherSpawnerACS")==0,"PowerupChoose")
 		TNT1 A 0 A_Jump(45,"SpawnDemonKey") //(17.5%)
 		TNT1 A 0 A_Jump(51,"SpawnNukeLauncher") //(20%)
 	PowerupChoose:
-		TNT1 A 0 A_JumpIf(CallACS("ExtraSpheresACS")==0,"SpawnInvul")
-		TNT1 A 0 A_JumpIf(CallACS("ExtraSpheresACS")==1,"SpawnTitan")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("ExtraSpheresACS")==0,"SpawnInvul")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("ExtraSpheresACS")==1,"SpawnTitan")
 		TNT1 A 0 A_Jump(39,"SpawnTitan") //(15%)
 	SpawnInvul:
 		TNT1 A 1 A_SpawnItemEx("64InvulnerabilitySphere",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -406,8 +406,8 @@ Scale 0.82
 	States
 	{
 	Spawn:
-		BROK A 0 NoDelay A_JumpIf(CallACS("D64WeaponsOnlyReplacer")==1,"SpawnRocketbox")	//if D64 weapons only enabled spawn plasma rifle
-		TNT1 A 0 A_JumpIf(CallACS("NukelauncherSpawnerACS")==0,"SpawnRocketbox")
+		BROK A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("D64WeaponsOnlyReplacer")==1,"SpawnRocketbox")	//if D64 weapons only enabled spawn plasma rifle
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("NukelauncherSpawnerACS")==0,"SpawnRocketbox")
 		TNT1 A 0 A_Jump(8,"SpawnNuclearWarhead") //(3%)
 	SpawnRocketbox:
 		TNT1 A 1 A_SpawnItemEx("64Rocketbox",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -425,12 +425,12 @@ Scale 0.82
 	States
 	{
 	Spawn:
-		CLIP A 0 NoDelay A_JumpIf(CallACS("D64WeaponsOnlyReplacer")==1,"SpawnCell")	//if D64 weapons only enabled spawn Chaingun
-		TNT1 A 0 A_JumpIf(CallACS("PlasmaNewRandomACS")==0,"SpawnCell")
-		TNT1 A 0 A_JumpIf(CallACS("PlasmaNewRandomACS")==1,"SpawnCell")
-		TNT1 A 0 A_JumpIf(CallACS("PlasmaNewRandomACS")==2,"SpawnCell")
-		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS")==0,"SpawnBoth")
-		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS")==1,"SpawnBothRarerNails")
+		CLIP A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("D64WeaponsOnlyReplacer")==1,"SpawnCell")	//if D64 weapons only enabled spawn Chaingun
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("PlasmaNewRandomACS")==0,"SpawnCell")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("PlasmaNewRandomACS")==1,"SpawnCell")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("PlasmaNewRandomACS")==2,"SpawnCell")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("ExtraAmmoRandomACS")==0,"SpawnBoth")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("ExtraAmmoRandomACS")==1,"SpawnBothRarerNails")
 		TNT1 A 0 A_Jump(64,"SpawnCell","SpawnNails") //(25%)
 	SpawnCell:
 		TNT1 A 1 A_SpawnItemEx("64Cell",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -453,15 +453,15 @@ Scale 0.82
 	States
 	{
 	Spawn:
-		CELP A 0 NoDelay A_JumpIf(CallACS("D64WeaponsOnlyReplacer")==1,"SpawnCellPack")	//if D64 weapons only enabled spawn plasma rifle
-		TNT1 A 0 A_JumpIf(CallACS("NukelauncherSpawnerACS")==0,"SpawnCellPack")
+		CELP A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("D64WeaponsOnlyReplacer")==1,"SpawnCellPack")	//if D64 weapons only enabled spawn plasma rifle
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("NukelauncherSpawnerACS")==0,"SpawnCellPack")
 		TNT1 A 0 A_Jump(8,"SpawnNuclearWarhead") //(3%)
 	AmmotypeChoose:
-		TNT1 A 0 A_JumpIf(CallACS("PlasmaNewRandomACS")==0,"SpawnCellPack")
-		TNT1 A 0 A_JumpIf(CallACS("PlasmaNewRandomACS")==1,"SpawnCellPack")
-		TNT1 A 0 A_JumpIf(CallACS("PlasmaNewRandomACS")==2,"SpawnCellPack")
-		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS")==0,"SpawnBoth")
-		TNT1 A 0 A_JumpIf(CallACS("ExtraAmmoRandomACS")==1,"SpawnBothRarerNails")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("PlasmaNewRandomACS")==0,"SpawnCellPack")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("PlasmaNewRandomACS")==1,"SpawnCellPack")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("PlasmaNewRandomACS")==2,"SpawnCellPack")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("ExtraAmmoRandomACS")==0,"SpawnBoth")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("ExtraAmmoRandomACS")==1,"SpawnBothRarerNails")
 		TNT1 A 0 A_Jump(64,"SpawnCellPack","SpawnNailCrate") //(25%)
 	SpawnCellPack:
 		TNT1 A 1 A_SpawnItemEx("64CellPack",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -487,8 +487,8 @@ Scale 0.82
 	States
 	{
 	Spawn:
-		PVIS A 0 NoDelay A_JumpIf(CallACS("InfraredNewRandomACS")==0,"SpawnInfrared")
-		TNT1 A 0 A_JumpIf(CallACS("InfraredNewRandomACS")==1,"SpawnCrucifix")
+		PVIS A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("InfraredNewRandomACS")==0,"SpawnInfrared")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("InfraredNewRandomACS")==1,"SpawnCrucifix")
 		TNT1 A 0 A_Jump(39,"SpawnCrucifix") //(15%)
 		TNT1 A 0 A_Jump(64,"SpawnFlashlight")
 	SpawnInfrared:
@@ -509,8 +509,8 @@ Scale 0.82
 	States
 	{
 	Spawn:
-		PMAP A 0 NoDelay A_JumpIf(CallACS("AllMapNewRandomACS")==0,"SpawnComputerMap")
-		TNT1 A 0 A_JumpIf(CallACS("AllMapNewRandomACS")==1,"SpawnComputerScanner")
+		PMAP A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("AllMapNewRandomACS")==0,"SpawnComputerMap")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("AllMapNewRandomACS")==1,"SpawnComputerScanner")
 		TNT1 A 0 A_Jump(39,"SpawnComputerScanner") //(15%)
 	SpawnComputerMap:
 		TNT1 A 1 A_SpawnItemEx("64Allmap",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -527,8 +527,8 @@ Scale 0.82
 	States
 	{
 	Spawn:
-		PMAP A 0 NoDelay A_JumpIf(CallACS("RadsuitNewRandomACS")==0,"SpawnHazmatSuit")
-		TNT1 A 0 A_JumpIf(CallACS("RadsuitNewRandomACS")==1,"SpawnBiosuit")
+		PMAP A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("RadsuitNewRandomACS")==0,"SpawnHazmatSuit")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("RadsuitNewRandomACS")==1,"SpawnBiosuit")
 		TNT1 A 0 A_Jump(39,"SpawnBiosuit") //(15%)
 	SpawnHazmatSuit:
 		TNT1 A 1 A_SpawnItemEx("64RadSuit",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -545,12 +545,12 @@ Scale 0.82
 	States
 	{
 	Spawn:
-		PINS A 0 NoDelay A_JumpIf(CallACS("WpnPowerRandom")==0,"PowerupChoose")
-		TNT1 A 0 A_JumpIf(CallACS("WpnPowerRandom")==1,"SpawnDemonKey")
+		PINS A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("WpnPowerRandom")==0,"PowerupChoose")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("WpnPowerRandom")==1,"SpawnDemonKey")
 		TNT1 A 0 A_Jump(39,"SpawnDemonKey") //(15%)
 	PowerupChoose:
-		PINS A 0 A_JumpIf(CallACS("ExtraSpheresACS")==0,"SpawnMegaSphere")
-		TNT1 A 0 A_JumpIf(CallACS("ExtraSpheresACS")==1,"SpawnUltrasphere")
+		PINS A 0 A_JumpIf(ACS_NamedExecuteWithResult("ExtraSpheresACS")==0,"SpawnMegaSphere")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("ExtraSpheresACS")==1,"SpawnUltrasphere")
 		TNT1 A 0 A_Jump(39,"SpawnUltrasphere") //(15%)
 	SpawnMegaSphere:
 		TNT1 A 1 A_SpawnItemEx("64MegaSphere",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -570,8 +570,8 @@ Scale 0.82
 	States
 	{
 	Spawn:
-		ARM2 A 0 NoDelay A_JumpIf(CallACS("BlueArmorsNewRandomACS")==0,"SpawnBlue")
-		TNT1 A 0 A_JumpIf(CallACS("BlueArmorsNewRandomACS")==1,"SpawnRed")
+		ARM2 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("BlueArmorsNewRandomACS")==0,"SpawnBlue")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("BlueArmorsNewRandomACS")==1,"SpawnRed")
 		TNT1 A 0 A_Jump(39,"SpawnRed") //(15%)
 	SpawnBlue:
 		TNT1 A 1 A_SpawnItemEx("64BlueArmor",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -588,8 +588,8 @@ Scale 0.82
 	States
 	{
 	Spawn:
-		ARM1 A 0 NoDelay A_JumpIf(CallACS("ExtraSpheresACS")==0,"SpawnGreen")
-		TNT1 A 0 A_JumpIf(CallACS("ExtraSpheresACS")==1,"SpawnMini")
+		ARM1 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("ExtraSpheresACS")==0,"SpawnGreen")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("ExtraSpheresACS")==1,"SpawnMini")
 		TNT1 A 0 A_Jump(39,"SpawnMini") //(15%)
 	SpawnGreen:
 		TNT1 A 1 A_SpawnItemEx("64GreenArmor",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -606,8 +606,8 @@ Scale 0.82
 	States
 	{
 	Spawn:
-		SOUL A 0 NoDelay A_JumpIf(CallACS("ExtraSpheresACS")==0,"SpawnSuper")
-		TNT1 A 0 A_JumpIf(CallACS("ExtraSpheresACS")==1,"SpawnHyper")
+		SOUL A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("ExtraSpheresACS")==0,"SpawnSuper")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("ExtraSpheresACS")==1,"SpawnHyper")
 		TNT1 A 0 A_Jump(39,"SpawnHyper") //(15%)
 	SpawnSuper:
 		TNT1 A 1 A_SpawnItemEx("64Soulsphere",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)

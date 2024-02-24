@@ -6,8 +6,8 @@ Inventory.PickupSound "WPICK"
 	States
 	{
 	Spawn:
-		ASGP A 0 NoDelay A_JumpIf(CallACS("D64WeaponsOnlyReplacer")==1,"SpawnSSG")	//D64 weapon only
-		SK12 F 0 A_JumpIf(CallACS("Striker12ACS")==true,2)	//Alternative Skin
+		ASGP A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("D64WeaponsOnlyReplacer")==1,"SpawnSSG")	//D64 weapon only
+		SK12 F 0 A_JumpIf(ACS_NamedExecuteWithResult("Striker12ACS")==true,2)	//Alternative Skin
 		ASGP A 0
 		"####" "#" 2
 		"####" "#" 0 ACS_NamedExecuteAlways("DM_SpawnACS")
@@ -17,13 +17,13 @@ Inventory.PickupSound "WPICK"
 	Pickup:
 		TNT1 A 0 A_JumpIfInventory("IsTacticalClass",1,"Pickup2")
 		TNT1 A 0 A_JumpIfInventory("IsModern",1,"Pickup2")
-		TNT1 A 0 A_JumpIf(CallACS("Striker12ACS")==true,2)
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("Striker12ACS")==true,2)
 		TNT1 A 0 A_GiveInventory("64AssaultShotgun",1)
 		Stop
 		TNT1 A 0 A_GiveInventory("64Protecta",1)
 		Stop
 	Pickup2:
-		TNT1 A 0 A_JumpIf(CallACS("Striker12ACS")==true,2)
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("Striker12ACS")==true,2)
 		TNT1 A 0 A_GiveInventory("64AssaultShotgunTactical",1)
 		Stop
 		TNT1 A 0 A_GiveInventory("64ProtectaTactical",1)
@@ -32,7 +32,7 @@ Inventory.PickupSound "WPICK"
 		TNT1 A 1 A_SpawnItemEx("SuperShotgunSpawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
 	DMSpawn:
-		TNT1 A 0 A_JumpIf(CallACS("Striker12ACS")==TRUE,"DMSpawn2")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("Striker12ACS")==TRUE,"DMSpawn2")
 		TNT1 A 0 A_ChangeFlag("THRUACTORS",1)
 		TNT1 A 0 A_SpawnItemEx("TeleportationFog")
 		TNT1 A 0 A_SpawnItemEx("64AssaultShotgun")
@@ -40,7 +40,7 @@ Inventory.PickupSound "WPICK"
 		TNT1 A 1050
 		Loop
 	DMSpawn2:
-		TNT1 A 0 A_JumpIf(CallACS("Striker12ACS")==FALSE,"DMSpawn")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("Striker12ACS")==FALSE,"DMSpawn")
 		TNT1 A 0 A_ChangeFlag("THRUACTORS",1)
 		TNT1 A 0 A_SpawnItemEx("TeleportationFog")
 		TNT1 A 0 A_SpawnItemEx("64Protecta")
@@ -77,7 +77,7 @@ Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		ASGG A 1 A_WeaponReady
 		Wait
 	Select:
-		TNT1 A 0 A_JumpIf(CallACS("Striker12ACS")==true,"ProtectaSelected")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("Striker12ACS")==true,"ProtectaSelected")
 		ASGG A 1 A_Raise
 		Wait
 	Deselect:
