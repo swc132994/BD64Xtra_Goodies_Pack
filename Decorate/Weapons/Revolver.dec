@@ -1,6 +1,7 @@
 Actor RevolverSpawner : CustomInventory
 {
 Scale 0.87
+Tag "Double-Action Revolver"
 Inventory.PickupMessage "You got the Double-Action Revolver!"
 Inventory.PickupSound "WPICK"
 	States

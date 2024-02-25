@@ -1,6 +1,7 @@
 Actor LMGSpawner : CustomInventory
 {
 Scale 0.82
+Tag "Light Machinegun"
 Inventory.PickupMessage "You got the Light Machinegun!"
 Inventory.PickupSound "WPICK"
 	States

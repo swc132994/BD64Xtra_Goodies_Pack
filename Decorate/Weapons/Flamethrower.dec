@@ -1,6 +1,7 @@
 Actor FlamerWeaponSpawner : CustomInventory
 {
 scale 0.7
+Tag "Flamethrower"
 Inventory.PickupMessage "You got the flamethrower!"
 Inventory.PickupSound "WPICK"
 	States

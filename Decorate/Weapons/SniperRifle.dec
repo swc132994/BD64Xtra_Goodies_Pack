@@ -1,6 +1,7 @@
 Actor SniperRifleSpawner : CustomInventory
  {
  Scale 0.82
+ Tag "Sniper Rifle"
  Inventory.PickupMessage "You got The Walther WA 2000!"
  Inventory.PickupSound "WPICK"
  States

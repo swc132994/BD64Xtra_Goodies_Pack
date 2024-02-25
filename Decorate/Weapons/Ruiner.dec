@@ -1,6 +1,7 @@
 Actor RuinerSpawner : CustomInventory
 {
 scale 0.8
+Tag "Ruiner"
 Inventory.PickupMessage "You feel like it is watching you..."
 Inventory.PickupSound "WPICK"
 	States

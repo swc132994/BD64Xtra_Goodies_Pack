@@ -1,6 +1,7 @@
 Actor NailgunSpawner : CustomInventory
 {
 scale 0.82
+Tag "Nailgun"
 Inventory.PickupMessage "You got the NailGun!"
 Inventory.PickupSound "WPICK"
 	States

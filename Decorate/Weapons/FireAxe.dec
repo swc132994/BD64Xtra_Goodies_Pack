@@ -1,6 +1,7 @@
 Actor FireAxeSpawner : CustomInventory
 {
 scale 0.8
+Tag "FireAxe"
 Inventory.PickupMessage "You found a fireaxe!"
 Inventory.PickupSound "WPICK"
 	States

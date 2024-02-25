@@ -1,6 +1,7 @@
 Actor HexaShotgunSpawner : CustomInventory
 {
 scale 0.9
+Tag "Hexa Shotgun"
 inventory.pickupmessage "You got the Hexa Shotgun!"
 Inventory.PickupSound "WPICK"
 	States

@@ -1,6 +1,7 @@
 Actor RevenantLauncherSpawner : CustomInventory
 {
 scale 0.82
+Tag "Heatseeker Missile Launcher"
 Inventory.PickupMessage "You got the Heatseeker Missile Launchers!"
 Inventory.PickupSound "WPICK"
 	States

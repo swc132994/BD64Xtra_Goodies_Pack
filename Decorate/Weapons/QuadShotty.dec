@@ -1,6 +1,7 @@
 Actor QuadShotWeaponSpawner : CustomInventory
 {
 scale 0.9
+Tag "Ultra Shotgun"
 inventory.pickupmessage "You got the Ultra Shotgun!"
 Inventory.PickupSound "WPICK"
 	States

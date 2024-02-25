@@ -1,6 +1,7 @@
 Actor NadeLauncherSpawner : CustomInventory
 {
 scale 0.8
+Tag "Grenade Launcher"
 Inventory.PickupMessage "You got the grenade launcher!"
 Inventory.PickupSound "WPICK"
 	States

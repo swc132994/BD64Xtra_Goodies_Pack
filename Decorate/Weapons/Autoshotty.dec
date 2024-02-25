@@ -1,6 +1,7 @@
 Actor AssaultShotgunSpawner : CustomInventory	// Replaces Shotgun		//replaced by new spawner
 {
 Scale 0.87
+Tag "Assault Shotgun"
 Inventory.PickupMessage "You got the Assault Shotgun!"
 Inventory.PickupSound "WPICK"
 	States

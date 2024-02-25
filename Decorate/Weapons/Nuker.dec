@@ -1,6 +1,7 @@
 Actor NukerSpawner : CustomInventory
 {
 Scale 1.2
+Tag "Nuclear Missile Launcher"
 Inventory.PickupMessage "Remember - Duck and Cover."
 Inventory.PickupSound "WPICK"
 	States

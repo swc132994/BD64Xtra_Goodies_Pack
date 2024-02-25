@@ -1,6 +1,7 @@
 Actor BFG10kSpawner : CustomInventory
 {
 Scale 1.0
+ Tag "BFG 10000"
 Inventory.Pickupmessage "You got the BFG10000!  Hell,yes!"
 Inventory.PickupSound "WPICK"
 	States
@@ -42,7 +43,7 @@ Weapon.Kickback 100
 Inventory.PickupSound "WPICK"
 Inventory.Pickupmessage "You got the BFG10000! Kaching!"
 Obituary "%o was blasted by %k's BFG10K"
-Tag "BFG 10,000"
+Tag "BFG 10000"
 +Weapon.NoAutoFire
 VisibleToPlayerClass "64DoomPlayer"
 Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
@@ -212,7 +213,7 @@ Weapon.Kickback 100
 Inventory.PickupSound "WPICK"
 Inventory.Pickupmessage "You got the BFG10000! kaching!"
 Obituary "%o was blasted by %k's BFG10K"
-Tag "BFG 10,000"
+Tag "BFG 10000"
 +WEAPON.NOAUTOFIRE
 +INVENTORY.RESTRICTABSOLUTELY
 	States
