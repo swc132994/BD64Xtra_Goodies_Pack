@@ -151,13 +151,16 @@ Tag "Biological Suit"
 	States
 	{
 	Spawn:
-		BIOS A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("AltRadSuitACS")==1,"AltSpawn")
-		BIOS A 6 Bright Light("REDARMOR1")
-		BIOS B 5 Light("REDARMOR2")
-		loop
+		BIOS A 1
+	SpawnLoop:
+		"####" "#" 3 Light("Blursphere") ACS_NamedExecuteAlways("AlternativeAmmoPickupSpritesACS")
+	NormalSpawn:
+		BIOS A 6 Bright Light("Blursphere")
+		BIOS B 5 Light("Blursphere")
+		Goto SpawnLoop
 	AltSpawn:
 		BIOS C 5
-		Loop
+		Goto SpawnLoop
 	Pickup:
 		TNT1 A 0 A_GiveInventory("BioArmor",1)
 		TNT1 A 0 A_GiveInventory("BioSuitFeet",1)
@@ -241,11 +244,9 @@ Tag "Ultra Sphere"
 	{
 	Spawn:
 		ULTR ABCD 6 Bright Light("WEAPONPOWERTEAL")
-		ULTR DDDD 8 Bright Light("WEAPONPOWERTEAL")
-		ULTR DDDD 8 Bright Light("WEAPONPOWERTEAL")
-		ULTR DDDD 8 Bright Light("WEAPONPOWERTEAL")
+		ULTR D 96 Bright Light("WEAPONPOWERTEAL")
 		ULTR DCBA 6 Bright Light("WEAPONPOWERTEAL")
-		ULTR AAAA 6 Bright Light("WEAPONPOWERTEAL")
+		ULTR A 32 Bright Light("WEAPONPOWERTEAL")
 		Loop
 	Pickup:
 		TNT1 A 0 A_GiveInventory("64RedArmor",1)
@@ -268,14 +269,17 @@ Inventory.Pickupmessage "You got the UltraArmour!"
 	States
 	{
 	Spawn:
-		ARM6 A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("AlphaPickupACS")==True,"AlphaSpawn")
-		ARM6 A 6 Light("REDARMOR1")
-		ARM6 B 7 bright Light("REDARMOR2")
-		Loop
+		ARM6 A 1
+	SpawnLoop:
+		"####" A 3  Light("Blursphere") ACS_NamedExecuteAlways("AlphaPickupACS")
+	SpawnNormal:
+		ARM6 A 6 Light("Blursphere")
+		ARM6 B 7 bright Light("Blursphere")
+		Goto SpawnLoop
 	AlphaSpawn:
-		ARM7 A 6 Light("REDARMOR1")
-		ARM7 B 7 Bright Light("REDARMOR2")
-		Loop
+		ARM7 A 6 Light("Blursphere")
+		ARM7 B 7 Bright Light("Blursphere")
+		Goto SpawnLoop
 	}
 }
 

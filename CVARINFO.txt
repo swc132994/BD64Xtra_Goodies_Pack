@@ -1,18 +1,20 @@
-server int Immolator_Spawner_Cvar = 0;		//FLAMETHROWER, GRENADELAUNCHER ADDED
-server int PlasmaRifleNew_Spawner_Cvar = 0;	//BLIGHTER ADDED
-server int ChaingunNew_Spawner_Cvar = 0;	//NAILGUN ADDED
-server int ExtraAmmo_Spawner_Cvar = 0;		//ADDON AMMO
-server int AutoShotgun_Spawner_Cvar = 0;	//RAUTOSHOTGUN REPLACE SUPERSHOTGUN
+server int ChainsawNew_Spawner_Cvar = 1;	//FIREAXE
+server int Revolver_Spawner_Cvar = 1;		//REVOLVER
+server int AutoShotgun_Spawner_Cvar = 1;	//RAUTOSHOTGUN REPLACE SUPERSHOTGUN
+server int ChaingunNew_Spawner_Cvar = 1;	//NAILGUN ADDED
+server int Immolator_Spawner_Cvar = 1;		//FLAMETHROWER, GRENADELAUNCHER
+server int PlasmaRifleNew_Spawner_Cvar = 1;	//BLIGHTER
+server int BFG9kNew_Spawner_Cvar = 1;		//BFG 10k
+
+server int ExtraAmmo_Spawner_Cvar = 1;		//extra weapon ammo types
+
 server int NuclearMissile_Spawner_Cvar = 0;	//NUCLEAR MISSILE LAUNCHER
-server bool Striker12Cvar = FALSE;			//Alternative AutoShotgun (Striker-12, Protecta)
-server int Revolver_Spawner_Cvar = 0;		//REVOLVER
-server int ChainsawNew_Spawner_Cvar = 0;	//FIREAXE
-server int BFG9kNew_Spawner_Cvar = 0;		//BFG 10k
+server int Striker12Cvar = 0;			//Alternative AutoShotgun (Striker-12, Protecta)
 server bool ASGHLSoundCvar = FALSE;			//Assault Shotgun Half-Life Shotgun Sounds
 
 //XTRA POWERUPS
-server int ExtraSpheres_CVar = 0;
-server int Crucifix_Spawner_CVar = 0;
-server int MapRadar_Spawner_CVar = 0;
-server int Biosuit_Spawner_CVar = 0;
-server int RedArmor_Spawner_CVar = 0;
+server int ExtraSpheres_CVar		= 1;
+server int Crucifix_Spawner_CVar	= 1;
+server int MapRadar_Spawner_CVar	= 1;
+server int Biosuit_Spawner_CVar		= 1;
+server int RedArmor_Spawner_CVar	= 1;

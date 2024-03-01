@@ -7,48 +7,32 @@ Inventory.PickupSound "WPICK"
 	States
 	{
 	Spawn:
-		ASGP A 0 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("D64WeaponsOnlyReplacer")==1,"SpawnSSG")	//D64 weapon only
-		SK12 F 0 A_JumpIf(ACS_NamedExecuteWithResult("Striker12ACS")==true,2)	//Alternative Skin
-		ASGP A 0
-		"####" "#" 2
-		"####" "#" 0 ACS_NamedExecuteAlways("DM_SpawnACS")
-		"####" "#" 2
-		"####" "#" 0 A_JumpIfInventory("ISDM",1,"DMSpawn")
+		ASGP A 2
+		TNT1 A 0 ACS_NamedExecuteAlways("DM_SpawnACS")
+		ASGP A 2
+		TNT1 A 0 A_JumpIfInventory("ISDM",1,"DMSpawn")
 		Loop
 	Pickup:
 		TNT1 A 0 A_JumpIfInventory("IsTacticalClass",1,"Pickup2")
 		TNT1 A 0 A_JumpIfInventory("IsModern",1,"Pickup2")
-		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("Striker12ACS")==true,2)
 		TNT1 A 0 A_GiveInventory("64AssaultShotgun",1)
 		Stop
-		TNT1 A 0 A_GiveInventory("64Protecta",1)
-		Stop
 	Pickup2:
-		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("Striker12ACS")==true,2)
 		TNT1 A 0 A_GiveInventory("64AssaultShotgunTactical",1)
 		Stop
-		TNT1 A 0 A_GiveInventory("64ProtectaTactical",1)
-		Stop
-	SpawnSSG:
-		TNT1 A 1 A_SpawnItemEx("SuperShotgunSpawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
-		Stop
 	DMSpawn:
-		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("Striker12ACS")==TRUE,"DMSpawn2")
 		TNT1 A 0 A_ChangeFlag("THRUACTORS",1)
 		TNT1 A 0 A_SpawnItemEx("TeleportationFog")
 		TNT1 A 0 A_SpawnItemEx("64AssaultShotgun")
 		TNT1 A 0 A_SpawnItemEx("64AssaultShotgunTACTICAL")
 		TNT1 A 1050
 		Loop
-	DMSpawn2:
-		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("Striker12ACS")==FALSE,"DMSpawn")
-		TNT1 A 0 A_ChangeFlag("THRUACTORS",1)
-		TNT1 A 0 A_SpawnItemEx("TeleportationFog")
-		TNT1 A 0 A_SpawnItemEx("64Protecta")
-		TNT1 A 0 A_SpawnItemEx("64ProtectaTACTICAL")
-		TNT1 A 1050
-		Loop
 	}
+}
+
+Actor ProtectaSwitchToken : Inventory
+{
+Inventory.MaxAmount 1
 }
 
 Actor AssaultShotgunCounter : Inventory
@@ -70,18 +54,31 @@ VisibleToPlayerClass "64DoomPlayer"
 Inventory.PickupMessage "You got the Assault Shotgun!"
 Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 +INVENTORY.RESTRICTABSOLUTELY
+Weapon.SisterWeapon "64Protecta"
 	States
 	{
-	ProtectaSelected:
+	ProtectaSwitchSelected:	//Deselect animation
+		ASGG A 1 Offset(0,32)
+		ASGG A 1 Offset(0,42)
+		ASGG A 1 Offset(0,54)
+		ASGG A 1 Offset(0,66)
+		TNT1 A 3
+	ProtectaSwitchSelected2:	//Protecta select animation
+		SK12 A 1 Offset(0,66)
+		SK12 A 1 Offset(0,54)
+		SK12 A 1 Offset(0,42)
+		SK12 A 1 Offset(0,32)
 		TNT1 A 0 A_GiveInventory("SisterWeaponSelector",1)
 	Ready:
+		TNT1 A 0 A_JumpIfInventory("ProtectaSwitchToken",1,"ProtectaSwitchSelected")
 		ASGG A 1 A_WeaponReady
-		Wait
+		Loop
 	Select:
-		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("Striker12ACS")==true,"ProtectaSelected")
+		TNT1 A 0 A_JumpIfInventory("ProtectaSwitchToken",1,"ProtectaSwitchSelected2")
 		ASGG A 1 A_Raise
-		Wait
+		Loop
 	Deselect:
+		TNT1 A 0 A_TakeInventory("SisterWeaponSelector",0)
 		TNT1 A 0 A_ZoomFactor(1.0)
 		ASGG A 1 A_Lower
 		Wait
@@ -131,15 +128,22 @@ VisibleToPlayerClass "64DoomPlayer"
 Inventory.PickupMessage "You got the Striker-12!"
 Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 +INVENTORY.RESTRICTABSOLUTELY
+Weapon.SisterWeapon "64AssaultShotgun"
++POWERED_UP
 	States
 	{
 	Ready:
+		TNT1 A 0 A_JumpIfInventory("ProtectaSwitchToken",1,2)
+		TNT1 A 0 A_TakeInventory("SisterWeaponSelector",0)
 		SK12 A 1 A_WeaponReady
-		Wait
+		Loop
 	Select:
+		TNT1 A 0 A_JumpIfInventory("ProtectaSwitchToken",1,2)
+		TNT1 A 0 A_TakeInventory("SisterWeaponSelector",0)
 		SK12 A 1 A_Raise
-		Wait
+		Loop
 	Deselect:
+		TNT1 A 0 A_TakeInventory("SisterWeaponSelector",0)
 		SK12 A 1 A_Lower
 		Wait
 	Fire:
@@ -192,6 +196,7 @@ Tag "Assault Shotgun"
 +WEAPON.NOAUTOFIRE
 +WEAPON.AMMO_CHECKBOTH
 +NOALERT
+Weapon.SisterWeapon "64ProtectaTACTICAL"
 	States
 	{
 	MineThrowFlash:
@@ -222,8 +227,16 @@ Tag "Assault Shotgun"
 	Spawn:
 		ASGP A -1
 		Stop
+	ProtectaSwitchSelected:	//Deselect animation
+		ASGS EFGH 1 Offset(0,32)
+		TNT1 A 3
+	ProtectaSwitchSelected2:	//Protecta select animation
+		TNT1 A 0 A_PlaySound("Striker-12/Select",CHAN_ITEM)
+		SK15 ABCD 1 Offset(0,32)
+		TNT1 A 0 A_GiveInventory("SisterWeaponSelector",1)
 	v1Ready:
 	Ready:
+		TNT1 A 0 A_JumpIfInventory("ProtectaSwitchToken",1,"ProtectaSwitchSelected")
 		TNT1 A 0 A_JumpIfInventory("Kicking",1,"DoKick")
 		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
@@ -235,6 +248,7 @@ Tag "Assault Shotgun"
 		TNT1 A 0 A_PlaySound("DRYFIRE",CHAN_WEAPON)
 		Goto Ready
 	Select:
+		TNT1 A 0 A_JumpIfInventory("ProtectaSwitchToken",1,"ProtectaSwitchSelected2")
 		TNT1 A 0 ACS_NamedExecuteAlways("ASGHLPumpSounds")
 		ASGS ABCD 1 Offset(0,32)
 		TNT1 A 0 A_Raise
@@ -246,6 +260,7 @@ Tag "Assault Shotgun"
 		TNT1 A 0 A_Takeinventory("PlaceMine",0)
 		TNT1 A 0 A_Takeinventory("Kicking",0)
 		ASGS EFGH 1
+		TNT1 A 0 A_TakeInventory("SisterWeaponSelector",0)
 		TNT1 A 0 A_Lower
 		Wait
 	Fidget:
@@ -485,6 +500,8 @@ Tag "Striker-12"
 +WEAPON.NOAUTOFIRE
 +WEAPON.AMMO_CHECKBOTH
 +NOALERT
+Weapon.SisterWeapon "64AssaultShotgunTACTICAL"
++POWERED_UP
 	States
 	{
 	MineThrowFlash:
@@ -517,6 +534,8 @@ Tag "Striker-12"
 		Stop
 	v1Ready:
 	Ready:
+		TNT1 A 0 A_JumpIfInventory("ProtectaSwitchToken",1,2)
+		TNT1 A 0 A_TakeInventory("SisterWeaponSelector",0)
 		TNT1 A 0 A_JumpIfInventory("Kicking",1,"DoKick")
 		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
@@ -531,6 +550,8 @@ Tag "Striker-12"
 		TNT1 A 0 A_PlaySound("DRYFIRE",CHAN_WEAPON)
 		Goto Ready
 	Select:
+		TNT1 A 0 A_JumpIfInventory("ProtectaSwitchToken",1,2)
+		TNT1 A 0 A_TakeInventory("SisterWeaponSelector",0)
 		TNT1 A 0 A_PlaySound("Striker-12/Select",CHAN_ITEM)
 		SK15 ABCD 1 Offset(0,32)
 		TNT1 A 0 A_Raise
@@ -543,6 +564,7 @@ Tag "Striker-12"
 		TNT1 A 0 A_Takeinventory("Kicking",0)
 		TNT1 A 0 A_Takeinventory("Zoomed",0)
 		SK15 DCBA 1
+		TNT1 A 0 A_TakeInventory("SisterWeaponSelector",0)
 		TNT1 A 0 A_Lower
 		Wait
 	Fidget:

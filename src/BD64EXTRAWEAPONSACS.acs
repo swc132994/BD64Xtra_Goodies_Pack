@@ -1,0 +1,165 @@
+#library "BD64EXTRAWEAPONSACS"
+#include "zcommon.acs"
+#import "ACSFunc.acs"
+
+script "ChainsawerNewRandomACS" (void)
+{
+	if(GetCvar("ChainsawNew_Spawner_Cvar") == 1) { SetActorState(0,"SpawnSaw"); }
+	else
+	if(GetCvar("ChainsawNew_Spawner_Cvar") == 2) { SetActorState(0,"SpawnAxe"); }
+}
+
+script "RevolverRandom" (void)
+{
+	if(GetCvar("Revolver_Spawner_Cvar") == 1) { SetActorState(0,"SpawnShotgun"); }
+	else
+	if(GetCvar("Revolver_Spawner_Cvar") == 2) { SetActorState(0,"SpawnRevolver"); }
+	else
+	if(GetCvar("Revolver_Spawner_Cvar") == 3) { SetActorState(0,"SpawnSniperRifle"); }
+}
+
+script "AutoShotgunRandom" (void)
+{
+	if(GetCvar("AutoShotgun_Spawner_Cvar") == 1) { SetActorState(0,"SpawnSSG"); }
+	else
+	if(GetCvar("AutoShotgun_Spawner_Cvar") == 2) { SetActorState(0,"SpawnAssaultShotgun"); }
+	else
+	if(GetCvar("AutoShotgun_Spawner_Cvar") == 3) { SetActorState(0,"SpawnUltraShotgun"); }
+}
+
+script "ChaingunNewRandomACS" (void)
+{
+	if(GetCvar("ChaingunNew_Spawner_Cvar") == 1) { SetActorState(0,"SpawnChaingun"); }
+	else
+	if(GetCvar("ChaingunNew_Spawner_Cvar") == 2) { SetActorState(0,"SpawnRifle"); }
+	else
+	if(GetCvar("ChaingunNew_Spawner_Cvar") == 3) { SetActorState(0,"SpawnSMG"); }
+	else
+	if(GetCvar("ChaingunNew_Spawner_Cvar") == 4) { SetActorState(0,"SpawnLMG"); }
+}
+
+script "ImmolatorRandom" (void)
+{
+	if(GetCvar("Immolator_Spawner_Cvar") == 1) { SetActorState(0,"SpawnRocketLauncher"); }
+	else
+	if(GetCvar("Immolator_Spawner_Cvar") == 2) { SetActorState(0,"SpawnNadeLauncher"); }
+	else
+	if(GetCvar("Immolator_Spawner_Cvar") == 3) { SetActorState(0,"SpawnFlamethrower"); }
+	else
+	if(GetCvar("Immolator_Spawner_Cvar") == 4) { SetActorState(0,"SpawnRevenantLauncher"); }
+}
+
+script "PlasmaNewRandomACS" (void)
+{
+	if(GetCvar("PlasmaRifleNew_Spawner_Cvar") == 1) { SetActorState(0,"SpawnPlasmaRifle"); }
+	else
+	if(GetCvar("PlasmaRifleNew_Spawner_Cvar") == 2) { SetActorState(0,"SpawnGaussCannon"); }
+	else
+	if(GetCvar("PlasmaRifleNew_Spawner_Cvar") == 3) { SetActorState(0,"SpawnRuiner"); }
+	else
+	if(GetCvar("PlasmaRifleNew_Spawner_Cvar") == 4) { SetActorState(0,"SpawnNailgun"); }
+}
+
+script "BFG9kNewRandomACS" (void)
+{
+	if(GetCvar("BFG9kNew_Spawner_Cvar") == 1) { SetActorState(0,"Spawn9k"); }
+	else
+	if(GetCvar("BFG9kNew_Spawner_Cvar") == 2) { SetActorState(0,"Spawn10k"); }
+	else
+	if(GetCvar("BFG9kNew_Spawner_Cvar") == 3) { SetActorState(0,"SpawnUnmaker"); }
+	else
+	if(GetCvar("BFG9kNew_Spawner_Cvar") == 4) { SetActorState(0,"SpawnLasergun"); }
+	else
+	if(GetCvar("BFG9kNew_Spawner_Cvar") == 5) { SetActorState(0,"SpawnHexaShotgun"); }
+}
+
+script "ExtraAmmoRandomACS" (void)
+{
+	if(GetCvar("ExtraAmmo_Spawner_Cvar") == 1) { SetActorState(0,"SpawnNormal"); }
+	else
+	if(GetCvar("ExtraAmmo_Spawner_Cvar") == 2) { SetActorState(0,"SpawnBoth"); }
+}
+
+script "NukelauncherSpawnerACS" (void)
+{
+	if(GetCvar("NuclearMissile_Spawner_Cvar") == 0)
+	{
+		SetActorState(0,"PowerUpChoose");
+		SetActorState(0,"SpawnNormal");
+	}
+}
+
+script "Striker12ACS" Enter
+{
+SetInventory("ProtectaSwitchToken",getcvar("Striker12Cvar"));
+Delay(64);
+Restart;
+}
+
+//switching
+Script "ASGHLFireSounds" (VOID) NET //I don't like HL HD Shotgun Sound
+{
+	If (GetCvar("ASGHLSoundCvar")==True)
+	{
+		PlaySound(0,"AutoShotgun/HDFire",CHAN_WEAPON,1.0,false,ATTN_NORM,true);
+	}
+	Else
+	{
+		PlaySound(0,"AutoShotgun/Fire",CHAN_WEAPON,1.0,false,ATTN_NORM,false);
+	}
+}
+
+Script "ASGHLPumpSounds" (VOID) NET
+{
+	If (GetCvar("ASGHLSoundCvar")==True)
+	{
+		PlaySound(0,"AutoShotgun/HDPump",CHAN_WEAPON,1.0,false,ATTN_NORM,true);
+	}
+	Else
+	{
+		PlaySound(0,"AutoShotgun/Pump",CHAN_WEAPON,1.0,false,ATTN_NORM,false);
+	}
+}
+
+//extra powerups
+script "ExtraSpheresACS" (void)
+{
+	if(GetCvar("ExtraSpheres_CVar") == 1) { SetActorState(0,"SpawnNormal"); }
+	else
+	if(GetCvar("ExtraSpheres_CVar") == 2) { SetActorState(0,"SpawnExtra"); }
+}
+
+script "InfraredNewRandomACS" (void)
+{
+	if(GetCvar("Crucifix_Spawner_CVar") == 1) { SetActorState(0,"SpawnNormal"); }
+	else
+	if(GetCvar("Crucifix_Spawner_CVar") == 2) { SetActorState(0,"SpawnExtra"); }
+}
+
+script "AllMapNewRandomACS" (void)
+{
+	if(GetCvar("MapRadar_Spawner_CVar") == 1) { SetActorState(0,"SpawnNormal"); }
+	else
+	if(GetCvar("MapRadar_Spawner_CVar") == 2) { SetActorState(0,"SpawnExtra"); }
+}
+
+script "BlueArmorsNewRandomACS" (void)
+{
+	if(GetCvar("RedArmor_Spawner_CVar") == 1) { SetActorState(0,"SpawnNormal"); }
+	else
+	if(GetCvar("RedArmor_Spawner_CVar") == 2) { SetActorState(0,"SpawnExtra"); }
+}
+
+script "RadsuitNewRandomACS" (void)
+{
+	if(GetCvar("Biosuit_Spawner_CVar") == 1) { SetActorState(0,"SpawnNormal"); }
+	else
+	if(GetCvar("Biosuit_Spawner_CVar") == 2) { SetActorState(0,"SpawnExtra"); }
+}
+
+script "WpnPowerExtra" (void)
+{
+	if(GetCvar("WpnPower_Spawner_Cvar") == 0) { SetActorState(0,"PowerUpChoose"); }
+	else
+	if(GetCvar("WpnPower_Spawner_Cvar") == 1) { SetActorState(0,"SpawnDemonKey"); }
+}
