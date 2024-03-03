@@ -28,7 +28,7 @@ OptionMenu "BrutalDoom64OptionsItem/WeaponSpawner"
 	Option "Blue Armour Spawner =","RedArmor_Spawner_CVar","RedArmor_Spawner_Value"
 		StaticText "Blue Armour by Default",1
 		StaticText ""
-		StaticText "(Red armour gives 300 armour & protection from fire damage)",1
+		StaticText "(Red armour = 300 armour & protection from fire damage)",1
 		StaticText ""
 		StaticText "Extra Weapons Options",1
 		StaticText ""
@@ -45,7 +45,7 @@ OptionMenu "BrutalDoom64OptionsItem/WeaponSpawner"
 		StaticText "Super Shotgun by Default",1
 		StaticText ""
 	Option "Rocket Launcher Spawner =","Immolator_Spawner_Cvar","Immolator_Spawner_Value"
-		StaticText "Rocker Luancher by Default",1
+		StaticText "Rocket Luancher by Default",1
 		StaticText ""
 	Option "Plasma Rifle Spawner =","PlasmaRifleNew_Spawner_Cvar","PlasmaRifleNew_Spawner_Value"
 		StaticText "Plasma Rifle by Default",1
@@ -56,8 +56,8 @@ OptionMenu "BrutalDoom64OptionsItem/WeaponSpawner"
 	Option "Extra Ammo Spawner =","ExtraAmmo_Spawner_Cvar","ExtraAmmo_Spawner_Value"
 		StaticText "Spawn Normal Only by Default",1
 		StaticText ""
-		StaticText "Option to Enable Nuke Launchers to spawn alongside Invulnerability",1
-		StaticText "And Nuclear Warheads alongside Rockets/Rocket Crates",1
+		StaticText "Enable Nuke Launchers to spawn alongside Invulnerability",1
+		StaticText "and Nuclear Warheads alongside Rockets/Rocket Crates",1
 		StaticText ""
 	Option "Enable NukeLauncher =","NuclearMissile_Spawner_Cvar","YesOrNo"
 }
@@ -163,7 +163,7 @@ OptionValue "ExtraAmmo_Spawner_Value"
 {
 	0,"Random"
 	1,"Spawn Normal Only"
-	2,"Spawn Together Random"
+	2,"Spawn Alongside Random"
 }
 
 OptionValue "ASGHLSoundValue"

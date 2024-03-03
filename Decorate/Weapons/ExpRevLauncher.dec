@@ -66,7 +66,7 @@ Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		Stop
 	Fire:
 		TNT1 A 0 A_JumpIfTargetInLOS("OpenFire")
-		RVCG J 1
+		TNT1 A 0 A_GunFlash("NoTargetFlash")
 		Goto Ready
 	OpenFire:
 		TNT1 A 0 A_JumpIfInventory("HeatseekerSwitchShoulder",1,"OpenFire2")
@@ -81,6 +81,9 @@ Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		RVCG HHIAA 2
 		TNT1 A 0 A_TakeInventory("HeatseekerSwitchShoulder",1)
 		Goto Ready
+	NotargetFlash:
+		RVCG J 1
+		Stop
 	}
 }
 
