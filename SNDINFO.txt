@@ -65,9 +65,6 @@ $Limit Weapons/NailHit		0
 $Limit Weapons/NailHitBleed	0
 
 //Auto-Shotgun - taken from Half-Life HQ Sounds
-AutoShotgun/Fire		ASGFIRE
-//ASGFIR3				ASGFIR3 //Unused
-AutoShotgun/Pump		ASGPUMP
 AutoShotgun/HDFire		AHDFIRE
 AutoShotgun/HDPump		AHDPUMP
 

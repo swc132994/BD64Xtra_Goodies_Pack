@@ -96,31 +96,6 @@ Delay(64);
 Restart;
 }
 
-//switching
-Script "ASGHLFireSounds" (VOID) NET //I don't like HL HD Shotgun Sound
-{
-	If (GetCvar("ASGHLSoundCvar")==True)
-	{
-		PlaySound(0,"AutoShotgun/HDFire",CHAN_WEAPON,1.0,false,ATTN_NORM,true);
-	}
-	Else
-	{
-		PlaySound(0,"AutoShotgun/Fire",CHAN_WEAPON,1.0,false,ATTN_NORM,false);
-	}
-}
-
-Script "ASGHLPumpSounds" (VOID) NET
-{
-	If (GetCvar("ASGHLSoundCvar")==True)
-	{
-		PlaySound(0,"AutoShotgun/HDPump",CHAN_WEAPON,1.0,false,ATTN_NORM,true);
-	}
-	Else
-	{
-		PlaySound(0,"AutoShotgun/Pump",CHAN_WEAPON,1.0,false,ATTN_NORM,false);
-	}
-}
-
 //extra powerups
 script "ExtraSpheresACS" (void)
 {

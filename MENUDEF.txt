@@ -95,7 +95,6 @@ OptionMenu "BrutalDoom64Item/WeaponOptions"
 		StaticText ""
 		StaticText "Switch between Stiker-12 or Assault Shotgun"
 	Option "Striker-12 as Alternative of Assault Shotgun =","Striker12Cvar","YesOrNo"
-	Option "Assault Shotgun Half-Life Shotgun Sounds =","ASGHLSoundCvar","ASGHLSoundValue"
 }
 
 //XTRA WEAPON & AMMO VALUES
@@ -164,12 +163,6 @@ OptionValue "ExtraAmmo_Spawner_Value"
 	0,"Random"
 	1,"Spawn Normal Only"
 	2,"Spawn Alongside Random"
-}
-
-OptionValue "ASGHLSoundValue"
-{
-	0,"Standard (Valve, HQ Restored by Senn)"
-	1,"HD (Gearbox)"
 }
 
 //XTRA POWERUP VALUES
