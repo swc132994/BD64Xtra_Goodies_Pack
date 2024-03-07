@@ -77,7 +77,9 @@ script "ExtraAmmoRandomACS" (void)
 {
 	if(GetCvar("ExtraAmmo_Spawner_Cvar") == 1) { SetActorState(0,"SpawnNormal"); }
 	else
-	if(GetCvar("ExtraAmmo_Spawner_Cvar") == 2) { SetActorState(0,"SpawnBoth"); }
+	if(GetCvar("ExtraAmmo_Spawner_Cvar") == 2) { SetActorState(0,"SpawnBothRandom"); }
+	else
+	if(GetCvar("ExtraAmmo_Spawner_Cvar") == 3) { SetActorState(0,"SpawnBoth"); }
 }
 
 script "NukelauncherSpawnerACS" (void)

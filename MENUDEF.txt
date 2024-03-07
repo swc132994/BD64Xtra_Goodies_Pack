@@ -162,7 +162,8 @@ OptionValue "ExtraAmmo_Spawner_Value"
 {
 	0,"Random"
 	1,"Spawn Normal Only"
-	2,"Spawn Alongside Random"
+	2,"Random Spawn Both"
+	3,"Spawn Both (random nukes)"
 }
 
 //XTRA POWERUP VALUES
