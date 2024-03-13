@@ -93,6 +93,11 @@ script "NukelauncherSpawnerACS" (void)
 
 script "Striker12ACS" Enter
 {
+	if(GetCvar("Striker12Cvar") == 1)
+	{
+		SetActorState(0,"ShowStriker12");
+	}
+
 SetInventory("ProtectaSwitchToken",getcvar("Striker12Cvar"));
 Delay(64);
 Restart;

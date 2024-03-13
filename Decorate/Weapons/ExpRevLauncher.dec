@@ -22,7 +22,7 @@ Inventory.PickupSound "WPICK"
 		TNT1 A 0 A_GiveInventory("64HeatseekerLauncherTACTICAL",1)
 		Stop
 	DMSpawn:
-		TNT1 A 0 A_ChangeFlag("THRUACTORS",1)
+		TNT1 A 0 A_ChangeFlag("THRUACTORS",TRUE)
 		TNT1 A 0 A_SpawnItemEx("TeleportationFog")
 		TNT1 A 0 A_SpawnItemEx("64HeatseekerLauncher")
 		TNT1 A 0 A_SpawnItemEx("64HeatseekerLauncherTACTICAL")
@@ -102,7 +102,7 @@ ACTOR 64HeatseekerProjectilePlayer : 64RevenantTracer3
 	{
 	Spawn:
 		TNT1 A 3
-		TNT1 A 0 A_ChangeFlag("NOCLIP",0)
+		TNT1 A 0 A_ChangeFlag("NOCLIP",FALSE)
 	Stay:
 		M5B1 A 2 Bright A_SpawnItemEx("RedFlareSmall")
 		TNT1 A 0 A_SeekerMissile(15,15,SMF_LOOK|SMF_PRECISE)
@@ -114,6 +114,29 @@ ACTOR 64HeatseekerProjectilePlayer : 64RevenantTracer3
 		TNT1 A 0 A_SpawnItemEx("OldschoolRocketSmokeTrail2")
 		M5B1 C 2 Bright A_SpawnItemEx("RedFlareSmall")
 		TNT1 A 0 A_SeekerMissile(15,15,SMF_LOOK|SMF_PRECISE)
+		TNT1 A 0 A_SpawnItemEx("RevenantFireTrailparticle")
+		TNT1 A 0 A_SpawnItemEx("OldschoolRocketSmokeTrail2")
+		Loop
+	}
+}
+
+ACTOR 64ProjectilePlayer : 64HeatseekerProjectilePlayer
+{
+Speed 22
+-SCREENSEEKER
+	States
+	{
+	Spawn:
+		TNT1 A 3
+		TNT1 A 0 A_ChangeFlag("NOCLIP",FALSE)
+	Stay:
+		M5B1 A 2 Bright A_SpawnItemEx("RedFlareSmall")
+		TNT1 A 0 A_SpawnItemEx("RevenantFireTrailparticle")
+		TNT1 A 0 A_SpawnItemEx("OldschoolRocketSmokeTrail2")
+		M5B1 B 2 Bright A_SpawnItemEx("RedFlareSmall")
+		TNT1 A 0 A_SpawnItemEx("RevenantFireTrailparticle")
+		TNT1 A 0 A_SpawnItemEx("OldschoolRocketSmokeTrail2")
+		M5B1 C 2 Bright A_SpawnItemEx("RedFlareSmall")
 		TNT1 A 0 A_SpawnItemEx("RevenantFireTrailparticle")
 		TNT1 A 0 A_SpawnItemEx("OldschoolRocketSmokeTrail2")
 		Loop
@@ -167,7 +190,7 @@ Tag "Heatseeker Missile Launcher"
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
 		Loop
 	Fire:
-		TNT1 A 0 A_JumpIfTargetInLOS("OpenFire")
+		TNT1 A 0  A_JumpIfTargetInLOS("OpenFire")
 		TNT1 A 0 A_GunFlash("NoTargetFlash")
 		Goto Ready
 	OpenFire:
@@ -177,15 +200,24 @@ Tag "Heatseeker Missile Launcher"
 		RVCG DDEAA 2
 		TNT1 A 0 A_GiveInventory("HeatseekerSwitchShoulder",1)
 		Goto Ready
-	AltFire:
-		TNT1 A 0 A_JumpIfTargetInLOS("OpenFire2")
-		TNT1 A 0 A_GunFlash("NoTargetFlash")
-		Goto Ready
 	OpenFire2:
 		RVCG F 2 BRIGHT A_FireCustomMissile("64HeatseekerProjectilePlayer",random(4,-4),1,25)
 		RVCG G 2 BRIGHT A_AlertMonsters
 		RVCG HHIAA 2
 		TNT1 A 0 A_TakeInventory("HeatseekerSwitchShoulder",1)
+		Goto Ready
+	AltFire:
+		TNT1 A 0 A_JumpIfInventory("HeatseekerSwitchShoulder",1,"AltFire2")
+		RVCG B 2 BRIGHT A_FireCustomMissile("64ProjectilePlayer",random(4,-4),1,-25)
+		RVCG C 2 BRIGHT A_AlertMonsters
+		RVCG DDEAA 1
+		TNT1 A 0 A_GiveInventory("HeatseekerSwitchShoulder",1)
+		Goto Ready
+	AltFire2:
+		RVCG F 2 BRIGHT A_FireCustomMissile("64ProjectilePlayer",random(4,-4),1,25)
+		RVCG G 2 BRIGHT A_AlertMonsters
+		RVCG HHIAA 1
+		TNT1 A 0 A_TakeInventory("HeatseekerSwitchShoulder",0)
 		Goto Ready
 	MineThrowFlash:
 		RVDW ABCE 1
