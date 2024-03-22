@@ -89,7 +89,7 @@ Weapon.SisterWeapon "64Protecta"
 	Fire:
 		ASGG A 1
 		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0)
-		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",30,5,40)
+		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,5,40)
 		TNT1 AAAAA 0 A_FireCustomMissile("Tracer",random(-3,3),0,-1,-12,0,random(-5,5))
 		TNT1 A 0 A_FireBullets(4.0,4.0,8,7,"ShotgunPuff")
 		ASGF A 1
@@ -152,7 +152,7 @@ Weapon.SisterWeapon "64AssaultShotgun"
 	Fire:
 		SK12 A 1
 		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0)
-		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",30,5,40)
+		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,5,40)
 		TNT1 AAAAA 0 A_FireCustomMissile("Tracer",random(-3,3),0,-1,-12,0,random(-5,5))
 		TNT1 A 0 A_FireBullets(4.0,4.0,8,7,"ShotgunPuff")
 		TNT1 A 0 A_PlaySound("Striker-12/Fire",CHAN_WEAPON)
@@ -284,7 +284,7 @@ Weapon.SisterWeapon "64ProtectaTACTICAL"
 		Goto ResumeFire
 	ResumeFire:
 		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0)
-		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",30,5,40)
+		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,5,40)
 		TNT1 AAAAA 0 A_FireCustomMissile("Tracer",random(-3,3),0,-1,-12,0,random(-5,5))
 		TNT1 A 0 A_FireBullets(2.0,2.0,8,7,"ShotgunPuff",0)
 		TNT1 A 0 A_PlaySound("Striker-12/Fire",CHAN_WEAPON)
@@ -318,7 +318,7 @@ Weapon.SisterWeapon "64ProtectaTACTICAL"
 		Goto ResumeAltFire1
 	ResumeAltFire1:
 		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0)
-		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",30,5,40)
+		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,5,40)
 		TNT1 AAAAA 0 A_FireCustomMissile("Tracer",random(-3,3),0,-1,-12,0,random(-5,5))
 		TNT1 A 0 A_FireBullets(2.0,2.0,8,7,"ShotgunPuff",0)
 		TNT1 A 0 A_GiveInventory("AssaultShotgunCounter",1)
@@ -331,7 +331,7 @@ Weapon.SisterWeapon "64ProtectaTACTICAL"
 		Goto AltFire
 	ResumeAltFire2:
 		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0)
-		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",30,5,40)
+		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,5,40)
 		TNT1 AAAAA 0 A_FireCustomMissile("Tracer",random(-3,3),0,-1,-12,0,random(-5,5))
 		TNT1 A 0 A_FireBullets(2.0,2.0,8,7,"ShotgunPuff",0)
 		TNT1 A 0 A_GiveInventory("AssaultShotgunCounter",1)
@@ -344,7 +344,7 @@ Weapon.SisterWeapon "64ProtectaTACTICAL"
 		Goto AltFire
 	ResumeAltFire3:
 		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0)
-		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",30,5,40)
+		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,5,40)
 		TNT1 AAAAA 0 A_FireCustomMissile("Tracer",random(-3,3),0,-1,-12,0,random(-5,5))
 		TNT1 A 0 A_FireBullets(2.0,2.0,8,7,"ShotgunPuff",0)
 		TNT1 A 0 A_GiveInventory("AssaultShotgunCounter",1)
@@ -587,7 +587,7 @@ Weapon.SisterWeapon "64AssaultShotgunTACTICAL"
 		Goto AmmoCheck
 	ResumeFire:
 		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0)
-		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",30,5,40)
+		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,5,40)
 		TNT1 AAAAA 0 A_FireCustomMissile("Tracer",random(-3,3),0,-1,-12,0,random(-5,5))
 		TNT1 A 0 A_FireBullets(2.0,2.0,8,7,"ShotgunPuff",0)
 		TNT1 A 0 A_PlaySound("Striker-12/Fire",CHAN_WEAPON)
@@ -607,7 +607,7 @@ Weapon.SisterWeapon "64AssaultShotgunTACTICAL"
 		Goto AmmoCheck
 	ResumeZoomedFire:
 		TNT1 AA 0 A_FireCustomMissile("GunFireSmoke",0,0)
-		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",30,5,40)
+		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,5,40)
 		TNT1 AAAAA 0 A_FireCustomMissile("Tracer",random(-5,5),0,0,0,0,random(-5,5))
 		TNT1 A 0 A_FireBullets(2.0,2.0,8,7,"ShotgunPuff",0)
 		TNT1 A 0 A_PlaySound("Striker-12/Fire",CHAN_WEAPON)

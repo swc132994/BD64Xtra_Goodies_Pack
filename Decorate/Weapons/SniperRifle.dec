@@ -72,7 +72,7 @@ Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		TNT1 A 0 A_JumpIfInventory("Zoomed",1,"FireZoomed")
 		TNT1 A 0 A_AlertMonsters
 		TNT1 A 0 A_FireCustomMissile("GunFireSmoke",0,0)
-		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",30,5,40)
+		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,5,40)
 		TNT1 A 0 A_FireCustomMissile("Tracer",random(-3,3),0,-1,-12,0,random(-2,2))
 		TNT1 A 0 A_FireBullets(6.0,6.0,1,60,"RifleBulletPuff")
 		TNT1 A 0 A_PlaySound("Weapon/SniperFire",CHAN_WEAPON)
@@ -97,7 +97,7 @@ Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 	FireZoomed:
 		TNT1 A 0 A_AlertMonsters
 		TNT1 A 0 A_FireCustomMissile("GunFireSmoke",0,0)
-		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",30,5,40)
+		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,5,40)
 		TNT1 A 0 A_FireCustomMissile("Tracer",0,0,-1,-12,0,0)
 		TNT1 A 0 A_FireBullets(0,0,1,120,"RifleBulletPuff")
 		TNT1 A 0 A_PlaySound("Weapon/SniperFire",CHAN_WEAPON)
@@ -203,7 +203,7 @@ Tag "Walther WA 2000"
 		TNT1 A 0 A_FireCustomMissile("Tracer",random(-3,3),0,-1,-12,0,random(-2,2))
 		TNT1 A 0 A_FireBullets(6.0,6.0,1,60,"RifleBulletPuff",0)
 	ContinueFireNormal:
-		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",30,5,40)
+		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,5,40)
 		TNT1 A 0 A_AlertMonsters
 		TNT1 A 0 A_PlaySound("Weapon/SniperFire",CHAN_WEAPON)
 		SNIF A 2 Bright
@@ -241,7 +241,7 @@ Tag "Walther WA 2000"
 		TNT1 A 0 A_FireCustomMissile("Tracer",0,0,-1,-12,0,0)
 		TNT1 A 0 A_FireBullets(0,0,1,120,"RifleBulletPuff",0)
 	FiringZoomedNormal:
-		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",30,5,40)
+		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,5,40)
 		TNT1 A 0 A_AlertMonsters
 		TNT1 A 0 A_PlaySound("Weapon/SniperFire",CHAN_WEAPON)
 		SNIZ A 2 Bright
