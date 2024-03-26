@@ -83,6 +83,7 @@ Weapon.SisterWeapon "64Protecta"
 		ASGG A 1 A_Raise
 		Loop
 	Deselect:
+		TNT1 A 0 A_Takeinventory("SisterWeaponSelector",0)
 		TNT1 A 0 A_ZoomFactor(1.0)
 		ASGG A 1 A_Lower
 		Wait
@@ -150,6 +151,7 @@ Weapon.SisterWeapon "64AssaultShotgun"
 		SK12 A 1 A_Raise
 		Loop
 	Deselect:
+		TNT1 A 0 A_Takeinventory("SisterWeaponSelector",0)
 		SK12 A 1 A_Lower
 		Wait
 	Fire:
@@ -226,10 +228,10 @@ Weapon.SisterWeapon "64ProtectaTACTICAL"
 		ASGG G 8
 		ASGG FEDCB 1
 		Stop
-	SlideKickingStart:
+	SlideKickingStart:	//22
 		ASGG BCDEF 1
-		ASGG G 10
-	SlideKickingEnd:
+		ASGG G 17
+	SlideKickingEnd:	//10
 		ASGG G 5
 		ASGG FEDCB 1
 		Stop
@@ -269,6 +271,7 @@ Weapon.SisterWeapon "64ProtectaTACTICAL"
 		TNT1 A 0 A_Takeinventory("TossMine",0)
 		TNT1 A 0 A_Takeinventory("PlaceMine",0)
 		TNT1 A 0 A_Takeinventory("Kicking",0)
+		TNT1 A 0 A_Takeinventory("SisterWeaponSelector",0)
 		ASGS EFGH 1
 		TNT1 A 0 A_Lower
 		Wait
@@ -545,9 +548,9 @@ Weapon.SisterWeapon "64AssaultShotgunTACTICAL"
 		Stop
 	SlideKickingStart:
 		SK12 BCD 1
-		SK12 E 12
+		SK12 E 19
 	SlideKickingEnd:
-		SK12 E 8
+		SK12 E 7
 		SK12 DCB 1
 		Stop
 	Spawn:
@@ -584,6 +587,7 @@ Weapon.SisterWeapon "64AssaultShotgunTACTICAL"
 		TNT1 A 0 A_Takeinventory("PlaceMine",0)
 		TNT1 A 0 A_Takeinventory("Kicking",0)
 		TNT1 A 0 A_Takeinventory("Zoomed",0)
+		TNT1 A 0 A_Takeinventory("SisterWeaponSelector",0)
 		SK15 DCBA 1
 		TNT1 A 0 A_Lower
 		Wait

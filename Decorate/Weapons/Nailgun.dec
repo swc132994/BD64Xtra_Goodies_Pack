@@ -266,10 +266,10 @@ Speed 44
 Damage 4
 SeeSound ""
 DeathSound ""
-Decal BulletChip
-DamageType CutLess
-Projectile
-+BloodSplatter
+Decal "BulletDecalNew1"
+DamageType "CutLess"
+PROJECTILE
++BLOODSPLATTER
 	States
 	{
 	Spawn:
@@ -292,7 +292,7 @@ Actor 64PlayerLavaNail : 64PlayerNail
 {
 Damage 8
 SeeSound "Weapons/NailMGLava"
-DamageType Plasma
+DamageType "Plasma"
 +FORCEPAIN
 	States
 	{
@@ -312,9 +312,9 @@ Damage 0
 Speed 0.2
 RenderStyle Translucent
 Alpha 0.5
-+NoGravity
-+DropOff
-+NoTeleport
++NOGRAVITY
++DROPOFF
++NOTELEPORT
 	States
 	{
 	Spawn:

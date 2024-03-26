@@ -97,7 +97,7 @@ Speed 16
 Damage 1
 Alpha 0.67
 RenderStyle Add
-Damagetype "Plasma"
+DamageType "Plasma"
 SeeSound "Flamethrower/Fire"
 DeathSound "Flamethrower/Hit"
 Projectile
@@ -276,19 +276,19 @@ Inventory.ForbiddenTo "64DoomPlayer"
 	KickingFlash:
 		FR4M FGHI 1
 		FR4M J 8
-		FR4M HIGF 1
+		FR4M IHGF 1
 		Stop
 	AirKickingFlash:
 		FR4M FGHI 1
 		FR4M J 10
-		FR4M HIGF 1
+		FR4M IHGF 1
 		Stop
 	SlideKickingStart:
 		FR4M FGHI 1
 		FR4M J 17
 	SlideKickingEnd:
 		FR4M J 6
-		FR4M HIGF 1
+		FR4M IHGF 1
 		Stop
 	}
 }

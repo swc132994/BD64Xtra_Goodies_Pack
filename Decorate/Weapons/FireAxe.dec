@@ -390,7 +390,7 @@ Actor AltAxeAttack : ChargeAxeAttack
 {
 Radius 12
 Height 2
-Damagetype "Cut"
+DamageType "Cut"
 +RIPPER
 Damage (random(5,5))
 }

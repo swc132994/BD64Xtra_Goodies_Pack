@@ -185,7 +185,7 @@ Radius 13
 Height 8
 Speed 35
 Damage 256
-Damagetype "Plasma" //None of the projectiles this weapon has are plasmatic,it's just so it triggers the burning deaths
+DamageType "Plasma" //None of the projectiles this weapon has are plasmatic,it's just so it triggers the burning deaths
 DeathSound "weapons/nuclearmissileexplode"
 Obituary "%o was atomized by a Nuclear Explosion."
 PROJECTILE
@@ -331,8 +331,8 @@ Radius 4
 Height 4
 Speed 20
 Damage 5
-Damagetype "Plasma"
-Damagetype "Fire"
+DamageType "Plasma"
+DamageType "Fire"
 Obituary "%o was charred by a Nuclear Heatwave."
 +MISSILE
 +NOBLOCKMAP
@@ -385,7 +385,7 @@ ACTOR RadiationSicknessAreaDamage
 Radius 6
 Height 4
 Damage 1
-Damagetype "Plasma"
+DamageType "Plasma"
 Obituary "%o died of radiation poisoning."
 +NOBLOCKMAP
 +THRUGHOST
@@ -417,8 +417,8 @@ RADIUS 600
 +DONTSPLASH
 +FORCEPAIN
 +CANNOTPUSH
-DAMAGETYPE "PLASMA"
-REACTIONTIME 40
+DamageType "Plasma"
+ReactionTime 40
 	STATES
 	{
 	SPAWN:

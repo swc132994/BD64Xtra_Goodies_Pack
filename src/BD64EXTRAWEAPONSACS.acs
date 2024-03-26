@@ -103,6 +103,14 @@ Delay(64);
 Restart;
 }
 
+Script "PlayerDeathScript" Death
+	{
+	Delay(1);
+	TakeInventory("ClassicChainsawToken",1);
+	TakeInventory("ClassicRLToken",1);
+	TakeInventory("ProtectaSwitchToken",1);
+	}
+
 //extra powerups
 script "ExtraSpheresACS" (void)
 {

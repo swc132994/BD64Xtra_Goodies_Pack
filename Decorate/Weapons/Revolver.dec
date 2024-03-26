@@ -147,25 +147,25 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 	{
 	MineThrowFlash:
 		DARD EFGH 1
-		TNT1 A 18
-		DARD DCBA 1
+		TNT1 H 18
+		DARD HGFE 1
 		Stop
 	KickingFlash:
-		DARD ABCD 1
-		DARD D 8
-		DARD DCBA 1
+		DARD EFGH 1
+		DARD H 8
+		DARD HGFE 1
 		Stop
 	AirKickingFlash:
-		DARD ABDC 1
-		DARD D 10
-		DARD DCBA 1
+		DARD EFGH 1
+		DARD H 10
+		DARD HGFE 1
 		Stop
 	SlideKickingStart:
-		DARD ABDC 1
-		DARD D 18
+		DARD EFGH 1
+		DARD H 18
 	SlideKickingEnd:
-		DARD D 6
-		DARD DCBA 1
+		DARD H 6
+		DARD HGFE 1
 		Stop
 	v1Ready:
 	Ready:

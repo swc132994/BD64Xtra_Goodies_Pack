@@ -108,9 +108,9 @@ Tag "Ruiner"
 	States
 	{
 	MineThrowFlash:
-		ZV0Y EFGH 1
+		VZ0Y EFGH 1
 		TNT1 A 18
-		ZV0Y ABCD 1
+		VZ0Y HGFE 1
 		Stop
 	KickingFlash:
 		ZV0U ABCD 1

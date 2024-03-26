@@ -134,11 +134,11 @@ inventory.pickupmessage "You got the Hexa Shotgun!"
 		HXSK G 6
 		HXSK FEDCBA 1
 		Stop
-	SlideKickingStart:
+	SlideKickingStart:	//22
 		HXSK ABCDEF 1
-		HXSK G 10
-	SlideKickingEnd:
-		HXSK G 5
+		HXSK G 16
+	SlideKickingEnd:	//10
+		HXSK G 4
 		HXSK FEDCBA 1
 		Stop
 	v1Ready:
