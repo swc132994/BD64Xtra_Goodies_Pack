@@ -303,23 +303,25 @@ PROJECTILE
 		NKE1 J 2 bright A_FadeOut(0.05)
 		TNT1 AAAAAA 0 A_CustomMissile("64NukeSmoke",160,0,random(0,360),2,random(10,40))
 		TNT1 A 0 A_SetScale(3.4,1.6)
+		TNT1 AAAAAA 0 A_CustomMissile("64NukeSmoke",180,0,random(0,360),2,random(10,40))
 		NKE1 J 2 bright A_FadeOut(0.05)
 		TNT1 AAAAAA 0 A_CustomMissile("64NukeSmoke",200,0,random(0,360),2,random(10,40))
 		TNT1 A 0 A_SetScale(3.6,1.7)
+		TNT1 AAAAAA 0 A_CustomMissile("64NukeSmoke",220,0,random(0,360),2,random(10,40))
+		TNT1 AAAAAA 0 A_CustomMissile("64NukeSmoke",350,0,random(0,360),2,random(10,40))
+		TNT1 AAA 0 A_SpawnItemex("64NukeSmoke",-150,0,300,0,0,0,0,SXF_ABSOLUTEPOSITION)
+		TNT1 AAA 0 A_SpawnItemex("64NukeSmoke",150,0,300,0,0,0,180,SXF_ABSOLUTEPOSITION)
+		TNT1 AAA 0 A_SpawnItemex("64NukeSmoke",0,150,300,0,0,0,-90,SXF_ABSOLUTEPOSITION)
+		TNT1 AAA 0 A_SpawnItemex("64NukeSmoke",0,-150,300,0,0,0,90,SXF_ABSOLUTEPOSITION)
+		TNT1 AAA 0 A_SpawnItemex("64NukeSmoke",-200,-200,300,0,0,0,0,SXF_ABSOLUTEPOSITION)
+		TNT1 AAA 0 A_SpawnItemex("64NukeSmoke",200,200,300,0,0,0,180,SXF_ABSOLUTEPOSITION)
+		TNT1 AAA 0 A_SpawnItemex("64NukeSmoke",-200,200,300,0,0,0,-90,SXF_ABSOLUTEPOSITION)
+		TNT1 AAA 0 A_SpawnItemex("64NukeSmoke",200,-200,300,0,0,0,90,SXF_ABSOLUTEPOSITION)
+		TNT1 AAA 0 A_SpawnItemex("64NukeSmoke",-300,0,300,0,0,0,0,SXF_ABSOLUTEPOSITION)
+		TNT1 AAA 0 A_SpawnItemex("64NukeSmoke",300,0,300,0,0,0,180,SXF_ABSOLUTEPOSITION)
+		TNT1 AAA 0 A_SpawnItemex("64NukeSmoke",0,300,300,0,0,0,-90,SXF_ABSOLUTEPOSITION)
+		TNT1 AAA 0 A_SpawnItemex("64NukeSmoke",0,-300,300,0,0,0,90,SXF_ABSOLUTEPOSITION)
 		NKE1 KKKKKLLLLL 2 Bright A_FadeOut(0.02)
-		TNT1 AAAAAA 0 A_CustomMissile("64NukeSmoke",240,0,random(0,360),2,random(10,40))
-		TNT1 AAA 0 A_SpawnItemex("64NukeSmoke",-120,0,260,0,0,0,0,SXF_ABSOLUTEPOSITION)
-		TNT1 AAA 0 A_SpawnItemex("64NukeSmoke",120,0,260,0,0,0,180,SXF_ABSOLUTEPOSITION)
-		TNT1 AAA 0 A_SpawnItemex("64NukeSmoke",0,120,260,0,0,0,-90,SXF_ABSOLUTEPOSITION)
-		TNT1 AAA 0 A_SpawnItemex("64NukeSmoke",0,-120,260,0,0,0,90,SXF_ABSOLUTEPOSITION)
-		TNT1 AAA 0 A_SpawnItemex("64NukeSmoke",-120,-120,260,0,0,0,0,SXF_ABSOLUTEPOSITION)
-		TNT1 AAA 0 A_SpawnItemex("64NukeSmoke",120,120,260,0,0,0,180,SXF_ABSOLUTEPOSITION)
-		TNT1 AAA 0 A_SpawnItemex("64NukeSmoke",-120,120,260,0,0,0,-90,SXF_ABSOLUTEPOSITION)
-		TNT1 AAA 0 A_SpawnItemex("64NukeSmoke",120,-120,260,0,0,0,90,SXF_ABSOLUTEPOSITION)
-		TNT1 AAA 0 A_SpawnItemex("64NukeSmoke",-200,0,260,0,0,0,0,SXF_ABSOLUTEPOSITION)
-		TNT1 AAA 0 A_SpawnItemex("64NukeSmoke",200,0,260,0,0,0,180,SXF_ABSOLUTEPOSITION)
-		TNT1 AAA 0 A_SpawnItemex("64NukeSmoke",0,200,260,0,0,0,-90,SXF_ABSOLUTEPOSITION)
-		TNT1 AAA 0 A_SpawnItemex("64NukeSmoke",0,-200,260,0,0,0,90,SXF_ABSOLUTEPOSITION)
 		NKE1 M 2 Bright A_FadeOut(0.01)
 		Wait
 	}
@@ -482,14 +484,10 @@ Inventory.Icon "NUKAA0"
 ACTOR 64NukeSmoke
 {
 Scale 1.5
-Height 1
-Radius 1
-Speed 1
-Gravity 0.001
-BounceFactor 0.1
-Alpha 0.4
+Speed 0.5
+Gravity 0.002
+Alpha 0.6
 RenderStyle Translucent
-BounceType "Doom"
 -NOGRAVITY
 +MISSILE
 +NOTELEPORT
@@ -500,11 +498,12 @@ BounceType "Doom"
 	States
 	{
 	Spawn:
-		SMO4 A 50
-		SMO4 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 1 A_FadeOut(0.006)
-		Goto Death
-	Death:
-		SMO4 A 1 A_FadeOut(0.006)
+		SMK7 K 35 NoDelay ThrustThingZ(0,3,0,0)
+		SMK7 K 35 A_Recoil(0.2)
+		SMK7 K 2 A_FadeOut(0.002)
 		Wait
+	Death:
+		SMK7 K 2 A_FadeOut(0.004)
+		wait
 	}
 }
