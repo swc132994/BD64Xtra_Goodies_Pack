@@ -149,7 +149,7 @@ script "RadsuitNewRandomACS" (void)
 
 script "WpnPowerExtra" (void)
 {
-	if(GetCvar("WpnPower_Spawner_Cvar") == 0) { SetActorState(0,"PowerUpChoose"); }
+	if(GetCvar("WpnPower_Spawner_Cvar") == 1) { SetActorState(0,"PowerUpChoose"); }
 	else
-	if(GetCvar("WpnPower_Spawner_Cvar") == 1) { SetActorState(0,"SpawnDemonKey"); }
+	if(GetCvar("WpnPower_Spawner_Cvar") == 2) { SetActorState(0,"SpawnDemonKey"); }
 }
