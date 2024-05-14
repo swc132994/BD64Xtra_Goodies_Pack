@@ -132,7 +132,7 @@ Weapon.AmmoUse1 1
 Weapon.AmmoGive1 40
 Weapon.AmmoType1 "Clip"
 Weapon.AmmoUse2 1
-Weapon.AmmoGive2 6
+Weapon.AmmoGive2 0
 Weapon.AmmoType2 "RocketAmmo"
 Inventory.PickupMessage "You got the Light Machinegun!"
 Tag "Light Machinegun"

@@ -44,9 +44,9 @@ Weapon.AmmoGive 4
 +WEAPON.NOALERT
 +WEAPON.EXPLOSIVE
 +INVENTORY.RESTRICTABSOLUTELY
-Inventory.PickupMessage "You got the Heatseeker Missile Launchers!"
+Inventory.PickupMessage "You got the Heatseeker Launchers!"
 Inventory.PickupSound "WPICK"
-Tag "Heatseeker Missile Launcher"
+Tag "Heatseeker Launcher"
 VisibleToPlayerClass "64DoomPlayer"
 Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 	States
@@ -165,9 +165,9 @@ Weapon.AmmoGive 4
 +WEAPON.EXPLOSIVE
 +WEAPON.ALT_USES_BOTH
 +INVENTORY.RESTRICTABSOLUTELY
-Inventory.PickupMessage "You got the Heatseeker Missile Launchers!"
+Inventory.PickupMessage "You got the Heatseeker Launchers!"
 Inventory.PickupSound "WPICK"
-Tag "Heatseeker Missile Launcher"
+Tag "Heatseeker Launcher"
 	States
 	{
 	Spawn:
