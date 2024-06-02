@@ -155,11 +155,6 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		DARD H 8
 		DARD HGFE 1
 		Stop
-	AirKickingFlash:
-		DARD EFGH 1
-		DARD H 10
-		DARD HGFE 1
-		Stop
 	SlideKickingStart:
 		DARD EFGH 1
 		DARD H 18
@@ -175,7 +170,7 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction",1,"FanningFire")
 		DARG D 0 A_JumpIfInventory("RevolverAlt",1,2)
 		DARG A 0
-		DARG "#" 1 A_WeaponReady(WRF_ALLOWRELOAD)
+		DARG "#" 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWZOOM)
 		Loop
 	Fidget:
 		TNT1 A 0 A_Jump(64,"AltFidget")

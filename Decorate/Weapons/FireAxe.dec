@@ -162,11 +162,6 @@ VisibleToPlayerClass "Modern","Tactical64DoomPlayer","Tactical64DoomPlayer_P"
 		AXER D 8
 		AXER DCBA 1
 		Stop
-	AirKickingFlash:
-		AXER ABCD 1
-		AXER D 10
-		AXER DCBA 1
-		Stop
 	SlideKickingStart:
 		AXER ABCD 1
 		AXER D 18
@@ -198,7 +193,7 @@ VisibleToPlayerClass "Modern","Tactical64DoomPlayer","Tactical64DoomPlayer_P"
 		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
 		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction",1,"Bashing")
-		AXEG AA 1 A_WeaponReady(WRF_ALLOWRELOAD)
+		AXEG AA 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWZOOM)
 		loop
 	Fire:
 		AXEG ABCD 1

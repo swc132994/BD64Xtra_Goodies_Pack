@@ -129,11 +129,6 @@ inventory.pickupmessage "You got the Hexa Shotgun!"
 		HXSK G 4
 		HXSK FEDCBA 1
 		Stop
-	AirKickingFlash:
-		HXSK ABCDEF 1
-		HXSK G 6
-		HXSK FEDCBA 1
-		Stop
 	SlideKickingStart:	//22
 		HXSK ABCDEF 1
 		HXSK G 16
@@ -143,7 +138,7 @@ inventory.pickupmessage "You got the Hexa Shotgun!"
 		Stop
 	v1Ready:
 	Ready:
-		HXSG A 1 A_WeaponReady(WRF_ALLOWRELOAD)
+		HXSG A 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWZOOM)
 		TNT1 A 0 A_Jumpifinventory("Kicking",1,"DoKick")
 		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")

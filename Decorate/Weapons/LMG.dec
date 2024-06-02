@@ -288,7 +288,7 @@ Weapon.SisterWeapon "64LMGGrenadeModeTactical"
 		Stop
 	v1Ready:
 	Ready:
-		GLRG A 1 A_WeaponReady(WRF_ALLOWRELOAD)
+		GLRG A 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWZOOM)
 		TNT1 A 0 A_JumpIfInventory("Kicking",1,"DoKick")
 		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
@@ -539,11 +539,6 @@ Weapon.SisterWeapon "64LMGGrenadeModeTactical"
 	KickingFlash:
 		GLRG BCDE 1
 		GLRG F 8
-		GLRG EDCB 1
-		Stop
-	AirKickingFlash:
-		GLRG BCDE 1
-		GLRG F 10
 		GLRG EDCB 1
 		Stop
 	SlideKickingStart:

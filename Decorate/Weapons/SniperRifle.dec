@@ -149,11 +149,6 @@ Tag "Walther WA 2000"
 		SNIK E 8
 		SNIK DCBA 1
 		Stop
-	AirKickingFlash:
-		SNIK FGHI 1
-		SNIK J 10
-		SNIK IHGF 1
-		Stop
 	SlideKickingStart:
 		SNIK FGHI 1
 		SNIK J 18
@@ -167,7 +162,7 @@ Tag "Walther WA 2000"
 		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
 		//TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction",1,"AttachSilencer")
-		SNIG A 1 A_WeaponReady(WRF_ALLOWRELOAD)
+		SNIG A 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWZOOM)
 		Loop
 	NoAmmo:
 		SNIG A 10 A_PlaySound("DRYFIRE",CHAN_WEAPON)
@@ -262,7 +257,7 @@ Tag "Walther WA 2000"
 		SNIZ A 8 Bright
 		Goto Ready2
 	Ready2:
-		SNIZ A 1 Bright A_WeaponReady(WRF_ALLOWRELOAD)
+		SNIZ A 1 Bright A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWZOOM)
 		TNT1 A 0 A_JumpIfInventory("Kicking",1,"DoKick")
 		Loop
 	Reload:

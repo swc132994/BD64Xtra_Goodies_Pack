@@ -179,11 +179,6 @@ inventory.pickupmessage "You got the Ultra Shotgun!"
 		QSGG H 4
 		QSGG GFEDCB 1
 		Stop
-	AirKickingFlash:
-		QSGG BCDEFG 1
-		QSGG H 6
-		QSGG GFEDCB 1
-		Stop
 	SlideKickingStart:	//22
 		QSGG BCDEFG 1
 		QSGG H 16
@@ -194,47 +189,47 @@ inventory.pickupmessage "You got the Ultra Shotgun!"
 	v1Ready:
 	Ready:
 		TNT1 A 0 A_JumpIfTargetInLOS("BlinkBegin",0,0,JLOSF_COMBATANTONLY,12000) //checks if an enemy/player is in sight
-		QSGI A 1 A_WeaponReady(WRF_ALLOWRELOAD)
+		QSGI A 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWZOOM)
 		TNT1 A 0 A_Jumpifinventory("Kicking",1,"DoKick")
 		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
 		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction",1,"CheckForDemonKey")
 		loop
 	BlinkBegin:
-		QSGI B 1 A_WeaponReady(WRF_ALLOWRELOAD)
+		QSGI B 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWZOOM)
 		TNT1 A 0 A_Jumpifinventory("Kicking",1,"DoKick")
 		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
 		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction",1,"CheckForDemonKey")
-		QSGI C 1 A_WeaponReady(WRF_ALLOWRELOAD)
+		QSGI C 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWZOOM)
 		TNT1 A 0 A_Jumpifinventory("Kicking",1,"DoKick")
 		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
 		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction",1,"CheckForDemonKey")
-		QSGI D 1 A_WeaponReady(WRF_ALLOWRELOAD)
+		QSGI D 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWZOOM)
 		TNT1 A 0 A_Jumpifinventory("Kicking",1,"DoKick")
 		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
 		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction",1,"CheckForDemonKey")
 		Goto Blink
 	Blink:
-		QSGI E 1 A_WeaponReady(WRF_ALLOWRELOAD)
+		QSGI E 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWZOOM)
 		TNT1 A 0 A_Jumpifinventory("Kicking",1,"DoKick")
 		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
 		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction",1,"CheckForDemonKey")
 		TNT1 A 0 A_JumpIfTargetInLOS("Blink",0,0,JLOSF_COMBATANTONLY,12000) //Still in sight? Then repeat!
-		QSGI D 1 A_WeaponReady(WRF_ALLOWRELOAD)
+		QSGI D 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWZOOM)
 		TNT1 A 0 A_Jumpifinventory("Kicking",1,"DoKick")
 		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
 		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction",1,"CheckForDemonKey")
-		QSGI C 1 A_WeaponReady(WRF_ALLOWRELOAD)
+		QSGI C 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWZOOM)
 		TNT1 A 0 A_Jumpifinventory("Kicking",1,"DoKick")
 		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
 		TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction",1,"CheckForDemonKey")
-		QSGI B 1 A_WeaponReady(WRF_ALLOWRELOAD)
+		QSGI B 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWZOOM)
 		TNT1 A 0 A_Jumpifinventory("Kicking",1,"DoKick")
 		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")

@@ -125,7 +125,7 @@ Inventory.PickupSound "WPICK"
 		Wait
 	v1Ready:
 	Ready:
-		NUKG A 1 A_WeaponReady
+		NUKG A 1 A_WeaponReady(WRF_ALLOWZOOM)
 		TNT1 A 0 A_Jumpifinventory("Kicking",1,"DoKick")
 		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
@@ -162,11 +162,6 @@ Inventory.PickupSound "WPICK"
 	KickingFlash:
 		NUK7 WXYZ 1
 		NUK7 Z 8
-		NUK7 ZYXW 1
-		Stop
-	AirKickingFlash:
-		NUK7 WXYZ 1
-		NUK7 Z 10
 		NUK7 ZYXW 1
 		Stop
 	SlideKickingStart:

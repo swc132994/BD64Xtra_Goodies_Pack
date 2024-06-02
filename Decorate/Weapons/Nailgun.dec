@@ -121,7 +121,7 @@ Tag "Nailgun"
 		Wait
 	v1Ready:
 	Ready:
-		NLMG A 1 A_WeaponReady(WRF_ALLOWRELOAD)
+		NLMG A 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWZOOM)
 		TNT1 A 0 A_JumpIfInventory("Kicking",1,"DoKick")
 		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
@@ -205,11 +205,6 @@ Tag "Nailgun"
 	KickingFlash:
 		NLSL EDCB 1
 		NLSL A 8
-		NLSL BCDE 1
-		Stop
-	AirKickingFlash:
-		NLSL EDCB 1
-		NLSL A 10
 		NLSL BCDE 1
 		Stop
 	SlideKickingStart:
