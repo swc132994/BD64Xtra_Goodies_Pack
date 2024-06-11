@@ -1,0 +1,408 @@
+Actor SniperRifleSpawner : CustomInventory
+ {
+ Scale 0.82
+ Tag "Sniper Rifle"
+ Inventory.PickupMessage "You got The Walther WA 2000!"
+ Inventory.PickupSound "WPICK"
+ States
+	{
+	Spawn:
+		SNIP A 2
+		TNT1 A 0 ACS_NamedExecuteAlways("DM_SpawnACS")
+		SNIP A 2
+		TNT1 A 0 A_JumpIfInventory("ISDM",1,"DMSpawn")
+		SNIP A -1
+		Stop
+	Pickup:
+		TNT1 A 0 A_JumpIfInventory("IsTacticalClass",1,"Pickup2")
+		TNT1 A 0 A_JumpIfInventory("IsModern",1,"Pickup2")
+		TNT1 A 0 A_GiveInventory("64SniperRifle",1)
+		Stop
+	Pickup2:
+		TNT1 A 0 A_GiveInventory("64SniperRifleTACTICAL",1)
+		Stop
+	DMSpawn:
+		TNT1 A 0 A_ChangeFlag("THRUACTORS",TRUE)
+		TNT1 A 0 A_SpawnItemEx("TeleportationFog")
+		TNT1 A 0 A_SpawnItemEx("64SniperRifle")
+		TNT1 A 0 A_SpawnItemEx("64SniperRifleTACTICAL")
+		TNT1 A 1050
+		Loop
+		}
+}
+
+Actor 64SniperRifle : DoomWeapon
+{
+Scale 0.82
+Weapon.SlotNumber 4
+Weapon.SelectionOrder 4
+Weapon.AmmoType "Clip"
+Weapon.AmmoUse 1
+Weapon.AmmoGive 10
+Obituary "%o's brain was splattered by %k's Walther WA 2000"
+Inventory.PickupMessage "You got The Walther WA 2000!"
+Inventory.PickupSound "WPICK"
+Tag "Walther WA 2000"
+VisibleToPlayerClass "64DoomPlayer"
+Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
++WEAPON.NOAUTOAIM
++WEAPON.NOAUTOFIRE
++INVENTORY.RESTRICTABSOLUTELY
++WEAPON.NOALERT
+	States
+	{
+	Spawn:
+		SNIP A -1
+		Loop
+	Ready:
+		SNIG A 1 A_WeaponReady
+		Loop
+	Ready2:
+		SNIZ A 1 Bright A_WeaponReady
+		Loop
+	Deselect:
+		TNT1 A 0 A_Takeinventory("Zoomed",0)
+		TNT1 A 0 A_ZoomFactor(1.0)
+		SNIG A 1 A_Lower
+		Wait
+	Select:
+		SNIG A 1 A_Raise
+		Wait
+	Fire:
+		TNT1 A 0 A_JumpIfInventory("Zoomed",1,"FireZoomed")
+		TNT1 A 0 A_AlertMonsters
+		TNT1 A 0 A_FireCustomMissile("GunFireSmoke",0,0)
+		TNT1 A 0 A_JumpIfInventory("IsCrouching",1,3)
+		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,5,40)
+		TNT1 A 0 A_Jump(256,2)
+		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,5,22)
+		TNT1 A 0 A_FireCustomMissile("Tracer",random(-3,3),0,-1,-12,0,random(-2,2))
+		TNT1 A 0 A_FireBullets(6.0,6.0,1,60,"RifleBulletPuff")
+		TNT1 A 0 A_PlaySound("Weapon/SniperFire",CHAN_WEAPON)
+		SNIF A 2 Bright
+		SNIF B 1 A_Firecustommissile("50CaseSpawn",0,0,-6,-18)
+		SNIF CD 1
+		SNIG A 4 A_WeaponReady(1)
+		SNIG A 2
+		SNIG A 8 A_WeaponReady(1)
+		Goto Ready
+	AltFire:
+		TNT1 A 0 A_JumpIfInventory("Zoomed",1,"NoAim")
+		TNT1 A 0 A_Giveinventory("Zoomed",1)
+		TNT1 A 0 A_ZoomFactor(5.0)
+		SNIU ABC 1 A_PlaySound("Weapon/SniperZoom",CHAN_WEAPON)
+		Goto Ready2
+	NoAim:
+		SNIU CBA 1 A_PlaySound("Weapon/SniperZoom",CHAN_WEAPON)
+		TNT1 A 0 A_Takeinventory("Zoomed",0)
+		TNT1 A 0 A_ZoomFactor(1.0)
+		Goto Ready
+	FireZoomed:
+		TNT1 A 0 A_AlertMonsters
+		TNT1 A 0 A_FireCustomMissile("GunFireSmoke",0,0)
+		TNT1 A 0 A_JumpIfInventory("IsCrouching",1,3)
+		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,5,40)
+		TNT1 A 0 A_Jump(256,2)
+		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,5,22)
+		TNT1 A 0 A_FireCustomMissile("Tracer",0,0,-1,-12,0,0)
+		TNT1 A 0 A_FireBullets(0,0,1,60,"RifleBulletPuff")
+		TNT1 A 0 A_PlaySound("Weapon/SniperFire",CHAN_WEAPON)
+		SNIZ A 2 Bright
+		TNT1 A 0 A_Firecustommissile("50CaseSpawn",0,0,-6,-18)
+		SNIZ A 4 Bright
+		Goto Ready2
+	}
+}
+
+Actor 64SniperRifleTACTICAL : Brutal64Weapon
+{
+Scale 0.82
+Weapon.SlotNumber 4
+Weapon.SelectionOrder 4
+Weapon.AmmoType1 "64HighCaliberBox"
+Weapon.AmmoUse1 1
+Weapon.AmmoGive1 10
+Weapon.AmmoType2 "SniperAmmo"
+Weapon.AmmoUse2 1
+Weapon.AmmoGive2 0
+Obituary "%o's brain was splattered by %k's Walther WA 2000"
+Inventory.PickupMessage "You got The Walther WA 2000!"
+Inventory.PickupSound "WPICK"
+Tag "Walther WA 2000"
++WEAPON.NOAUTOAIM
++WEAPON.AMMO_CHECKBOTH
++WEAPON.NOAUTOFIRE
++INVENTORY.RESTRICTABSOLUTELY
++WEAPON.NOALERT
+	States
+	{
+	Spawn:
+		SNIP A -1
+		Loop
+	MineThrowFlash:
+		SNIS EFGH 1
+		TNT1 A 18
+		SNIS ABCD 1
+		Stop
+	KickingFlash:
+		SNIK ABCD 1
+		SNIK E 8
+		SNIK DCBA 1
+		Stop
+	SlideKickingStart:
+		SNIK FGHI 1
+		SNIK J 18
+	SlideKickingEnd:
+		SNIK J 6
+		SNIK IHGF 1
+		Stop
+	v1Ready:
+	Ready:
+		TNT1 A 0 A_JumpIfInventory("Kicking",1,"DoKick")
+		TNT1 A 0 A_JumpIfInventory("TossMine",1,"TossMine")
+		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
+		//TNT1 A 0 A_JumpIfInventory("WeaponSpecialAction",1,"AttachSilencer")
+		SNIG A 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWZOOM)
+		Loop
+	NoAmmo:
+		SNIG A 10 A_PlaySound("DRYFIRE",CHAN_WEAPON)
+		Goto Ready
+	Select:
+		TNT1 A 0 A_PlaySound("Weapon/SniperCharge",CHAN_AUTO)
+		//5N1R A 0 A_JumpIfInventory("SniperSilencer",1,2)
+		//SNIS A 0
+		SNIS ABCD 1 Offset(0,32)
+	SelectRaise:
+		TNT1 A 0 A_Raise
+		Wait
+	Deselect:
+		TNT1 A 0 A_ZoomFactor(1.0)
+		TNT1 A 0 A_Takeinventory("WeaponSpecialAction",0)
+		TNT1 A 0 A_Takeinventory("TossMine",0)
+		TNT1 A 0 A_Takeinventory("PlaceMine",0)
+		TNT1 A 0 A_Takeinventory("Kicking",0)
+		TNT1 A 0 A_Takeinventory("Zoomed",0)
+		//5N1R D 0 A_JumpIfInventory("SniperSilencer",1,2)
+		//SNIS D 0
+		SNIS EFGH 1
+		TNT1 A 0 A_Lower
+		Wait
+	Fire:
+		TNT1 A 0 A_JumpIfInventory("NoReloading",1,"NoReload")
+		TNT1 A 0 A_JumpIfInventory("SniperAmmo",1,1)
+		Goto Reload
+		TNT1 A 0 A_TakeInventory("SniperAmmo",1,TIF_NOTAKEINFINITE)
+		Goto StartFire
+	NoReload:
+		TNT1 A 0 A_JumpIfInventory("64HighCaliberBox",1,1)
+		Goto NoAmmo
+		TNT1 A 0 A_TakeInventory("64HighCaliberBox",1,TIF_NOTAKEINFINITE)
+		Goto StartFire
+	StartFire:
+		TNT1 A 0 A_JumpIfInventory("Zoomed",1,"FireZoomed")
+		TNT1 A 0 A_FireCustomMissile("GunFireSmoke",0,0)
+		TNT1 A 0 A_FireCustomMissile("Tracer",random(-3,3),0,-1,-12,0,random(-2,2))
+		TNT1 A 0 A_FireBullets(6.0,6.0,1,60,"RifleBulletPuff",0)
+	ContinueFireNormal:
+		TNT1 A 0 A_JumpIfInventory("IsCrouching",1,3)
+		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,5,40)
+		TNT1 A 0 A_Jump(256,2)
+		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,5,22)
+		TNT1 A 0 A_AlertMonsters
+		TNT1 A 0 A_PlaySound("Weapon/SniperFire",CHAN_WEAPON)
+		SNIF A 2 Bright
+		TNT1 A 0 A_SetPitch(pitch-1.5,SPF_INTERPOLATE)
+		SNIF B 1 A_Firecustommissile("50CaseSpawn",0,0,-6,-18)
+		SNIF CD 2
+		SNIG A 2
+		Goto Ready
+	ContinueFireSilenced:
+		TNT1 A 0 A_PlaySound("Weapon/SniperStealth",CHAN_WEAPON)
+		5NIF F 2
+		TNT1 A 0 A_SetPitch(pitch-1.5,SPF_INTERPOLATE)
+		SNIG BCDE 2
+		SNIG A 8
+		SNIG A 2
+		5NIR BCDEFG 2
+		5NIR H 2 A_PlaySound("Weapon/SniperCharge",CHAN_WEAPON)
+		TNT1 A 0 A_Firecustommissile("50CaseSpawn",0,0,-6,-18)
+		5NIR IJDCB 2
+		SNIG A 2
+		Goto Ready
+	AltFire:
+		TNT1 A 0 A_JumpIfInventory("Zoomed",1,"NoAim")
+		TNT1 A 0 A_Giveinventory("Zoomed",1)
+		TNT1 A 0 A_ZoomFactor(5.0)
+		SNIU ABC 1 A_PlaySound("Weapon/SniperZoom",CHAN_WEAPON)
+		Goto Ready2
+	NoAim:
+		SNIU CBA 1 A_PlaySound("Weapon/SniperZoom",CHAN_WEAPON)
+		TNT1 A 0 A_Takeinventory("Zoomed",0)
+		TNT1 A 0 A_ZoomFactor(1.0)
+		Goto Ready
+	FireZoomed:
+		TNT1 A 0 A_FireCustomMissile("GunFireSmoke",0,0)
+		TNT1 A 0 A_FireCustomMissile("Tracer",0,0,-1,-12,0,0)
+		TNT1 A 0 A_FireBullets(0,0,1,60,"RifleBulletPuff",0)
+	FiringZoomedNormal:
+		TNT1 A 0 A_JumpIfInventory("IsCrouching",1,3)
+		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,5,40)
+		TNT1 A 0 A_Jump(256,2)
+		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,5,22)
+		TNT1 A 0 A_AlertMonsters
+		TNT1 A 0 A_PlaySound("Weapon/SniperFire",CHAN_WEAPON)
+		SNIZ A 2 Bright
+		TNT1 A 0 A_SetPitch(pitch-1.2,SPF_INTERPOLATE)
+		TNT1 A 0 A_Firecustommissile("50CaseSpawn",0,0,-6,-18)
+		SNIZ A 8 Bright
+		Goto Ready2
+	Ready2:
+		SNIZ A 1 Bright A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWZOOM)
+		TNT1 A 0 A_JumpIfInventory("Kicking",1,"DoKick")
+		Loop
+	Reload:
+		TNT1 A 0 A_Takeinventory("Zoomed",1)
+		TNT1 A 0 A_ZoomFactor(1.0)
+		SNIG A 2 A_WeaponReady
+		TNT1 A 0 A_JumpIfInventory("SniperAmmo",6,"Fidget")
+		TNT1 A 0 A_JumpIfInventory("64HighCaliberBox",1,"ContinuedReload")
+		Goto NoAmmo
+	ContinuedReload:
+		SNIR A 2
+		SNIR BCDEFGH 1 A_JumpIfInventory("Kicking",1,"DoKick")
+		TNT1 A 0 A_PlaySound("Weapon/SniperClipOut",CHAN_AUTO)
+		SNIR IJ 1 A_JumpIfInventory("Kicking",1,"DoKick")
+		SNIR K 1 A_FireCustomMissile("EmptyClipSpawn",-5,0,8,-18)
+		SNIR K 18 A_JumpIfInventory("Kicking",1,"DoKick")
+		TNT1 A 0 A_PlaySound("Weapon/SniperClipIn",CHAN_AUTO)
+		SNIR LML 3 A_JumpIfInventory("Kicking",1,"DoKick")
+		SNIR K 5 A_JumpIfInventory("Kicking",1,"DoKick")
+		SNIR JIHGFE 1 A_JumpIfInventory("Kicking",1,"DoKick")
+		TNT1 A 0 A_JumpIfInventory("SniperAmmo",1,3)
+		TNT1 A 0 A_GiveInventory("SniperBolt",1)
+		TNT1 A 0 A_JumpIfInventory("SniperBolt",1,"ReloadEmpty")
+		SNIR DCB 1 A_JumpIfInventory("Kicking",1,"DoKick")
+		TNT1 A 0 A_JumpIfInventory("SniperAmmo",1,"InsertBullets2")//5+1 effect
+	ReloadEmpty:
+		TNT1 A 0 A_TakeInventory("SniperBolt",1)
+		SN1R ABCDEFGH 1
+		SN1R I 2 A_PlaySound("Weapon/SniperCharge",CHAN_WEAPON)
+		SN1R JKLMMMMNOPQ 1
+		SNIR EDCB 1
+		SNIR A 2
+		Goto InsertBullets
+	InsertBullets:
+		TNT1 A 0 A_JumpIfInventory("SniperAmmo",5,"Ready")
+		TNT1 A 0 A_JumpIfInventory("64HighCaliberBox",1,1)
+		Goto Ready
+		TNT1 A 0 A_Giveinventory("SniperAmmo",1)
+		TNT1 A 0 A_Takeinventory("64HighCaliberBox",1,TIF_NOTAKEINFINITE)
+		Goto InsertBullets
+		TNT1 A 0 A_Refire
+		Goto Ready
+	InsertBullets2:
+		TNT1 A 0 A_JumpIfInventory("SniperAmmo",6,"Ready")
+		TNT1 A 0 A_JumpIfInventory("64HighCaliberBox",1,1)
+		Goto Ready
+		TNT1 A 0 A_Giveinventory("SniperAmmo",1)
+		TNT1 A 0 A_Takeinventory("64HighCaliberBox",1,TIF_NOTAKEINFINITE)
+		Goto InsertBullets2
+		TNT1 A 0 A_Refire
+		Goto Ready
+	Fidget:
+		TNT1 A 0 A_Jump(69,"AltFidget")
+		SNIG BCDE 1 A_WeaponReady
+		SNIG F 4 A_WeaponReady
+		TNT1 A 0 A_PlaySound("Weapon/SniperCharge",CHAN_WEAPON)
+		SNIG GHIIJKKKKJIIHG 1 A_WeaponReady
+		SNIG F 4 A_WeaponReady
+		SNIG EDCB 1 A_WeaponReady
+		Goto Ready
+	AltFidget:
+		SNIR ABCDE 1 A_WeaponReady
+		SN1R ABCDEFGH 1 A_WeaponReady
+		SN1R I 2 A_PlaySound("Weapon/SniperCharge",CHAN_WEAPON)
+		SN1R JKLMMMMMMNOPQ 1 A_WeaponReady
+		SNIR EDCB 1 A_WeaponReady
+		SNIR A 2 A_WeaponReady
+		Goto Ready
+/*
+	FiringZoomedSilenced:
+		TNT1 A 0 A_PlaySound("Weapon/SniperStealth",CHAN_WEAPON)
+		5NIZ A 2 Bright
+		TNT1 A 0 A_SetPitch(pitch-1.2,SPF_INTERPOLATE)
+		5NIZ FFFF 2 Bright
+		5NIZ F 8 Bright
+		5NIZ FFFFFFFF 2 Bright
+		TNT1 A 0 A_PlaySound("Weapon/SniperCharge",CHAN_WEAPON)
+		TNT1 A 0 A_Firecustommissile("50CaseSpawn",0,0,-6,-18)
+		5NIZ EDCBAA 2 Bright
+		Goto Ready5
+	SilencedReload:
+		TNT1 A 0 A_PlaySound("Weapon/SniperReload"CHAN_BODY)
+		SNIR A 2
+		5NIR BCDJKMNOO 2 A_JumpIfInventory("Kicking",1,"DoKick")
+		5NIR O 8 A_FireCustomMissile("EmptyClipSpawn",-5,0,8,-18)
+		5NIR O 2 A_JumpIfInventory("Kicking",1,"DoKick")
+		5NIR NMK 2
+		5NIR JD 2 A_JumpIfInventory("Kicking",1,"DoKick")
+		TNT1 A 0 A_JumpIfInventory("SniperAmmo",1,3)
+		TNT1 A 0 A_GiveInventory("SniperBolt",1)
+		TNT1 A 0 A_JumpIfInventory("SniperBolt",1,"SilencedReloadEmpty")
+		5NIR CB 2
+		SNIR A 2
+		TNT1 A 0 A_JumpIfInventory("SniperAmmo",1,"InsertBullets2")//45+1 effect
+	SilencedReloadEmpty:
+		TNT1 A 0 A_TakeInventory("SniperBolt",1)
+		5NIR EFG 2
+		5NIR H 2 A_PlaySound("Weapon/SniperCharge",CHAN_WEAPON)
+		5NIR IJDCB 2
+		SNIR A 2
+AttachSilencer:
+		TNT1 A 0 A_JumpIfInventory("PistolSilencerPickup",1,"SucessfullyAttach")
+		TNT1 A 0 A_Print("You need a pistol silencer! This can be found in backpacks")
+		TNT1 A 0 A_TakeInventory("WeaponSpecialAction",0)
+		Goto Ready
+	SucessfullyAttach:
+		TNT1 A 0 A_JumpIfInventory("SniperSilencer",1,"UnattachSilencer")
+		TNT1 A 0 A_GiveInventory("SniperSilencer",1)
+		SNIR ABCDJKLMN 1
+		5NIA ABCDEF 2
+		TNT1 A 0 A_PlaySound("SILEIN",CHAN_BODY)
+		5NIA GHIJK 2
+		5NIR NMLKJDCB 1
+		SNIR A 1
+		TNT1 A 0 A_TakeInventory("WeaponSpecialAction",0)
+		Goto Ready
+	UnattachSilencer:
+		TNT1 A 0 A_TakeInventory("SniperSilencer",1)
+		SNIR A 1
+		5NIR BCDJKLMN 1
+		5NIA KJIHG 2
+		TNT1 A 0 A_PlaySound("SILEOUT",CHAN_BODY)
+		5NIA FEDCBA 2
+		SNIR NMLKJDCBA 1
+		TNT1 A 0 A_TakeInventory("WeaponSpecialAction",0)
+		Goto Ready*/
+	}
+}
+
+Actor SniperAmmo : Ammo
+{
+Inventory.Amount 0
+Inventory.MaxAmount 6
+Ammo.BackpackAmount 0
+Ammo.BackpackMaxAmount 6
+Inventory.Icon "SNIPA0"
++IGNORESKILL
+}
+
+Actor SniperBolt : Inventory
+{
+inventory.maxamount 1
+}
+
+Actor SniperSilencer : Inventory
+{
+inventory.maxamount 1
+}
