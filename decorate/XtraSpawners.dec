@@ -6,7 +6,7 @@ Scale 0.82
 	{
 	Spawn:
 		CSAW A 0
-		TNT1 A 3 ACS_NamedExecuteAlways("ChainsawerNewRandomACS")
+		TNT1 A 3 ACS_NamedExecuteAlways("ChainsawSpawner")
 		TNT1 A 0 A_Jump(128,"SpawnAxe") //(50%)
 	SpawnSaw:
 		TNT1 A 1 A_SpawnItemEx("ChainsawSpawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -24,7 +24,7 @@ Scale 0.87
 	{
 	Spawn:
 		SHOT A 0
-		TNT1 A 3 ACS_NamedExecuteAlways("RevolverRandom")
+		TNT1 A 3 ACS_NamedExecuteAlways("ShotgunSpawner")
 		TNT1 A 0 A_Jump(64,"SpawnRevolver","SpawnPistolSilencer","SpawnSniperRifle") //(25%)
 	SpawnShotgun:
 		TNT1 A 1 A_SpawnItemEx("Shotgunspawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -48,7 +48,7 @@ Scale 0.87
 	{
 	Spawn:
 		SGN2 A 0
-		TNT1 A 3 ACS_NamedExecuteAlways("AutoShotgunRandom")
+		TNT1 A 3 ACS_NamedExecuteAlways("SSGSpawner")
 		TNT1 A 0 A_Jump(38,"SpawnAssaultShotgun") //(15%)
 		TNT1 A 0 A_Jump(8,"SpawnUltraShotgun") //(3%)
 	SpawnSSG:
@@ -63,14 +63,15 @@ Scale 0.87
 	}
 }
 
-Actor Dyn_ChaingunReplacer_New Replaces Chaingun
+Actor Dyn_ChaingunReplacer_Extra Replaces Chaingun
 {
 Scale 0.82
 	States
 	{
 	Spawn:
 		MGUN A 0
-		TNT1 A 3 ACS_NamedExecuteAlways("ChaingunNewRandomACS")
+		TNT1 A 3 ACS_NamedExecuteAlways("ChaingunSpawner")
+		TNT1 A 2 ACS_NamedExecuteAlways("ChaingunExtraSpawner")
 		TNT1 A 0 A_Jump(38,"SpawnLMG") //(15%)
 		TNT1 A 0 A_Jump(85,"SpawnSMG","SpawnRifle") //(33%)
 	SpawnChaingun:
@@ -95,7 +96,7 @@ Scale 0.82
 	{
 	Spawn:
 		LAUN A 0
-		TNT1 A 3 ACS_NamedExecuteAlways("ImmolatorRandom")
+		TNT1 A 3 ACS_NamedExecuteAlways("RLSpawner")
 		TNT1 A 0 A_Jump(51,"SpawnNadeLauncher","SpawnFlamethrower","SpawnRevenantLauncher") //(20%)
 	SpawnRocketLauncher:
 		TNT1 A 1 A_SpawnItemEx("RocketLauncherSpawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -112,14 +113,15 @@ Scale 0.82
 	}
 }
 
-Actor Dyn_PlasmaRifleReplacer_New Replaces Plasmarifle
+Actor Dyn_PlasmaRifleReplacer_Extra Replaces Plasmarifle
 {
 Scale 0.82
 	States
 	{
 	Spawn:
 		PLAS A 0
-		TNT1 A 3 ACS_NamedExecuteAlways("PlasmaNewRandomACS")
+		TNT1 A 3 ACS_NamedExecuteAlways("PlasmaRifleSpawner")
+		TNT1 A 2 ACS_NamedExecuteAlways("PlasmaRifleExtraSpawner")
 		TNT1 A 0 A_Jump(38,"SpawnRuiner") //(15%)
 		TNT1 A 0 A_Jump(64,"SpawnGaussCannon","SpawnNailgun") //(25%)
 	SpawnPlasmaRifle:
@@ -144,14 +146,12 @@ Scale 0.9
 	{
 	Spawn:
 		BFUG A 0
-		TNT1 A 3 ACS_NamedExecuteAlways("BFG9kNewRandomACS")
-		TNT1 A 0 A_Jump(38,"Spawn10k","HexaShotgunSpawner") //(15%)
+		TNT1 A 3 ACS_NamedExecuteAlways("BFGSpawner")
+		TNT1 A 2 ACS_NamedExecuteAlways("BFGExtraSpawner")
+		TNT1 A 0 A_Jump(38,"SpawnBFG10k","SpawnHexaShotgun") //(15%)
 		TNT1 A 0 A_Jump(85,"SpawnUnmaker","SpawnLasergun") //(33%)
-	Spawn9k:
+	SpawnBFG9000:
 		TNT1 A 1 A_SpawnItemEx("BFG9000Spawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
-		Stop
-	Spawn10k:
-		TNT1 A 1 A_SpawnItemEx("BFG10kSpawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
 	SpawnUnmaker:
 		TNT1 A 1 A_SpawnItemEx("UnmakerSpawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -159,6 +159,9 @@ Scale 0.9
 	SpawnLasergun:
 		TNT1 A 1 A_SpawnItemEx("LasergunSpawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
+	SpawnBFG10k:
+		TNT1 A 1 A_SpawnItemEx("BFG10kSpawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
+		Stop		
 	SpawnHexaShotgun:
 		TNT1 A 1 A_SpawnItemEx("HexaShotgunSpawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
@@ -175,14 +178,15 @@ Scale 0.82
 		CLIP A 0
 		TNT1 A 3 ACS_NamedExecuteAlways("ExtraAmmoRandomACS")
 		TNT1 A 0 A_Jump(38,"SpawnExtra") //(15%)
+		Goto Spawn
+	AltSpawn:
+		TNT1 A 0 A_Jump(218,"SpawnNormal","SpawnBoth") //(85%)		
 	SpawnNormal:
 		TNT1 A 1 A_SpawnItemEx("64Clip",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
 	SpawnExtra:
 		TNT1 A 1 A_SpawnItemEx("64SpeedloaderAmmo",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
-	SpawnBothRandom:
-		TNT1 A 0 A_Jump(218,"SpawnNormal") //(85%)
 	SpawnBoth:
 		TNT1 A 0 A_SpawnItemEx("64Clip",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		TNT1 A 1 A_SpawnItemEx("64SpeedloaderAmmo",random(-9,9),-9,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -199,14 +203,15 @@ Scale 0.82
 		SHEL A 0
 		TNT1 A 3 ACS_NamedExecuteAlways("ExtraAmmoRandomACS")
 		TNT1 A 0 A_Jump(38,"SpawnExtra") //(15%)
+		Goto Spawn
+	AltSpawn:	
+		TNT1 A 0 A_Jump(218,"SpawnNormal","SpawnBoth") //(85%)		
 	SpawnNormal:
 		TNT1 A 1 A_SpawnItemEx("64Shell",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
 	SpawnExtra:
 		TNT1 A 1 A_SpawnItemEx("64BlueShell",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
-	SpawnBothRandom:
-		TNT1 A 0 A_Jump(218,"SpawnNormal") //(85%)
 	SpawnBoth:
 		TNT1 A 0 A_SpawnItemEx("64Shell",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		TNT1 A 1 A_SpawnItemEx("64BlueShell",7,random(-7,7),0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -223,14 +228,14 @@ Scale 0.82
 		SBOX A 0
 		TNT1 A 3 ACS_NamedExecuteAlways("ExtraAmmoRandomACS")
 		TNT1 A 0 A_Jump(38,"SpawnExtra") //(15%)
+	AltSpawn:
+		TNT1 A 0 A_Jump(218,"SpawnNormal","SpawnBoth") //(85%)	
 	SpawnNormal:
 		TNT1 A 1 A_SpawnItemEx("64ShellBox",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
 	SpawnExtra:
 		TNT1 A 1 A_SpawnItemEx("64BlueShellBox",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
-	SpawnBothRandom:
-		TNT1 A 0 A_Jump(218,"SpawnNormal") //(85%)
 	SpawnBoth:
 		TNT1 A 0 A_SpawnItemEx("64ShellBox",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		TNT1 A 1 A_SpawnItemEx("64BlueShellBox",13,random(-13,13),0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -248,15 +253,16 @@ Scale 0.82
 		TNT1 A 3 ACS_NamedExecuteAlways("NukelauncherSpawnerACS")
 		TNT1 A 3 ACS_NamedExecuteAlways("ExtraAmmoRandomACS")
 		TNT1 A 0 A_Jump(8,"SpawnExtra") //(3%)
+		Goto Spawn
+	AltSpawn:
+		TNT1 A 0 A_Jump(248,"SpawnNormal","SpawnBoth") //(97%)	
 	SpawnNormal:
 		TNT1 A 1 A_SpawnItemEx("64RocketAmmo",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
 	SpawnExtra:
 		TNT1 A 1 A_SpawnItemEx("64NuclearWarheadAmmo",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
-	SpawnBothRandom:
 	SpawnBoth:
-		TNT1 A 0 A_Jump(248,"SpawnNormal") //(97%)
 		TNT1 A 0 A_SpawnItemEx("64Rocketbox",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		TNT1 A 1 A_SpawnItemEx("64NuclearWarheadAmmo",13,random(-13,13),0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
@@ -273,15 +279,16 @@ Scale 0.82
 		TNT1 A 3 ACS_NamedExecuteAlways("NukelauncherSpawnerACS")
 		TNT1 A 3 ACS_NamedExecuteAlways("ExtraAmmoRandomACS")
 		TNT1 A 0 A_Jump(8,"SpawnExtra") //(3%)
+		Goto Spawn
+	AltSpawn:
+		TNT1 A 0 A_Jump(248,"SpawnNormal","SpawnBoth") //(97%)		
 	SpawnNormal:
 		TNT1 A 1 A_SpawnItemEx("64Rocketbox",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
 	SpawnExtra:
 		TNT1 A 1 A_SpawnItemEx("64NuclearWarheadAmmo",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
-	SpawnBothRandom:
 	SpawnBoth:
-		TNT1 A 0 A_Jump(248,"SpawnNormal") //(97%)
 		TNT1 A 0 A_SpawnItemEx("64Rocketbox",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		TNT1 A 1 A_SpawnItemEx("64NuclearWarheadAmmo",13,random(-13,13),0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
@@ -297,14 +304,15 @@ Scale 0.82
 		CELL A 0
 		CELL A 3 ACS_NamedExecuteAlways("ExtraAmmoRandomACS")
 		TNT1 A 0 A_Jump(64,"SpawnExtra") //(25%)
+		Goto Spawn
+	AltSpawn:
+		TNT1 A 0 A_Jump(192,"SpawnNormal","SpawnBoth") //(75%)		
 	SpawnNormal:
 		TNT1 A 1 A_SpawnItemEx("64Cell",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
 	SpawnExtra:
 		TNT1 A 1 A_SpawnItemEx("64NailAmmo",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
-	SpawnBothRandom:
-		TNT1 A 0 A_Jump(192,"SpawnNormal") //(75%)
 	SpawnBoth:
 		TNT1 A 0 A_SpawnItemEx("64Cell",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		TNT1 A 1 A_SpawnItemEx("64NailAmmo",13,random(-13,13),0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -321,14 +329,15 @@ Scale 0.82
 		CELP A 0
 		TNT1 A 3 ACS_NamedExecuteAlways("ExtraAmmoRandomACS")
 		TNT1 A 0 A_Jump(64,"SpawnExtra") //(25%)
+		Goto Spawn		
+	AltSpawn:
+		TNT1 A 0 A_Jump(192,"SpawnNormal","SpawnBoth") //(75%)	
 	SpawnNormal:
 		TNT1 A 1 A_SpawnItemEx("64CellPack",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
 	SpawnExtra:
 		TNT1 A 1 A_SpawnItemEx("64NailCrate",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
-	SpawnBothRandom:
-		TNT1 A 0 A_Jump(192,"SpawnNormal") //(75%)
 	SpawnBoth:
 		TNT1 A 0 A_SpawnItemEx("64CellPack",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		TNT1 A 1 A_SpawnItemEx("64NailCrate",13,random(-13,13),0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -345,7 +354,7 @@ Scale 0.82
 	Spawn:
 		BPAK A 0
 		TNT1 A 3 ACS_NamedExecuteAlways("ExtraSpheresACS")
-		TNT1 A 0 A_Jump(45,"SpawnArsenalsphere") //(17.5%)
+		TNT1 A 0 A_Jump(45,"SpawnExtra") //(17.5%)
 	SpawnNormal:
 		TNT1 A 1 A_SpawnItemEx("64Backpack",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop

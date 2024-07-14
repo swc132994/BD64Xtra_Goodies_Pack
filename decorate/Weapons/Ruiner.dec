@@ -121,7 +121,7 @@ Tag "Ruiner"
 		ZV0U ABCD 1
 		ZV0U D 18
 	SlideKickingEnd:
-		ZV0U D 6
+		ZV0U D 3
 		ZV0U DCBA 1
 		Stop
 	Spawn:

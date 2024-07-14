@@ -207,9 +207,9 @@ Tag "Heatseeker Launcher"
 		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,-8,50)
 		TNT1 A 0 A_Jump(256,2)
 		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,-8,32)
-		RVCG B 2 BRIGHT A_FireCustomMissile("64HeatseekerProjectilePlayer",random(4,-4),1,-25)
-		RVCG C 2 BRIGHT A_AlertMonsters
-		RVCG DDEAA 2
+		RVCG B 1 BRIGHT A_FireCustomMissile("64HeatseekerProjectilePlayer",random(4,-4),1,-25)
+		RVCG C 1 BRIGHT A_AlertMonsters
+		RVCG DDEAA 1
 		TNT1 A 0 A_GiveInventory("HeatseekerSwitchShoulder",1)
 		Goto Ready
 	OpenFire2:
@@ -217,9 +217,9 @@ Tag "Heatseeker Launcher"
 		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,8,50)
 		TNT1 A 0 A_Jump(256,2)
 		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,8,32)
-		RVCG F 2 BRIGHT A_FireCustomMissile("64HeatseekerProjectilePlayer",random(4,-4),1,25)
-		RVCG G 2 BRIGHT A_AlertMonsters
-		RVCG HHIAA 2
+		RVCG F 1 BRIGHT A_FireCustomMissile("64HeatseekerProjectilePlayer",random(4,-4),1,25)
+		RVCG G 1 BRIGHT A_AlertMonsters
+		RVCG HHIAA 1
 		TNT1 A 0 A_TakeInventory("HeatseekerSwitchShoulder",1)
 		Goto Ready
 	AltFire:
@@ -228,8 +228,8 @@ Tag "Heatseeker Launcher"
 		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,-8,50)
 		TNT1 A 0 A_Jump(256,2)
 		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,-8,32)
-		RVCG B 2 BRIGHT A_FireCustomMissile("64ProjectilePlayer",random(4,-4),1,-25)
-		RVCG C 2 BRIGHT A_AlertMonsters
+		RVCG B 1 BRIGHT A_FireCustomMissile("64ProjectilePlayer",random(4,-4),1,-25)
+		RVCG C 1 BRIGHT A_AlertMonsters
 		RVCG DDEAA 1
 		TNT1 A 0 A_GiveInventory("HeatseekerSwitchShoulder",1)
 		Goto Ready
@@ -238,8 +238,8 @@ Tag "Heatseeker Launcher"
 		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,8,50)
 		TNT1 A 0 A_Jump(256,2)
 		TNT1 A 0 A_SpawnItemEx("PlayerMuzzle1",20,8,32)
-		RVCG F 2 BRIGHT A_FireCustomMissile("64ProjectilePlayer",random(4,-4),1,25)
-		RVCG G 2 BRIGHT A_AlertMonsters
+		RVCG F 1 BRIGHT A_FireCustomMissile("64ProjectilePlayer",random(4,-4),1,25)
+		RVCG G 1 BRIGHT A_AlertMonsters
 		RVCG HHIAA 1
 		TNT1 A 0 A_TakeInventory("HeatseekerSwitchShoulder",0)
 		Goto Ready
@@ -249,16 +249,12 @@ Tag "Heatseeker Launcher"
 		RVDW ECBA 1
 		Stop
 	KickingFlash:
-		RVDW ABCD 1
-		RVDW D 8
-		RVDW DCBA 1
+		RVCG A 18
 		Stop
 	SlideKickingStart:
-		RVDW ABCD 1
-		RVDW D 18
+		RVCG A 32
 	SlideKickingEnd:
-		RVDW D 6
-		RVDW DCBA 1
+		RVCG A 6
 		Stop
 	TossMine:
 		"----" A 0 A_JumpIfInventory("64MineAmmo",1,2)

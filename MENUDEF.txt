@@ -1,17 +1,53 @@
+OptionMenu "BD64Menu"
+{
+	Title "BRUTAL DOOM 64 OPTIONS"
+	StaticText "Some changes are not initialized automatically", 1
+	StaticText "Press \"Apply Changes\" for the changes to take effect",1
+	Command "Apply Changes","PukeName BD64Respawn"
+	StaticText " "
+	StaticText "-------------------------------- Presets -------------------------------------",1
+	StaticText " "
+	SafeCommand "Original", "pukename OriginalCvars"
+	SafeCommand "Classic", "pukename ClassicCvars"
+	SafeCommand "Enhanced(Default)", "pukename EnhancedCvars"
+	StaticText " "
+	StaticText "To set all monster/weapon/item spawners to random press this",1
+	SafeCommand "Spawner Randomiser", "pukename RandomCvars"
+	StaticText " "
+	StaticText "-------------------------------- Options -------------------------------------",1
+	StaticText " "
+	Submenu "Other Item/Weapon Options",		"BrutalDoom64Item/WeaponOptions"
+	Submenu "Other Monster Options",			"BrutalDoom64OptionsOtherMonster"
+	Submenu "Performance & Misc. Options",		"BrutalDoom64OptionsPerformance"
+	Submenu "Map Options",						"BD64MapOptions"
+	StaticText " "
+	StaticText "-------------------------------- Gameplay -------------------------------------",1
+	StaticText " "
+	Submenu "Item/Weapon Spawner Options",		"BrutalDoom64OptionsItem/WeaponSpawner"	
+	Submenu "Monster Spawner Options",			"BrutalDoom64OptionsMonsterSpawner"	
+	StaticText " "
+	StaticText ""
+	Submenu 	"Engine (GZD, Zand) Shortcuts",		"GZDShortcuts"
+}
+
 OptionMenu "BrutalDoom64OptionsItem/WeaponSpawner"
 {
 	Title "Item/Weapon Spawner Options"
+	StaticText "Some changes are not initialized automatically", 1
+	StaticText "Press \"Apply Changes\" for the changes to take effect",1
+	Command "Apply Changes","PukeName BD64Respawn"
+		StaticText " "
 		StaticText "Options to choose replacements of weapons and power-ups",1
 		StaticText "or set to appear randomly",1
-		StaticText ""
-	Option "Bonuses Spawner =","BonusRandomCvar","BonusRandomValue"
-		StaticText "Bonus by Default",1
-		StaticText "(hell potions are combined armour/health pickups)",1
 		StaticText ""
 	Option "Power-up spawner =","WpnPower_Spawner_Cvar","WpnPower_Spawner_Value"
 		StaticText "Power-up by Default",1
 		StaticText ""
 		StaticText "Extra Power-ups Options",1
+		StaticText ""
+	Option "Bonuses Spawner =","BonusRandomCvar","BonusRandomValue"
+		StaticText "Bonus by Default",1
+		StaticText "(hell potions are combined armour/health pickups)",1
 		StaticText ""
 	Option "Sphere Spawner =","ExtraSpheres_CVar","ExtraSpheres_Value"
 		StaticText "Classic Spheres by Default",1
@@ -25,17 +61,15 @@ OptionMenu "BrutalDoom64OptionsItem/WeaponSpawner"
 	Option "Radsuit Spawner =","Biosuit_Spawner_CVar","Biosuit_Spawner_Value"
 		StaticText "RadSuit by Default",1
 		StaticText ""
-	Option "Blue Armour Spawner =","RedArmor_Spawner_CVar","RedArmor_Spawner_Value"
-		StaticText "Blue Armour by Default",1
-		StaticText ""
-		StaticText "(Red armour = 300 armour & protection from fire damage)",1
-		StaticText ""
 		StaticText "Extra Weapons Options",1
 		StaticText ""
-	Option "Chainsaw Spawner =","ChainsawNew_Spawner_Cvar","ChainsawNew_Spawner_Value"
+	Option "Chainsaw Spawner =","Chainsaw_Spawner_Cvar","ChainsawNew_Spawner_Value"
 		StaticText "Chainsaw by Default",1
 		StaticText ""
-	Option "Chaingun Spawner =","ChaingunNew_Spawner_Cvar","ChaingunNew_Spawner_Value"
+	Option "Power-up spawner =","WpnPower_Spawner_Cvar","WpnPower_Spawner_Value"
+		StaticText "Power-up by Default",1
+		StaticText ""
+	Option "Chaingun Spawner =","Chaingun_Spawner_Cvar","Chaingun_Spawner_Value"
 		StaticText "Chaingun by Default",1
 		StaticText ""
 	Option "Shotgun Spawner =","Revolver_Spawner_Cvar","Revolver_Spawner_Value"
@@ -47,10 +81,10 @@ OptionMenu "BrutalDoom64OptionsItem/WeaponSpawner"
 	Option "Rocket Launcher Spawner =","Immolator_Spawner_Cvar","Immolator_Spawner_Value"
 		StaticText "Rocket Luancher by Default",1
 		StaticText ""
-	Option "Plasma Rifle Spawner =","PlasmaRifleNew_Spawner_Cvar","PlasmaRifleNew_Spawner_Value"
-		StaticText "Plasma Rifle by Default",1
+	Option "Plasmagun Spawner =","GaussCannon_Spawner_Cvar","GaussCannon_Spawner_Value"
+		StaticText "Plasmagun by Default",1
 		StaticText ""
-	Option "BFG9000 Spawner =","BFG9kNew_Spawner_Cvar","BFG9kNew_Spawner_Value"
+	Option "BFG9000 Spawner =","BFG_Spawner_Cvar","BFG_Spawner_Value"
 		StaticText "BFG9000 by Default",1
 		StaticText ""
 	Option "Extra Ammo Spawner =","ExtraAmmo_Spawner_Cvar","ExtraAmmo_Spawner_Value"
@@ -65,6 +99,12 @@ OptionMenu "BrutalDoom64OptionsItem/WeaponSpawner"
 OptionMenu "BrutalDoom64Item/WeaponOptions"
 {
 	Title "Other Item/Weapon Options"
+	StaticText "Some changes are not initialized automatically", 1
+	StaticText "Press \"Apply Changes\" for the changes to take effect",1
+	Command "Apply Changes","PukeName BD64Respawn"
+	StaticText " "
+	StaticText "---------------------------- Weapons Functions ------------------------------",1
+		StaticText " "
 	Option "Enable Vanilla Weapon Animations =","VWeaponCvar","YesOrNo"
 		StaticText "Show classic Doom 64 weapon animations (classical mode ONLY).",1
 		StaticText ""
@@ -76,6 +116,21 @@ OptionMenu "BrutalDoom64Item/WeaponOptions"
 	Option "Classic Style Rocket Launcher for Tactical/Modern =","ClassicRLCvar","YesOrNo"
 		StaticText "Options to switch between classic or modernised weapons.",1
 		StaticText ""
+	Option "Skip Weapon Reload Sequences (Need Map Restart) =","NoReloadCvar","YesOrNo"
+		StaticText "Skip weapon reload animation sequences (tactical/modern modes ONLY).",1
+		StaticText ""
+	Option "Low Ammo SFX =","LowAmmoSFX","YesOrNo"
+		StaticText "Allows you to toggle the sound warning when ammo is too low.",1
+		StaticText "(tactical/modern modes ONLY)",1
+		StaticText ""
+	Option "Switch to Fists on Berserk Pickup =","BerserkSwitchFistsCvar","YesOrNo"
+		StaticText "Option to disable switching to fists on berserk pickup.",1
+		StaticText ""
+	Option "Striker-12 as Alternative of Assault Shotgun =","Striker12Cvar","YesOrNo"
+		StaticText "Switch between Stiker-12 or Assault Shotgun"
+		StaticText ""
+		StaticText "--------------------------- Weapons & Items Skins -----------------------------",1
+		StaticText " "
 	Option "Alternative Rifle Skin =","AlternativeRifleSkinCvar","YesOrNo"
 	Option "Alternative Laser Skin =","AlternativeLaserSkinCvar","YesOrNo"
 	Option "Item Sprites Pickups =","AlternativeAmmoPickupSpritesCvar","AlternativeAmmoPickupSpritesValue"
@@ -83,18 +138,9 @@ OptionMenu "BrutalDoom64Item/WeaponOptions"
 	Option "Alpha Build Item Pickups =","AlphaPickupCvar","YesOrNo"
 		StaticText "Options for alternative or some alpha build looks for items & weapons.",1
 		StaticText ""
-	Option "Switch to Fists on Berserk Pickup =","BerserkSwitchFistsCvar","YesOrNo"
-		StaticText "Option to disable switching to fists on berserk pack pickup.",1
-		StaticText ""
+		StaticText "-------------------------------------- Other -----------------------------------",1
+		StaticText " "
 	Option "Start with Flashlight/Torch (Need Map Restart) =","FlashlightStartCvar","YesOrNo"
-		StaticText ""
-	Option "Skip Weapon Reload Sequences (Need Map Restart) =","NoReloadCvar","YesOrNo"
-		StaticText "Skip weapon reload animation sequences (tactical/modern modes ONLY).",1
-		StaticText ""
-		StaticText "Extra Pack Weapon Options!",1
-		StaticText ""
-		StaticText "Switch between Stiker-12 or Assault Shotgun"
-	Option "Striker-12 as Alternative of Assault Shotgun =","Striker12Cvar","YesOrNo"
 }
 
 //XTRA WEAPON & AMMO VALUES
@@ -121,7 +167,7 @@ OptionValue "AutoShotgun_Spawner_Value"
 	3,"Ultra Shotgun"
 }
 
-OptionValue "ChaingunNew_Spawner_Value"
+OptionValue "Chaingun_Spawner_Value_Extra"
 {
 	0,"Random"
 	1,"Chaingun"
@@ -139,7 +185,7 @@ OptionValue "Immolator_Spawner_Value"
 	4,"Homing Missiles"
 }
 
-OptionValue "PlasmaRifleNew_Spawner_Value"
+OptionValue "PlasmaRifle_Spawner_Value_Extra"
 {
 	0,"Random"
 	1,"Plasma Rifle"
@@ -148,22 +194,22 @@ OptionValue "PlasmaRifleNew_Spawner_Value"
 	4,"Nailgun"
 }
 
-OptionValue "BFG9kNew_Spawner_Value"
+OptionValue "BFG_Spawner_Value_Extra"
 {
 	0,"Random"
 	1,"BFG9k"
-	2,"BFG10k"
-	3,"Unmaker"
-	4,"Lasergun"
+	2,"Unmaker"
+	3,"Lasergun"
+	4,"BFG10k"
 	5,"Hexa Shotgun"
 }
 
 OptionValue "ExtraAmmo_Spawner_Value"
 {
+	-1,"Random Spawn Both"
 	0,"Random"
 	1,"Spawn Normal Only"
-	2,"Random Spawn Both"
-	3,"Spawn Both (random nukes)"
+	2,"Spawn Both (random nukes)"
 }
 
 //XTRA POWERUP VALUES

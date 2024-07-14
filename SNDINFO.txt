@@ -33,6 +33,7 @@ DSZAPHT3		DSZAPHT3
 
 //NukeLauncher
 weapons/nuclearmissilecharge		dsnukcrg
+weapons/nuclearmissilefire			dsnukfir
 weapons/nuclearmissileexplode		dsnukxpl
 weapons/nuclearmissileflamehit		dsflwexp
 

@@ -1,13 +1,8 @@
-server int ChainsawNew_Spawner_Cvar = 1;	//FIREAXE
+server int Chainsaw_Spawner_Cvar = 1;	//FIREAXE
 server int Revolver_Spawner_Cvar = 1;		//REVOLVER
 server int AutoShotgun_Spawner_Cvar = 1;	//RAUTOSHOTGUN REPLACE SUPERSHOTGUN
-server int ChaingunNew_Spawner_Cvar = 1;	//NAILGUN ADDED
 server int Immolator_Spawner_Cvar = 1;		//FLAMETHROWER, GRENADELAUNCHER
-server int PlasmaRifleNew_Spawner_Cvar = 1;	//BLIGHTER
-server int BFG9kNew_Spawner_Cvar = 1;		//BFG 10k
-
 server int ExtraAmmo_Spawner_Cvar = 1;		//extra weapon ammo types
-
 server int NuclearMissile_Spawner_Cvar = 0;	//NUCLEAR MISSILE LAUNCHER
 server int Striker12Cvar = 0;			//Alternative AutoShotgun (Striker-12, Protecta)
 

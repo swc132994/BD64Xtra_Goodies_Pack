@@ -159,7 +159,7 @@ VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		DARD EFGH 1
 		DARD H 18
 	SlideKickingEnd:
-		DARD H 6
+		DARD H 3
 		DARD HGFE 1
 		Stop
 	v1Ready:
