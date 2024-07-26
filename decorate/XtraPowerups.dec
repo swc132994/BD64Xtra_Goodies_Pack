@@ -154,7 +154,7 @@ Tag "Biological Suit"
 		BIOS A 1
 	SpawnLoop:
 		"####" "#" 3 Light("Blursphere") ACS_NamedExecuteAlways("AlternativeAmmoPickupSpritesACS")
-	NormalSpawn:
+	SpawnNormal:
 		BIOS A 6 Bright Light("Blursphere")
 		BIOS B 5 Light("Blursphere")
 		Goto SpawnLoop
