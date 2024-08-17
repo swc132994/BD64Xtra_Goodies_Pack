@@ -895,7 +895,8 @@ Radius 2
 Height 4
 Alpha 0.5
 RenderStyle Add
-Projectile
++MISSILE
++NOGRAVITY
 +DONTSPLASH
 -SOLID
 	States

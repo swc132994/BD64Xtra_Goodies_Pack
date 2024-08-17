@@ -102,10 +102,10 @@ inventory.maxamount 1
 
 ACTOR 64HeatseekerProjectilePlayer : 64RevenantTracer3
 {
-	Damage 10
-	Speed 12
-	+SCREENSEEKER
-	+NOCLIP
+Damage 10
+Speed 12
++SCREENSEEKER
++NOCLIP
 	States
 	{
 	Spawn:
