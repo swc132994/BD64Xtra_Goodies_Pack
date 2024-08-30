@@ -65,6 +65,7 @@ Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 		10KR A 1 A_Raise
 		Loop
 	Fire:
+		TNT1 A 0 A_JumpIf(waterlevel > 1,"Ready")
 		10KR A 20 A_PlaySound("Weapons/BFG10KF",CHAN_AUTO)
 		10KR BCDEF 2
 		Goto Hold
@@ -114,6 +115,7 @@ Alpha 0.75
 	States
 	{
 	Spawn:
+		TNT1 A 1 NoDelay A_JumpIf(waterlevel > 1,"Death")
 		TNT1 AAA 0 A_CustomMissile("ExplosionParticleGreenHeavySmall",0,0,random(0,360),2,random(10,70))
 		TNT1 AAAAAAAAA 0 A_CustomMissile("ExplosionParticleGreenHeavySmall",0,0,random(0,360),2,random(20,50))
 		TNT1 AAAAA 0 A_CustomMissile("ExplosionParticleGreenVeryFast",0,0,random(0,360),2,random(20,40))
@@ -129,6 +131,9 @@ Alpha 0.75
 		BFE1 B 3 Bright A_FadeOut(0.142857)
 		BFE1 C 2 Bright A_FadeOut(0.142857)
 		BFE1 DEF 1 Bright A_FadeOut(0.142857)
+		Stop
+	Death:
+		TNT1 A 1
 		Stop
 	}
 }
@@ -249,6 +254,7 @@ Tag "BFG 10000"
 		TNT1 A 0 A_JumpIfInventory("PlaceMine",1,"PlaceMine")
 		Loop
 	Fire:
+		TNT1 A 0 A_JumpIf(waterlevel > 1,"Ready")
 		10KR A 20 A_PlaySound("Weapons/BFG10KF",CHAN_AUTO)
 		10KR BCDEF 2
 		Goto Hold
@@ -276,6 +282,7 @@ Tag "BFG 10000"
 		10KR AAAAAA 2 A_FireCustomMissile("10kFireSmoke",random(-4,4),0)
 		Goto Ready
 	AltFire:
+		TNT1 A 0 A_JumpIf(waterlevel > 1,"Ready")
 		TNT1 A 0 A_JumpIfInventory("Cell",10,"HoloShield")
 		10KE AAAA 1 BRIGHT A_Print("Not Enough Cells")
 		Goto Ready
@@ -317,6 +324,7 @@ Mass 0x7FFFFFFF
 RenderStyle Add
 -SOLID
 +SHOOTABLE
++NOGRAVITY
 +NOBLOOD
 +NOBLOODDECALS
 	States
