@@ -105,9 +105,9 @@ OptionMenu "BrutalDoom64Item/WeaponOptions"
 	StaticText " "
 	StaticText "---------------------------- Weapons Functions ------------------------------",1
 		StaticText " "
-	Option "Enable Vanilla Weapon Animations =","VWeaponCvar","YesOrNo"
-		StaticText "Show classic Doom 64 weapon animations (classical mode).",1
-		StaticText "Show faster shotgun pump animation (modern/tactical mode).",1
+	Option "Enable Traditional Shotgun/SSG Animations =","VWeaponCvar","YesOrNo"
+		StaticText "Show classic Doom 64 Shotgun/SSG animations (classical mode).",1
+		StaticText "Show traditional shotgun pump animation (modern/tactical mode).",1
 		StaticText ""
 	Option "Enable Weapon Warm Up Animations =","WeaponsWarmUpCvar","YesOrNo"
 		StaticText "Show weapon warm up animations on first pickup (tactical/modern modes ONLY).",1
@@ -117,7 +117,7 @@ OptionMenu "BrutalDoom64Item/WeaponOptions"
 	Option "Classic Style Rocket Launcher for Tactical/Modern =","ClassicRLCvar","YesOrNo"
 		StaticText "Options to switch between classic or modernised weapons.",1
 		StaticText ""
-	Option "Skip Weapon Reload Sequences (Need to press 'apply changes') =","NoReloadCvar","YesOrNo"
+	Option "Skip Weapon Reload Sequences (Press \"Apply Changes\") =","NoReloadCvar","YesOrNo"
 		StaticText "Skip weapon reload animation sequences (tactical/modern modes ONLY).",1
 		StaticText ""
 	Option "Low Ammo SFX =","LowAmmoSFX","YesOrNo"
@@ -141,7 +141,7 @@ OptionMenu "BrutalDoom64Item/WeaponOptions"
 		StaticText ""
 		StaticText "-------------------------------------- Other -----------------------------------",1
 		StaticText " "
-	Option "Start with Flashlight/Torch (Need Map Restart) =","FlashlightStartCvar","YesOrNo"
+	Option "Start with Flashlight/Torch =","FlashlightStartCvar","YesOrNo"
 }
 
 //XTRA WEAPON & AMMO VALUES
