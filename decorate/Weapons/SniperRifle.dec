@@ -151,9 +151,9 @@ Tag "Walther WA 2000"
 		Stop
 	SlideKickingStart:
 		SNIK FGHI 1
-		SNIK J 18
+		SNIK J 35
 	SlideKickingEnd:
-		SNIK J 3
+		SNIK J 2
 		SNIK IHGF 1
 		Stop
 	v1Ready:

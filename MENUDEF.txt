@@ -63,11 +63,13 @@ OptionMenu "BrutalDoom64OptionsItem/WeaponSpawner"
 		StaticText ""
 		StaticText "Extra Weapons Options",1
 		StaticText ""
+	Option "Armour Spawner =","RedArmor_Spawner_CVar","RedArmor_Spawner_Value"
+		StaticText "Blue Armour by Default",1
+		StaticText ""
+		StaticText "(Red armour = 300 armour & protection from fire damage)",1
+		StaticText ""
 	Option "Chainsaw Spawner =","Chainsaw_Spawner_Cvar","ChainsawNew_Spawner_Value"
 		StaticText "Chainsaw by Default",1
-		StaticText ""
-	Option "Power-up spawner =","WpnPower_Spawner_Cvar","WpnPower_Spawner_Value"
-		StaticText "Power-up by Default",1
 		StaticText ""
 	Option "Chaingun Spawner =","Chaingun_Spawner_Cvar","Chaingun_Spawner_Value"
 		StaticText "Chaingun by Default",1

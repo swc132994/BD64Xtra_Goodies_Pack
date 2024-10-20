@@ -164,9 +164,9 @@ VisibleToPlayerClass "Modern","Tactical64DoomPlayer","Tactical64DoomPlayer_P"
 		Stop
 	SlideKickingStart:
 		AXER ABCD 1
-		AXER D 18
+		AXER D 35
 	SlideKickingEnd:
-		AXER D 6
+		AXER D 2
 		AXER DCBA 1
 		Stop
 	Spawn:

@@ -296,11 +296,11 @@ Inventory.ForbiddenTo "64DoomPlayer"
 		FR4M J 10
 		FR4M IHGF 1
 		Stop
-	SlideKickingStart:
+	SlideKickingStart://22
 		FR4M FGHI 1
-		FR4M J 17
-	SlideKickingEnd:
-		FR4M J 6
+		FR4M J 35
+	SlideKickingEnd://10
+		FR4M J 2
 		FR4M IHGF 1
 		Stop
 	}

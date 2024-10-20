@@ -179,9 +179,9 @@ inventory.pickupmessage "You got the Ultra Shotgun!"
 		Stop
 	SlideKickingStart:	//22
 		QSGG BCDEFG 1
-		QSGG H 16
+		QSGG H 32
 	SlideKickingEnd:	//10
-		QSGG H 2
+		QSGG H 1
 		QSGG GFEDCB 1
 		Stop
 	v1Ready:

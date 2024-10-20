@@ -223,11 +223,11 @@ Weapon.SisterWeapon "64ProtectaTACTICAL"
 	ReloadingKick:
 		ASGG F 16
 		Stop
-	SlideKickingStart:	//22
+	SlideKickingStart:
 		ASGG BCDEF 1
-		ASGG G 17
+		ASGG G 34
 	SlideKickingEnd:	//10
-		ASGG G 5
+		ASGG G 1
 		ASGG FEDCB 1
 		Stop
 	Spawn:
@@ -508,9 +508,9 @@ Weapon.SisterWeapon "64AssaultShotgunTACTICAL"
 		Stop
 	SlideKickingStart:
 		SK12 BCD 1
-		SK12 E 19
+		SK12 E 36
 	SlideKickingEnd:
-		SK12 E 7
+		SK12 E 3
 		SK12 DCB 1
 		Stop
 	Spawn:
