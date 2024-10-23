@@ -363,7 +363,7 @@ Speed 10
 		XDT1 J 3 Bright A_CustomMissile("64AcidPuff",0,0,0,2,0)
 		TNT1 A 0 A_Playsound("AcidPuddle/Start",CHAN_WEAPON,1,TRUE)
 		TNT1 A 0 A_Explode(1,20)
-		XDT1 K 5 Bright A_SpawnItemEx("PlasmaSmoke")
+		XDT1 K 5 Bright A_SpawnItemEx("MicroSmokeColumn")
 		TNT1 A 0 A_Explode(1,20)
 		XDT1 K 5 Bright A_SpawnItemEx("MediumAcidSpot")
 		TNT1 A 0 A_Explode(1,20)
@@ -371,7 +371,7 @@ Speed 10
 		TNT1 A 0 A_Explode(1,20)
 		XDT1 K 5 Bright
 		TNT1 A 0 A_Explode(1,20)
-		XDT1 K 5 Bright A_SpawnItemEx("PlasmaSmoke")
+		XDT1 K 5 Bright
 		TNT1 A 0 A_Explode(1,20)
 		XDT1 K 5 Bright A_SpawnItemEx("DetectFloorCraterSmallMotherdemon")
 		TNT1 A 0 A_Explode(1,20)
@@ -379,7 +379,11 @@ Speed 10
 		TNT1 A 0 A_Explode(1,20)
 		XDT1 K 5 Bright
 		TNT1 A 0 A_Explode(1,20)
-		XDT1 K 5 Bright A_SpawnItemEx("PlasmaSmoke")
+		XDT1 K 5 Bright
+		TNT1 A 0 A_Explode(1,20)
+		XDT1 K 5 Bright
+		TNT1 A 0 A_Explode(1,20)
+		XDT1 K 5 Bright
 		TNT1 A 0 A_Explode(1,20)
 		XDT1 K 5 Bright
 		TNT1 A 0 A_Explode(1,20)
@@ -387,7 +391,11 @@ Speed 10
 		TNT1 A 0 A_Explode(1,20)
 		XDT1 K 5 Bright
 		TNT1 A 0 A_Explode(1,20)
-		XDT1 K 5 Bright A_SpawnItemEx("PlasmaSmoke")
+		XDT1 K 5 Bright
+		TNT1 A 0 A_Explode(1,20)
+		XDT1 K 5 Bright
+		TNT1 A 0 A_Explode(1,20)
+		XDT1 K 5 Bright
 		TNT1 A 0 A_Explode(1,20)
 		XDT1 K 5 Bright
 		TNT1 A 0 A_Explode(1,20)
@@ -395,7 +403,11 @@ Speed 10
 		TNT1 A 0 A_Explode(1,20)
 		XDT1 K 5 Bright
 		TNT1 A 0 A_Explode(1,20)
-		XDT1 K 5 Bright A_SpawnItemEx("PlasmaSmoke")
+		XDT1 K 5 Bright
+		TNT1 A 0 A_Explode(1,20)
+		XDT1 K 5 Bright
+		TNT1 A 0 A_Explode(1,20)
+		XDT1 K 5 Bright
 		TNT1 A 0 A_Explode(1,20)
 		XDT1 K 5 Bright
 		TNT1 A 0 A_Explode(1,20)
@@ -403,7 +415,11 @@ Speed 10
 		TNT1 A 0 A_Explode(1,20)
 		XDT1 K 5 Bright
 		TNT1 A 0 A_Explode(1,20)
-		XDT1 K 5 Bright A_SpawnItemEx("PlasmaSmoke")
+		XDT1 K 5 Bright
+		TNT1 A 0 A_Explode(1,20)
+		XDT1 K 5 Bright
+		TNT1 A 0 A_Explode(1,20)
+		XDT1 K 5 Bright
 		TNT1 A 0 A_Explode(1,20)
 		XDT1 K 5 Bright
 		TNT1 A 0 A_Explode(1,20)
@@ -411,23 +427,7 @@ Speed 10
 		TNT1 A 0 A_Explode(1,20)
 		XDT1 K 5 Bright
 		TNT1 A 0 A_Explode(1,20)
-		XDT1 K 5 Bright A_SpawnItemEx("PlasmaSmoke")
-		TNT1 A 0 A_Explode(1,20)
 		XDT1 K 5 Bright
-		TNT1 A 0 A_Explode(1,20)
-		XDT1 K 5 Bright
-		TNT1 A 0 A_Explode(1,20)
-		XDT1 K 5 Bright
-		TNT1 A 0 A_Explode(1,20)
-		XDT1 K 5 Bright A_SpawnItemEx("PlasmaSmoke")
-		TNT1 A 0 A_Explode(1,20)
-		XDT1 K 5 Bright
-		TNT1 A 0 A_Explode(1,20)
-		XDT1 K 5 Bright
-		TNT1 A 0 A_Explode(1,20)
-		XDT1 K 5 Bright
-		TNT1 A 0 A_Explode(1,20)
-		XDT1 K 5 Bright A_SpawnItemEx("PlasmaSmoke")
 		TNT1 A 0 A_Explode(1,20)
 		XDT1 K 5 Bright
 		TNT1 A 1 A_StopSound(CHAN_WEAPON)
