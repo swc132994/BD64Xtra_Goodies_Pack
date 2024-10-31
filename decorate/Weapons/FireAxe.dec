@@ -35,9 +35,6 @@ ACTOR 64FireAxe : DoomWeapon
 {
 Scale 0.8
 Weapon.SlotNumber 1
-+WEAPON.MELEEWEAPON
-+WEAPON.NOALERT
-+WEAPON.AMMO_OPTIONAL
 Weapon.AmmoType "AxeCharge"
 Inventory.PickupSound "WPICK"
 Inventory.Icon "AXEPA0"
@@ -47,6 +44,9 @@ Obituary "%k was slashed by %o fireaxe!"
 VisibleToPlayerClass "64DoomPlayer"
 Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 +INVENTORY.RESTRICTABSOLUTELY
++WEAPON.MELEEWEAPON
++WEAPON.NOALERT
++WEAPON.AMMO_OPTIONAL
 	States
 	{
 	Spawn:
@@ -137,9 +137,6 @@ Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 ACTOR 64FireAxeModern : Brutal64Weapon
 {
 Scale 0.8
-+WEAPON.MELEEWEAPON
-+WEAPON.NOALERT
-+WEAPON.AMMO_OPTIONAL
 Weapon.AmmoType "AxeCharge"
 Inventory.PickupSound "WPICK"
 Inventory.Icon "AXEPA0"
@@ -147,9 +144,12 @@ Inventory.PickupMessage "You found a fireaxe!"
 Tag "FireAxe"
 Weapon.SlotNumber 1
 Obituary "%k was slashed by %o fireaxe!"
-+INVENTORY.RESTRICTABSOLUTELY
 Inventory.forbiddento "64DoomPlayer"
 VisibleToPlayerClass "Modern","Tactical64DoomPlayer","Tactical64DoomPlayer_P"
++INVENTORY.RESTRICTABSOLUTELY
++WEAPON.MELEEWEAPON
++WEAPON.NOALERT
++WEAPON.AMMO_OPTIONAL
 	States
 	{
 	MineThrowFlash:

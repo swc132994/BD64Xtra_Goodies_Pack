@@ -43,6 +43,7 @@ Inventory.Icon WSBOA0
 VisibleToPlayerClass "64DoomPlayer"
 Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 +INVENTORY.RESTRICTABSOLUTELY
++WEAPON.BFG
 Tag "Ruiner"
 	States
 	{
@@ -103,8 +104,8 @@ Weapon.AmmoGive2 0
 Inventory.PickupMessage "You feel like it is watching you..."
 Tag "Ruiner"
 +INVENTORY.RESTRICTABSOLUTELY
-+WEAPON.AMMO_CHECKBOTH
 +WEAPON.NOALERT
++WEAPON.BFG
 	States
 	{
 	MineThrowFlash:

@@ -43,12 +43,11 @@ Inventory.PickupSound "WPICK"
 Inventory.PickupMessage "You got the grenade launcher!"
 Obituary "%o caught %k's grenade."
 Tag "Grenade Launcher"
-+WEAPON.NOAUTOFIRE
-+WEAPON.NOAUTOAIM
-+WEAPON.EXPLOSIVE
 VisibleToPlayerClass "64DoomPlayer"
 Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 +INVENTORY.RESTRICTABSOLUTELY
++WEAPON.NOAUTOFIRE
++WEAPON.NOAUTOAIM
 	States
 	{
 	Spawn:
@@ -89,15 +88,15 @@ Weapon.SelectionOrder 1500
 Weapon.AmmoType "RocketAmmo"
 Weapon.AmmoUse 1
 Weapon.AmmoGive 2
-+WEAPON.NOAUTOFIRE
-+WEAPON.NOAUTOAIM
-+WEAPON.EXPLOSIVE
-+WEAPON.ALT_USES_BOTH
 Inventory.PickupSound "WPICK"
 Inventory.PickupMessage "You got the grenade launcher!"
 Obituary "%o caught %k's grenade."
 Tag "Grenade Launcher"
 +INVENTORY.RESTRICTABSOLUTELY
++WEAPON.NOAUTOFIRE
++WEAPON.NOAUTOAIM
++WEAPON.ALT_USES_BOTH
+-WEAPON.AMMO_CHECKBOTH
 	States
 	{
 	Spawn:

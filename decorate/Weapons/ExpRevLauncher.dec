@@ -40,15 +40,15 @@ Weapon.BobRangeX 0
 Weapon.AmmoType "RocketAmmo"
 Weapon.AmmoUse 1
 Weapon.AmmoGive 4
-+WEAPON.NOAUTOAIM
-+WEAPON.NOALERT
-+WEAPON.EXPLOSIVE
-+INVENTORY.RESTRICTABSOLUTELY
 Inventory.PickupMessage "You got the Heatseeker Launchers!"
 Inventory.PickupSound "WPICK"
 Tag "Heatseeker Launcher"
 VisibleToPlayerClass "64DoomPlayer"
 Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
++INVENTORY.RESTRICTABSOLUTELY
++WEAPON.NOAUTOAIM
++WEAPON.NOALERT
++WEAPON.EXPLOSIVE
 	States
 	{
 	Ready:
@@ -160,14 +160,15 @@ Weapon.BobRangeX 0
 Weapon.AmmoType "RocketAmmo"
 Weapon.AmmoUse 1
 Weapon.AmmoGive 4
-+WEAPON.NOAUTOAIM
-+WEAPON.NOALERT
-+WEAPON.EXPLOSIVE
-+WEAPON.ALT_USES_BOTH
-+INVENTORY.RESTRICTABSOLUTELY
 Inventory.PickupMessage "You got the Heatseeker Launchers!"
 Inventory.PickupSound "WPICK"
 Tag "Heatseeker Launcher"
++INVENTORY.RESTRICTABSOLUTELY
++WEAPON.NOAUTOAIM
++WEAPON.NOALERT
++WEAPON.ALT_USES_BOTH
+-WEAPON.AMMO_CHECKBOTH
++WEAPON.EXPLOSIVE
 	States
 	{
 	Spawn:

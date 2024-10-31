@@ -139,7 +139,6 @@ Obituary "%o was picked off by %k's Double-Action Revolver."
 Tag "Double-Action Revolver"
 Inventory.ForbiddenTo "64DoomPlayer"
 VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
-+WEAPON.AMMO_CHECKBOTH
 +WEAPON.NOAUTOFIRE
 +WEAPON.NOALERT
 +INVENTORY.RESTRICTABSOLUTELY

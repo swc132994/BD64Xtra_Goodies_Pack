@@ -42,10 +42,10 @@ Inventory.PickupSound "WPICK"
 Inventory.PickupMessage "You got the NailGun!"
 Obituary "%o was nailed by %k."
 Tag "Nailgun"
-+WEAPON.NOAUTOAIM
 VisibleToPlayerClass "64DoomPlayer"
 Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 +INVENTORY.RESTRICTABSOLUTELY
++WEAPON.NOAUTOAIM
 	States
 	{
 	Spawn:
@@ -98,8 +98,10 @@ Inventory.PickupSound "WPICK"
 Inventory.PickupMessage "You got the NailGun!"
 Obituary "%o was nailed by %k."
 Tag "Nailgun"
-+WEAPON.NOAUTOAIM
 +INVENTORY.RESTRICTABSOLUTELY
++WEAPON.NOAUTOAIM
++WEAPON.ALT_USES_BOTH
+-WEAPON.AMMO_CHECKBOTH
 	States
 	{
 	Spawn:

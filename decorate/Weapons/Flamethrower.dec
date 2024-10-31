@@ -51,7 +51,6 @@ VisibleToPlayerClass "64DoomPlayer"
 Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 +INVENTORY.RESTRICTABSOLUTELY
 +WEAPON.NOAUTOAIM
-+WEAPON.EXPLOSIVE
 	States
 	{
 	Spawn:
@@ -95,37 +94,48 @@ Scale 0.67
 Radius 2
 Height 4
 Speed 16
-Damage 1
+Damage 2
 Alpha 0.67
 RenderStyle Add
-DamageType "Plasma"
+DamageType "Fire"
 SeeSound "Flamethrower/Fire"
 DeathSound "Flamethrower/Hit"
-Projectile
+Decal "SmallerScorch"
+PROJECTILE
 +DONTSPLASH
++RIPPER
 +NODAMAGETHRUST
--SOLID
++FORCERADIUSDMG
++PAINLESS
 	States
 	{
 	Spawn:
 		FRFX A 2 NoDelay A_JumpIf(waterlevel > 1,"Splash")
-		FRFX BCD 2 bright A_Explode(1,8,0)
+		FRFX BCD 2 bright
+		TNT1 A 0 A_Explode(1,32,0)
 		TNT1 A 0 A_LowGravity
 		TNT1 A 0 A_JumpIf(waterlevel > 1,"Splash")
-		FRFX EFG 2 bright A_Explode(1,16,0)
+		FRFX EFG 2 bright
+		TNT1 A 0 A_Explode(1,32,0)
 		TNT1 A 0 A_JumpIf(waterlevel > 1,"Splash")
-		FRFX HIJ 2 bright A_Explode(1,32,0)
+		FRFX HIJ 2 bright
+		TNT1 A 0 A_Explode(1,32,0)
 		TNT1 A 0 A_JumpIf(waterlevel > 1,"Splash")
-		FRFX KLM 2 bright A_Explode(1,64,0)
+		FRFX KLM 2 bright
+		TNT1 A 0 A_Explode(1,32,0)
 		TNT1 A 0 A_JumpIf(waterlevel > 1,"Splash")
 		FRFX NO 2 bright
 		Stop
 	Death:
-		TNT1 A 0 A_SpawnItemEx("TinyBurningPiece2",random(-25,25),random(-15,15))
-		TNT1 A 0 A_SpawnItemEx("TinyBurningPiece",random(-15,15),random(-15,15))
+		TNT1 AAA 0 A_SpawnItemEx("TinyBurningPiece2",random(-25,25),random(-15,15))
+		TNT1 AAA 0 A_SpawnItemEx("TinyBurningPiece",random(-15,15),random(-15,15))
 		TNT1 A 0 A_CustomMissile("FlamethrowerFireParticles",6,0,random(0,360),2,random(10,90))
-		FRFX HIJ 2 bright A_Explode(1,32,0)
-		FRFX KLM 2 bright A_Explode(1,64,0)
+		TNT1 A 0 A_SpawnItemEx("DetectCeilCraterSmall")
+		TNT1 A 0 A_SpawnItemEx("DetectFloorCraterSmallMotherdemon")
+		FRFX HIJ 2 bright
+		TNT1 A 0 A_Explode(1,32,0)
+		FRFX HIJ 2 bright
+		TNT1 A 0 A_Explode(1,32,0)
 		FRFX NO 2 bright
 		Stop
 	Splash:
@@ -139,8 +149,12 @@ Actor 64FlamerFlamesLessEffects : 64FlamerFlames
 	{
 	Death:
 		TNT1 A 0 A_CustomMissile("FlamethrowerFireParticles",6,0,random(0,360),2,random(10,90))
-		FRFX HIJ 2 bright A_Explode(1,32,0)
-		FRFX KLM 2 bright A_Explode(1,64,0)
+		TNT1 A 0 A_SpawnItemEx("DetectCeilCraterSmall")
+		TNT1 A 0 A_SpawnItemEx("DetectFloorCraterSmallMotherdemon")
+		FRFX HIJ 2 bright
+		TNT1 A 0 A_Explode(1,32,0)
+		FRFX KLM 2 bright
+		TNT1 A 0 A_Explode(1,32,0)
 		FRFX NO 2 bright
 		Stop
 	}
@@ -204,12 +218,12 @@ Inventory.PickupMessage "You got the flamethrower!"
 Inventory.PickupSound "WPICK"
 Obituary "%o was cremated by %k's flamethrower."
 Tag "Flamethrower"
-+WEAPON.NOAUTOAIM
-+Weapon.Explosive
-+WEAPON.ALT_USES_BOTH
-+INVENTORY.RESTRICTABSOLUTELY
 VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 Inventory.ForbiddenTo "64DoomPlayer"
++INVENTORY.RESTRICTABSOLUTELY
++WEAPON.NOAUTOAIM
++WEAPON.ALT_USES_BOTH
+-WEAPON.AMMO_CHECKBOTH
 	States
 	{
 	Spawn:
@@ -296,10 +310,10 @@ Inventory.ForbiddenTo "64DoomPlayer"
 		FR4M J 10
 		FR4M IHGF 1
 		Stop
-	SlideKickingStart://22
+	SlideKickingStart:
 		FR4M FGHI 1
 		FR4M J 35
-	SlideKickingEnd://10
+	SlideKickingEnd:
 		FR4M J 2
 		FR4M IHGF 1
 		Stop

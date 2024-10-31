@@ -52,10 +52,10 @@ Alpha 0.5
 	}
 }
 
-actor RocketUpgraded : Rocket
+actor RocketUpgraded : 64Rocket
 {
 Scale 0.22
-Damage (random(125,150))
+Damage 100
 Speed 35
 Gravity 0.2
 Radius 4
@@ -208,7 +208,6 @@ Inventory.PickupSound "WPICK"
 Inventory.forbiddento "64DoomPlayer"
 VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_P","Modern"
 +INVENTORY.RESTRICTABSOLUTELY
-+WEAPON.AMMO_CHECKBOTH
 +WEAPON.NOALERT
 +WEAPON.NOAUTOFIRE
 Weapon.SisterWeapon "64LMGGrenadeModeTactical"
@@ -428,12 +427,12 @@ Weapon.AmmoGive2 0
 Inventory.forbiddento "64DoomPlayer"
 VisibleToPlayerClass "Tactical64DoomPlayer","Tactical64DoomPlayer_P","Modern"
 +INVENTORY.RESTRICTABSOLUTELY
-+WEAPON.AMMO_CHECKBOTH
++INVENTORY.UNDROPPABLE
++INVENTORY.UNTOSSABLE
 +WEAPON.NOALERT
 +WEAPON.NOAUTOFIRE
++WEAPON.EXPLOSIVE
 +POWERED_UP
-+INVENTORY.UNDROPPABLE
-+Inventory.untossable
 Weapon.SisterWeapon "64LMGTactical"
 	States
 	{

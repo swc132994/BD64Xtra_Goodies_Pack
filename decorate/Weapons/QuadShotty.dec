@@ -154,17 +154,16 @@ actor 64QuadShotgunTACTICAL : Brutal64Weapon
 Scale 0.9
 Weapon.SlotNumber 3
 Weapon.AmmoType "64BlueShell"
-Weapon.AmmoUse1 1
+Weapon.AmmoUse1 2
 Weapon.AmmoGive1 4
 Weapon.AmmoType2 "QSGAmmo"
-Weapon.AmmoUse2 1
+Weapon.AmmoUse2 2
 Weapon.AmmoGive2 0
 Tag "Ultra Shotgun"
 obituary "%o was obliterated by %k's Ultra Shotgun!"
 inventory.pickupmessage "You got the Ultra Shotgun!"
 +INVENTORY.RESTRICTABSOLUTELY
 +WEAPON.NOAUTOFIRE
-+WEAPON.AMMO_CHECKBOTH
 	states
 	{
 	MineThrowFlash:
@@ -177,10 +176,10 @@ inventory.pickupmessage "You got the Ultra Shotgun!"
 		QSGG H 4
 		QSGG GFEDCB 1
 		Stop
-	SlideKickingStart:	//22
+	SlideKickingStart:
 		QSGG BCDEFG 1
 		QSGG H 32
-	SlideKickingEnd:	//10
+	SlideKickingEnd:
 		QSGG H 1
 		QSGG GFEDCB 1
 		Stop

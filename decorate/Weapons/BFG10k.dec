@@ -44,10 +44,11 @@ Inventory.PickupSound "WPICK"
 Inventory.Pickupmessage "You got the BFG10000! Kaching!"
 Obituary "%o was blasted by %k's BFG10K"
 Tag "BFG 10000"
-+Weapon.NoAutoFire
 VisibleToPlayerClass "64DoomPlayer"
 Inventory.ForbiddenTo "Tactical64DoomPlayer","Tactical64DoomPlayer_p","Modern"
 +INVENTORY.RESTRICTABSOLUTELY
++WEAPON.NOAUTOFIRE
++WEAPON.BFG
 	States
 	{
 	Spawn:
@@ -233,8 +234,11 @@ Inventory.PickupSound "WPICK"
 Inventory.Pickupmessage "You got the BFG10000! kaching!"
 Obituary "%o was blasted by %k's BFG10K"
 Tag "BFG 10000"
-+WEAPON.NOAUTOFIRE
 +INVENTORY.RESTRICTABSOLUTELY
++WEAPON.BFG
++WEAPON.NOAUTOFIRE
++WEAPON.ALT_USES_BOTH
+-WEAPON.AMMO_CHECKBOTH
 	States
 	{
 	Spawn:
