@@ -528,66 +528,58 @@ object 64NadeLauncherGrenades
 	frame MISLF {light ROCKET_X5}
 }
 
-PointLight BFG10kShot
-{
-Color 0.0 1.0 0.0
-Size 120
-}
-
 FlickerLight BFG10KSHOT_X1
 {
 Color 0.0 1.0 0.0
-Size 120
-SecondarySize 128
+Size 64
+SecondarySize 72
 Chance 0.3
 }
 
 FlickerLight BFG10KSHOT_X2
 {
 Color 0.0 1.0 0.0
-Size 180
-SecondarySize 182
+Size 72
+SecondarySize 80
 Chance 0.3
 }
 
 FlickerLight BFG10KSHOT_X3
 {
 Color 0.0 1.0 0.0
-Size 200
-SecondarySize 210
+Size 80
+SecondarySize 88
 Chance 0.3
 }
 
 Object 64BFG10kShot
 {
-Frame BFE1A0 {Light BFG10KSHOT}
-Frame BFE1B0 {Light BFG10KSHOT}
+Frame BFE1A0 {Light BFG10KSHOT_X1}
+Frame BFE1B0 {Light BFG10KSHOT_X1}
 Frame BFE1C0 {Light BFG10KSHOT_X1}
 Frame BFE1D0 {Light BFG10KSHOT_X2}
 Frame BFE1E0 {Light BFG10KSHOT_X3}
 }
 
-
 flickerlight PlasmaShieldOrange
 {
 color 0.7 0.7 0.2
-size 120
-secondarySize 128
+size 64
+secondarySize 72
 chance 0.3
 }
-
 
 flickerlight PlasmaShieldRed
 {
 color 0.3 0.1 0.1
-size 48
-secondarySize 56
+size 64
+secondarySize 72
 chance 0.3
 }
 
 Object 64BFG10kActiveShield
 {
-Frame KHXAZ {light BFGBALL}
+Frame KHXAZ {light BFGBALL_X1}
 Frame KHXBZ {light PlasmaShieldOrange}
 Frame KHXCZ {light PlasmaShieldRed}
 }
