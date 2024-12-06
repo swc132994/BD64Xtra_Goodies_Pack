@@ -146,6 +146,3 @@ Weapon/SniperStealth		MLSNISIL
 
 //Exp Revenant Launcher
 heatseek/raise			REVRAISE
-
-//Hexa Shotgun
-Weapon/HexaFire			HSGFIRE

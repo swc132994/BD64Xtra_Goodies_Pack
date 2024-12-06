@@ -62,7 +62,7 @@ script "BFGExtraSpawner" (void)
 {
 	static str ExtraWeaponType[] =
 	{
-		"SpawnBFG10k","SpawnHexaShotgun"
+		"SpawnBFG10k"
 	};
 	Delay(1);
 	SetActorState(0,ExtraWeaponType[GetCvar("BFG_Spawner_Cvar") - 4]);

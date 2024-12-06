@@ -148,7 +148,7 @@ Scale 0.9
 		BFUG A 0
 		TNT1 A 3 ACS_NamedExecuteAlways("BFGSpawner")
 		TNT1 A 2 ACS_NamedExecuteAlways("BFGExtraSpawner")
-		TNT1 A 0 A_Jump(38,"SpawnBFG10k","SpawnHexaShotgun") //(15%)
+		TNT1 A 0 A_Jump(38,"SpawnBFG10k") //(15%)
 		TNT1 A 0 A_Jump(85,"SpawnUnmaker","SpawnLasergun") //(33%)
 	SpawnBFG9000:
 		TNT1 A 1 A_SpawnItemEx("BFG9000Spawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
@@ -161,9 +161,6 @@ Scale 0.9
 		Stop
 	SpawnBFG10k:
 		TNT1 A 1 A_SpawnItemEx("BFG10kSpawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
-		Stop		
-	SpawnHexaShotgun:
-		TNT1 A 1 A_SpawnItemEx("HexaShotgunSpawner",0,0,0,0,0,0,0,SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_CLEARCALLERTID,0,tid)
 		Stop
 	}
 }

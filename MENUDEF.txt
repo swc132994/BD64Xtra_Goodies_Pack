@@ -203,7 +203,6 @@ OptionValue "BFG_Spawner_Value_Extra"
 	2,"Unmaker"
 	3,"Lasergun"
 	4,"BFG10k"
-	5,"Hexa Shotgun"
 }
 
 OptionValue "ExtraAmmo_Spawner_Value"
