@@ -102,7 +102,7 @@ inventory.maxamount 1
 
 ACTOR 64HeatseekerProjectilePlayer : 64RevenantTracer3
 {
-Damage 10
+Damage 15
 Speed 12
 +SCREENSEEKER
 +NOCLIP

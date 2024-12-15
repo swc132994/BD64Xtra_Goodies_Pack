@@ -287,6 +287,7 @@ Tag "BFG 10000"
 	Hold:
 		TNT1 A 0 A_JumpIf(waterlevel > 1,"NotReady")
 		TNT1 A 0 A_PlaySound("Weapons/BFG10KX",CHAN_WEAPON)
+		TNT1 A 0 A_AlertMonsters
 		10KF A 2 Bright
 		TNT1 A 0 A_ZoomFactor(0.98)
 		TNT1 A 0 A_SetPitch(pitch+1.2,SPF_INTERPOLATE)
